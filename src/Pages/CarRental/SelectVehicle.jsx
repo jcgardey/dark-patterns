@@ -9,9 +9,13 @@ import people from '../../assets/CarRental/people.svg';
 import bag from '../../assets/CarRental/bag.svg';
 import { useEffect, useState } from 'react';
 import { dateString } from '../../utils/date';
+import { useNavigate } from 'react-router-dom';
 
-const Vehicle = ({ vehicle }) => (
-  <div className="bg-white p-4 flex w-4/5 mx-auto my-3">
+const Vehicle = ({ vehicle, onSelect }) => (
+  <div
+    onClick={() => onSelect(vehicle)}
+    className="bg-white p-4 flex w-4/5 mx-auto my-3"
+  >
     <div className="w-1/3">
       <h3 className="text-blue-800 text-2xl font-bold">{vehicle.name}</h3>
       <p>Additional description</p>
@@ -41,6 +45,8 @@ const Vehicle = ({ vehicle }) => (
 export const SelectVehicle = ({}) => {
   const [reservation, setReservation] = useState({});
 
+  const navigate = useNavigate();
+
   const vehicles = [
     { name: 'Standard SUV', capacity: 5, price: 357.15, img: standard_suv },
     { name: 'Standard', capacity: 5, price: 357.35, img: standard },
@@ -59,6 +65,14 @@ export const SelectVehicle = ({}) => {
     document.title = 'Select a Vehicle';
     setReservation(JSON.parse(localStorage.getItem('reservation')));
   }, []);
+
+  const onSelect = (vehicle) => {
+    localStorage.setItem(
+      'reservation',
+      JSON.stringify({ ...reservation, vehicle })
+    );
+    navigate('/car_rental/protection');
+  };
 
   return (
     <div className="bg-blue-950 p-4">
@@ -80,7 +94,7 @@ export const SelectVehicle = ({}) => {
         </div>
         <div className="w-4/5">
           {vehicles.map((vehicle, i) => (
-            <Vehicle key={i} vehicle={vehicle} />
+            <Vehicle key={i} vehicle={vehicle} onSelect={onSelect} />
           ))}
         </div>
       </div>
