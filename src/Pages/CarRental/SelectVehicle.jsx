@@ -18,7 +18,7 @@ const Vehicle = ({ vehicle, onSelect }) => (
   >
     <div className="w-1/3">
       <h3 className="text-blue-800 text-2xl font-bold">{vehicle.name}</h3>
-      <p>Additional description</p>
+      <p className="my-1 text-grey-800 italic">{vehicle.description}</p>
       <div className="flex my-2">
         <div className="mx-2">
           <img className="w-7 mx-auto" src={people} />
@@ -48,11 +48,41 @@ export const SelectVehicle = ({}) => {
   const navigate = useNavigate();
 
   const vehicles = [
-    { name: 'Standard SUV', capacity: 5, price: 357.15, img: standard_suv },
-    { name: 'Standard', capacity: 5, price: 357.35, img: standard },
-    { name: 'Convertible', capacity: 4, price: 357.65, img: convertible },
-    { name: 'Pickup', capacity: 4, price: 357.65, img: pickup },
-    { name: 'Sporty Car', capacity: 4, price: 357.65, img: sporty },
+    {
+      name: 'Standard SUV',
+      description: 'Ford Edge or Similar',
+      capacity: 5,
+      price: 357.15,
+      img: standard_suv,
+    },
+    {
+      name: 'Standard',
+      description: 'VW Jetta or Similar',
+      capacity: 5,
+      price: 357.35,
+      img: standard,
+    },
+    {
+      name: 'Convertible',
+      description: 'Ford Mustang or Similar',
+      capacity: 4,
+      price: 357.65,
+      img: convertible,
+    },
+    {
+      name: 'Pickup',
+      description: 'Ford F150 or Similar',
+      capacity: 4,
+      price: 357.65,
+      img: pickup,
+    },
+    {
+      name: 'Sporty Car',
+      description: 'Dodge Challenger or Similar',
+      capacity: 4,
+      price: 357.65,
+      img: sporty,
+    },
     {
       name: 'Standard Pickup',
       capacity: 4,
