@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { CheckIcon } from './CheckIcon';
 import { differenceInDays } from '../../utils/date';
+import { Modal } from '../../components/Modal';
 
 const ProtectionItem = ({ title, items, price, setProtection, protection }) => {
   const changeProtection = () => {
@@ -38,10 +39,34 @@ const OrderItem = ({ description }) => (
   </div>
 );
 
+const ProtectionModal = ({ onClose, onNext }) => (
+  <Modal title={'Continue without additional protection?'} onClose={onClose}>
+    <p>
+      You are liable for all damage and theft up to the full value of the rental
+      vehicle, as well as third party accident and injury claims, plus admin
+      fees. Your personal insurance or credit card may not fully cover this
+      rental.
+    </p>
+    <div className="flex w-1/2 mx-auto my-4 justify-evenly">
+      <button className="bg-blue-900 text-white p-2 mx-3" onClick={onClose}>
+        Add protection
+      </button>
+      <button
+        className="border-2 text-blue-900 border-blue-900 p-2"
+        onClick={onNext}
+      >
+        Skip for now
+      </button>
+    </div>
+  </Modal>
+);
+
 export const SelectProtection = () => {
   const reservation = JSON.parse(localStorage.getItem('reservation'));
 
   const [protection, setProtection] = useState(null);
+
+  const [showModal, setShowModal] = useState(false);
 
   const totalPrice = () =>
     differenceInDays(
@@ -49,6 +74,10 @@ export const SelectProtection = () => {
       new Date(reservation.startDate)
     ) *
     (reservation.vehicle.price + (protection?.price || 0));
+
+  const onNext = () => {
+    setShowModal(protection === null);
+  };
 
   return (
     <div className="w-4/5 mx-auto py-4">
@@ -113,7 +142,15 @@ export const SelectProtection = () => {
                 ${totalPrice().toFixed(2)}
               </p>
             </div>
-            <button className="w-full bg-blue-900 text-white p-2">Next</button>
+            <button
+              className="w-full bg-blue-900 text-white p-2"
+              onClick={onNext}
+            >
+              Next
+            </button>
+            {showModal && (
+              <ProtectionModal onClose={() => setShowModal(false)} />
+            )}
           </div>
         </div>
       </div>
