@@ -1,64 +1,14 @@
 import { useState } from 'react';
 import { CheckIcon } from './CheckIcon';
 import { differenceInDays } from '../../utils/date';
-import { Modal } from '../../components/Modal';
-
-const ProtectionItem = ({ title, items, price, setProtection, protection }) => {
-  const changeProtection = () => {
-    protection?.title !== title
-      ? setProtection({ title, price })
-      : setProtection(null);
-  };
-
-  return (
-    <div
-      className={`p-2 shadow m-4 cursor-pointer${
-        protection?.title === title ? ' border-2 border-blue-950' : ''
-      }`}
-      onClick={changeProtection}
-    >
-      <h4 className="text-center text-lg font-bold">{title}</h4>
-      <div className="my-4">
-        {items.map((item, i) => (
-          <p key={i} className="my-2">
-            {item}
-          </p>
-        ))}
-      </div>
-      <div className="my-2">
-        <p className="text-center font-bold text-blue-500">${price} / day</p>
-      </div>
-    </div>
-  );
-};
+import { ProtectionItem } from '../../Components/CarRent/ProtectionItem';
+import { ProtectionModal } from '../../Components/CarRent/ProtectionModal';
 
 const OrderItem = ({ description }) => (
   <div className="flex justify-between my-2">
     <CheckIcon />
     <p className="w-3/4">{description}</p>
   </div>
-);
-
-const ProtectionModal = ({ onClose, onNext }) => (
-  <Modal title={'Continue without additional protection?'} onClose={onClose}>
-    <p>
-      You are liable for all damage and theft up to the full value of the rental
-      vehicle, as well as third party accident and injury claims, plus admin
-      fees. Your personal insurance or credit card may not fully cover this
-      rental.
-    </p>
-    <div className="flex w-1/2 mx-auto my-4 justify-evenly">
-      <button className="bg-blue-900 text-white p-2 mx-3" onClick={onClose}>
-        Add protection
-      </button>
-      <button
-        className="border-2 text-blue-900 border-blue-900 p-2"
-        onClick={onNext}
-      >
-        Skip for now
-      </button>
-    </div>
-  </Modal>
 );
 
 export const SelectProtection = () => {
@@ -157,4 +107,3 @@ export const SelectProtection = () => {
     </div>
   );
 };
-
