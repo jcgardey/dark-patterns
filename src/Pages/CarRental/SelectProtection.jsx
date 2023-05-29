@@ -3,6 +3,7 @@ import { CheckIcon } from './CheckIcon';
 import { differenceInDays } from '../../utils/date';
 import { ProtectionItem } from '../../Components/CarRent/ProtectionItem';
 import { ProtectionModal } from '../../Components/CarRent/ProtectionModal';
+import { useNavigate } from 'react-router-dom';
 
 const OrderItem = ({ description }) => (
   <div className="flex justify-between my-2">
@@ -18,6 +19,8 @@ export const SelectProtection = () => {
 
   const [showModal, setShowModal] = useState(false);
 
+  const navigate = useNavigate();
+
   const totalPrice = () =>
     differenceInDays(
       new Date(reservation.endDate),
@@ -26,7 +29,11 @@ export const SelectProtection = () => {
     (reservation.vehicle.price + (protection?.price || 0));
 
   const onNext = () => {
-    setShowModal(protection === null);
+    protection === null ? setShowModal(true) : checkout();
+  };
+
+  const checkout = () => {
+    navigate('/car_rental/review');
   };
 
   return (
@@ -99,7 +106,10 @@ export const SelectProtection = () => {
               Next
             </button>
             {showModal && (
-              <ProtectionModal onClose={() => setShowModal(false)} />
+              <ProtectionModal
+                onClose={() => setShowModal(false)}
+                onNext={checkout}
+              />
             )}
           </div>
         </div>
