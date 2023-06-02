@@ -1,16 +1,10 @@
 import { useState } from 'react';
-import { CheckIcon } from './CheckIcon';
 import { differenceInDays } from '../../utils/date';
 import { ProtectionItem } from '../../Components/CarRent/ProtectionItem';
 import { ProtectionModal } from '../../Components/CarRent/ProtectionModal';
 import { useNavigate } from 'react-router-dom';
-
-const OrderItem = ({ description }) => (
-  <div className="flex justify-between my-2">
-    <CheckIcon />
-    <p className="w-3/4">{description}</p>
-  </div>
-);
+import { OrderItem } from '../../Components/CarRent/OrderItem';
+import { TotalPrice } from '../../Components/CarRent/TotalPrice';
 
 export const SelectProtection = () => {
   const reservation = JSON.parse(localStorage.getItem('reservation'));
@@ -33,6 +27,9 @@ export const SelectProtection = () => {
   };
 
   const checkout = () => {
+    reservation.protection = protection?.title;
+    reservation.total = totalPrice().toFixed(2);
+    localStorage.setItem('reservation', JSON.stringify(reservation));
     navigate('/car_rental/review');
   };
 
@@ -93,12 +90,7 @@ export const SelectProtection = () => {
                 <OrderItem description={protection.title} />
               )}
             </div>
-            <div className="mx-2 my-4 flex justify-between font-bold text-lg">
-              <p>Total</p>
-              <p className="font-bold text-blue-500">
-                ${totalPrice().toFixed(2)}
-              </p>
-            </div>
+            <TotalPrice price={totalPrice().toFixed(2)} />
             <button
               className="w-full bg-blue-900 text-white p-2"
               onClick={onNext}
