@@ -1,5 +1,7 @@
+import { Link } from 'react-router-dom';
 import { OrderItem } from '../../Components/CarRent/OrderItem';
 import { TotalPrice } from '../../Components/CarRent/TotalPrice';
+import { BackIcon } from '../../Components/Icons/BackIcon';
 
 const Reservation = () => {
   const reservation = JSON.parse(localStorage.getItem('reservation'));
@@ -43,7 +45,12 @@ const Input = () => (
 export const Review = ({}) => {
   return (
     <div className="w-10/12 mx-auto py-4">
-      <h2 className="text-2xl text-black font-semibold">Review and book</h2>
+      <div className="flex items-center">
+        <Link to="/car_rental/protection">
+          <BackIcon />
+        </Link>
+        <h2 className="text-2xl text-black font-semibold">Review and book</h2>
+      </div>
       <div className="flex">
         <div>
           <div className="my-6 w-1/3">
