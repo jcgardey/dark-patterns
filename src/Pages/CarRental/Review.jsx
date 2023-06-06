@@ -27,7 +27,7 @@ const Reservation = () => {
       </div>
       {reservation.protection && (
         <div className="border-b">
-          <OrderItem description={reservation.protection} />
+          <OrderItem description={reservation.protection?.title} />
         </div>
       )}
       <TotalPrice price={reservation.total} />
@@ -91,7 +91,7 @@ export const Review = ({}) => {
               </div>
             </div>
           </div>
-          <button className="w-1/4 bg-blue-800 text-white text-xl rounded p-2">
+          <button className="w-1/4 bg-blue-800 hover:bg-blue-700 text-white text-xl rounded p-2">
             Pay and book
           </button>
         </div>

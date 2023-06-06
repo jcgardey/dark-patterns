@@ -2,14 +2,15 @@ import { useState } from 'react';
 import { differenceInDays } from '../../utils/date';
 import { ProtectionItem } from '../../Components/CarRent/ProtectionItem';
 import { ProtectionModal } from '../../Components/CarRent/ProtectionModal';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { OrderItem } from '../../Components/CarRent/OrderItem';
 import { TotalPrice } from '../../Components/CarRent/TotalPrice';
+import { BackIcon } from '../../Components/Icons/BackIcon';
 
 export const SelectProtection = () => {
   const reservation = JSON.parse(localStorage.getItem('reservation'));
 
-  const [protection, setProtection] = useState(null);
+  const [protection, setProtection] = useState(reservation.protection);
 
   const [showModal, setShowModal] = useState(false);
 
@@ -27,7 +28,7 @@ export const SelectProtection = () => {
   };
 
   const checkout = () => {
-    reservation.protection = protection?.title;
+    reservation.protection = protection;
     reservation.total = totalPrice().toFixed(2);
     localStorage.setItem('reservation', JSON.stringify(reservation));
     navigate('/car_rental/review');
@@ -35,9 +36,15 @@ export const SelectProtection = () => {
 
   return (
     <div className="w-4/5 mx-auto py-4">
-      <h2 className="text-2xl text-black font-semibold">
-        Choose your protection
-      </h2>
+      <div className="flex items-center">
+        <Link to="/car_rental/vehicle">
+          <BackIcon />
+        </Link>
+        <h2 className="text-2xl text-black font-semibold">
+          Choose your protection
+        </h2>
+      </div>
+
       <div className="flex justify-between">
         <div className="my-4 w-1/2">
           <ProtectionItem
