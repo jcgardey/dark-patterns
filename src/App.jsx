@@ -5,6 +5,7 @@ import { CarRental } from './Pages/CarRental/CarRental';
 import { SelectVehicle } from './Pages/CarRental/SelectVehicle';
 import { SelectProtection } from './Pages/CarRental/SelectProtection';
 import { Review } from './Pages/CarRental/Review';
+import { SeatSelection } from './Pages/Passenger/SeatSelection';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -17,6 +18,8 @@ function App() {
           <Route path="/car_rental/vehicle" element={<SelectVehicle />} />
           <Route path="/car_rental/protection" element={<SelectProtection />} />
           <Route path="/car_rental/review" element={<Review />} />
+
+          <Route path="/check_in/seat" element={<SeatSelection />} />
         </Routes>
       </BrowserRouter>
     </>
@@ -24,3 +27,4 @@ function App() {
 }
 
 export default App;
+
