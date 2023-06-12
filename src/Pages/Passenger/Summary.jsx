@@ -13,55 +13,49 @@ export const Summary = () => {
   );
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-75">
-          <p className="passenger-section-title">Selección de Asiento</p>
-          <form>
-            <div className="row">
-              <div className="plane summary-total col-md-6">
-                <h2>Resumen</h2>
-                <table className="summary">
-                  <tr>
-                    <td>Ticket</td>
-                    <td>$160.000</td>
-                  </tr>
-                  <tr>
-                    <td>Impuestos y tasas</td>
-                    <td>$80.000</td>
-                  </tr>
-                  <tr>
-                    <td>Selección de asiento</td>
-                    <td id="seatPrice">{seatPrice}</td>
-                  </tr>
-                  <tr>
-                    <td>Descuentos</td>
-                    <td>$0</td>
-                  </tr>
-                  <tr className="summary-total">
-                    <td>Total</td>
-                    <td id="tktTotal">{total}</td>
-                  </tr>
-                </table>
+    <div className="w-11/12 mx-auto">
+      <div className="w-3/4">
+        <p className="passenger-section-title">Selección de Asiento</p>
+        <form>
+          <div className="plane w-1/2 mx-auto">
+            <h2 className="text-2xl font-bold">Resumen</h2>
+            <div className="summary my-4">
+              <div className="flex justify-between my-4">
+                <p>Ticket</p>
+                <p>$160.000</p>
               </div>
-              <div className="legend col-50"></div>
-            </div>
-            <div className="row buttons justify-around">
-              <div className="text-right">
-                <Link to="/check_in/seat" className="passenger back-button">
-                  Volver a la selección de asientos
-                </Link>
+              <div className="flex justify-between my-4">
+                <p>Impuestos y tasas</p>
+                <p>$80.000</p>
               </div>
-              <div className="col-30">
-                <button className="passenger" type="submit">
-                  Continuar
-                </button>
+              <div className="flex justify-between my-4">
+                <p>Selección de asiento</p>
+                <p id="seatPrice">{seatPrice}</p>
+              </div>
+              <div className="flex justify-between my-4">
+                <p>Descuentos</p>
+                <p>$0</p>
+              </div>
+              <div className="flex justify-between summary-total my-4 text-2xl">
+                <p>Total</p>
+                <p id="tktTotal">{total}</p>
               </div>
             </div>
-          </form>
-        </div>
+          </div>
+          <div className="row buttons justify-around">
+            <div className="text-right">
+              <Link to="/check_in/seat" className="passenger back-button">
+                Volver a la selección de asientos
+              </Link>
+            </div>
+            <div className="col-30">
+              <button className="passenger" type="submit">
+                Continuar
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   );
 };
-
