@@ -4,6 +4,7 @@ import { Seat } from '../../components/Passenger/Seat';
 import { SeatsRow } from '../../components/Passenger/SeatsRow';
 import { useState } from 'react';
 import { seatRows } from './seats';
+import { PageTitle, PrimaryButton } from '../../components/Passenger/common';
 
 export const SeatSelection = () => {
   const [seat, setSeat] = useState(localStorage.getItem('seat-id'));
@@ -29,9 +30,7 @@ export const SeatSelection = () => {
   return (
     <div className="w-11/12 mx-auto">
       <div className="w-3/4">
-        <p className="bg-sky-700 text-white font-bold p-1">
-          Selección de Asiento
-        </p>
+        <PageTitle>Selección de Asiento</PageTitle>
         <form id="seatSelection" onSubmit={saveSeat}>
           <div className="flex">
             <div className="plane">
@@ -94,14 +93,7 @@ export const SeatSelection = () => {
               </Link>
             </div>
             <div className="w-1/3">
-              <button
-                id="seatSubmit"
-                className="text-white bg-sky-700 hover:bg-sky-700 rounded w-full p-2"
-                type="submit"
-                disabled={seat === null}
-              >
-                Continuar
-              </button>
+              <PrimaryButton disabled={seat === null}>Continuar</PrimaryButton>
             </div>
           </div>
         </form>

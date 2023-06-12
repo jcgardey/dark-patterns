@@ -1,4 +1,8 @@
-import { Link } from 'react-router-dom';
+import {
+  BackButton,
+  PageTitle,
+  PrimaryButton,
+} from '../../components/Passenger/common';
 
 export const Summary = () => {
   let formatting_options = {
@@ -15,7 +19,7 @@ export const Summary = () => {
   return (
     <div className="w-11/12 mx-auto">
       <div className="w-3/4">
-        <p className="passenger-section-title">Selección de Asiento</p>
+        <PageTitle>Selección de Asiento</PageTitle>
         <form>
           <div className="plane w-1/2 mx-auto">
             <h2 className="text-2xl font-bold">Resumen</h2>
@@ -42,16 +46,14 @@ export const Summary = () => {
               </div>
             </div>
           </div>
-          <div className="row buttons justify-around">
-            <div className="text-right">
-              <Link to="/check_in/seat" className="passenger back-button">
+          <div className="flex my-8 buttons justify-center">
+            <div className="w-1/4 mx-4">
+              <BackButton to="/check_in/seat" className="passenger back-button">
                 Volver a la selección de asientos
-              </Link>
+              </BackButton>
             </div>
-            <div className="col-30">
-              <button className="passenger" type="submit">
-                Continuar
-              </button>
+            <div className="w-1/4 mx-4">
+              <PrimaryButton type="submit">Continuar</PrimaryButton>
             </div>
           </div>
         </form>
