@@ -7,6 +7,7 @@ import { SelectProtection } from './Pages/CarRental/SelectProtection';
 import { Review } from './Pages/CarRental/Review';
 import { SeatSelection } from './Pages/Passenger/SeatSelection';
 import { Summary } from './Pages/Passenger/Summary';
+import { PassengerInfo } from './Pages/Passenger/PassengerInfo';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -20,6 +21,7 @@ function App() {
           <Route path="/car_rental/protection" element={<SelectProtection />} />
           <Route path="/car_rental/review" element={<Review />} />
 
+          <Route path="/check_in/passenger" element={<PassengerInfo />} />
           <Route path="/check_in/seat" element={<SeatSelection />} />
           <Route path="/check_in/summary" element={<Summary />} />
         </Routes>
@@ -29,4 +31,3 @@ function App() {
 }
 
 export default App;
-
