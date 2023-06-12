@@ -1,5 +1,4 @@
 import { Link, useNavigate } from 'react-router-dom';
-import './main.css';
 import './SeatSelection.css';
 import { Seat } from '../../components/Passenger/Seat';
 import { SeatsRow } from '../../components/Passenger/SeatsRow';
@@ -30,9 +29,11 @@ export const SeatSelection = () => {
   return (
     <div className="w-11/12 mx-auto">
       <div className="w-3/4">
-        <p className="passenger-section-title">Selección de Asiento</p>
+        <p className="bg-sky-700 text-white font-bold p-1">
+          Selección de Asiento
+        </p>
         <form id="seatSelection" onSubmit={saveSeat}>
-          <div className="row">
+          <div className="flex">
             <div className="plane">
               <div className="exit exit--front fuselage"></div>
               <div className="cabin fuselage">
@@ -49,7 +50,7 @@ export const SeatSelection = () => {
               </div>
               <div className="exit exit--back fuselage"></div>
             </div>
-            <div className="legend col-50">
+            <div className="legend w-1/2">
               <h2 className="font-bold text-2xl">Selección de Asiento</h2>
               <dl>
                 <dt>
@@ -86,16 +87,16 @@ export const SeatSelection = () => {
               </dl>
             </div>
           </div>
-          <div className="row buttons justify-around">
-            <div className="col-50 skip">
+          <div className="my-6 flex buttons justify-around items-center">
+            <div className="w-1/2 skip">
               <Link to="/check_in/summary" onClick={skipSeat}>
                 No deseo elegir mi asiento
               </Link>
             </div>
-            <div className="col-30">
+            <div className="w-1/3">
               <button
                 id="seatSubmit"
-                className="passenger"
+                className="text-white bg-sky-700 hover:bg-sky-700 rounded w-full p-2"
                 type="submit"
                 disabled={seat === null}
               >

@@ -1,7 +1,7 @@
 import { Seat } from './Seat';
 
 export const SeatsRow = ({ number, seats, onSelect, isVIP, selected }) => (
-  <div className={`row row--${number}`}>
+  <div className={`flex my-4`}>
     <div className="seats" type="A">
       {Object.keys(seats).map((name, i) => (
         <Seat
