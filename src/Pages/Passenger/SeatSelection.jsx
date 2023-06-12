@@ -7,7 +7,7 @@ import { useState } from 'react';
 import { seatRows } from './seats';
 
 export const SeatSelection = () => {
-  const [seat, setSeat] = useState(null);
+  const [seat, setSeat] = useState(localStorage.getItem('seat-id'));
   const navigate = useNavigate();
 
   const saveSeat = (e) => {
@@ -22,94 +22,89 @@ export const SeatSelection = () => {
     }
   };
 
-  const skipSeat = (event) => {
+  const skipSeat = () => {
     localStorage.setItem('seat-price', 0);
     localStorage.setItem('seat-id', null);
   };
 
   return (
-    <div className="container">
-      <div className="row">
-        <div className="col-75">
-          <p className="passenger-section-title">Selección de Asiento</p>
-          <form id="seatSelection" onSubmit={saveSeat}>
-            <div className="row">
-              <div className="plane col-md-6">
-                <div className="exit exit--front fuselage"></div>
-                <div className="cabin fuselage">
-                  {seatRows.map((row, i) => (
-                    <SeatsRow
-                      key={i}
-                      number={i + 1}
-                      isVIP={row.isVIP}
-                      seats={row.seats}
-                      onSelect={setSeat}
+    <div className="w-11/12 mx-auto">
+      <div className="w-3/4">
+        <p className="passenger-section-title">Selección de Asiento</p>
+        <form id="seatSelection" onSubmit={saveSeat}>
+          <div className="row">
+            <div className="plane">
+              <div className="exit exit--front fuselage"></div>
+              <div className="cabin fuselage">
+                {seatRows.map((row, i) => (
+                  <SeatsRow
+                    key={i}
+                    number={i + 1}
+                    isVIP={row.isVIP}
+                    seats={row.seats}
+                    onSelect={setSeat}
+                    selected={seat}
+                  />
+                ))}
+              </div>
+              <div className="exit exit--back fuselage"></div>
+            </div>
+            <div className="legend col-50">
+              <h2 className="font-bold text-2xl">Selección de Asiento</h2>
+              <dl>
+                <dt>
+                  <Seat value={'NN'} isVIP={true} />
+                </dt>
+                <dd>
+                  Asiento preferencial <strong>(+ ARS 30.000)</strong>
+                </dd>
+                <dt>
+                  <Seat value={'NN'} isVIP={false} />
+                </dt>
+                <dd>
+                  Asiento regular <strong>(+ ARS 10.000)</strong>
+                </dd>
+                <dt>
+                  <Seat value={'NN'} isVIP={false} save={true} />
+                </dt>
+                <dd>
+                  Tarifa con descuento <strong>(+ ARS 6.000)</strong>
+                </dd>
+                <dt>
+                  <div className="seat reference">
+                    <input
+                      type="radio"
+                      name="seat"
+                      disabled
+                      id="10F"
+                      value="10F"
                     />
-                  ))}
-                </div>
-                <div className="exit exit--back fuselage"></div>
-              </div>
-              <div className="legend col-50">
-                <h2 className="font-bold text-2xl">Selección de Asiento</h2>
-                <dl>
-                  <dt>
-                    <Seat value={'NN'} isVIP={true} />
-                  </dt>
-                  <dd>
-                    Asiento preferencial <strong>(+ ARS 30.000)</strong>
-                  </dd>
-                  <dt>
-                    <Seat value={'NN'} isVIP={false} />
-                  </dt>
-                  <dd>
-                    Asiento regular <strong>(+ ARS 10.000)</strong>
-                  </dd>
-                  <dt>
-                    <Seat value={'NN'} isVIP={false} save={true} />
-                  </dt>
-                  <dd>
-                    Tarifa con descuento <strong>(+ ARS 6.000)</strong>
-                  </dd>
-                  <dt>
-                    <div className="seat reference">
-                      <input
-                        type="radio"
-                        name="seat"
-                        disabled
-                        id="10F"
-                        value="10F"
-                      />
-                      <label htmlFor="10F">NN</label>
-                    </div>
-                  </dt>
-                  <dd>Asiento ocupado</dd>
-                </dl>
-              </div>
+                    <label htmlFor="10F">NN</label>
+                  </div>
+                </dt>
+                <dd>Asiento ocupado</dd>
+              </dl>
             </div>
-            <div
-              className="row buttons"
-              style={{ justifyContent: 'space-around' }}
-            >
-              <div className="col-50 skip">
-                <Link to="/check_in/summary" onClick={skipSeat}>
-                  No deseo elegir mi asiento
-                </Link>
-              </div>
-              <div className="col-30">
-                <button
-                  id="seatSubmit"
-                  className="passenger"
-                  type="submit"
-                  disabled={seat === null}
-                >
-                  Continuar
-                </button>
-              </div>
+          </div>
+          <div className="row buttons justify-around">
+            <div className="col-50 skip">
+              <Link to="/check_in/summary" onClick={skipSeat}>
+                No deseo elegir mi asiento
+              </Link>
             </div>
-          </form>
-        </div>
+            <div className="col-30">
+              <button
+                id="seatSubmit"
+                className="passenger"
+                type="submit"
+                disabled={seat === null}
+              >
+                Continuar
+              </button>
+            </div>
+          </div>
+        </form>
       </div>
     </div>
   );
 };
-

@@ -1,6 +1,6 @@
 import { Seat } from './Seat';
 
-export const SeatsRow = ({ number, seats, onSelect, isVIP }) => (
+export const SeatsRow = ({ number, seats, onSelect, isVIP, selected }) => (
   <div className={`row row--${number}`}>
     <div className="seats" type="A">
       {Object.keys(seats).map((name, i) => (
@@ -11,9 +11,9 @@ export const SeatsRow = ({ number, seats, onSelect, isVIP }) => (
           save={seats[name].save}
           onSelect={onSelect}
           disabled={seats[name].ocuppied}
+          selected={selected}
         />
       ))}
     </div>
   </div>
 );
-

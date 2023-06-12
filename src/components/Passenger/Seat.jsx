@@ -4,6 +4,7 @@ export const Seat = ({
   isVIP,
   save = false,
   disabled = false,
+  selected,
 }) => (
   <div className="seat">
     <input
@@ -13,6 +14,7 @@ export const Seat = ({
       id={value}
       value={value}
       onChange={() => onSelect({ value, isVIP, save })}
+      defaultChecked={selected == value}
     />
     <label
       htmlFor={value}
@@ -22,4 +24,3 @@ export const Seat = ({
     </label>
   </div>
 );
-
