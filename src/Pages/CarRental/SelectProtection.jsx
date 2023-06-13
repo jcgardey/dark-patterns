@@ -6,11 +6,12 @@ import { Link, useNavigate } from 'react-router-dom';
 import { OrderItem } from '../../Components/CarRent/OrderItem';
 import { TotalPrice } from '../../Components/CarRent/TotalPrice';
 import { BackIcon } from '../../Components/Icons/BackIcon';
+import { useTranslation } from 'react-i18next';
 
 export const SelectProtection = () => {
   const reservation = JSON.parse(localStorage.getItem('reservation'));
 
-  const [protection, setProtection] = useState(reservation.protection);
+  const [protection, setProtection] = useState(reservation.protection || null);
 
   const [showModal, setShowModal] = useState(false);
 
@@ -34,6 +35,8 @@ export const SelectProtection = () => {
     navigate('/car_rental/review');
   };
 
+  const { t } = useTranslation();
+
   return (
     <div className="w-4/5 mx-auto py-4">
       <div className="flex items-center">
@@ -41,39 +44,39 @@ export const SelectProtection = () => {
           <BackIcon />
         </Link>
         <h2 className="text-2xl text-black font-semibold">
-          Choose your protection
+          {t('Rental.Protection.Select')}
         </h2>
       </div>
 
       <div className="flex justify-between">
         <div className="my-4 w-1/2">
           <ProtectionItem
-            title={'Basic Cover Protection'}
+            title={t('Rental.Protection.Basic.Name')}
             protection={protection}
             setProtection={setProtection}
-            items={['Avoid paying for damage or theft of your rental vehicle.']}
+            items={[t('Rental.Protection.Basic.Description')]}
             price={1.39}
           />
 
           <ProtectionItem
-            title={'Standard Cover Protection'}
+            title={t('Rental.Protection.Standard.Name')}
             protection={protection}
             setProtection={setProtection}
             items={[
-              'Avoid paying for damage or theft of your rental vehicle.',
-              'Protect yourself from third party accident or injury claims up to $1M.',
+              t('Rental.Protection.Basic.Description'),
+              t('Rental.Protection.Standard.Description'),
             ]}
             price={16.99}
           />
 
           <ProtectionItem
-            title={'Full Cover Protection'}
+            title={t('Rental.Protection.Total.Name')}
             protection={protection}
             setProtection={setProtection}
             items={[
-              'Avoid paying for damage or theft of your rental vehicle.',
-              'Protect yourself from third party accident or injury claims up to $1M.',
-              'Free 24/7 roadside assistance for flat tires, lost keys and dead battery.',
+              t('Rental.Protection.Basic.Description'),
+              t('Rental.Protection.Standard.Description'),
+              t('Rental.Protection.Total.Description'),
             ]}
             price={23.29}
           />
@@ -102,7 +105,7 @@ export const SelectProtection = () => {
               className="w-full bg-blue-900 text-white p-2"
               onClick={onNext}
             >
-              Next
+              {t('Rental.Protection.Next')}
             </button>
             {showModal && (
               <ProtectionModal

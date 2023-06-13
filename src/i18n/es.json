@@ -1,5 +1,36 @@
 {
     "Rental": {
-        "Start": "Iniciar una Reserva"
+        "Start": "Iniciar una Reserva",
+        "Location": "Ubicación",
+        "StartDate": "Fecha de recogida",
+        "EndDate": "Fecha de devolución",
+        "Search": "Buscar",
+        "SelectVehicle": "Seleccionar un Vehículo",
+        "Filters": "Filtros",
+        "Vehicle": {
+            "Similar": "o similar",
+            "Seats_one": "{{count}} asiento",
+            "Seats_other": "{{count}} asientos",
+            "Bags_one": "{{count}} valija",
+            "Bags_other": "{{count}} valijas",
+            "Price": "{{price }} / día",
+            "Select": "Seleccionar"
+        },
+        "Protection": {
+            "Select": "Elija su protección",
+            "Basic": {
+                "Name": "Cobertura Básica",
+                "Description": "Evita pagar por daños o robo del vehículo en alquier."    
+            },
+            "Standard": {
+                "Name": "Cobertura Estándar",
+                "Description": "Protégete de las demandas por accidente o lesiones de terceros hasta 1 millon USD."
+            },
+            "Total": {
+                "Name": "Cobertura Total",
+                "Description": "Asistencia gratuita 24/7 para neumáticos pinchados, pérdida de llaves y batería descargada."
+            },
+            "Next": "Siguiente"
+        }
       }
 }

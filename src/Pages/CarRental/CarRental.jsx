@@ -80,7 +80,7 @@ export function CarRental() {
         <form onSubmit={onSubmit}>
           <div className="my-4 flex items-end">
             <div className="mx-3 w-1/4 relative">
-              <Label>Location</Label>
+              <Label>{t('Rental.Location')}</Label>
               <Input
                 name={'location'}
                 value={location}
@@ -104,7 +104,7 @@ export function CarRental() {
               )}
             </div>
             <div className="mx-3 w-1/5">
-              <Label>Pick-up Date</Label>
+              <Label>{t('Rental.StartDate')}</Label>
               <DatePicker
                 className="w-full rounded px-2 h-9"
                 selected={startDate}
@@ -117,7 +117,7 @@ export function CarRental() {
               />
             </div>
             <div className="mx-3 w-1/5">
-              <Label>Return Date</Label>
+              <Label>{t('Rental.EndDate')}</Label>
               <DatePicker
                 className="w-full rounded px-2 h-9"
                 selected={endDate}
@@ -134,7 +134,7 @@ export function CarRental() {
                 type="submit"
                 className="bg-yellow-300 hover:bg-yellow-400 p-4 rounded-lg text-xl font-semibold"
               >
-                Search
+                {t('Rental.Search')}
               </button>
             </div>
           </div>

@@ -1,5 +1,36 @@
 {
     "Rental": {
-        "Start": "Start a Reservation"
+        "Start": "Start a Reservation",
+        "Location": "Location",
+        "StartDate": "Pick-up date",
+        "EndDate": "Return date",
+        "Search": "Search",
+        "SelectVehicle": "Select a Vehicle",
+        "Filters": "Filters",
+        "Vehicle": {
+            "Similar": "or similar",
+            "Seats_one": "{{count}} seat",
+            "Seats_other": "{{count}} seats",
+            "Bags_one": "{{count}} bag",
+            "Bags_other": "{{count}} bags",
+            "Price": "{{price }} / day",
+            "Select": "Select"
+        },
+        "Protection": {
+          "Select": "Choose your protection",
+              "Basic": {
+                  "Name": "Basic Cover Protection",
+                  "Description": "Avoid paying for damage or theft of your rental vehicle."    
+              },
+              "Standard": {
+                  "Name": "Standard Cover Protection",
+                  "Description": "Protect yourself from third party accident or injury claims up to $1M."
+              },
+              "Total": {
+                  "Name": "Full Cover Protection",
+                  "Description": "Free 24/7 roadside assistance for flat tires, lost keys and dead battery."
+              },
+              "Next": "Next"
+        }
       }
 }
