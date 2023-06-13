@@ -2,6 +2,7 @@ import { useEffect, useState } from 'react';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 const Input = ({ name, value, onChange }) => (
   <input
@@ -68,11 +69,13 @@ export function CarRental() {
     }
   };
 
+  const { t } = useTranslation();
+
   return (
     <>
       <div className="bg-blue-900 p-4">
         <h2 className="text-2xl text-white font-semibold">
-          Start a Reservation
+          {t('Rental.Start')}
         </h2>
         <form onSubmit={onSubmit}>
           <div className="my-4 flex items-end">
@@ -140,4 +143,3 @@ export function CarRental() {
     </>
   );
 }
-

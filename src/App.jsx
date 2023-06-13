@@ -9,6 +9,8 @@ import { SeatSelection } from './Pages/Passenger/SeatSelection';
 import { Summary } from './Pages/Passenger/Summary';
 import { PassengerInfo } from './Pages/Passenger/PassengerInfo';
 
+import './i18n/i18n';
+
 function App() {
   const [count, setCount] = useState(0);
 
