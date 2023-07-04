@@ -1,3 +1,5 @@
+import { useTranslation } from 'react-i18next';
+
 export const ProtectionItem = ({
   title,
   items,
@@ -10,6 +12,8 @@ export const ProtectionItem = ({
       ? setProtection({ title, price })
       : setProtection(null);
   };
+
+  const { t } = useTranslation();
 
   return (
     <div
@@ -27,7 +31,9 @@ export const ProtectionItem = ({
         ))}
       </div>
       <div className="my-2">
-        <p className="text-center font-bold text-blue-500">${price} / day</p>
+        <p className="text-center font-bold text-blue-500">
+          ${t('Rental.Protection.Price', { price })}
+        </p>
       </div>
     </div>
   );

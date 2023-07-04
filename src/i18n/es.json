@@ -30,7 +30,33 @@
                 "Name": "Cobertura Total",
                 "Description": "Asistencia gratuita 24/7 para neumáticos pinchados, pérdida de llaves y batería descargada."
             },
+            "Price": "{{price }} / día",
             "Next": "Siguiente"
+        },
+        "Review": {
+            "Title": "Revisar y reservar",
+            "Book": "Reservar",
+            "Driver": {
+                "Title": "Datos del conductor",
+                "Name": "Nombre",
+                "Email": "Email"
+            },
+            "Payment": {
+                "Method": "Método de pago",
+                "Card": {
+                    "Number": "Número de tarjeta",
+                    "Holder": "Nombre del titular",
+                    "Month": "Mes",
+                    "Year": "Año",
+                    "CVV": "Código seguridad"
+                }
+            }
+        },
+        "Order": {
+            "Unlimited": "Millas ilimitadas",
+            "Tires": "Tasa de neumáticos y baterías",
+            "Rental": "Recargo de alquiler",
+            "License": "Impuesto de circulación"
         }
       }
 }

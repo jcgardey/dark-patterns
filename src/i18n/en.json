@@ -30,7 +30,33 @@
                   "Name": "Full Cover Protection",
                   "Description": "Free 24/7 roadside assistance for flat tires, lost keys and dead battery."
               },
+              "Price": "{{price }} / day",
               "Next": "Next"
+        },
+        "Review": {
+            "Title": "Review and book",
+            "Book": "Pay and book",
+            "Driver": {
+                "Title": "Driver details",
+                "Name": "Name",
+                "Email": "Email"
+            },
+            "Payment": {
+                "Method": "Payment Method",
+                "Card": {
+                    "Number": "Card number",
+                    "Holder": "Cardholder name",
+                    "Month": "Month",
+                    "Year": "Year",
+                    "CVV": "CVV"
+                }
+            }
+        },
+        "Order": {
+            "Unlimited": "Unlimited miles",
+            "Tires": "Tires and battery fee",
+            "Rental": "Rental surcharge",
+            "License": "Vehicle license fee"
         }
       }
 }
