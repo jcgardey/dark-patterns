@@ -14,7 +14,11 @@
             "Bags_one": "{{count}} bag",
             "Bags_other": "{{count}} bags",
             "Price": "{{price }} / day",
-            "Select": "Select"
+            "Select": "Select",
+            "Filters" : {
+                "Title": "Filters",
+                "Type": "Vehicle Type"
+            }
         },
         "Protection": {
           "Select": "Choose your protection",

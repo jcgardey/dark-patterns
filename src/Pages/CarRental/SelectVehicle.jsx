@@ -11,6 +11,7 @@ import { useEffect, useState } from 'react';
 import { dateString } from '../../utils/date';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { CarFilters } from '../../components/CarRent/CarFilters';
 
 const Vehicle = ({ vehicle, onSelect }) => {
   const { t } = useTranslation();
@@ -61,6 +62,7 @@ export const SelectVehicle = ({}) => {
   const vehicles = [
     {
       name: 'Standard SUV',
+      type: 'suv',
       description: 'Ford Edge',
       capacity: 5,
       price: 357.15,
@@ -68,6 +70,7 @@ export const SelectVehicle = ({}) => {
     },
     {
       name: 'Standard',
+      type: 'sedan',
       description: 'VW Jetta',
       capacity: 5,
       price: 357.35,
@@ -75,6 +78,7 @@ export const SelectVehicle = ({}) => {
     },
     {
       name: 'Convertible',
+      type: 'convertible',
       description: 'Ford Mustang',
       capacity: 4,
       price: 357.65,
@@ -82,6 +86,7 @@ export const SelectVehicle = ({}) => {
     },
     {
       name: 'Pickup',
+      type: 'pickup',
       description: 'Ford F150',
       capacity: 4,
       price: 357.65,
@@ -89,6 +94,7 @@ export const SelectVehicle = ({}) => {
     },
     {
       name: 'Sporty Car',
+      type: 'sporty',
       description: 'Dodge Challenger',
       capacity: 4,
       price: 357.65,
@@ -96,6 +102,7 @@ export const SelectVehicle = ({}) => {
     },
     {
       name: 'Standard Pickup',
+      type: 'pickup',
       capacity: 4,
       price: 357.65,
       img: standard_pickup,
@@ -117,6 +124,16 @@ export const SelectVehicle = ({}) => {
 
   const { t, i18n } = useTranslation();
 
+  const initialFilters = { type: [] };
+  const [filters, setFilters] = useState(initialFilters);
+
+  const filterVehicles = (vehicles) => {
+    if (filters.type.length == 0) {
+      return vehicles;
+    }
+    return vehicles.filter((v) => filters.type.includes(v.type));
+  };
+
   return (
     <div className="bg-blue-950 p-4">
       <div className="mx-auto w-2/5">
@@ -132,13 +149,11 @@ export const SelectVehicle = ({}) => {
         {t('Rental.SelectVehicle')}
       </h2>
       <div className="flex my-4">
-        <div className="w-1/5 border border-color-white rounded p-2">
-          <h3 className="text-center text-2xl text-white font-medium">
-            {t('Rental.Filters')}
-          </h3>
+        <div className="w-1/5">
+          <CarFilters filters={filters} setFilters={setFilters} />
         </div>
         <div className="w-4/5">
-          {vehicles.map((vehicle, i) => (
+          {filterVehicles(vehicles).map((vehicle, i) => (
             <Vehicle key={i} vehicle={vehicle} onSelect={onSelect} />
           ))}
         </div>
