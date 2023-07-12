@@ -92,10 +92,10 @@ export const SelectProtection = () => {
               </p>
             </div>
             <div className="border-b p-1 my-2">
-              <OrderItem description="Unlimited miles" />
-              <OrderItem description="Tire and Battery Fee" />
-              <OrderItem description="Rental surcharge" />
-              <OrderItem description="Vehicle License Fee" />
+              <OrderItem description={t('Rental.Review.Order.Unlimited')} />
+              <OrderItem description={t('Rental.Review.Order.Tires')} />
+              <OrderItem description={t('Rental.Review.Order.Rental')} />
+              <OrderItem description={t('Rental.Review.Order.License')} />
               {protection !== null && (
                 <OrderItem description={protection.title} />
               )}

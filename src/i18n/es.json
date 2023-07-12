@@ -31,7 +31,13 @@
                 "Description": "Asistencia gratuita 24/7 para neumáticos pinchados, pérdida de llaves y batería descargada."
             },
             "Price": "{{price }} / día",
-            "Next": "Siguiente"
+            "Next": "Siguiente",
+            "NoProtection": {
+                "Title": "Continuar sin protección adicional?",
+                "Description": "Usted es responsable de los daños o el robo del vehículo hasta el valor total del vehículo de alquiler más los gastos administrativos. Es posible que su seguro personal o su tarjeta de crédito no cubran totalmente este viaje.",
+                "Add": "Agregar protección",
+                "Skip": "Continuar sin protección"
+            }
         },
         "Review": {
             "Title": "Revisar y reservar",
@@ -48,15 +54,15 @@
                     "Holder": "Nombre del titular",
                     "Month": "Mes",
                     "Year": "Año",
-                    "CVV": "Código seguridad"
+                    "CVV": "Código de seguridad"
                 }
+            },
+            "Order": {
+                "Unlimited": "Millas ilimitadas",
+                "Tires": "Tasa de neumáticos y baterías",
+                "Rental": "Recargo de alquiler",
+                "License": "Impuesto de circulación"
             }
-        },
-        "Order": {
-            "Unlimited": "Millas ilimitadas",
-            "Tires": "Tasa de neumáticos y baterías",
-            "Rental": "Recargo de alquiler",
-            "License": "Impuesto de circulación"
         }
       }
 }

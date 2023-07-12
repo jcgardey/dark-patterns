@@ -3,17 +3,11 @@ import { OrderItem } from '../../Components/CarRent/OrderItem';
 import { TotalPrice } from '../../Components/CarRent/TotalPrice';
 import { BackIcon } from '../../Components/Icons/BackIcon';
 import { useTranslation } from 'react-i18next';
+import { dateString } from '../../utils/date';
 
 const Reservation = () => {
   const reservation = JSON.parse(localStorage.getItem('reservation'));
-
-  const toLocalDate = (aString) =>
-    new Date(aString).toLocaleDateString('en', {
-      weekday: 'short',
-      year: 'numeric',
-      month: 'short',
-      day: 'numeric',
-    });
+  const { t, i18n } = useTranslation();
 
   return (
     <div className="shadow-lg p-4">
@@ -23,11 +17,19 @@ const Reservation = () => {
       </div>
       <div className="border-b p-2">
         <p className="text-center font-semibold my-2">{reservation.location}</p>
-        <p className="text-sm">{toLocalDate(reservation.startDate)}</p>
-        <p className="text-sm">{toLocalDate(reservation.endDate)}</p>
+        <p className="text-sm">
+          {dateString(new Date(reservation.startDate), i18n.language)}
+        </p>
+        <p className="text-sm">
+          {dateString(new Date(reservation.endDate), i18n.language)}
+        </p>
       </div>
       {reservation.protection && (
         <div className="border-b">
+          <OrderItem description={t('Rental.Review.Order.Unlimited')} />
+          <OrderItem description={t('Rental.Review.Order.Tires')} />
+          <OrderItem description={t('Rental.Review.Order.Rental')} />
+          <OrderItem description={t('Rental.Review.Order.License')} />
           <OrderItem description={reservation.protection?.title} />
         </div>
       )}
@@ -75,23 +77,23 @@ export const Review = ({}) => {
             <h4 className="text-xl">{t('Rental.Review.Payment.Method')}</h4>
             <div className="flex my-2">
               <div className="mr-2">
-                <label>{t('Rental.Review.Driver.Payment.Card.Number')}</label>
+                <label>{t('Rental.Review.Payment.Card.Number')}</label>
                 <Input />
               </div>
               <div className="mr-8">
-                <label>{t('Rental.Review.Driver.Payment.Card.Holder')}</label>
+                <label>{t('Rental.Review.Payment.Card.Holder')}</label>
                 <Input />
               </div>
               <div className="mr-2 w-1/12">
-                <label>{t('Rental.Review.Driver.Payment.Card.Month')}</label>
+                <label>{t('Rental.Review.Payment.Card.Month')}</label>
                 <Input />
               </div>
               <div className="mr-2 w-1/12">
-                <label>{t('Rental.Review.Driver.Payment.Card.Year')}</label>
+                <label>{t('Rental.Review.Payment.Card.Year')}</label>
                 <Input />
               </div>
-              <div className="mr-2 w-1/12">
-                <label>{t('Rental.Review.Driver.Payment.Card.CVV')}</label>
+              <div className="mr-2 w-2/12">
+                <label>{t('Rental.Review.Payment.Card.CVV')}</label>
                 <Input />
               </div>
             </div>
