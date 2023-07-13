@@ -29,27 +29,14 @@ const FilterGroup = ({
   );
 };
 
-export const CarFilters = ({ filters, setFilters }) => {
+export const CarFilters = ({ availableFilters, filters, setFilters }) => {
   const { t } = useTranslation();
 
-  const availableFilters = {
-    type: [
-      { value: 'sedan', label: 'Sedan' },
-      { value: 'suv', label: 'SUV' },
-      { value: 'coupe', label: 'Coupe' },
-      { value: 'convertible', label: 'Convertible' },
-      { value: 'pickup', label: 'Pickup' },
-    ],
-    seats: [
-      { value: 2, label: '2+' },
-      { value: 4, label: '4+' },
-    ],
-  };
-
   const toggleFilter = (filterName, value) => {
-    const newFilters = filters[filterName].includes(value)
-      ? filters[filterName].filter((val) => val !== value)
-      : [...filters[filterName], value];
+    const newValue = parseInt(value) ? parseInt(value) : value;
+    const newFilters = filters[filterName].includes(newValue)
+      ? filters[filterName].filter((val) => val !== newValue)
+      : [...filters[filterName], newValue];
 
     setFilters({ ...filters, [filterName]: newFilters });
   };
@@ -63,6 +50,13 @@ export const CarFilters = ({ filters, setFilters }) => {
           name="type"
           availableFilters={availableFilters.type}
           selectedFilters={filters.type}
+          toggleFilter={toggleFilter}
+        />
+        <FilterGroup
+          title={t('Rental.Vehicle.Filters.Seats')}
+          name="seats"
+          availableFilters={availableFilters.seats}
+          selectedFilters={filters.seats}
           toggleFilter={toggleFilter}
         />
       </h3>

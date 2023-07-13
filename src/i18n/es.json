@@ -16,7 +16,8 @@
             "Select": "Seleccionar",
             "Filters" : {
                 "Title": "Filtros",
-                "Type": "Tipo de Vehiculo"
+                "Type": "Tipo de Vehiculo",
+                "Seats": "Asientos"
             }
         },
         "Protection": {

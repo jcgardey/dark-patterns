@@ -124,14 +124,41 @@ export const SelectVehicle = ({}) => {
 
   const { t, i18n } = useTranslation();
 
-  const initialFilters = { type: [] };
+  const availableFilters = {
+    type: [
+      { value: 'sedan', label: 'Sedan' },
+      { value: 'suv', label: 'SUV' },
+      { value: 'coupe', label: 'Coupe' },
+      { value: 'convertible', label: 'Convertible' },
+      { value: 'pickup', label: 'Pickup' },
+    ],
+    seats: [
+      { value: 2, label: '2+' },
+      { value: 4, label: '4+' },
+      { value: 6, label: '6+' },
+    ],
+  };
+
+  const initialFilters = { type: [], seats: [] };
   const [filters, setFilters] = useState(initialFilters);
 
+  const miniumCapacity = () => {
+    const minimum = filters.seats.reduce(
+      (acc, seat) => (seat < acc ? seat : acc),
+      16
+    );
+    return minimum === 16 ? 0 : minimum;
+  };
+
   const filterVehicles = (vehicles) => {
-    if (filters.type.length == 0) {
-      return vehicles;
-    }
-    return vehicles.filter((v) => filters.type.includes(v.type));
+    const targetTypes =
+      filters.type.length == 0
+        ? availableFilters.type.map((filter) => filter.value)
+        : filters.type;
+
+    return vehicles.filter(
+      (v) => targetTypes.includes(v.type) && v.capacity >= miniumCapacity()
+    );
   };
 
   return (
@@ -150,7 +177,11 @@ export const SelectVehicle = ({}) => {
       </h2>
       <div className="flex my-4">
         <div className="w-1/5">
-          <CarFilters filters={filters} setFilters={setFilters} />
+          <CarFilters
+            availableFilters={availableFilters}
+            filters={filters}
+            setFilters={setFilters}
+          />
         </div>
         <div className="w-4/5">
           {filterVehicles(vehicles).map((vehicle, i) => (
