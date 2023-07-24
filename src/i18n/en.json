@@ -67,6 +67,11 @@
                 "Tires": "Tires and battery fee",
                 "Rental": "Rental surcharge",
                 "License": "Vehicle license fee"
+            },
+            "Confirmation": {
+                "Title": "Reservation Confirmed",
+                "Message": "Details will be sent to {{email}}.",
+                "Close": "You may close this window"
             }
         }
       }

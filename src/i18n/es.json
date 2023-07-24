@@ -66,6 +66,11 @@
                 "Tires": "Tasa de neumáticos y baterías",
                 "Rental": "Recargo de alquiler",
                 "License": "Impuesto de circulación"
+            },
+            "Confirmation": {
+                "Title": "Reserva Confirmada",
+                "Message": "Los datos de la reserva seran enviados a {{email}}.",
+                "Close": "Puede cerrar esta ventana"
             }
         }
       }
