@@ -7,6 +7,9 @@ import { dateString } from '../../utils/date';
 import { Modal } from '../../components/Modal';
 import { ReservationConfirmed } from '../../components/CarRent/ReservationConfirmed';
 import { useState } from 'react';
+import { useForm } from 'react-hook-form';
+import { TextInput } from '../../components/CarRent/TextInput';
+import { data } from 'autoprefixer';
 
 const Reservation = () => {
   const reservation = JSON.parse(localStorage.getItem('reservation'));
@@ -41,20 +44,21 @@ const Reservation = () => {
   );
 };
 
-const Input = () => (
-  <input
-    className="w-full h-10 border-2 border-blue-800 rounded p-2"
-    type="text"
-  />
-);
-
 export const Review = ({}) => {
   const { t } = useTranslation();
   const [confirmed, setConfirmed] = useState(false);
-  const onSubmit = (e) => {
-    e.preventDefault();
+  const onSubmit = (data) => {
     setConfirmed(true);
   };
+
+  const {
+    register,
+    handleSubmit,
+    getValues,
+    formState: { errors },
+  } = useForm();
+
+  const inputClass = 'w-full h-10 border-2 border-blue-800 rounded p-2';
 
   return (
     <div className="w-10/12 mx-auto py-4">
@@ -67,17 +71,32 @@ export const Review = ({}) => {
         </h2>
       </div>
       <div className="flex">
-        <form onSubmit={onSubmit}>
+        <form onSubmit={handleSubmit(onSubmit)}>
           <div className="my-6 w-1/3">
             <h4 className="text-xl">{t('Rental.Review.Driver.Title')}</h4>
             <div className="my-4">
               <div className="my-3">
                 <label className="">{t('Rental.Review.Driver.Name')}</label>
-                <Input />
+                <TextInput
+                  name={'driver'}
+                  className={inputClass}
+                  register={register}
+                  rules={{ required: true }}
+                  errors={errors.driver}
+                />
               </div>
               <div className="my-3">
                 <label>{t('Rental.Review.Driver.Email')}</label>
-                <Input />
+                <TextInput
+                  name={'email'}
+                  className={inputClass}
+                  register={register}
+                  rules={{
+                    required: true,
+                    pattern: /^[\w-\.]+@([\w-]+\.)+[\w-]{2,4}$/,
+                  }}
+                  errors={errors.email}
+                />
               </div>
             </div>
           </div>
@@ -86,23 +105,57 @@ export const Review = ({}) => {
             <div className="flex my-2">
               <div className="mr-2">
                 <label>{t('Rental.Review.Payment.Card.Number')}</label>
-                <Input />
+                <TextInput
+                  name={'card.number'}
+                  className={inputClass}
+                  register={register}
+                  rules={{
+                    required: true,
+                    pattern:
+                      /^(?:(4[0-9]{12}(?:[0-9]{3})?)|(5[1-5][0-9]{14})|(6(?:011|5[0-9]{2})[0-9]{12})|(3[47][0-9]{13})|(3(?:0[0-5]|[68][0-9])[0-9]{11})|((?:2131|1800|35[0-9]{3})[0-9]{11}))$/,
+                  }}
+                  errors={errors.card?.number}
+                />
               </div>
               <div className="mr-8">
                 <label>{t('Rental.Review.Payment.Card.Holder')}</label>
-                <Input />
+                <TextInput
+                  name={'card.holder'}
+                  className={inputClass}
+                  register={register}
+                  rules={{ required: true }}
+                  errors={errors.card?.holder}
+                />
               </div>
               <div className="mr-2 w-1/12">
                 <label>{t('Rental.Review.Payment.Card.Month')}</label>
-                <Input />
+                <TextInput
+                  name={'card.month'}
+                  className={inputClass}
+                  register={register}
+                  rules={{ required: true }}
+                  errors={errors.card?.month}
+                />
               </div>
               <div className="mr-2 w-1/12">
                 <label>{t('Rental.Review.Payment.Card.Year')}</label>
-                <Input />
+                <TextInput
+                  name={'card.year'}
+                  className={inputClass}
+                  register={register}
+                  rules={{ required: true }}
+                  errors={errors.card?.year}
+                />
               </div>
               <div className="mr-2 w-2/12">
                 <label>{t('Rental.Review.Payment.Card.CVV')}</label>
-                <Input />
+                <TextInput
+                  name={'card.cvv'}
+                  className={inputClass}
+                  register={register}
+                  rules={{ required: true }}
+                  errors={errors.card?.cvv}
+                />
               </div>
             </div>
           </div>
@@ -116,7 +169,7 @@ export const Review = ({}) => {
       </div>
       {confirmed && (
         <Modal title={t('Rental.Review.Confirmation.Title')}>
-          <ReservationConfirmed email="test@hotmail.com" />
+          <ReservationConfirmed email={getValues('email')} />
         </Modal>
       )}
     </div>

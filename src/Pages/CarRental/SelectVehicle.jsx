@@ -162,7 +162,7 @@ export const SelectVehicle = ({}) => {
   };
 
   return (
-    <div className="bg-blue-950 p-4">
+    <div className="bg-blue-950 p-4 min-h-screen">
       <div className="mx-auto w-2/5">
         <div className="bg-blue-900 flex justify-center text-white text-lg p-1">
           <p className="mx-2">{reservation.location}</p>
@@ -176,7 +176,7 @@ export const SelectVehicle = ({}) => {
         {t('Rental.SelectVehicle')}
       </h2>
       <div className="flex my-4">
-        <div className="w-1/5">
+        <div className="w-1/5 my-4">
           <CarFilters
             availableFilters={availableFilters}
             filters={filters}
