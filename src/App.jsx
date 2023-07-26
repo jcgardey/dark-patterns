@@ -23,7 +23,7 @@ function App() {
           <Route path="/car_rental/protection" element={<SelectProtection />} />
           <Route path="/car_rental/review" element={<Review />} />
 
-          <Route path="/check_in/passenger" element={<PassengerInfo />} />
+          <Route path="/check_in" element={<PassengerInfo />} />
           <Route path="/check_in/seat" element={<SeatSelection />} />
           <Route path="/check_in/summary" element={<Summary />} />
         </Routes>
