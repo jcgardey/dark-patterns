@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import './App.css';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { CarRental } from './Pages/CarRental/CarRental';
@@ -13,6 +13,15 @@ import './i18n/i18n';
 
 function App() {
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    const params = new URLSearchParams(document.location.search);
+    if (params.get('enabled') === 'true') {
+      localStorage.setItem('dark', true);
+    } else if (params.get('enabled') === 'false') {
+      localStorage.removeItem('dark');
+    }
+  }, []);
 
   return (
     <>

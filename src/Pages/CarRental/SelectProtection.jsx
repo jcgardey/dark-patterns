@@ -25,7 +25,8 @@ export const SelectProtection = () => {
     (reservation.vehicle.price + (protection?.price || 0));
 
   const onNext = () => {
-    protection === null ? setShowModal(true) : checkout();
+    const dark = localStorage.getItem('dark');
+    dark === 'true' && protection === null ? setShowModal(true) : checkout();
   };
 
   const checkout = () => {
