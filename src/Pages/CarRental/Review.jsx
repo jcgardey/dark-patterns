@@ -58,7 +58,7 @@ export const Review = ({}) => {
     formState: { errors },
   } = useForm();
 
-  const inputClass = 'w-full h-10 border-2 border-blue-800 rounded p-2';
+  const inputClass = 'w-full h-10 border-2 border-sky-800 rounded p-2';
 
   return (
     <div className="w-10/12 mx-auto py-4">
@@ -159,7 +159,7 @@ export const Review = ({}) => {
               </div>
             </div>
           </div>
-          <button className="w-1/4 bg-blue-800 hover:bg-blue-700 text-white text-xl rounded p-2">
+          <button className="w-1/4 bg-sky-800 hover:bg-sky-700 text-white text-xl rounded p-2">
             {t('Rental.Review.Book')}
           </button>
         </form>

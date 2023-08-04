@@ -75,14 +75,14 @@ export function CarRental() {
 
   const Card = ({ title, description, className }) => (
     <div className={`p-4 bg-white box-shadow ${className}`}>
-      <h4 className="font-bold text-blue-900 text-xl my-2">{title}</h4>
-      <p className="text-blue-900 font-medium">{description}</p>
+      <h4 className="font-bold text-sky-900 text-xl my-2">{title}</h4>
+      <p className="text-sky-900 font-medium">{description}</p>
     </div>
   );
 
   return (
     <>
-      <div className="bg-blue-900 p-4">
+      <div className="bg-sky-900 p-4">
         <h2 className="text-2xl text-white font-semibold">
           {t('Rental.Start')}
         </h2>

@@ -22,7 +22,7 @@ const Vehicle = ({ vehicle, onSelect }) => {
       className="bg-white p-4 flex w-4/5 mx-auto my-3"
     >
       <div className="w-1/3">
-        <h3 className="text-blue-800 text-2xl font-bold">{vehicle.name}</h3>
+        <h3 className="text-sky-800 text-2xl font-bold">{vehicle.name}</h3>
         <p className="my-1 text-grey-800 italic">
           {vehicle.description} {t('Rental.Vehicle.Similar')}
         </p>
@@ -43,10 +43,10 @@ const Vehicle = ({ vehicle, onSelect }) => {
         <img src={vehicle.img} />
       </div>
       <div className="w-1/3">
-        <p className="text-2xl text-center font-bold text-blue-500 my-2">
+        <p className="text-2xl text-center font-bold text-sky-500 my-2">
           &#36;{t('Rental.Vehicle.Price', { price: vehicle.price })}
         </p>
-        <button className="w-full bg-blue-800 text-white py-2">
+        <button className="w-full bg-sky-800 text-white py-2">
           {t('Rental.Vehicle.Select')}
         </button>
       </div>
@@ -162,9 +162,9 @@ export const SelectVehicle = ({}) => {
   };
 
   return (
-    <div className="bg-blue-950 p-4 min-h-screen">
+    <div className="bg-sky-950 p-4 min-h-screen">
       <div className="mx-auto w-2/5">
-        <div className="bg-blue-900 flex justify-center text-white text-lg p-1">
+        <div className="bg-sky-900 flex justify-center text-white text-lg p-1">
           <p className="mx-2">{reservation.location}</p>
           <p className="mx-2">
             {dateString(new Date(reservation.startDate), i18n.language)} -{' '}
