@@ -4,6 +4,8 @@ import 'react-datepicker/dist/react-datepicker.css';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
+import car_illustration from '../../assets/CarRental/car_illustration.avif';
+
 const Input = ({ name, value, onChange }) => (
   <input
     type="text"
@@ -70,6 +72,13 @@ export function CarRental() {
   };
 
   const { t } = useTranslation();
+
+  const Card = ({ title, description, className }) => (
+    <div className={`p-4 bg-white box-shadow ${className}`}>
+      <h4 className="font-bold text-blue-900 text-xl my-2">{title}</h4>
+      <p className="text-blue-900 font-medium">{description}</p>
+    </div>
+  );
 
   return (
     <>
@@ -139,6 +148,26 @@ export function CarRental() {
             </div>
           </div>
         </form>
+      </div>
+      <div className="h-screen bg-sky-800 p-8">
+        <img className="w-1/2 mx-auto" src={car_illustration} />
+        <div className="w-3/4 mx-auto my-4">
+          <h2 className="text-white font-bold text-3xl border-b p-2">
+            {t('Rental.Featured.Title')}
+          </h2>
+          <div className="flex justify-between my-4">
+            <Card
+              title={t('Rental.Featured.Last_Minute.Title')}
+              description={t('Rental.Featured.Last_Minute.Description')}
+              className="w-1/3"
+            />
+            <Card
+              title={t('Rental.Featured.Plan_Ahead.Title')}
+              description={t('Rental.Featured.Plan_Ahead.Description')}
+              className="w-1/3"
+            />
+          </div>
+        </div>
       </div>
     </>
   );

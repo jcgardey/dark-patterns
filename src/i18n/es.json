@@ -5,6 +5,17 @@
         "StartDate": "Fecha de recogida",
         "EndDate": "Fecha de devolución",
         "Search": "Buscar",
+        "Featured": {
+            "Title": "Ofertas destacadas",
+            "Last_Minute": {
+                "Title": "Ofertas especiales de ultimo minuto",
+                "Description": "Revisa las increíbles ofertas especiales de último minuto en alquiler de autos para alquileres diarios y semanales en EE. UU. y Canadá."
+            },
+            "Plan_Ahead": {
+                "Title": "Ofertas especiales por anticipacion",
+                "Description": "Reserva tu próximo auto de alquiler por adelantado con las ofertas especiales por planificar con anticipación y ahorra dinero en alquileres en EE. UU. y Canadá."
+            }
+        },
         "SelectVehicle": "Seleccionar un Vehículo",
         "Vehicle": {
             "Similar": "o similar",

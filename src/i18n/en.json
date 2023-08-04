@@ -5,6 +5,17 @@
         "StartDate": "Pick-up date",
         "EndDate": "Return date",
         "Search": "Search",
+        "Featured": {
+            "Title": "Feature Car Rental Deals",
+            "Last_Minute": {
+                "Title": "Last Minute Specials",
+                "Description": "Check out great last minute car rental specials for daily and weekly rentals in the U.S and Canada."
+            },
+            "Plan_Ahead": {
+                "Title": "Plan Ahead Specials",
+                "Description": "Book your next rental car in advance with Plan Ahead Specials and save money on rentals in the U.S and Canada."
+            }
+        },
         "SelectVehicle": "Select a Vehicle",
         "Filters": "Filters",
         "Vehicle": {
