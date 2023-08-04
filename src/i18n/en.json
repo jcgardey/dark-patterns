@@ -5,8 +5,14 @@
         "StartDate": "Pick-up date",
         "EndDate": "Return date",
         "Search": "Search",
+        "NavBar": {
+            "Reservations": "Reservations",
+            "Deals": "Deals",
+            "Vehicles": "Vehicles",
+            "Locations": "Locations"
+        },
         "Featured": {
-            "Title": "Feature Car Rental Deals",
+            "Title": "Featured Car Rental Deals",
             "Last_Minute": {
                 "Title": "Last Minute Specials",
                 "Description": "Check out great last minute car rental specials for daily and weekly rentals in the U.S and Canada."

@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 
 import car_illustration from '../../assets/CarRental/car_illustration.avif';
+import { NavBar } from '../../components/CarRent/NavBar';
 
 const Input = ({ name, value, onChange }) => (
   <input
@@ -82,6 +83,7 @@ export function CarRental() {
 
   return (
     <>
+      <NavBar />
       <div className="bg-sky-900 p-4">
         <h2 className="text-2xl text-white font-semibold">
           {t('Rental.Start')}

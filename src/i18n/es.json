@@ -5,6 +5,12 @@
         "StartDate": "Fecha de recogida",
         "EndDate": "Fecha de devolución",
         "Search": "Buscar",
+        "NavBar": {
+            "Reservations": "Reservas",
+            "Deals": "Ofertas",
+            "Vehicles": "Vehiculos",
+            "Locations": "Oficinas"
+        },
         "Featured": {
             "Title": "Ofertas destacadas",
             "Last_Minute": {
