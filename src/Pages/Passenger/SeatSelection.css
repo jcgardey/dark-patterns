@@ -212,7 +212,7 @@
 	a.back-button{
 		cursor: pointer;
 	}
-	button[type=submit].passenger:disabled{
+	button.passenger:disabled{
 		background-color: #b5babe;
 		color: rgb(101,101,101);
 		cursor: not-allowed;

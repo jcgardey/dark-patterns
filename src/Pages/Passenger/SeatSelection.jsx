@@ -10,14 +10,19 @@ export const SeatSelection = () => {
   const [seat, setSeat] = useState(localStorage.getItem('seat-id'));
   const navigate = useNavigate();
 
+  const dark = localStorage.getItem('dark') == 'true';
+
   const saveSeat = (e) => {
     e.preventDefault();
-    if (seat !== null) {
+    if (dark && seat !== null) {
       let price = 10000;
       if (seat.isVIP) price = 30000;
       if (seat.save) price = 6000;
       localStorage.setItem('seat-price', price);
       localStorage.setItem('seat-id', seat.value);
+      navigate('/check_in/summary');
+    } else if (!dark) {
+      skipSeat();
       navigate('/check_in/summary');
     }
   };
@@ -87,13 +92,20 @@ export const SeatSelection = () => {
             </div>
           </div>
           <div className="my-6 flex buttons justify-around items-center">
-            <div className="w-1/2 skip">
-              <Link to="/check_in/summary" onClick={skipSeat}>
-                No deseo elegir mi asiento
-              </Link>
-            </div>
+            {dark && (
+              <div className="w-1/2 skip">
+                <Link to="/check_in/summary" onClick={skipSeat}>
+                  No deseo elegir mi asiento
+                </Link>
+              </div>
+            )}
             <div className="w-1/3">
-              <PrimaryButton disabled={seat === null}>Continuar</PrimaryButton>
+              <PrimaryButton
+                className="passenger"
+                disabled={dark && seat === null}
+              >
+                Continuar
+              </PrimaryButton>
             </div>
           </div>
         </form>

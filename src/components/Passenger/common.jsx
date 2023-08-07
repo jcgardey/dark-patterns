@@ -4,9 +4,15 @@ export const PageTitle = ({ children }) => (
   <p className="bg-sky-700 text-white font-bold p-1">{children}</p>
 );
 
-export const PrimaryButton = ({ children, type, disabled = false }) => (
+export const PrimaryButton = ({
+  children,
+  className = '',
+  type,
+  disabled = false,
+  onClick,
+}) => (
   <button
-    className="text-white bg-sky-700 hover:bg-sky-700 rounded w-full p-2"
+    className={`text-white bg-sky-700 hover:bg-sky-700 rounded w-full p-2 ${className}`}
     type={type}
     disabled={disabled}
   >
