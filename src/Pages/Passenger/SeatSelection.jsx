@@ -35,6 +35,10 @@ export const SeatSelection = () => {
     localStorage.setItem('seat-id', null);
   };
 
+  useEffect(() => {
+    document.title = t('Checkin.Seat.Title');
+  }, []);
+
   return (
     <div className="w-11/12 mx-auto">
       <div className="w-3/4">

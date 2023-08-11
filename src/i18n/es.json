@@ -148,7 +148,8 @@
                 "November": "Noviembre",
                 "December": "Diciembre"
             }
-        }
+        },
+        "RequiredField": "{{ field}} es requerido"
 
     }
 }

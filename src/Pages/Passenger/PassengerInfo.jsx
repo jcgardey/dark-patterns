@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { useForm } from 'react-hook-form';
 import { DateSelects } from '../../components/Form/DateSelects';
 import { Input } from '../../components/Form/Input';
@@ -42,6 +42,10 @@ export const PassengerInfo = ({}) => {
   const onError = () => {
     // do something
   };
+
+  useEffect(() => {
+    document.title = t('Checkin.Passenger.Title');
+  }, []);
 
   return (
     <div className="w-11/12 mx-auto">

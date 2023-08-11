@@ -19,6 +19,10 @@ export const Summary = () => {
 
   const { t } = useTranslation();
 
+  useEffect(() => {
+    document.title = t('Checkin.Summary.Title');
+  }, []);
+
   return (
     <div className="w-11/12 mx-auto">
       <div className="w-3/4">
