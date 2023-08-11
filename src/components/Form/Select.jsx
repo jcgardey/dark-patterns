@@ -1,5 +1,6 @@
 import React from 'react';
 import { Field } from './Field';
+import { useTranslation } from 'react-i18next';
 
 export const Select = ({
   name,
@@ -36,17 +37,20 @@ export const SelectInput = ({
   register,
   errors,
   ...props
-}) => (
-  <select
-    {...register(name, { required: required || false })}
-    className={`form-input${errors !== undefined ? ' error' : ''}`}
-    disabled={disabled || false}
-    defaultValue={defaultValue}
-    {...props}
-  >
-    <option value="">{label || 'Seleccionar'}</option>
-    {options.map((option) => (
-      <option key={option}>{option}</option>
-    ))}
-  </select>
-);
+}) => {
+  const { t } = useTranslation();
+  return (
+    <select
+      {...register(name, { required: required || false })}
+      className={`form-input${errors !== undefined ? ' error' : ''}`}
+      disabled={disabled || false}
+      defaultValue={defaultValue}
+      {...props}
+    >
+      <option value="">{label || t('Common.Select')}</option>
+      {options.map((option) => (
+        <option key={option}>{option}</option>
+      ))}
+    </select>
+  );
+};

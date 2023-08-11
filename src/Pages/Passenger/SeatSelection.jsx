@@ -5,10 +5,13 @@ import { SeatsRow } from '../../components/Passenger/SeatsRow';
 import { useState } from 'react';
 import { seatRows } from './seats';
 import { PageTitle, PrimaryButton } from '../../components/Passenger/common';
+import { useTranslation } from 'react-i18next';
 
 export const SeatSelection = () => {
   const [seat, setSeat] = useState(localStorage.getItem('seat-id'));
   const navigate = useNavigate();
+
+  const { t } = useTranslation();
 
   const dark = localStorage.getItem('dark') == 'true';
 
@@ -35,7 +38,7 @@ export const SeatSelection = () => {
   return (
     <div className="w-11/12 mx-auto">
       <div className="w-3/4">
-        <PageTitle>Selección de Asiento</PageTitle>
+        <PageTitle>{t('Checkin.Seat.Title')}</PageTitle>
         <form id="seatSelection" onSubmit={saveSeat}>
           <div className="flex">
             <div className="plane">
@@ -55,25 +58,26 @@ export const SeatSelection = () => {
               <div className="exit exit--back fuselage"></div>
             </div>
             <div className="legend w-1/2">
-              <h2 className="font-bold text-2xl">Selección de Asiento</h2>
+              <h2 className="font-bold text-2xl">{t('Checkin.Seat.Title')}</h2>
               <dl>
                 <dt>
                   <Seat value={'NN'} isVIP={true} />
                 </dt>
                 <dd>
-                  Asiento preferencial <strong>(+ ARS 30.000)</strong>
+                  {t('Checkin.Seat.Preferential')}{' '}
+                  <strong>(+ ARS 30.000)</strong>
                 </dd>
                 <dt>
                   <Seat value={'NN'} isVIP={false} />
                 </dt>
                 <dd>
-                  Asiento regular <strong>(+ ARS 10.000)</strong>
+                  {t('Checkin.Seat.Regular')} <strong>(+ ARS 10.000)</strong>
                 </dd>
                 <dt>
                   <Seat value={'NN'} isVIP={false} save={true} />
                 </dt>
                 <dd>
-                  Tarifa con descuento <strong>(+ ARS 6.000)</strong>
+                  {t('Checkin.Seat.Cheap')} <strong>(+ ARS 6.000)</strong>
                 </dd>
                 <dt>
                   <div className="seat reference">
@@ -87,7 +91,7 @@ export const SeatSelection = () => {
                     <label htmlFor="10F">NN</label>
                   </div>
                 </dt>
-                <dd>Asiento ocupado</dd>
+                <dd>{t('Checkin.Seat.Occupied')}</dd>
               </dl>
             </div>
           </div>
@@ -95,7 +99,7 @@ export const SeatSelection = () => {
             {dark && (
               <div className="w-1/2 skip">
                 <Link to="/check_in/summary" onClick={skipSeat}>
-                  No deseo elegir mi asiento
+                  {t('Checkin.Seat.NoSeat')}
                 </Link>
               </div>
             )}
@@ -104,7 +108,7 @@ export const SeatSelection = () => {
                 className="passenger"
                 disabled={dark && seat === null}
               >
-                Continuar
+                {t('Checkin.Seat.Continue')}
               </PrimaryButton>
             </div>
           </div>

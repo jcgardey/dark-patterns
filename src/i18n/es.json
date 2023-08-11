@@ -90,5 +90,65 @@
                 "Close": "Puede cerrar esta ventana"
             }
         }
-      }
+    },
+    "Checkin": {
+        "Passenger": {
+            "Title": "Datos del pasajero",
+            "Name": "Nombre",
+            "Surname": "Apellido",
+            "Birthdate": "Fecha de Nacimiento",
+            "Gender": {
+                "Label": "Género",
+                "Male": "Masculino",
+                "Female": "Femenino"
+            },
+            "IdType": "Tipo de documento",
+            "IdNumber": "Número de documento",
+            "IssueCountry": "País de emisión",
+            "DueDate": "Fecha de vencimiento",
+            "Nationality": "Nacionalidad",
+            "Passport": "Pasaporte",
+            "SelectSeat": "Elegir Asiento"
+        },
+        "Seat": {
+            "Title": "Selección de Asiento",
+            "Preferential": "Asiento preferencial",
+            "Regular": "Asiento regular",
+            "Cheap": "Asiento con descuento",
+            "Occupied": "Asiento ocupado",
+            "Continue": "Continuar",
+            "NoSeat": "No deseo elegir mi asiento"
+        },
+        "Summary": {
+            "Title":"Resumen",
+            "Taxes": "Impuestos y tasas",
+            "Seat": "Selección de Asiento",
+            "Discount": "Descuentos",
+            "Back": "Volver a la selección de asientos",
+            "Continue": "Continuar"
+        }
+    },
+    "Common": {
+        "Select": "Seleccionar",
+        "Date": {
+            "Day": "Día",
+            "Month": "Mes",
+            "Year": "Año",
+            "Months": {
+                "January": "Enero",
+                "February": "Febrero",
+                "March": "Marzo",
+                "April": "Abril",
+                "May": "Mayo",
+                "June": "Junio",
+                "July": "Julio",
+                "August": "Agosto",
+                "September": "Septiembre",
+                "October": "Octubre",
+                "November": "Noviembre",
+                "December": "Diciembre"
+            }
+        }
+
+    }
 }

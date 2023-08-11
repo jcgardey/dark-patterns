@@ -9,6 +9,7 @@ import { PageTitle, PrimaryButton } from '../../components/Passenger/common';
 
 import '../../components/Form/Form.css';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export const PassengerInfo = ({}) => {
   const {
@@ -18,6 +19,8 @@ export const PassengerInfo = ({}) => {
     control,
     formState: { errors },
   } = useForm();
+
+  const { t } = useTranslation();
 
   const nameRules = {
     required: true,
@@ -43,13 +46,13 @@ export const PassengerInfo = ({}) => {
   return (
     <div className="w-11/12 mx-auto">
       <div className="w-3/4">
-        <PageTitle>Datos del pasajero</PageTitle>
+        <PageTitle>{t('Checkin.Passenger.Title')}</PageTitle>
         <form onSubmit={handleSubmit(onSubmit, onError)}>
           <div className="flex justify-between">
             <div className="w-2/5">
               <Input
                 name={'name'}
-                label={'Nombre'}
+                label={t('Checkin.Passenger.Name')}
                 register={register}
                 rules={nameRules}
                 errors={errors.name}
@@ -58,7 +61,7 @@ export const PassengerInfo = ({}) => {
             <div className="w-2/5">
               <Input
                 name={'surname'}
-                label={'Apellido'}
+                label={t('Checkin.Passenger.Surname')}
                 register={register}
                 rules={nameRules}
                 errors={errors.surname}
@@ -68,7 +71,7 @@ export const PassengerInfo = ({}) => {
           <div className="flex justify-between">
             <div className="w-2/5">
               <DateSelects
-                label={'Fecha de Nacimiento'}
+                label={t('Checkin.Passenger.Birthdate')}
                 name={'fecha_nacimiento'}
                 years={range(1925, 2022).reverse()}
                 control={control}
@@ -78,11 +81,14 @@ export const PassengerInfo = ({}) => {
             </div>
             <div className="w-2/5">
               <RadioSet
-                label={'Sexo'}
+                label={t('Checkin.Passenger.Gender.Label')}
                 name={'sex'}
                 className={'passenger-radio'}
                 inline={true}
-                options={['Masculino', 'Femenino']}
+                options={[
+                  t('Checkin.Passenger.Gender.Male'),
+                  t('Checkin.Passenger.Gender.Female'),
+                ]}
                 register={register}
                 required={true}
                 errors={errors.sex}
@@ -93,17 +99,17 @@ export const PassengerInfo = ({}) => {
             <div className="w-1/4">
               <Select
                 name={'id_type'}
-                label={'Tipo de Documento'}
+                label={t('Checkin.Passenger.IdType')}
                 disabled={true}
-                defaultValue={'Pasaporte'}
+                defaultValue={t('Checkin.Passenger.Passport')}
                 control={control}
-                options={['Pasaporte']}
+                options={[t('Checkin.Passenger.Passport')]}
               />
             </div>
             <div className="w-1/4">
               <Input
                 name={'id_number'}
-                label={'Numero de Documento'}
+                label={t('Checkin.Passenger.IdNumber')}
                 register={register}
                 rules={{
                   required: true,
@@ -118,7 +124,7 @@ export const PassengerInfo = ({}) => {
             <div className="w-1/4">
               <Select
                 name={'id_country'}
-                label={'Pais de Emisión'}
+                label={t('Checkin.Passenger.IssueCountry')}
                 control={control}
                 rules={{ required: true }}
                 options={countryNames()}
@@ -129,7 +135,7 @@ export const PassengerInfo = ({}) => {
           <div className="flex">
             <div className="w-1/3">
               <DateSelects
-                label={'Fecha de Caducidad'}
+                label={t('Checkin.Passenger.DueDate')}
                 name={'id_due_date'}
                 years={range(2022, 2026)}
                 control={control}
@@ -142,7 +148,7 @@ export const PassengerInfo = ({}) => {
             <div className="w-1/3">
               <Select
                 name={'country'}
-                label={'Nacionalidad'}
+                label={t('Checkin.Passenger.Nationality')}
                 control={control}
                 rules={{ required: true }}
                 options={countryNames()}
@@ -152,7 +158,9 @@ export const PassengerInfo = ({}) => {
           </div>
           <div className="flex justify-around">
             <div className="w-1/3">
-              <PrimaryButton type="submit">Elegir Asiento</PrimaryButton>
+              <PrimaryButton type="submit">
+                {t('Checkin.Passenger.SelectSeat')}
+              </PrimaryButton>
             </div>
           </div>
         </form>

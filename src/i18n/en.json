@@ -91,5 +91,65 @@
                 "Close": "You may close this window"
             }
         }
-      }
+    },
+    "Checkin": {
+        "Passenger": {
+            "Title": "Passenger information",
+            "Name": "Name",
+            "Surname": "Surname",
+            "Birthdate": "Birthdate",
+            "Gender": {
+                "Label": "Gender",
+                "Male": "Male",
+                "Female": "Female"
+            },
+            "IdType": "ID Type",
+            "IdNumber": "ID Number",
+            "IssueCountry": "Country of Issue",
+            "DueDate": "Due Date",
+            "Nationality": "Nationality",
+            "Passport": "Passport",
+            "SelectSeat": "Select Seat"
+        },
+        "Seat": {
+            "Title": "Seat Selection",
+            "Preferential": "Preferential Seat",
+            "Regular": "Regular Seat",
+            "Cheap": "Cheap Seat",
+            "Occupied": "Occupied Seat",
+            "Continue": "Continue",
+            "NoSeat": "I don't want to select a seat"
+        },
+        "Summary": {
+            "Title":"Summary",
+            "Taxes": "Taxes",
+            "Seat": "Seat Selection",
+            "Discount": "Discount",
+            "Back": "Back to seat selection",
+            "Continue": "Continue"
+        }
+    },
+    "Common": {
+        "Select": "Select",
+        "Date": {
+            "Day": "Day",
+            "Month": "Month",
+            "Year": "Year",
+            "Months": {
+                "January": "January",
+                "February": "February",
+                "March": "March",
+                "April": "April",
+                "May": "May",
+                "June": "June",
+                "July": "July",
+                "August": "August",
+                "September": "September",
+                "October": "October",
+                "November": "November",
+                "December": "December"
+            }
+        }
+
+    }
 }

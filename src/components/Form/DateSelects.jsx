@@ -2,6 +2,7 @@ import React from 'react';
 import { range } from './utils';
 import { Field } from './Field';
 import { SelectInput } from './CustomSelect';
+import { useTranslation } from 'react-i18next';
 
 export const DateSelects = ({ name, label, years, control, errors, rules }) => {
   const dateError =
@@ -9,13 +10,15 @@ export const DateSelects = ({ name, label, years, control, errors, rules }) => {
       ? { type: 'required', message: '' }
       : {};
 
+  const { t } = useTranslation();
+
   return (
     <Field label={label} errors={dateError}>
       <div className="inline-input">
         <SelectInput
           name={`${name}_dia`}
           groupName={name}
-          label="Dia"
+          label={t('Common.Date.Day')}
           widgetType={'date-select'}
           style={{ width: '20%' }}
           options={range(1, 31)}
@@ -26,22 +29,22 @@ export const DateSelects = ({ name, label, years, control, errors, rules }) => {
         <SelectInput
           name={`${name}_mes`}
           groupName={name}
-          label="Mes"
+          label={t('Common.Date.Month')}
           widgetType={'date-select'}
           style={{ width: '40%' }}
           options={[
-            'Enero',
-            'Febrero',
-            'Marzo',
-            'Abril',
-            'Mayo',
-            'Junio',
-            'Julio',
-            'Agosto',
-            'Septiembre',
-            'Octubre',
-            'Noviembre',
-            'Diciembre',
+            t('Common.Date.Months.January'),
+            t('Common.Date.Months.February'),
+            t('Common.Date.Months.March'),
+            t('Common.Date.Months.April'),
+            t('Common.Date.Months.May'),
+            t('Common.Date.Months.June'),
+            t('Common.Date.Months.July'),
+            t('Common.Date.Months.August'),
+            t('Common.Date.Months.September'),
+            t('Common.Date.Months.October'),
+            t('Common.Date.Months.November'),
+            t('Common.Date.Months.December'),
           ]}
           control={control}
           rules={rules}
@@ -50,7 +53,7 @@ export const DateSelects = ({ name, label, years, control, errors, rules }) => {
         <SelectInput
           name={`${name}_anio`}
           groupName={name}
-          label="Año"
+          label={t('Common.Date.Year')}
           widgetType={'date-select'}
           style={{ width: '20%' }}
           options={years}
