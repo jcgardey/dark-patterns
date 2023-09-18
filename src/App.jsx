@@ -10,6 +10,7 @@ import { Summary } from './Pages/Passenger/Summary';
 import { PassengerInfo } from './Pages/Passenger/PassengerInfo';
 
 import './i18n/i18n';
+import { Home } from './Pages/Home';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -27,6 +28,8 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
+          <Route path="/" element={<Home />} />
+
           <Route path="/car_rental" element={<CarRental />} />
           <Route path="/car_rental/vehicle" element={<SelectVehicle />} />
           <Route path="/car_rental/protection" element={<SelectProtection />} />
