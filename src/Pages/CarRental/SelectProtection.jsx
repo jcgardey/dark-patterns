@@ -84,6 +84,7 @@ export const SelectProtection = () => {
               t('Rental.Protection.Total.Description'),
             ]}
             price={23.29}
+            featured={true}
           />
         </div>
         <div className="w-1/4">
@@ -107,7 +108,7 @@ export const SelectProtection = () => {
             </div>
             <TotalPrice price={totalPrice().toFixed(2)} />
             <button
-              className="w-full bg-sky-900 text-white p-2"
+              className="w-full bg-slate-800 text-white p-2"
               onClick={onNext}
             >
               {t('Rental.Protection.Next')}

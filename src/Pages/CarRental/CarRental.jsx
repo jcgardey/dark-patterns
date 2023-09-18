@@ -76,15 +76,15 @@ export function CarRental() {
 
   const Card = ({ title, description, className }) => (
     <div className={`p-4 bg-white box-shadow ${className}`}>
-      <h4 className="font-bold text-sky-900 text-xl my-2">{title}</h4>
-      <p className="text-sky-900 font-medium">{description}</p>
+      <h4 className="font-bold text-slate-800 text-xl my-2">{title}</h4>
+      <p className="text-slate-800 font-medium">{description}</p>
     </div>
   );
 
   return (
     <>
       <NavBar />
-      <div className="bg-sky-900 p-4">
+      <div className="bg-slate-500 p-4">
         <h2 className="text-2xl text-white font-semibold">
           {t('Rental.Start')}
         </h2>
@@ -151,7 +151,7 @@ export function CarRental() {
           </div>
         </form>
       </div>
-      <div className="h-screen bg-sky-800 p-8">
+      <div className="h-screen bg-slate-600 p-8">
         <img className="w-1/2 mx-auto" src={car_illustration} />
         <div className="w-3/4 mx-auto my-4">
           <h2 className="text-white font-bold text-3xl border-b p-2">

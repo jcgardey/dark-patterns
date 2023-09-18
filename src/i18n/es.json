@@ -59,7 +59,8 @@
                 "Description": "Usted es responsable de los daños o el robo del vehículo hasta el valor total del vehículo de alquiler más los gastos administrativos. Es posible que su seguro personal o su tarjeta de crédito no cubran totalmente este viaje.",
                 "Add": "Agregar protección",
                 "Skip": "Sí, me voy a hacer cargo de los gastos que surjan"
-            }
+            },
+            "Featured": "Destacada"
         },
         "Review": {
             "Title": "Revisar y reservar",
