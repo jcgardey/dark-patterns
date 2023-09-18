@@ -2,7 +2,7 @@ import { Link, useNavigate } from 'react-router-dom';
 import './SeatSelection.css';
 import { Seat } from '../../components/Passenger/Seat';
 import { SeatsRow } from '../../components/Passenger/SeatsRow';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { seatRows } from './seats';
 import { PageTitle, PrimaryButton } from '../../components/Passenger/common';
 import { useTranslation } from 'react-i18next';
