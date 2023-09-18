@@ -1,5 +1,6 @@
 {
     "Rental": {
+        "Title": "Rent a Car",
         "Start": "Start a Reservation",
         "Location": "Location",
         "StartDate": "Pick-up date",
@@ -58,7 +59,7 @@
                 "Title": "Continue without additional protection?",
                 "Description": "You are liable for all damage and theft up to the full value of the rental vehicle, as well as third party accident and injury claims, plus admin fees. Your personal insurance or credit card may not fully cover this rental.",
                 "Add": "Add protection",
-                "Skip": "Skip for now"
+                "Skip": "Yes, I will take care of any expenses that may be incurred"
              }
         },
         "Review": {

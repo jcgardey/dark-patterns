@@ -23,7 +23,7 @@ const Label = ({ children }) => (
 
 export function CarRental() {
   useEffect(() => {
-    document.title = 'Rent a Car';
+    document.title = t('Rental.Title');
   }, []);
 
   const navigate = useNavigate();

@@ -4,9 +4,9 @@ import { TotalPrice } from '../../Components/CarRent/TotalPrice';
 import { BackIcon } from '../../Components/Icons/BackIcon';
 import { useTranslation } from 'react-i18next';
 import { dateString } from '../../utils/date';
-import { Modal } from '../../components/Modal';
+import { Modal } from '../../Components/Modal';
 import { ReservationConfirmed } from '../../components/CarRent/ReservationConfirmed';
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { TextInput } from '../../components/CarRent/TextInput';
 import { data } from 'autoprefixer';
@@ -50,6 +50,10 @@ export const Review = ({}) => {
   const onSubmit = (data) => {
     setConfirmed(true);
   };
+
+  useEffect(() => {
+    document.title = t('Rental.Review.Title');
+  }, []);
 
   const {
     register,
@@ -127,6 +131,8 @@ export const Review = ({}) => {
                   errors={errors.card?.holder}
                 />
               </div>
+            </div>
+            <div className="flex my-4">
               <div className="mr-2 w-1/12">
                 <label>{t('Rental.Review.Payment.Card.Month')}</label>
                 <TextInput
@@ -147,7 +153,7 @@ export const Review = ({}) => {
                   errors={errors.card?.year}
                 />
               </div>
-              <div className="mr-2 w-2/12">
+              <div className="mr-2 w-1/4">
                 <label>{t('Rental.Review.Payment.Card.CVV')}</label>
                 <TextInput
                   name={'card.cvv'}

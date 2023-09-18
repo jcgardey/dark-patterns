@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useEffect, useState } from 'react';
 import { differenceInDays } from '../../utils/date';
 import { ProtectionItem } from '../../Components/CarRent/ProtectionItem';
 import { ProtectionModal } from '../../Components/CarRent/ProtectionModal';
@@ -16,6 +16,10 @@ export const SelectProtection = () => {
   const [showModal, setShowModal] = useState(false);
 
   const navigate = useNavigate();
+
+  useEffect(() => {
+    document.title = t('Rental.Protection.Select');
+  }, []);
 
   const totalPrice = () =>
     differenceInDays(

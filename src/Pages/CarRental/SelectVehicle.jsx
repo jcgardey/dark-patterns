@@ -110,7 +110,7 @@ export const SelectVehicle = ({}) => {
   ];
 
   useEffect(() => {
-    document.title = 'Select a Vehicle';
+    document.title = t('Rental.SelectVehicle');
     setReservation(JSON.parse(localStorage.getItem('reservation')));
   }, []);
 

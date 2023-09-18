@@ -17,9 +17,10 @@ export const ProtectionItem = ({
 
   return (
     <div
-      className={`p-2 shadow m-4 cursor-pointer${
+      className={`p-2  m-4 hover:bg-gray-100 cursor-pointer${
         protection?.title === title ? ' border-2 border-blue-950' : ''
       }`}
+      style={{ boxShadow: '0px 0px 20px rgb(0,0,0,0.2)' }}
       onClick={changeProtection}
     >
       <h4 className="text-center text-lg font-bold">{title}</h4>

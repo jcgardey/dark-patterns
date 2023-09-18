@@ -8,7 +8,7 @@ export const ProtectionModal = ({ onClose, onNext }) => {
   return (
     <Modal title={t('Rental.Protection.NoProtection.Title')} onClose={onClose}>
       <p>{t('Rental.Protection.NoProtection.Description')}</p>
-      <div className="flex w-1/2 mx-auto my-4 justify-evenly">
+      <div className="flex w-full mx-auto my-4 justify-evenly">
         <button className="bg-blue-900 text-white p-2 mx-3" onClick={onClose}>
           {t('Rental.Protection.NoProtection.Add')}
         </button>
