@@ -3,6 +3,8 @@ import { NavBar } from '../../components/Roomio/NavBar';
 import { useForm } from 'react-hook-form';
 import { formatCurrency } from '../../utils/currency';
 import { useTranslation } from 'react-i18next';
+import { Modal } from '../../components/Modal';
+import { ReservationConfirmed } from '../../components/CarRent/ReservationConfirmed';
 
 const Input = forwardRef(
   ({ id, type = 'text', placeholder, errors, ...props }, ref) => (
@@ -25,6 +27,7 @@ const FieldError = ({ message }) => (
 
 export const RoomioSummary = () => {
   const [showAutocompleteCard, setShowAutocompleteCard] = useState(false);
+  const [confirmed, setConfirmed] = useState(false);
 
   const {
     handleSubmit,
@@ -34,7 +37,7 @@ export const RoomioSummary = () => {
   } = useForm();
 
   const onSubmit = (data) => {
-    console.log(data);
+    setConfirmed(true);
   };
 
   const autocompleteCard = () => {
@@ -193,6 +196,11 @@ export const RoomioSummary = () => {
           </div>
         </div>
       </div>
+      {confirmed && (
+        <Modal title={t('Rental.Review.Confirmation.Title')}>
+          <ReservationConfirmed email={'test@hotmail.com'} />
+        </Modal>
+      )}
     </>
   );
 };
