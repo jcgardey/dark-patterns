@@ -5,6 +5,7 @@ import DatePicker from 'react-datepicker';
 import background from '../../assets/Roomio/bg.jpg';
 import { NavBar } from '../../components/Roomio/NavBar';
 import { useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export const Search = ({}) => {
   const [startDate, setStartDate] = useState(new Date());
@@ -12,6 +13,8 @@ export const Search = ({}) => {
   const [adults, setAdults] = useState(1);
 
   const navigate = useNavigate();
+
+  const { t } = useTranslation();
 
   const onSubmit = (e) => {
     e.preventDefault();
@@ -35,7 +38,7 @@ export const Search = ({}) => {
         <input
           className="p-2 text-lg rounded mx-2"
           type="text"
-          placeholder="Destino"
+          placeholder={t('Roomio.Search.Destination')}
           name="destination"
         />
         <div>
@@ -68,18 +71,18 @@ export const Search = ({}) => {
           value={adults}
           onChange={(e) => setAdults(e.target.value)}
         >
-          <option selected>Nro de Personas</option>
-          <option value="1">1 adulto</option>
-          <option value="2">2 adultos</option>
-          <option value="3">3 adultos</option>
-          <option value="4">4 adultos</option>
-          <option value="5">5+ adultos</option>
+          <option selected>{t('Roomio.Search.People')}</option>
+          <option value="1">{t('Roomio.Search.Adult', { count: 1 })}</option>
+          <option value="2">{t('Roomio.Search.Adult', { count: 2 })}</option>
+          <option value="3">{t('Roomio.Search.Adult', { count: 3 })}</option>
+          <option value="4">{t('Roomio.Search.Adult', { count: 4 })}</option>
+          <option value="5">{t('Roomio.Search.Adult', { count: 5 })}</option>
         </select>
         <button
           type="submit"
           className="bg-green-700 hover:bg-green-800 p-2 rounded text-white text-lg"
         >
-          Buscar
+          {t('Roomio.Search.Search')}
         </button>
       </form>
     </>

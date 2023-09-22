@@ -1,31 +1,39 @@
-import { useEffect } from 'react';
+import { useEffect, useTransition } from 'react';
 import map from '../../assets/Roomio/map.jpg';
 import { NavBar } from '../../components/Roomio/NavBar';
 import { Room } from '../../components/Roomio/Room';
 import { rooms } from './rooms';
 import dayjs from 'dayjs';
+import { useTranslation } from 'react-i18next';
 
-const Sidebar = () => (
-  <div className="w-1/5 hotel_sidebar">
-    <img src={map} width="100%" />
-    <div className="filters">
-      <h4>Filtros</h4>
+const Sidebar = () => {
+  const { t } = useTranslation();
+  return (
+    <div className="w-1/5 hotel_sidebar">
+      <img src={map} width="100%" />
+      <div className="filters">
+        <h4>{t('Roomio.Results.Sidebar.Filters')}</h4>
 
-      <label>
-        <input type="checkbox" /> Cerca del centro
-      </label>
-      <label>
-        <input type="checkbox" /> Pet friendly
-      </label>
-      <label>
-        <input type="checkbox" /> Con piscina
-      </label>
-      <label>
-        <input type="checkbox" /> Con sauna
-      </label>
+        <label>
+          <input className="mx-1" type="checkbox" />
+          {t('Roomio.Results.Sidebar.Centre')}
+        </label>
+        <label>
+          <input className="mx-1" type="checkbox" />
+          {t('Roomio.Results.Sidebar.Pet')}
+        </label>
+        <label>
+          <input className="mx-1" type="checkbox" />
+          {t('Roomio.Results.Sidebar.Pool')}
+        </label>
+        <label>
+          <input className="mx-1" type="checkbox" />
+          {t('Roomio.Results.Sidebar.Sauna')}
+        </label>
+      </div>
     </div>
-  </div>
-);
+  );
+};
 
 export const RoomioResults = () => {
   useEffect(() => {
@@ -36,6 +44,8 @@ export const RoomioResults = () => {
     dayjs(localStorage.getItem('hotel-start')),
     'day'
   );
+
+  localStorage.setItem('hotel-nights', nights);
 
   const adults = localStorage.getItem('hotel-adults') ?? 0;
 

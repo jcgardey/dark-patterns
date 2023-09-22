@@ -130,6 +130,40 @@
             "Continue": "Continuar"
         }
     },
+    "Roomio": {
+        "Search": {
+            "People": "People",
+            "Destination": "Destino",
+            "Search": "Buscar",
+            "Start": "Inicio",
+            "End": "Fin",
+            "Adult_one": "{{count}} adulto",
+            "Adult_other": "{{count}} adultos"
+        },
+        "Results": {
+            "Sidebar": {
+                "Filters": "Filtros",
+                "Centre": "Cerca del centro",
+                "Pet": "Pet friendly",
+                "Pool": "Con piscina",
+                "Sauna": "Con sauna"
+            },
+            "Cancellation": "Cancelación gratuita, puede guardar el precio y cancelar más tarde",
+            "Night_one": "{{count}} noche",
+            "Night_other": "{{count}} noches",
+            "Taxes": "impuestos y tasas",
+            "Book": "Reservar"
+        },
+        "Summary": {
+            "Summary": "Resumen",
+            "Price_one": "Precio por {{count}} noche",
+            "Price_other": "Precio por {{count}} noches",
+            "Taxes": "Impuestos y tasas",
+            "Total": "Total",
+            "Name": "Nombre Completo",
+            "Buy": "Comprar"
+        }
+    },
     "Common": {
         "Select": "Seleccionar",
         "Date": {

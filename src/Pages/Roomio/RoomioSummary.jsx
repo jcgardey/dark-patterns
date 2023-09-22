@@ -2,6 +2,7 @@ import { forwardRef, useState } from 'react';
 import { NavBar } from '../../components/Roomio/NavBar';
 import { useForm } from 'react-hook-form';
 import { formatCurrency } from '../../utils/currency';
+import { useTranslation } from 'react-i18next';
 
 const Input = forwardRef(
   ({ id, type = 'text', placeholder, errors, ...props }, ref) => (
@@ -44,8 +45,12 @@ export const RoomioSummary = () => {
     setValue('cc-cvv', '322');
   };
 
-  const price = localStorage.getItem('hotel-price') ?? 0;
-  const taxes = localStorage.getItem('hotel-taxes') ?? 0;
+  const price = parseFloat(localStorage.getItem('hotel-price')) ?? 0;
+  const taxes = parseFloat(localStorage.getItem('hotel-taxes')) ?? 0;
+
+  const { t } = useTranslation();
+
+  const nights = parseInt(localStorage.getItem('hotel-nights')) ?? 0;
 
   return (
     <>
@@ -54,11 +59,13 @@ export const RoomioSummary = () => {
         <div className="flex justify-between">
           <div class="w-1/4">
             <div class="bg-teal-600 p-4 rounded">
-              <h2 className="text-white font-medium text-3xl">Resumen</h2>
+              <h2 className="text-white font-medium text-3xl">
+                {t('Roomio.Summary.Summary')}
+              </h2>
               <div className="py-4 border-b border-white">
                 <div className="my-4">
                   <p className="text-white text-xl font-bold my-1">
-                    Precio por 2 noches
+                    {t('Roomio.Summary.Price', { count: nights })}
                   </p>
                   <p className="text-right text-xl text-white">
                     {formatCurrency(price)}
@@ -66,7 +73,7 @@ export const RoomioSummary = () => {
                 </div>
                 <div className="my-4">
                   <p className="text-white text-xl font-bold my-1">
-                    Impuestos y tasas
+                    {t('Roomio.Summary.Taxes')}
                   </p>
                   <p className="text-right text-xl text-white">
                     {formatCurrency(taxes)}
@@ -74,7 +81,9 @@ export const RoomioSummary = () => {
                 </div>
               </div>
               <div className="flex justify-between py-2">
-                <h4 className="text-white text-3xl ">Total</h4>
+                <h4 className="text-white text-3xl ">
+                  {t('Roomio.Summary.Total')}
+                </h4>
                 <p className="text-2xl text-white" id="total">
                   {formatCurrency(price + taxes)}
                 </p>
@@ -87,7 +96,7 @@ export const RoomioSummary = () => {
               <div className="bg-neutral-200 p-6 rounded">
                 <div className="w-1/3">
                   <div className="my-4">
-                    <label for="fullName">Nombre Completo</label>
+                    <label for="fullName">{t('Roomio.Summary.Name')}</label>
                     <Input
                       id="fullName"
                       placeholder="Andrea Paz"
@@ -113,7 +122,9 @@ export const RoomioSummary = () => {
               <div className="bg-neutral-200 my-4 p-6 rounded">
                 <div className="flex my-4">
                   <div className="w-1/3 mr-8 relative">
-                    <label for="cc-number">Numero</label>
+                    <label for="cc-number">
+                      {t('Rental.Review.Payment.Card.Number')}
+                    </label>
                     <Input
                       type="text"
                       id="cc-number"
@@ -133,7 +144,9 @@ export const RoomioSummary = () => {
                     )}
                   </div>
                   <div className="w-1/3">
-                    <label for="email">Nombre del titular</label>
+                    <label for="email">
+                      {t('Rental.Review.Payment.Card.Holder')}
+                    </label>
                     <Input
                       type="text"
                       id="cc-name"
@@ -145,7 +158,9 @@ export const RoomioSummary = () => {
                 </div>
                 <div className="flex my-4">
                   <div className="w-1/6 mr-8">
-                    <label for="cc-expiry">Vencimiento</label>
+                    <label for="cc-expiry">{`${t(
+                      'Rental.Review.Payment.Card.Month'
+                    )}/${t('Rental.Review.Payment.Card.Year')}`}</label>
                     <Input
                       id="cc-expiry"
                       placeholder="MM/AA"
@@ -171,7 +186,7 @@ export const RoomioSummary = () => {
                   className="px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-2xl rounded"
                   type="submit"
                 >
-                  Comprar
+                  {t('Roomio.Summary.Buy')}
                 </button>
               </div>
             </form>

@@ -1,3 +1,6 @@
+import { useTranslation } from 'react-i18next';
+import { Link } from 'react-router-dom';
+
 export const Room = ({
   title,
   img,
@@ -8,8 +11,14 @@ export const Room = ({
   freeCancellation,
   nights,
   adults,
-  onClick,
 }) => {
+  const { t } = useTranslation();
+
+  const onClick = () => {
+    localStorage.setItem('hotel-price', price);
+    localStorage.setItem('hotel-taxes', taxes);
+  };
+
   return (
     <div className="my-2 border border-gray-400 rounded">
       <div className="flex justify-between">
@@ -29,12 +38,12 @@ export const Room = ({
             />
             {freeCancellation && (
               <p className="font-bold text-md my-1">
-                FREE cancellation You can cancel later, so lock in this great
-                price today.
+                {t('Roomio.Results.Cancellation')}
               </p>
             )}
             <p className="my-1 text-gray-500">
-              {nights} nights, {adults} adults
+              {t('Roomio.Results.Night', { count: nights })},{' '}
+              {t('Roomio.Search.Adult', { count: parseInt(adults) })}
             </p>
           </div>
         </div>
@@ -46,15 +55,15 @@ export const Room = ({
           <h5 className="text-xl my-1 font-medium">$ {price}</h5>
 
           <p className="text-sm text-gray-500 my-2">
-            +$ {taxes} impuestos y tasas
+            +$ {`${taxes} ${t('Roomio.Results.Taxes')}`}
           </p>
-          <a
-            href="hotel_rooms_co.html"
+          <Link
+            to="/roomio/summary"
             onClick={onClick}
             className="bg-teal-600 text-xl hover:bg-teal-700 p-2 my-2 inline-block rounded text-white"
           >
-            Reservar
-          </a>
+            {t('Roomio.Results.Book')}
+          </Link>
         </div>
       </div>
     </div>

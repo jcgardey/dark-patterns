@@ -131,6 +131,40 @@
             "Continue": "Continue"
         }
     },
+    "Roomio": {
+        "Search": {
+            "People": "People",
+            "Destination": "Destination",
+            "Search": "Search",
+            "Start": "Start Date",
+            "End": "End Date",
+            "Adult_one": "{{count}} adult",
+            "Adult_other": "{{count}} adults"
+        },
+        "Results": {
+            "Sidebar": {
+                "Filters": "Filters",
+                "Centre": "Near center",
+                "Pet": "Pet friendly",
+                "Pool": "Swimming pool",
+                "Sauna": "Sauna"
+            },
+            "Cancellation": "FREE cancellation You can cancel later, so lock in this great price today.",
+            "Night_one": "{{count}} night",
+            "Night_other": "{{count}} nights",
+            "Taxes": "taxes and charges",
+            "Book": "Book"
+        },
+        "Summary": {
+            "Summary": "Summary",
+            "Price_one": "Price for {{count}} night",
+            "Price_other": "Price for {{count}} nights",
+            "Taxes": "Taxes and charges",
+            "Total": "Total",
+            "Name": "Full Name",
+            "Buy": "Buy"
+        }
+    },
     "Common": {
         "Select": "Select",
         "Date": {
