@@ -11,6 +11,9 @@ import { PassengerInfo } from './Pages/Passenger/PassengerInfo';
 
 import './i18n/i18n';
 import { Home } from './Pages/Home';
+import { Search } from './Pages/Roomio/Search';
+import { RoomioResults } from './Pages/Roomio/RoomioResults';
+import { RoomioSummary } from './Pages/Roomio/RoomioSummary';
 
 function App() {
   const [count, setCount] = useState(0);
@@ -38,6 +41,10 @@ function App() {
           <Route path="/check_in" element={<PassengerInfo />} />
           <Route path="/check_in/seat" element={<SeatSelection />} />
           <Route path="/check_in/summary" element={<Summary />} />
+
+          <Route path="/roomio" element={<Search />} />
+          <Route path="/roomio/results" element={<RoomioResults />} />
+          <Route path="/roomio/summary" element={<RoomioSummary />} />
         </Routes>
       </BrowserRouter>
     </>

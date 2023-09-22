@@ -1,0 +1,183 @@
+import { forwardRef, useState } from 'react';
+import { NavBar } from '../../components/Roomio/NavBar';
+import { useForm } from 'react-hook-form';
+import { formatCurrency } from '../../utils/currency';
+
+const Input = forwardRef(
+  ({ id, type = 'text', placeholder, errors, ...props }, ref) => (
+    <input
+      id={id}
+      ref={ref}
+      type={type}
+      className={`w-full rounded block p-2${
+        !!errors ? ' border-2 border-red-500' : ''
+      }`}
+      placeholder={placeholder}
+      {...props}
+    />
+  )
+);
+
+const FieldError = ({ message }) => (
+  <p className="text-red-600 my-1">{message}</p>
+);
+
+export const RoomioSummary = () => {
+  const [showAutocompleteCard, setShowAutocompleteCard] = useState(false);
+
+  const {
+    handleSubmit,
+    register,
+    setValue,
+    formState: { errors },
+  } = useForm();
+
+  const onSubmit = (data) => {
+    console.log(data);
+  };
+
+  const autocompleteCard = () => {
+    setShowAutocompleteCard(false);
+    setValue('cc-number', '5490 4234 4899 4324');
+    setValue('cc-name', 'Miriam Flores');
+    setValue('cc-expiry', '12/28');
+    setValue('cc-cvv', '322');
+  };
+
+  const price = localStorage.getItem('hotel-price') ?? 0;
+  const taxes = localStorage.getItem('hotel-taxes') ?? 0;
+
+  return (
+    <>
+      <NavBar />
+      <div className="w-10/12 mx-auto">
+        <div className="flex justify-between">
+          <div class="w-1/4">
+            <div class="bg-teal-600 p-4 rounded">
+              <h2 className="text-white font-medium text-3xl">Resumen</h2>
+              <div className="py-4 border-b border-white">
+                <div className="my-4">
+                  <p className="text-white text-xl font-bold my-1">
+                    Precio por 2 noches
+                  </p>
+                  <p className="text-right text-xl text-white">
+                    {formatCurrency(price)}
+                  </p>
+                </div>
+                <div className="my-4">
+                  <p className="text-white text-xl font-bold my-1">
+                    Impuestos y tasas
+                  </p>
+                  <p className="text-right text-xl text-white">
+                    {formatCurrency(taxes)}
+                  </p>
+                </div>
+              </div>
+              <div className="flex justify-between py-2">
+                <h4 className="text-white text-3xl ">Total</h4>
+                <p className="text-2xl text-white" id="total">
+                  {formatCurrency(price + taxes)}
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <div className="w-4/6">
+            <form onSubmit={handleSubmit(onSubmit)} className="hotel_checkout">
+              <div className="bg-neutral-200 p-6 rounded">
+                <div className="w-1/3">
+                  <div className="my-4">
+                    <label for="fullName">Nombre Completo</label>
+                    <Input
+                      id="fullName"
+                      placeholder="Andrea Paz"
+                      {...register('fullName', { required: true })}
+                      errors={errors.fullName}
+                    />
+                  </div>
+
+                  <div className="my-4">
+                    <label for="email">E-mail</label>
+                    <Input
+                      id="email"
+                      placeholder="andrea.paz@mail.com"
+                      {...register('email', { required: true })}
+                      errors={errors.email}
+                    />
+                    {errors.email && (
+                      <FieldError message={'Ingrese un email válido'} />
+                    )}
+                  </div>
+                </div>
+              </div>
+              <div className="bg-neutral-200 my-4 p-6 rounded">
+                <div className="flex my-4">
+                  <div className="w-1/3 mr-8 relative">
+                    <label for="cc-number">Numero</label>
+                    <Input
+                      type="text"
+                      id="cc-number"
+                      placeholder="XXXX XXXX XXXX XXXX"
+                      onFocus={() => setShowAutocompleteCard(true)}
+                      onBlur={() => setShowAutocompleteCard(false)}
+                      {...register('cc-number', { required: true })}
+                      errors={errors['cc-number']}
+                    />
+                    {showAutocompleteCard && (
+                      <div id="autocompleteCard" onClick={autocompleteCard}>
+                        <h6 className="font-medium text-base">
+                          Autocomplete Credit Card
+                        </h6>
+                        <p>**** **** **** 4324 VISA</p>
+                      </div>
+                    )}
+                  </div>
+                  <div className="w-1/3">
+                    <label for="email">Nombre del titular</label>
+                    <Input
+                      type="text"
+                      id="cc-name"
+                      placeholder="Andrea Paz"
+                      {...register('cc-name', { required: true })}
+                      errors={errors['cc-name']}
+                    />
+                  </div>
+                </div>
+                <div className="flex my-4">
+                  <div className="w-1/6 mr-8">
+                    <label for="cc-expiry">Vencimiento</label>
+                    <Input
+                      id="cc-expiry"
+                      placeholder="MM/AA"
+                      {...register('cc-expiry', { required: true })}
+                      errors={errors['cc-expiry']}
+                    />
+                  </div>
+                  <div className="w-1/12">
+                    <label for="cc-cvv">CVV</label>
+                    <Input
+                      type="password"
+                      id="cc-cvv"
+                      placeholder="***"
+                      {...register('cc-cvv', { required: true })}
+                      errors={errors['cc-cvv']}
+                    />
+                  </div>
+                </div>
+              </div>
+
+              <div className="buttons">
+                <button
+                  className="px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-2xl rounded"
+                  type="submit"
+                >
+                  Comprar
+                </button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </>
+  );
+};
