@@ -4,13 +4,21 @@ import DatePicker from 'react-datepicker';
 
 import background from '../../assets/Roomio/bg.jpg';
 import { NavBar } from '../../components/Roomio/NavBar';
+import { useNavigate } from 'react-router-dom';
 
 export const Search = ({}) => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
+  const [adults, setAdults] = useState(1);
+
+  const navigate = useNavigate();
 
   const onSubmit = (e) => {
     e.preventDefault();
+    localStorage.setItem('hotel-start', startDate.toISOString().split('T')[0]);
+    localStorage.setItem('hotel-end', endDate.toISOString().split('T')[0]);
+    localStorage.setItem('hotel-adults', adults);
+    navigate('/roomio/results');
   };
 
   useEffect(() => {
@@ -57,15 +65,15 @@ export const Search = ({}) => {
         <select
           className="p-2 text-lg rounded mx-2"
           aria-label="Default select example"
+          value={adults}
+          onChange={(e) => setAdults(e.target.value)}
         >
           <option selected>Nro de Personas</option>
           <option value="1">1 adulto</option>
-          <option value="2" selected>
-            2 adultos
-          </option>
+          <option value="2">2 adultos</option>
           <option value="3">3 adultos</option>
-          <option value="3">4 adultos</option>
-          <option value="3">5+ adultos</option>
+          <option value="4">4 adultos</option>
+          <option value="5">5+ adultos</option>
         </select>
         <button
           type="submit"

@@ -1,10 +1,13 @@
 export const Room = ({
   title,
   img,
-  children,
+  description,
   fullPrice,
   price,
   taxes,
+  freeCancellation,
+  nights,
+  adults,
   onClick,
 }) => {
   return (
@@ -15,8 +18,25 @@ export const Room = ({
         </div>
 
         <div className="w-1/2">
-          <a className="underline font-medium text-xl text-teal-600">{title}</a>
-          <div className="my-2">{children}</div>
+          <a
+            className="underline font-medium text-xl text-teal-600"
+            dangerouslySetInnerHTML={{ __html: title }}
+          />
+          <div className="my-2">
+            <p
+              className="text-gray-800"
+              dangerouslySetInnerHTML={{ __html: description }}
+            />
+            {freeCancellation && (
+              <p className="font-bold text-md my-1">
+                FREE cancellation You can cancel later, so lock in this great
+                price today.
+              </p>
+            )}
+            <p className="my-1 text-gray-500">
+              {nights} nights, {adults} adults
+            </p>
+          </div>
         </div>
 
         <div className="w-1/5 py-4">
