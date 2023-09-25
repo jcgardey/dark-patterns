@@ -11,6 +11,7 @@ export const Search = ({}) => {
   const [startDate, setStartDate] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
   const [adults, setAdults] = useState(1);
+  const [city, setCity] = useState('');
 
   const navigate = useNavigate();
 
@@ -21,6 +22,7 @@ export const Search = ({}) => {
     localStorage.setItem('hotel-start', startDate.toISOString().split('T')[0]);
     localStorage.setItem('hotel-end', endDate.toISOString().split('T')[0]);
     localStorage.setItem('hotel-adults', adults);
+    localStorage.setItem('hotel-city', city);
     navigate('/roomio/results');
   };
 
@@ -40,6 +42,8 @@ export const Search = ({}) => {
           type="text"
           placeholder={t('Roomio.Search.Destination')}
           name="destination"
+          value={city}
+          onChange={(e) => setCity(e.target.value)}
         />
         <div>
           <DatePicker
@@ -71,7 +75,7 @@ export const Search = ({}) => {
           value={adults}
           onChange={(e) => setAdults(e.target.value)}
         >
-          <option selected>{t('Roomio.Search.People')}</option>
+          <option value="">{t('Roomio.Search.People')}</option>
           <option value="1">{t('Roomio.Search.Adult', { count: 1 })}</option>
           <option value="2">{t('Roomio.Search.Adult', { count: 2 })}</option>
           <option value="3">{t('Roomio.Search.Adult', { count: 3 })}</option>

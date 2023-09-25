@@ -148,6 +148,7 @@
                 "Pool": "Con piscina",
                 "Sauna": "Con sauna"
             },
+            "NoResults": "No se encontraron habitaciones para '{{ city }}'",
             "Cancellation": "Cancelación gratuita, puede guardar el precio y cancelar más tarde",
             "Night_one": "{{count}} noche",
             "Night_other": "{{count}} noches",

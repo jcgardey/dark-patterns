@@ -2,6 +2,7 @@ export const rooms = [
   {
     title: 'Moderno Apartamento en Bernabéu by Exyca',
     img: 'https://cf.bstatic.com/xdata/images/hotel/square600/473214679.jpg?k=d842e30500d24cabd90f2ce4c623a36fbcbb9814c7d3b9fcac828cd1fc5c4fd4&amp;o=',
+    city: 'Madrid',
     fullPrice: 81.348,
     price: 74.839,
     taxes: 20.55,
@@ -12,6 +13,7 @@ export const rooms = [
   {
     title: 'Dúplex en el Rastro, Centro de Madrid',
     img: 'https://cf.bstatic.com/xdata/images/hotel/square600/232417262.jpg?k=f971e80b6f44142abf790b172d2f3c915bf4243934df0026b355248015afc44a&amp;o=',
+    city: 'Madrid',
     fullPrice: 161.697,
     price: 148.762,
     taxes: 30.43,
@@ -21,6 +23,7 @@ export const rooms = [
   },
   {
     title: 'Coqueto Estudio en Malasaña',
+    city: 'Madrid',
     img: 'https://cf.bstatic.com/xdata/images/hotel/square600/378338174.jpg?k=8a169654ea9139391dd46851110d4a4b974461351ba5ad82010929f5c77f9632&amp;o=',
     fullPrice: 83.138,
     price: 76.486,
@@ -30,6 +33,7 @@ export const rooms = [
   },
   {
     title: 'Corazon de Malasaña',
+    city: 'Madrid',
     img: 'https://cf.bstatic.com/xdata/images/hotel/square600/140092546.jpg?k=214cfc5c360308ce827c4d1df70d67954cd0ae16173bb8df6fdf28bca39ef743&amp;o=',
     fullPrice: 190.232,
     price: 175.013,
@@ -40,7 +44,8 @@ export const rooms = [
   },
   {
     title: 'Apartamento con encanto en Malasaña',
-    img: 'https://cf.bstatic.com/xdata/images/hotel/square600/476781796.jpg?k=14cb04c001525eac0c8f0540cf3eef53d801003eae4e3f43197cb63230393338&amp;o=',
+    city: 'Madrid',
+    img: 'https://cf.bstatic.com/xdata/images/hotel/square200/475729128.webp?k=a06b998ae4f80369102f374531d772f52d123b9aaa0f0777e6902b89c8bce840&o=',
     fullPrice: 150.307,
     price: 138.282,
     taxes: 29.45,
@@ -49,6 +54,7 @@ export const rooms = [
   },
   {
     title: 'Arenal Suites Gran V&#237;a',
+    city: 'Madrid',
     img: 'https://cf.bstatic.com/xdata/images/hotel/square600/461125298.jpg?k=1609208a72ad94a87e5b7d6d3b3079c5cd8581b67963e35cf56e517ec65d786a&amp;o=',
     fullPrice: 147.958,
     price: 136.121,
@@ -58,6 +64,7 @@ export const rooms = [
   },
   {
     title: 'Cozy Bright - 1Bedroom 1 Bathroom - La Latina',
+    city: 'Madrid',
     img: 'https://cf.bstatic.com/xdata/images/hotel/square600/475397356.jpg?k=62c475bce9172de58a7d7de7255c41f8ccecf34b7f9fb39ef5c36caa786aae03&amp;o=',
     fullPrice: 108.033,
     price: 99.39,
@@ -67,6 +74,7 @@ export const rooms = [
   },
   {
     title: 'Apartamento en el coraz&#243;n de Madrid',
+    city: 'Madrid',
     img: 'https://cf.bstatic.com/xdata/images/hotel/square600/473109863.jpg?k=9530ef8b3ab8838fc86a7ae01a1e478751e284855aefd3f42ee96870435abce7&amp;o=',
     fullPrice: 93.942,
     price: 86.426,

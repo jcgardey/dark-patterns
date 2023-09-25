@@ -48,6 +48,9 @@ export const RoomioResults = () => {
   localStorage.setItem('hotel-nights', nights);
 
   const adults = localStorage.getItem('hotel-adults') ?? 0;
+  const city = localStorage.getItem('hotel-city') ?? '';
+
+  const { t } = useTranslation();
 
   return (
     <>
@@ -55,20 +58,27 @@ export const RoomioResults = () => {
       <div className="w-11/12 mx-auto flex justify-between">
         <Sidebar />
         <div className="w-3/4 hotel_serp">
-          {rooms.map((room, i) => (
-            <Room
-              key={i}
-              title={room.title}
-              img={room.img}
-              description={room.description}
-              fullPrice={room.fullPrice}
-              price={room.price}
-              taxes={room.taxes}
-              freeCancellation={room.freeCancellation}
-              nights={nights}
-              adults={adults}
-            />
-          ))}
+          {rooms.filter((room) => room.city.includes(city)).length == 0 && (
+            <h3 className="text-3xl font-medium text-gray-800 text-center">
+              {t('Roomio.Results.NoResults', { city })}
+            </h3>
+          )}
+          {rooms
+            .filter((room) => room.city.includes(city))
+            .map((room, i) => (
+              <Room
+                key={i}
+                title={room.title}
+                img={room.img}
+                description={room.description}
+                fullPrice={room.fullPrice}
+                price={room.price}
+                taxes={room.taxes}
+                freeCancellation={room.freeCancellation}
+                nights={nights}
+                adults={adults}
+              />
+            ))}
         </div>
       </div>
     </>
