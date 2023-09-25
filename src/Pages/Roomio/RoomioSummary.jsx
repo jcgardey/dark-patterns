@@ -60,8 +60,8 @@ export const RoomioSummary = () => {
       <NavBar />
       <div className="w-10/12 mx-auto">
         <div className="flex justify-between">
-          <div class="w-1/4">
-            <div class="bg-teal-600 p-4 rounded">
+          <div className="w-1/4">
+            <div className="bg-teal-600 p-4 rounded">
               <h2 className="text-white font-medium text-3xl">
                 {t('Roomio.Summary.Summary')}
               </h2>
@@ -99,7 +99,7 @@ export const RoomioSummary = () => {
               <div className="bg-neutral-200 p-6 rounded">
                 <div className="w-1/3">
                   <div className="my-4">
-                    <label for="fullName">{t('Roomio.Summary.Name')}</label>
+                    <label htmlFor="fullName">{t('Roomio.Summary.Name')}</label>
                     <Input
                       id="fullName"
                       placeholder="Andrea Paz"
@@ -109,7 +109,7 @@ export const RoomioSummary = () => {
                   </div>
 
                   <div className="my-4">
-                    <label for="email">E-mail</label>
+                    <label htmlFor="email">E-mail</label>
                     <Input
                       id="email"
                       placeholder="andrea.paz@mail.com"
@@ -125,7 +125,7 @@ export const RoomioSummary = () => {
               <div className="bg-neutral-200 my-4 p-6 rounded">
                 <div className="flex my-4">
                   <div className="w-1/3 mr-8 relative">
-                    <label for="cc-number">
+                    <label htmlFor="cc-number">
                       {t('Rental.Review.Payment.Card.Number')}
                     </label>
                     <Input
@@ -147,7 +147,7 @@ export const RoomioSummary = () => {
                     )}
                   </div>
                   <div className="w-1/3">
-                    <label for="email">
+                    <label htmlFor="email">
                       {t('Rental.Review.Payment.Card.Holder')}
                     </label>
                     <Input
@@ -161,7 +161,7 @@ export const RoomioSummary = () => {
                 </div>
                 <div className="flex my-4">
                   <div className="w-1/6 mr-8">
-                    <label for="cc-expiry">{`${t(
+                    <label htmlFor="cc-expiry">{`${t(
                       'Rental.Review.Payment.Card.Month'
                     )}/${t('Rental.Review.Payment.Card.Year')}`}</label>
                     <Input
@@ -172,7 +172,7 @@ export const RoomioSummary = () => {
                     />
                   </div>
                   <div className="w-1/12">
-                    <label for="cc-cvv">CVV</label>
+                    <label htmlFor="cc-cvv">CVV</label>
                     <Input
                       type="password"
                       id="cc-cvv"
