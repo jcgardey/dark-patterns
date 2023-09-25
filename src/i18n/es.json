@@ -151,7 +151,8 @@
             "Cancellation": "Cancelación gratuita, puede guardar el precio y cancelar más tarde",
             "Night_one": "{{count}} noche",
             "Night_other": "{{count}} noches",
-            "Taxes": "impuestos y tasas",
+            "Taxes": "Impuestos y tasas",
+            "TaxesIncluded": "Impuestos y tasas incluidos",
             "Book": "Reservar"
         },
         "Summary": {

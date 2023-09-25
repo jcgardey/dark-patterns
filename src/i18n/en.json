@@ -153,6 +153,7 @@
             "Night_one": "{{count}} night",
             "Night_other": "{{count}} nights",
             "Taxes": "taxes and charges",
+            "TaxesIncluded": "Taxes and charges are included",
             "Book": "Book"
         },
         "Summary": {

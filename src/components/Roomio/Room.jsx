@@ -19,6 +19,8 @@ export const Room = ({
     localStorage.setItem('hotel-taxes', taxes);
   };
 
+  const darkEnabled = localStorage.getItem('dark') == 'true' ?? false;
+
   return (
     <div className="my-2 border border-gray-400 rounded">
       <div className="flex justify-between">
@@ -52,10 +54,14 @@ export const Room = ({
           <h5 className="text-xl my-1 line-through text-gray-500">
             $ {fullPrice}
           </h5>
-          <h5 className="text-xl my-1 font-medium">$ {price}</h5>
+          <h5 className="text-xl my-1 font-medium">
+            $ {darkEnabled ? price : price + taxes}
+          </h5>
 
           <p className="text-sm text-gray-500 my-2">
-            +$ {`${taxes} ${t('Roomio.Results.Taxes')}`}
+            {darkEnabled
+              ? `+$ ${taxes} ${t('Roomio.Results.Taxes')}`
+              : t('Roomio.Results.TaxesIncluded')}
           </p>
           <Link
             to="/roomio/summary"
