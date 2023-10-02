@@ -1,3 +1,5 @@
+import { Link } from 'react-router-dom';
+
 export const Membership = () => {
   return (
     <>
@@ -40,32 +42,41 @@ export const Membership = () => {
         </ul>
       </div>
 
-      <div className="row membership-options">
-        <div className="col-2">
+      <div className="flex membership-options">
+        <div className="w-1/5">
           <p>Plan de Membresía</p>
         </div>
-        <div className="col-10">
+        <div className="w-3/4">
           <p>
             Su plan se renovará automáticamente el 4/12/23, y se cobrarán
             USD9.99
           </p>
-          <p>
-            <a href="books_survey.html">Cancelar mi membresía</a>
+          <p className="my-4">
+            <Link
+              to="/ebook/cancel_membership"
+              className="text-fuchsia-500 underline"
+            >
+              Cancelar mi membresía
+            </Link>
           </p>
         </div>
       </div>
 
-      <div className="row membership-options">
-        <div className="col-2">
+      <div className="flex membership-options">
+        <div className="w-1/5">
           <p>Detalles de Pago</p>
         </div>
-        <div className="col-10">
+        <div className="w-3/4">
           <p>Tarjeta VISA finalizada en 9903</p>
-          <p>
-            <a href="#">Actualizar Medio de Pago</a>
+          <p className="my-4">
+            <a className="text-fuchsia-500 underline" href="#">
+              Actualizar Medio de Pago
+            </a>
           </p>
-          <p>
-            <a href="#">Ver Historial de Pagos</a>
+          <p className="my-4">
+            <a className="text-fuchsia-500 underline" href="#">
+              Ver Historial de Pagos
+            </a>
           </p>
         </div>
       </div>

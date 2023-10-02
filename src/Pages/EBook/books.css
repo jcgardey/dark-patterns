@@ -84,9 +84,6 @@ a{
 
 
 /* Membership */
-.membership h3{
-	margin: 40px;
-}
 .benefits{
 	background: #fafafa;
 	max-width: 800px;
@@ -133,9 +130,7 @@ a{
 .survey .offer{
 	padding: 20px 40px;
 }
-.survey form{
-	padding: 0 40px;
-}
+
 .survey legend{
 	font-size: 1.3em;
 	margin-bottom: 30px;
