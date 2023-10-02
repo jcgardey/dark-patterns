@@ -15,6 +15,10 @@ import { Search } from './Pages/Roomio/Search';
 import { RoomioResults } from './Pages/Roomio/RoomioResults';
 import { RoomioSummary } from './Pages/Roomio/RoomioSummary';
 
+import { Home as EBookHome } from './Pages/EBook/Home';
+import { Membership } from './Pages/EBook/Membership';
+import { Books } from './Pages/EBook/Books';
+
 function App() {
   const [count, setCount] = useState(0);
 
@@ -45,6 +49,11 @@ function App() {
           <Route path="/roomio" element={<Search />} />
           <Route path="/roomio/results" element={<RoomioResults />} />
           <Route path="/roomio/summary" element={<RoomioSummary />} />
+
+          <Route path="/ebook" element={<EBookHome />}>
+            <Route path="" element={<Books />} />
+            <Route path="/ebook/membership" element={<Membership />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </>
