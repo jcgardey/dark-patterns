@@ -48,7 +48,7 @@ export const PassengerInfo = ({}) => {
   }, []);
 
   return (
-    <div className="w-11/12 mx-auto">
+    <div className="w-11/12 mx-auto my-4">
       <div className="w-3/4">
         <PageTitle>{t('Checkin.Passenger.Title')}</PageTitle>
         <form onSubmit={handleSubmit(onSubmit, onError)}>
@@ -63,17 +63,6 @@ export const PassengerInfo = ({}) => {
               />
             </div>
             <div className="w-2/5">
-              <Input
-                name={'surname'}
-                label={t('Checkin.Passenger.Surname')}
-                register={register}
-                rules={nameRules}
-                errors={errors.surname}
-              />
-            </div>
-          </div>
-          <div className="flex justify-between">
-            <div className="w-2/5">
               <DateSelects
                 label={t('Checkin.Passenger.Birthdate')}
                 name={'fecha_nacimiento'}
@@ -83,34 +72,9 @@ export const PassengerInfo = ({}) => {
                 errors={errors}
               />
             </div>
-            <div className="w-2/5">
-              <RadioSet
-                label={t('Checkin.Passenger.Gender.Label')}
-                name={'sex'}
-                className={'passenger-radio'}
-                inline={true}
-                options={[
-                  t('Checkin.Passenger.Gender.Male'),
-                  t('Checkin.Passenger.Gender.Female'),
-                ]}
-                register={register}
-                required={true}
-                errors={errors.sex}
-              />
-            </div>
           </div>
           <div className="flex justify-between">
-            <div className="w-1/4">
-              <Select
-                name={'id_type'}
-                label={t('Checkin.Passenger.IdType')}
-                disabled={true}
-                defaultValue={t('Checkin.Passenger.Passport')}
-                control={control}
-                options={[t('Checkin.Passenger.Passport')]}
-              />
-            </div>
-            <div className="w-1/4">
+            <div className="w-2/5">
               <Input
                 name={'id_number'}
                 label={t('Checkin.Passenger.IdNumber')}
@@ -125,7 +89,7 @@ export const PassengerInfo = ({}) => {
                 errors={errors.id_number}
               />
             </div>
-            <div className="w-1/4">
+            <div className="w-2/5">
               <Select
                 name={'id_country'}
                 label={t('Checkin.Passenger.IssueCountry')}
@@ -133,30 +97,6 @@ export const PassengerInfo = ({}) => {
                 rules={{ required: true }}
                 options={countryNames()}
                 errors={errors.id_country}
-              />
-            </div>
-          </div>
-          <div className="flex">
-            <div className="w-1/3">
-              <DateSelects
-                label={t('Checkin.Passenger.DueDate')}
-                name={'id_due_date'}
-                years={range(2022, 2026)}
-                control={control}
-                rules={{ required: true }}
-                errors={errors}
-              />
-            </div>
-          </div>
-          <div className="flex">
-            <div className="w-1/3">
-              <Select
-                name={'country'}
-                label={t('Checkin.Passenger.Nationality')}
-                control={control}
-                rules={{ required: true }}
-                options={countryNames()}
-                errors={errors.country}
               />
             </div>
           </div>

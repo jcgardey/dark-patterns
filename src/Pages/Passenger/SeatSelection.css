@@ -185,11 +185,6 @@
 	.skip{
 		text-align: right;
 	}
-	.skip a{
-		color: #396fa5;
-		//margin-right: 60px;
-		font-size: .8em;
-	}
 	
 	/* Summary*/
 	.summary td{
@@ -211,9 +206,4 @@
 	}
 	a.back-button{
 		cursor: pointer;
-	}
-	button.passenger:disabled{
-		background-color: #b5babe;
-		color: rgb(101,101,101);
-		cursor: not-allowed;
 	}

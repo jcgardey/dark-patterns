@@ -14,7 +14,7 @@ export const Seat = ({
       id={value}
       value={value}
       onChange={() => onSelect({ value, isVIP, save })}
-      defaultChecked={selected == value}
+      checked={selected?.value == value}
     />
     <label
       htmlFor={value}

@@ -4,11 +4,15 @@ import { Seat } from '../../components/Passenger/Seat';
 import { SeatsRow } from '../../components/Passenger/SeatsRow';
 import { useEffect, useState } from 'react';
 import { seatRows } from './seats';
-import { PageTitle, PrimaryButton } from '../../components/Passenger/common';
+import {
+  BackButton,
+  PageTitle,
+  PrimaryButton,
+} from '../../components/Passenger/common';
 import { useTranslation } from 'react-i18next';
 
 export const SeatSelection = () => {
-  const [seat, setSeat] = useState(localStorage.getItem('seat-id'));
+  const [seat, setSeat] = useState(JSON.parse(localStorage.getItem('seat')));
   const navigate = useNavigate();
 
   const { t } = useTranslation();
@@ -17,27 +21,28 @@ export const SeatSelection = () => {
 
   const saveSeat = (e) => {
     e.preventDefault();
-    if (dark && seat !== null) {
+    if (seat !== null) {
       let price = 10000;
       if (seat.isVIP) price = 30000;
       if (seat.save) price = 6000;
       localStorage.setItem('seat-price', price);
-      localStorage.setItem('seat-id', seat.value);
-      navigate('/check_in/summary');
-    } else if (!dark) {
-      skipSeat();
+      localStorage.setItem('seat', JSON.stringify(seat));
       navigate('/check_in/summary');
     }
   };
 
   const skipSeat = () => {
     localStorage.setItem('seat-price', 0);
-    localStorage.setItem('seat-id', null);
+    localStorage.setItem('seat', null);
   };
 
   useEffect(() => {
     document.title = t('Checkin.Seat.Title');
   }, []);
+
+  const skipSeatButtonClassName = dark
+    ? 'text-green-600 text-sm'
+    : 'text-white text-center block bg-gray-700 hover:grey-800 rounded w-full p-2';
 
   return (
     <div className="w-11/12 mx-auto">
@@ -62,7 +67,9 @@ export const SeatSelection = () => {
               <div className="exit exit--back fuselage"></div>
             </div>
             <div className="legend w-1/2">
-              <h2 className="font-bold text-2xl">{t('Checkin.Seat.Title')}</h2>
+              <h2 className="font-bold text-2xl text-gray-700">
+                {t('Checkin.Seat.Title')}
+              </h2>
               <dl>
                 <dt>
                   <Seat value={'NN'} isVIP={true} />
@@ -100,17 +107,20 @@ export const SeatSelection = () => {
             </div>
           </div>
           <div className="my-6 flex buttons justify-around items-center">
-            {dark && (
-              <div className="w-1/2 skip">
-                <Link to="/check_in/summary" onClick={skipSeat}>
-                  {t('Checkin.Seat.NoSeat')}
-                </Link>
-              </div>
-            )}
+            <div className="w-1/3 skip">
+              <Link
+                to="/check_in/summary"
+                className={skipSeatButtonClassName}
+                onClick={skipSeat}
+              >
+                {t('Checkin.Seat.NoSeat')}
+              </Link>
+            </div>
             <div className="w-1/3">
               <PrimaryButton
-                className="passenger"
-                disabled={dark && seat === null}
+                type={'submit'}
+                className="disabled:cursor-not-allowed"
+                disabled={seat === null}
               >
                 {t('Checkin.Seat.Continue')}
               </PrimaryButton>

@@ -1,7 +1,9 @@
 import { Link } from 'react-router-dom';
 
 export const PageTitle = ({ children }) => (
-  <p className="font-bold p-1">{children}</p>
+  <p className="font-bold my-4 p-2 text-lg text-gray-500 border-b border-gray-500">
+    {children}
+  </p>
 );
 
 export const PrimaryButton = ({
@@ -12,7 +14,7 @@ export const PrimaryButton = ({
   onClick,
 }) => (
   <button
-    className={`text-white bg-sky-700 hover:bg-sky-700 rounded w-full p-2 ${className}`}
+    className={`text-white bg-green-600 hover:bg-green-700 rounded w-full p-2 ${className}`}
     type={type}
     disabled={disabled}
   >

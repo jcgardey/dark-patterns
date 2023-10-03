@@ -27,10 +27,9 @@ export const Summary = () => {
   return (
     <div className="w-11/12 mx-auto">
       <div className="w-3/4">
-        <PageTitle>{t('Checkin.Seat.Title')}</PageTitle>
+        <PageTitle>{t('Checkin.Summary.Title')}</PageTitle>
         <form>
           <div className="plane w-1/2 mx-auto">
-            <h2 className="text-2xl font-bold">{t('Checkin.Summary.Title')}</h2>
             <div className="summary my-4">
               <div className="flex justify-between my-4">
                 <p>Ticket</p>
@@ -55,7 +54,7 @@ export const Summary = () => {
             </div>
           </div>
           <div className="flex my-8 buttons justify-center">
-            <div className="w-1/4 mx-4">
+            <div className="w-1/3 mx-4">
               <BackButton to="/check_in/seat" className="passenger back-button">
                 {t('Checkin.Summary.Back')}
               </BackButton>
