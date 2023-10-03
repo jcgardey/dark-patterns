@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 
 export const PageTitle = ({ children }) => (
-  <p className="bg-sky-700 text-white font-bold p-1">{children}</p>
+  <p className="font-bold p-1">{children}</p>
 );
 
 export const PrimaryButton = ({
