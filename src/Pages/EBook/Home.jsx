@@ -1,6 +1,6 @@
 import { NavBar } from '../../components/EBook/NavBar';
 import './books.css';
-import { Outlet } from 'react-router-dom';
+import { Link, Outlet } from 'react-router-dom';
 
 export const Home = () => {
   return (
@@ -10,9 +10,9 @@ export const Home = () => {
         <div className="w-1/6 sidebar px-8">
           <ul>
             <li>
-              <a href="#">
+              <Link to="/ebook">
                 <i className="fa-solid fa-sharp fa-house"></i> Inicio
-              </a>
+              </Link>
             </li>
             <li>
               <a href="#">

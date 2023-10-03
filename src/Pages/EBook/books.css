@@ -2,14 +2,7 @@
 a{
 	color: #CD5CDE;
 }
-.head h1{
-	margin-left: 30px;
-	font-size: 1.5em;
-	font-weight: 400;
-}
-.head .logo i, .head .logo span{
-	color: #CD5CDE;
-}
+
 .head .logo i{
 	font-size: 1.2em;
 	transform: rotate(30deg);

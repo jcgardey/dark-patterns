@@ -8,10 +8,11 @@ export const NavBar = () => {
     <div className="head px-12 py-8 text-gray-500 border-b-2 border-fuchsia-500">
       <div className="flex">
         <div className="w-1/3">
-          <h1 className="logo">
-            <i className="fa-solid fa-sharp fa-book-bookmark"></i> ebook
-            <span>world</span>
-          </h1>
+          <Link to={'/ebook'} className="text-2xl logo">
+            <i className="fa-solid fa-sharp fa-book-bookmark text-fuchsia-500"></i>{' '}
+            ebook
+            <span className="text-fuchsia-500">world</span>
+          </Link>
         </div>
         <div className="w-1/3">
           <div className="flex w-full items-center">
