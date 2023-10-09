@@ -1,8 +1,14 @@
+import { useEffect } from 'react';
 import { NavBar } from '../../components/EBook/NavBar';
 import './books.css';
 import { Link, Outlet } from 'react-router-dom';
+import { updateDarkPatternState } from '../../utils/dark_patterns';
 
 export const Home = () => {
+  useEffect(() => {
+    updateDarkPatternState();
+  }, []);
+
   return (
     <>
       <NavBar />

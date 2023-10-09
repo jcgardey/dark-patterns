@@ -6,6 +6,7 @@ import background from '../../assets/Roomio/bg.jpg';
 import { NavBar } from '../../components/Roomio/NavBar';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
+import { updateDarkPatternState } from '../../utils/dark_patterns';
 
 export const Search = ({}) => {
   const [startDate, setStartDate] = useState(new Date());
@@ -28,6 +29,7 @@ export const Search = ({}) => {
 
   useEffect(() => {
     document.body.style.background = `url(${background})`;
+    updateDarkPatternState();
   }, []);
 
   return (

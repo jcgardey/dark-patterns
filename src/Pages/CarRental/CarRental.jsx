@@ -6,10 +6,12 @@ import { useTranslation } from 'react-i18next';
 
 import car_illustration from '../../assets/CarRental/car_illustration.avif';
 import { NavBar } from '../../components/CarRent/NavBar';
+import { updateDarkPatternState } from '../../utils/dark_patterns';
 
 const Input = ({ name, value, onChange }) => (
   <input
     type="text"
+    widget-type="text"
     name={name}
     value={value}
     onChange={onChange}
@@ -24,6 +26,10 @@ const Label = ({ children }) => (
 export function CarRental() {
   useEffect(() => {
     document.title = t('Rental.Title');
+    updateDarkPatternState();
+
+    const params = new URLSearchParams(document.location.search);
+    localStorage.setItem('ux-analyzer-token', params.get('token'));
   }, []);
 
   const navigate = useNavigate();
