@@ -1,6 +1,6 @@
-import { useEffect, useState } from 'react';
+import { useEffect } from 'react';
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
 import { CarRental } from './Pages/CarRental/CarRental';
 import { SelectVehicle } from './Pages/CarRental/SelectVehicle';
 import { SelectProtection } from './Pages/CarRental/SelectProtection';
@@ -21,22 +21,16 @@ import { Books } from './Pages/EBook/Books';
 import { CancelMembership } from './Pages/EBook/CancelMembership';
 import { BooksOffer } from './Pages/EBook/BooksOffer';
 import { PassengerHome } from './Pages/Passenger/PassengerHome';
+import { updateDarkPatternState } from './utils/dark_patterns';
 
 function App() {
-  const [count, setCount] = useState(0);
-
   useEffect(() => {
-    const params = new URLSearchParams(document.location.search);
-    if (params.get('enabled') === 'true') {
-      localStorage.setItem('dark', true);
-    } else if (params.get('enabled') === 'false') {
-      localStorage.removeItem('dark');
-    }
+    updateDarkPatternState();
   }, []);
 
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
 
@@ -65,7 +59,7 @@ function App() {
             <Route path="/ebook/books_offer" element={<BooksOffer />} />
           </Route>
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }
