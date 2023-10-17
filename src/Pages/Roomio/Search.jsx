@@ -28,12 +28,11 @@ export const Search = ({}) => {
   };
 
   useEffect(() => {
-    document.body.style.background = `url(${background})`;
     updateDarkPatternState();
   }, []);
 
   return (
-    <>
+    <div style={{ background: `url(${background})`, minHeight: '100vh' }}>
       <NavBar />
       <form
         className="w-11/12 mx-auto flex justify-evenly bg-white/[.3] rounded-lg p-10 mt-32"
@@ -91,6 +90,6 @@ export const Search = ({}) => {
           {t('Roomio.Search.Search')}
         </button>
       </form>
-    </>
+    </div>
   );
 };
