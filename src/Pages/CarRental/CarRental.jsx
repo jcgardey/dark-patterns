@@ -28,7 +28,7 @@ export function CarRental() {
     document.title = t('Rental.Title');
     updateDarkPatternState();
 
-    const params = new URLSearchParams(document.location.search);
+    const params = new URLSearchParams(document.location.href.split('?')[1]);
     localStorage.setItem('ux-analyzer-token', params.get('token'));
   }, []);
 
