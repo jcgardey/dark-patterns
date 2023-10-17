@@ -7,6 +7,8 @@ import { NavBar } from '../../components/Roomio/NavBar';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { updateDarkPatternState } from '../../utils/dark_patterns';
+import { Autocomplete } from '../../components/Form/Autocomplete';
+import cities from '../../utils/cities.json';
 
 export const Search = ({}) => {
   const [startDate, setStartDate] = useState(new Date());
@@ -38,14 +40,17 @@ export const Search = ({}) => {
         className="w-11/12 mx-auto flex justify-evenly bg-white/[.3] rounded-lg p-10 mt-32"
         onSubmit={onSubmit}
       >
-        <input
-          className="p-2 text-lg rounded mx-2"
-          type="text"
-          placeholder={t('Roomio.Search.Destination')}
-          name="destination"
-          value={city}
-          onChange={(e) => setCity(e.target.value)}
-        />
+        <div className="relative w-1/4">
+          <Autocomplete
+            inputClassName="p-2 text-lg rounded w-full"
+            optionClassName="hover:bg-teal-600"
+            placeholder={t('Roomio.Search.Destination')}
+            name="destination"
+            value={city}
+            onChange={(newValue) => setCity(newValue)}
+            suggestedValues={cities.map((c) => `${c.nombre}, ${c.pais}`)}
+          />
+        </div>
         <div>
           <DatePicker
             className="p-2 text-lg rounded mx-2"
