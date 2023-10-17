@@ -26,9 +26,11 @@ export const CancelMembership = ({}) => {
   const [option, setOption] = useState('');
   const [error, setError] = useState(false);
 
+  const dark = localStorage.getItem('dark') === 'true';
+
   const onSubmit = (e) => {
     e.preventDefault();
-    if (option !== '') {
+    if (dark && option !== '') {
       navigate('/ebook/books_offer');
     } else {
       setError(true);
