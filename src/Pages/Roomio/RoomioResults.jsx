@@ -1,6 +1,7 @@
 import { useEffect, useTransition } from 'react';
 import map from '../../assets/Roomio/map.jpg';
 import { NavBar } from '../../components/Roomio/NavBar';
+import { Footer } from '../../components/Roomio/Footer';
 import { Room } from '../../components/Roomio/Room';
 import { rooms } from './rooms';
 import dayjs from 'dayjs';
@@ -81,6 +82,7 @@ export const RoomioResults = () => {
             ))}
         </div>
       </div>
+      <Footer />
     </>
   );
 };

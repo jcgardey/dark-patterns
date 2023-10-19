@@ -1,5 +1,6 @@
 import { forwardRef, useState } from 'react';
 import { NavBar } from '../../components/Roomio/NavBar';
+import { Footer } from '../../components/Roomio/Footer';
 import { useForm } from 'react-hook-form';
 import { formatCurrency } from '../../utils/currency';
 import { useTranslation } from 'react-i18next';
@@ -59,10 +60,12 @@ export const RoomioSummary = () => {
     <>
       <NavBar />
       <div className="w-10/12 mx-auto">
-        <div className="flex justify-between my-10">
 
+      <form onSubmit={handleSubmit(onSubmit)} className="hotel_checkout">
+
+        <div className="flex justify-between my-10">
+         
           <div className="w-4/6">
-            <form onSubmit={handleSubmit(onSubmit)} className="hotel_checkout">
               <div className="bg-neutral-200 p-6 rounded">
                 <div className="w-1/3">
                   <div className="my-4">
@@ -151,15 +154,6 @@ export const RoomioSummary = () => {
                 </div>
               </div>
 
-              <div className="buttons">
-                <button
-                  className="px-3 py-2 bg-blue-600 hover:bg-blue-700 text-white text-2xl rounded"
-                  type="submit"
-                >
-                  {t('Roomio.Summary.Buy')}
-                </button>
-              </div>
-            </form>
           </div>
 
           <div className="w-1/4">
@@ -194,10 +188,25 @@ export const RoomioSummary = () => {
                 </p>
               </div>
             </div>
+
+
+            <div className="buttons px-0">
+                <button
+                  className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white text-2xl rounded"
+                  type="submit"
+                >
+                  {t('Roomio.Summary.Buy')}
+                </button>
+              </div>
+
           </div>
 
         </div>
+
+        </form>
       </div>
+
+      <Footer />
       {confirmed && (
         <Modal title={t('Rental.Review.Confirmation.Title')}>
           <ReservationConfirmed email={'test@hotmail.com'} />

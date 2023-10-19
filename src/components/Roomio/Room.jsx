@@ -22,13 +22,13 @@ export const Room = ({
   const darkEnabled = localStorage.getItem('dark') == 'true' ?? false;
 
   return (
-    <div className="my-2 border border-gray-400 rounded">
+    <div className="mb-10 border border-gray-400 rounded">
       <div className="flex justify-between">
         <div className="w-1/4">
           <img src={img} className="img-fluid rounded-start" alt="..." />
         </div>
 
-        <div className="w-1/2">
+        <div className="w-1/2 pt-5">
           <a
             className="underline font-medium text-xl text-teal-600"
             dangerouslySetInnerHTML={{ __html: title }}
@@ -66,7 +66,7 @@ export const Room = ({
           <Link
             to="/roomio/summary"
             onClick={onClick}
-            className="bg-teal-600 text-xl hover:bg-teal-700 p-2 my-2 inline-block rounded text-white"
+            className="bg-teal-600 text-xl hover:bg-teal-700 p-2 px-10 my-2 inline-block rounded text-white"
           >
             {t('Roomio.Results.Book')}
           </Link>
