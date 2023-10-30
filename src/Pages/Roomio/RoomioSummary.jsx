@@ -6,6 +6,7 @@ import { formatCurrency } from '../../utils/currency';
 import { useTranslation } from 'react-i18next';
 import { Modal } from '../../components/Modal';
 import { ReservationConfirmed } from '../../components/CarRent/ReservationConfirmed';
+import { finishTask } from '../../utils/dark_patterns';
 
 const Input = forwardRef(
   ({ id, type = 'text', placeholder, errors, ...props }, ref) => (
@@ -39,6 +40,7 @@ export const RoomioSummary = () => {
 
   const onSubmit = (data) => {
     setConfirmed(true);
+    finishTask('Roomio');
   };
 
   const autocompleteCard = () => {
@@ -60,12 +62,9 @@ export const RoomioSummary = () => {
     <>
       <NavBar />
       <div className="w-10/12 mx-auto">
-
-      <form onSubmit={handleSubmit(onSubmit)} className="hotel_checkout">
-
-        <div className="flex justify-between my-10">
-         
-          <div className="w-4/6">
+        <form onSubmit={handleSubmit(onSubmit)} className="hotel_checkout">
+          <div className="flex justify-between my-10">
+            <div className="w-4/6">
               <div className="bg-neutral-200 p-6 rounded">
                 <div className="w-1/3">
                   <div className="my-4">
@@ -153,44 +152,42 @@ export const RoomioSummary = () => {
                   </div>
                 </div>
               </div>
-
-          </div>
-
-          <div className="w-1/4">
-            <div className="bg-teal-600 p-4 rounded">
-              <h2 className="text-white font-medium text-3xl">
-                {t('Roomio.Summary.Summary')}
-              </h2>
-              <div className="py-4 border-b border-white">
-                <div className="my-4">
-                  <p className="text-white text-xl font-bold my-1">
-                    {t('Roomio.Summary.Price', { count: nights })}
-                  </p>
-                  <p className="text-right text-xl text-white">
-                    {formatCurrency(price)}
-                  </p>
-                </div>
-                <div className="my-4">
-                  <p className="text-white text-xl font-bold my-1">
-                    {t('Roomio.Summary.Taxes')}
-                  </p>
-                  <p className="text-right text-xl text-white">
-                    {formatCurrency(taxes)}
-                  </p>
-                </div>
-              </div>
-              <div className="flex justify-between py-2">
-                <h4 className="text-white text-3xl ">
-                  {t('Roomio.Summary.Total')}
-                </h4>
-                <p className="text-2xl text-white" id="total">
-                  {formatCurrency(price + taxes)}
-                </p>
-              </div>
             </div>
 
+            <div className="w-1/4">
+              <div className="bg-teal-600 p-4 rounded">
+                <h2 className="text-white font-medium text-3xl">
+                  {t('Roomio.Summary.Summary')}
+                </h2>
+                <div className="py-4 border-b border-white">
+                  <div className="my-4">
+                    <p className="text-white text-xl font-bold my-1">
+                      {t('Roomio.Summary.Price', { count: nights })}
+                    </p>
+                    <p className="text-right text-xl text-white">
+                      {formatCurrency(price)}
+                    </p>
+                  </div>
+                  <div className="my-4">
+                    <p className="text-white text-xl font-bold my-1">
+                      {t('Roomio.Summary.Taxes')}
+                    </p>
+                    <p className="text-right text-xl text-white">
+                      {formatCurrency(taxes)}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex justify-between py-2">
+                  <h4 className="text-white text-3xl ">
+                    {t('Roomio.Summary.Total')}
+                  </h4>
+                  <p className="text-2xl text-white" id="total">
+                    {formatCurrency(price + taxes)}
+                  </p>
+                </div>
+              </div>
 
-            <div className="buttons px-0">
+              <div className="buttons px-0">
                 <button
                   className="w-full py-2 bg-blue-600 hover:bg-blue-700 text-white text-2xl rounded"
                   type="submit"
@@ -198,11 +195,8 @@ export const RoomioSummary = () => {
                   {t('Roomio.Summary.Buy')}
                 </button>
               </div>
-
+            </div>
           </div>
-
-        </div>
-
         </form>
       </div>
 

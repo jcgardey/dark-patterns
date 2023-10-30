@@ -1,9 +1,15 @@
 import { useState } from 'react';
 import { Modal } from '../../Components/Modal';
 import { MembershipCancelled } from '../../components/EBook/MembershipCancelled';
+import { finishTask } from '../../utils/dark_patterns';
 
 export const BooksOffer = () => {
   const [membershipCancelled, setMembershipCancelled] = useState(false);
+
+  const cancelMembership = () => {
+    setMembershipCancelled(true);
+    finishTask('Ebook');
+  };
 
   return (
     <div className="membership offer">
@@ -43,7 +49,7 @@ export const BooksOffer = () => {
         ¿Aún prefieres cancelar?{' '}
         <button
           className="underline text-fuchsia-500"
-          onClick={() => setMembershipCancelled(true)}
+          onClick={cancelMembership}
         >
           Finalizar cancelación
         </button>

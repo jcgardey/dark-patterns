@@ -5,6 +5,7 @@ import {
   PrimaryButton,
 } from '../../components/Passenger/common';
 import { useEffect } from 'react';
+import { finishTask } from '../../utils/dark_patterns';
 
 export const Summary = () => {
   let formatting_options = {
@@ -24,11 +25,16 @@ export const Summary = () => {
     document.title = t('Checkin.Summary.Title');
   }, []);
 
+  const onSubmit = (e) => {
+    e.preventDefault();
+    finishTask('Air Somewhere');
+  };
+
   return (
     <div className="w-11/12 mx-auto">
       <div className="w-3/4">
         <PageTitle>{t('Checkin.Summary.Title')}</PageTitle>
-        <form>
+        <form onSubmit={onSubmit}>
           <div className="plane w-1/2 mx-auto">
             <div className="summary my-4">
               <div className="flex justify-between my-4">
