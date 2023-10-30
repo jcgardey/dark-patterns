@@ -73,7 +73,7 @@ export const SelectVehicle = ({}) => {
       type: 'sedan',
       description: 'VW Jetta',
       capacity: 5,
-      price: 357.35,
+      price: 420.35,
       img: standard,
     },
     {
@@ -81,7 +81,7 @@ export const SelectVehicle = ({}) => {
       type: 'convertible',
       description: 'Ford Mustang',
       capacity: 4,
-      price: 357.65,
+      price: 650.23,
       img: convertible,
     },
     {
@@ -89,7 +89,7 @@ export const SelectVehicle = ({}) => {
       type: 'pickup',
       description: 'Ford F150',
       capacity: 4,
-      price: 357.65,
+      price: 450.95,
       img: pickup,
     },
     {
@@ -97,14 +97,14 @@ export const SelectVehicle = ({}) => {
       type: 'sporty',
       description: 'Dodge Challenger',
       capacity: 4,
-      price: 357.65,
+      price: 688.65,
       img: sporty,
     },
     {
       name: 'Standard Pickup',
       type: 'pickup',
       capacity: 4,
-      price: 357.65,
+      price: 468.06,
       img: standard_pickup,
     },
   ];

@@ -48,67 +48,72 @@ export const PassengerInfo = ({}) => {
   }, []);
 
   return (
-    <div className="w-11/12 mx-auto my-4">
-      <div className="w-3/4">
-        <PageTitle>{t('Checkin.Passenger.Title')}</PageTitle>
-        <form onSubmit={handleSubmit(onSubmit, onError)}>
-          <div className="flex justify-between">
-            <div className="w-2/5">
-              <Input
-                name={'name'}
-                label={t('Checkin.Passenger.Name')}
-                register={register}
-                rules={nameRules}
-                errors={errors.name}
-              />
+    <div className="w-100">
+      
+      <div className="w-11/12 mx-auto my-4">
+        <div className="w-3/4">
+          <PageTitle>{t('Checkin.Passenger.Title')}</PageTitle>
+          <form onSubmit={handleSubmit(onSubmit, onError)}>
+            <div className="flex">
+              <div className="w-1/5 mr-10">
+                <Input
+                  name={'name'}
+                  label={t('Checkin.Passenger.Code')}
+                  register={register}
+                  rules={nameRules}
+                  errors={errors.name}
+                />
+              </div>
+              <div className="w-1/5">
+                <Input
+                  name={'surname'}
+                  label={t('Checkin.Passenger.Surname')}
+                  register={register}
+                  rules={nameRules}
+                  errors={errors.name}
+                />
+              </div>
             </div>
-            <div className="w-2/5">
-              <DateSelects
-                label={t('Checkin.Passenger.Birthdate')}
-                name={'fecha_nacimiento'}
-                years={range(1925, 2022).reverse()}
-                control={control}
-                rules={{ required: true }}
-                errors={errors}
-              />
+  
+            <div className="flex">
+              <div className="w-1/3">
+                <PrimaryButton type="submit">
+                  {t('Checkin.Passenger.FindReservation')}
+                </PrimaryButton>
+              </div>
             </div>
-          </div>
-          <div className="flex justify-between">
-            <div className="w-2/5">
-              <Input
-                name={'id_number'}
-                label={t('Checkin.Passenger.IdNumber')}
-                register={register}
-                rules={{
-                  required: true,
-                  pattern: {
-                    value: /^(?!^0+$)[a-zA-Z0-9]{5,20}$/,
-                    message: 'Ingrese un numero de document valido',
-                  },
-                }}
-                errors={errors.id_number}
-              />
-            </div>
-            <div className="w-2/5">
-              <Select
-                name={'id_country'}
-                label={t('Checkin.Passenger.IssueCountry')}
-                control={control}
-                rules={{ required: true }}
-                options={countryNames()}
-                errors={errors.id_country}
-              />
-            </div>
-          </div>
-          <div className="flex justify-around">
-            <div className="w-1/3">
-              <PrimaryButton type="submit">
-                {t('Checkin.Passenger.SelectSeat')}
-              </PrimaryButton>
-            </div>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
+      
+      <div className="flex bg-gray-200 px-12 pb-20 pt-5 mt-20">
+        <div className="w-4/12 pt-10">
+          <h1 className="text-2xl font-bold text-green-700">Subscribe now and get the best deals</h1>
+          <p>Never miss a sale!</p>
+        </div>
+        
+        <div className="w-4/12 pt-10 pl-10">
+          <ul className="list-disc">
+            <li>Learn about latest deals</li>
+            <li>Be the first to get promotions</li>
+            <li>Learn about new destinations</li>
+          </ul>  
+        </div>
+    
+        <div className="w-4/12">
+          <Input
+            name={'email'}
+            label={t('Checkin.Passenger.Email')}
+            register={register}
+            rules={nameRules}
+            errors={errors.name}
+          />
+          <PrimaryButton type="submit">
+            {t('Checkin.Passenger.Subscribe')}
+          </PrimaryButton>
+        </div>
+      </div>
+        
     </div>
   );
 };

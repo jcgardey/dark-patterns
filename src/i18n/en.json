@@ -96,9 +96,10 @@
     },
     "Checkin": {
         "Passenger": {
-            "Title": "Passenger information",
+            "Title": "Checkin Information",
             "Name": "Name",
-            "Surname": "Surname",
+            "Code": "Reservation Code",
+            "Surname": "Last Name",
             "Birthdate": "Birthdate",
             "Gender": {
                 "Label": "Gender",
@@ -111,6 +112,9 @@
             "DueDate": "Due Date",
             "Nationality": "Nationality",
             "Passport": "Passport",
+            "Email": "Email",
+            "FindReservation": "Find Reservation",
+            "Subscribe": "Subscribe",
             "SelectSeat": "Select Seat"
         },
         "Seat": {

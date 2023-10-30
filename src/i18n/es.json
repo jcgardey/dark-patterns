@@ -97,6 +97,7 @@
         "Passenger": {
             "Title": "Datos del pasajero",
             "Name": "Nombre",
+            "Code": "Código de Reserva",
             "Surname": "Apellido",
             "Birthdate": "Fecha de Nacimiento",
             "Gender": {
@@ -110,6 +111,9 @@
             "DueDate": "Fecha de vencimiento",
             "Nationality": "Nacionalidad",
             "Passport": "Pasaporte",
+            "Email": "Email",
+            "FindReservation": "Encontrar Reserva",
+            "Subscribe": "Subscribirse",
             "SelectSeat": "Elegir Asiento"
         },
         "Seat": {
