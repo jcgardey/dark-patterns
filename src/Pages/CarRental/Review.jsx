@@ -10,6 +10,7 @@ import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { TextInput } from '../../components/CarRent/TextInput';
 import { sendLogs } from '../../utils/logs';
+import { finishTask } from '../../utils/dark_patterns';
 
 const Reservation = () => {
   const reservation = JSON.parse(localStorage.getItem('reservation'));
@@ -49,6 +50,7 @@ export const Review = ({}) => {
   const [confirmed, setConfirmed] = useState(false);
   const onSubmit = (data) => {
     setConfirmed(true);
+    finishTask('Car Rental');
     //sendLogs(); interaction effort
   };
 

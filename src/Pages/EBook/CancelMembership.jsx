@@ -1,5 +1,8 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { finishTask } from '../../utils/dark_patterns';
+import { Modal } from '../../Components/Modal';
+import { MembershipCancelled } from '../../components/EBook/MembershipCancelled';
 
 const RadioItem = ({ label, selected, onChange }) => (
   <div className="flex items-center my-3">
@@ -25,12 +28,16 @@ export const CancelMembership = ({}) => {
 
   const [option, setOption] = useState('');
   const [error, setError] = useState(false);
+  const [membershipCancelled, setMembershipCancelled] = useState(false);
 
   const dark = localStorage.getItem('dark') === 'true';
 
   const onSubmit = (e) => {
     e.preventDefault();
-    if (dark && option !== '') {
+    if (!dark) {
+      setMembershipCancelled(true);
+      finishTask('EBook');
+    } else if (option !== '') {
       navigate('/ebook/books_offer');
     } else {
       setError(true);
@@ -87,13 +94,27 @@ export const CancelMembership = ({}) => {
             Por favor explicanos los motivos
           </label>
         </div>
-        <button
-          type="submit"
-          className="my-2 underline text-sm text-fuchsia-500"
-        >
-          Enviar y continuar la cancelación
-        </button>
+        {dark ? (
+          <button
+            type="submit"
+            className="my-2 underline text-sm text-fuchsia-500"
+          >
+            Enviar y continuar la cancelación
+          </button>
+        ) : (
+          <button
+            className="bg-fuchsia-500 text-lg text-white p-2 rounded"
+            type="submit"
+          >
+            Cancelar membresía
+          </button>
+        )}
       </form>
+      {membershipCancelled && (
+        <Modal title="Membresia cancelada">
+          <MembershipCancelled />
+        </Modal>
+      )}
     </div>
   );
 };
