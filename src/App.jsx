@@ -21,6 +21,7 @@ import { Books } from './Pages/EBook/Books';
 import { CancelMembership } from './Pages/EBook/CancelMembership';
 import { BooksOffer } from './Pages/EBook/BooksOffer';
 import { PassengerHome } from './Pages/Passenger/PassengerHome';
+import { PassengerIndex } from './Pages/Passenger/PassengerIndex';
 import { updateDarkPatternState } from './utils/dark_patterns';
 
 function App() {
@@ -40,7 +41,8 @@ function App() {
           <Route path="/car_rental/review" element={<Review />} />
 
           <Route path="/check_in" element={<PassengerHome />}>
-            <Route path="" element={<PassengerInfo />} />
+            <Route path="" element={<PassengerIndex />} />
+            <Route path="/check_in/info" element={<PassengerInfo />} />
             <Route path="/check_in/seat" element={<SeatSelection />} />
             <Route path="/check_in/summary" element={<Summary />} />
           </Route>

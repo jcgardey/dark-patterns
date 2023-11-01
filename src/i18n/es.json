@@ -94,9 +94,24 @@
         }
     },
     "Checkin": {
+        "Home":{
+            "Flights":"Vuelos",
+            "SelfCheckin": "Auto Check In",
+            "Hotels": "Hoteles",
+            "CarHire":"Autos",
+            "Deals":"Ofertas de Último Momento",
+            "Home":"Home",
+            "CheckIn":"Check In",
+            "Services":"Servicios",
+            "Terms":"Términos",
+            "Contact":"Contacto"
+        },
         "Passenger": {
             "Title": "Datos del pasajero",
             "Name": "Nombre",
+            "From": "Origen",
+            "To": "Destino",
+            "Search": "Buscar",
             "Code": "Código de Reserva",
             "Surname": "Apellido",
             "Birthdate": "Fecha de Nacimiento",

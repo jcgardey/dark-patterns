@@ -95,9 +95,24 @@
         }
     },
     "Checkin": {
+        "Home":{
+            "Flights":"Flights",
+            "SelfCheckin": "Self Check In",
+            "Hotels": "Hotels",
+            "CarHire":"Car Hire",
+            "Deals":"Last-Minute Deals",
+            "Home":"Home",
+            "CheckIn":"Check In",
+            "Services":"Services",
+            "Terms":"Terms",
+            "Contact":"Contact"
+        },
         "Passenger": {
-            "Title": "Checkin Information",
+            "Title": "Check In Information",
             "Name": "Name",
+            "From": "From",
+            "To": "To",
+            "Search": "Search",
             "Code": "Reservation Code",
             "Surname": "Last Name",
             "Birthdate": "Birthdate",
