@@ -45,9 +45,27 @@ export const SeatSelection = () => {
     : 'text-white text-center block bg-gray-700 hover:grey-800 rounded w-full p-2';
 
   return (
-    <div className="w-11/12 mx-auto">
+    <>
+    <PageTitle>{t('Checkin.Seat.Title')}</PageTitle>
+    <div className="flex flex-row mx-auto">
+      
+      
+      <div className="w-1/4 pl-20 pt-20">
+        Reservation Info
+        <h3 className="font-bold text-lg mt-5">Passengers</h3>
+        <p>James Ferrel</p>
+        <h3 className="font-bold text-lg mt-5">Flights</h3>
+        <p className="mt-3 font-bold">Dublin -> Barcelona</p>
+        Thu 14 Dec - 6:25-00:55 . AS 3077<br/>
+        × small bag (40cm × 20cm)<br/>
+        <small>You do not pay government taxes</small>
+
+        <p className="mt-3 font-bold">Barcelona -> Dublin</p>
+        Sun 17 Dec - 06:15 - 08:00 - AS 4132<br/>
+       × small bag (40cm × 20cm)<br/>
+       <small>You do not pay government taxes</small>
+      </div>
       <div className="w-3/4">
-        <PageTitle>{t('Checkin.Seat.Title')}</PageTitle>
         <form id="seatSelection" onSubmit={saveSeat}>
           <div className="flex">
             <div className="plane">
@@ -129,5 +147,6 @@ export const SeatSelection = () => {
         </form>
       </div>
     </div>
+    </>
   );
 };

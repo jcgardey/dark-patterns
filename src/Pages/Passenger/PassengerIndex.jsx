@@ -53,7 +53,7 @@ const onError = () => {
     <div className="w-100">
 
 
-     <div style={{'--image-url': `url(${searchbg})`}}  className="w-full p-20 px-60 bg-green-700  bg-[image:var(--image-url)] bg-no-repeat bg-right-bottom bg-contain">
+     <div style={{'--image-url': `url(${searchbg})`}}  className="w-full pb-20 pt-10 px-60 bg-green-700  bg-[image:var(--image-url)] bg-no-repeat bg-right-bottom bg-contain">
 
        <ul className="flex flex-wrap items-center justify-left text-white pl-0 pb-5">
          <li>

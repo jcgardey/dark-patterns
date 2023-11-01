@@ -4,6 +4,7 @@ import DatePicker from 'react-datepicker';
 
 import background from '../../assets/Roomio/bg.jpg';
 import { NavBar } from '../../components/Roomio/NavBar';
+import { Footer } from '../../components/Roomio/Footer';
 import { useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { updateDarkPatternState } from '../../utils/dark_patterns';
@@ -34,6 +35,7 @@ export const Search = ({}) => {
   }, []);
 
   return (
+    <>
     <div style={{ background: `url(${background})`, minHeight: '100vh' }}>
       <NavBar />
       <form
@@ -96,5 +98,7 @@ export const Search = ({}) => {
         </button>
       </form>
     </div>
+    <Footer />
+    </>
   );
 };
