@@ -51,8 +51,8 @@ export const Room = ({
         </div>
 
         <div className="w-1/5 py-4">
-          <h5 className="text-xl my-1 line-through text-gray-500">
-            $ {fullPrice}
+          <h5 className="text-xs my-1 text-gray-900">
+          {t('Roomio.Results.Night', { count: nights })}
           </h5>
           <h5 className="text-xl my-1 font-medium">
             $ {darkEnabled ? price : price + taxes}
