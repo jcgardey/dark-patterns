@@ -49,7 +49,6 @@ export const Home = () => {
   }, []);
 
   const pendingSites = () => sites.filter((site) => site.status !== 'done');
-  const doneSites = () => sites.filter((site) => site.status === 'done');
 
   return (
     <div className="w-3/4 my-8 mx-auto">
@@ -61,25 +60,16 @@ export const Home = () => {
             <p>Todas las tareas fueron completadas correctamente</p>
           </div>
         )}
-        {pendingSites().map((site, i) => (
+        {sites.map((site, i) => (
           <Site
             key={site.path}
             site={site}
             enabled={
-              site.status === 'pending' &&
-              pendingSites()[i - 1]?.status !== 'pending'
+              site.status === 'pending' && sites[i - 1]?.status !== 'pending'
             }
           />
         ))}
       </div>
-      {doneSites().length > 0 && (
-        <div>
-          <h2 className="text-2xl">Tareas completadas:</h2>
-          {doneSites().map((site) => (
-            <Site key={site.path} site={site} enabled={false} />
-          ))}
-        </div>
-      )}
     </div>
   );
 };
