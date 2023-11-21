@@ -72,6 +72,7 @@ export function CarRental() {
               <Label>{t('Rental.StartDate')}</Label>
               <DatePicker
                 className="w-full rounded px-2 h-9"
+                wrapperClassName="w-full"
                 selected={startDate}
                 onChange={(date) => setStartDate(date)}
                 selectsStart
@@ -85,6 +86,7 @@ export function CarRental() {
               <Label>{t('Rental.EndDate')}</Label>
               <DatePicker
                 className="w-full rounded px-2 h-9"
+                wrapperClassName="w-full"
                 selected={endDate}
                 onChange={(date) => setEndDate(date)}
                 selectsEnd
