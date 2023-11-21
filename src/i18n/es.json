@@ -190,7 +190,11 @@
         "Saved": "Guardados",
         "Recommended": "Recomendados",
         "Books": "Libros",
-        "Audiobooks": "Audiolibros"
+        "Audiobooks": "Audiolibros",
+        
+        "AccountInfo":"Información de Cuenta",
+        "Membership":"Membresía",
+        "Logout":"Salir"
         
     },
     "Common": {

@@ -3,8 +3,12 @@ import { NavBar } from '../../components/EBook/NavBar';
 import './books.css';
 import { Link, Outlet } from 'react-router-dom';
 import { updateDarkPatternState } from '../../utils/dark_patterns';
+import { useTranslation } from 'react-i18next';
 
 export const Home = () => {
+  
+  const { t } = useTranslation();
+  
   useEffect(() => {
     updateDarkPatternState();
   }, []);

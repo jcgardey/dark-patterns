@@ -191,7 +191,10 @@
         "Saved": "Saved",
         "Recommended": "Recommended",
         "Books": "Books",
-        "Audiobooks": "Audiobooks"
+        "Audiobooks": "Audiobooks",
+        "AccountInfo":"Account Information",
+        "Membership":"Membership",
+        "Logout":"Log out"
         
     },
     "Common": {
