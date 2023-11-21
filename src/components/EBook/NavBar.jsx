@@ -63,7 +63,7 @@ export const NavBar = () => {
                     onClick={() => setDropdown(!dropdown)}
                     className="dropdown-item"
                   >
-                    {t('Ebook.Membership')}
+                    {t('Ebook.MyMembership')}
                   </Link>
                 </li>
                 <li className="hover:bg-gray-100 my-1">

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { finishTask } from '../../utils/dark_patterns';
 import { FinishedTask } from '../../components/FinishedTask';
+import { useTranslation } from 'react-i18next';
 
 const RadioItem = ({ label, selected, onChange }) => (
   <div className="flex items-center my-3">
@@ -23,6 +24,7 @@ const RadioItem = ({ label, selected, onChange }) => (
 );
 
 export const CancelMembership = ({}) => {
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
   const [option, setOption] = useState('');
@@ -45,40 +47,40 @@ export const CancelMembership = ({}) => {
 
   return (
     <div className="membership survey">
-      <h1 className="text-3xl my-8">Antes de que te vayas...</h1>
+      <h1 className="text-3xl my-8">{t('Ebook.Survey.Before')}</h1>
       <form onSubmit={onSubmit}>
         <legend className="text-xl my-4">
-          ¿Cuál de los siguientes motivos te llevó a cancelar tu membresía?
+          {t('Ebook.Survey.Which')}
         </legend>
         {error && (
           <p className="text-red-500 font-medium my-2">
-            Por favor, eliga una opcion
+            {t('Ebook.Survey.Choose')}
           </p>
         )}
         <RadioItem
           selected={option}
           onChange={setOption}
-          label={'Tengo problemas técnicos'}
+          label={t('Ebook.Survey.technical')}
         />
         <RadioItem
           selected={option}
           onChange={setOption}
-          label={'No uso ebookworld lo suficiente'}
+          label={t('Ebook.Survey.enough')}
         />
         <RadioItem
           selected={option}
           onChange={setOption}
-          label={'Esta suscripción es demasiado cara'}
+          label={t('Ebook.Survey.expensive')}
         />
         <RadioItem
           selected={option}
           onChange={setOption}
-          label={'No puedo encontrar el contenido específico que quiero leer'}
+          label={t('Ebook.Survey.specific')}
         />
         <RadioItem
           selected={option}
           onChange={setOption}
-          label={'Otros problemas'}
+          label={t('Ebook.Survey.Other')}
         />
 
         <div className="my-1 relative">
@@ -90,7 +92,7 @@ export const CancelMembership = ({}) => {
             className="absolute top-0 left-0 p-2 text-sm text-gray-600"
             htmlFor="floatingTextarea2"
           >
-            Por favor explicanos los motivos
+            {t('Ebook.Survey.Please')}
           </label>
         </div>
         {dark ? (
@@ -98,14 +100,14 @@ export const CancelMembership = ({}) => {
             type="submit"
             className="my-2 underline text-sm text-fuchsia-500"
           >
-            Enviar y continuar la cancelación
+            {t('Ebook.Survey.Send')}
           </button>
         ) : (
           <button
             className="bg-fuchsia-500 text-lg text-white p-2 rounded"
             type="submit"
           >
-            Cancelar membresía
+            {t('Ebook.Survey.Cancel')}
           </button>
         )}
       </form>

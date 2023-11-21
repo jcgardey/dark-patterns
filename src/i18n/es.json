@@ -193,8 +193,47 @@
         "Audiobooks": "Audiolibros",
         
         "AccountInfo":"Información de Cuenta",
-        "Membership":"Membresía",
-        "Logout":"Salir"
+        "MyMembership":"Membresía",
+        "Logout":"Salir",
+        "Membership":{
+            "Details": "Membresía y Detalles de Pago",
+            "Unlimited": "Lectura sin límites con tu membresía",
+            "Learn": "Learn more about your full membership benefits",
+            "Books": "Books",
+            "Read": "Lea bestsellers",
+            "Audiobooks": "Audiolibros",
+            "Listen": "Para escuchar estrenos",
+            "Snapshots": "Snapshots",
+            "Gain": "Resúmenes de 15 minutos",
+            "Documents": "Documentos",
+            "community": "Cargas de la comunidad",
+            "Magazines": "Revistas",
+            "Find": "Últimas ediciones",
+            "Sheet": "Partituras",
+            "Play": "Clásicos y éxitos nuevos",
+            "Plan": "Plan de Membresía",
+            "Your": "Su plan se renovará automáticamente el 4/12/23, y se cobrarán USD9.99",
+            "Pause": "",
+            "End": "Cancelar mi membresía",
+            "Payment": "Detalles de Pago",
+            "Card": "Tarjeta VISA finalizada en 9903",
+            "Update": "Actualizar Medio de Pago",
+            "View": "Ver Historial de Pagos"
+        },
+        "Survey":{
+            "Before": "Antes de que te vayas...",
+            "Which": "¿Cuál de los siguientes motivos te llevó a cancelar tu membresía?",
+            "Choose": "Por favor, elija una opcion",
+            "technical": "Tengo problemas técnicos",
+            "enough": "No uso ebookworld lo suficiente",
+            "Please": "Por favor explicanos los motivos",
+            "expensive": "Esta suscripción es demasiado cara",
+            "specific": "No puedo encontrar el contenido específico que quiero leer",
+            "Other": "Otros problemas",
+            "Send": "Enviar y continuar la cancelación",
+            "Cancel": "Cancelar membresía"
+            
+        }
         
     },
     "Common": {

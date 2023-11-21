@@ -1,62 +1,63 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export const Membership = () => {
+  const { t } = useTranslation();
   return (
     <>
       <h1 className="text-2xl my-4 font-medium">
-        Membresía y Detalles de Pago
+        {t('Ebook.Membership.Details')}
       </h1>
       <div className="benefits">
-        <h4>Lectura sin límites con tu membresía</h4>
+        <h4> {t('Ebook.Membership.Unlimited')}</h4>
         <ul>
           <li>
             <i className="fa-solid fa-sharp fa-book"></i>
-            <p>Libros</p>
-            <span>Lea bestsellers</span>
+            <p> {t('Ebook.Membership.Books')}</p>
+            <span> {t('Ebook.Membership.Read')}</span>
           </li>
           <li>
             <i className="fa-solid fa-sharp fa-headphones"></i>
-            <p>Audiolibros</p>
-            <span>Para escuchar estrenos</span>
+            <p> {t('Ebook.Membership.Audiobooks')}</p>
+            <span>{t('Ebook.Membership.Listen')}</span>
           </li>
           <li>
             <i className="fa-solid fa-sharp fa-stopwatch"></i>
-            <p>Snapshots</p>
-            <span>Resúmenes de 15 minutos</span>
+            <p>{t('Ebook.Membership.Snapshots')}</p>
+            <span>{t('Ebook.Membership.Gain')}</span>
           </li>
           <li>
             <i className="fa-solid fa-sharp fa-file"></i>
-            <p>Documentos</p>
-            <span>Cargas de la comunidad</span>
+            <p>{t('Ebook.Membership.Documents')}</p>
+            <span>{t('Ebook.Membership.community')}</span>
           </li>
           <li>
             <i className="fa-solid fa-sharp fa-book-open"></i>
-            <p>Revistas</p>
-            <span>Últimas ediciones</span>
+            <p>{t('Ebook.Membership.Magazines')}</p>
+            <span>{t('Ebook.Membership.Find')}</span>
           </li>
           <li>
             <i className="fa-solid fa-sharp fa-music"></i>
-            <p>Partituras</p>
-            <span>Clásicos y éxitos nuevos</span>
+            <p>{t('Ebook.Membership.Sheet')}</p>
+            <span>{t('Ebook.Membership.Play')}</span>
           </li>
         </ul>
       </div>
 
       <div className="flex membership-options">
         <div className="w-1/5">
-          <p>Plan de Membresía</p>
+          <p>{t('Ebook.Membership.Plan')}</p>
         </div>
         <div className="w-3/4">
           <p>
-            Su plan se renovará automáticamente el 4/12/23, y se cobrarán
-            USD9.99
+            {t('Ebook.Membership.Your')}
           </p>
           <p className="my-4">
             <Link
               to="/ebook/cancel_membership"
               className="text-fuchsia-500 underline"
             >
-              Cancelar mi membresía
+              {t('Ebook.Membership.End')}
             </Link>
           </p>
         </div>
@@ -64,18 +65,18 @@ export const Membership = () => {
 
       <div className="flex membership-options">
         <div className="w-1/5">
-          <p>Detalles de Pago</p>
+          <p>{t('Ebook.Membership.Payment')}</p>
         </div>
         <div className="w-3/4">
-          <p>Tarjeta VISA finalizada en 9903</p>
+          <p>{t('Ebook.Membership.Card')}</p>
           <p className="my-4">
             <a className="text-fuchsia-500 underline" href="javascript:void(0)">
-              Actualizar Medio de Pago
+              {t('Ebook.Membership.Update')}
             </a>
           </p>
           <p className="my-4">
             <a className="text-fuchsia-500 underline" href="javascript:void(0)">
-              Ver Historial de Pagos
+              {t('Ebook.Membership.View')}
             </a>
           </p>
         </div>
