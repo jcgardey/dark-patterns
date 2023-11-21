@@ -47,9 +47,13 @@ export const NavBar = () => {
             {dropdown && (
               <ul className="absolute my-1 right-0 border border-gray-300 rounded p-2 bg-white text-gray-700">
                 <li className="hover:bg-gray-100 my-1">
-                  <a className="dropdown-item" href="#">
+                  <Link
+                    to="/ebook/account"
+                    onClick={() => setDropdown(!dropdown)}
+                    className="dropdown-item"
+                  >
                     Información de Cuenta
-                  </a>
+                  </Link>
                 </li>
                 <li className="hover:bg-gray-100 my-1">
                   <Link
@@ -61,7 +65,7 @@ export const NavBar = () => {
                   </Link>
                 </li>
                 <li className="hover:bg-gray-100 my-1">
-                  <a className="dropdown-item" href="#">
+                  <a className="dropdown-item" href="javascript:void(0)">
                     Salir
                   </a>
                 </li>

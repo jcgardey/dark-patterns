@@ -3,7 +3,7 @@ import logo from '../../assets/CarRental/logo.png';
 
 const Link = ({ children }) => (
   <a
-    href="#"
+    href="javascript:void(0)"
     className="text-slate-700 text-xl font-bold mx-2 hover:underline hover:decoration-slate-800"
   >
     {children}

@@ -69,12 +69,12 @@ export const Membership = () => {
         <div className="w-3/4">
           <p>Tarjeta VISA finalizada en 9903</p>
           <p className="my-4">
-            <a className="text-fuchsia-500 underline" href="#">
+            <a className="text-fuchsia-500 underline" href="javascript:void(0)">
               Actualizar Medio de Pago
             </a>
           </p>
           <p className="my-4">
-            <a className="text-fuchsia-500 underline" href="#">
+            <a className="text-fuchsia-500 underline" href="javascript:void(0)">
               Ver Historial de Pagos
             </a>
           </p>

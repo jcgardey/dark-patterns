@@ -21,23 +21,23 @@ export const Home = () => {
               </Link>
             </li>
             <li>
-              <a href="#">
+              <a href="javascript:void(0)">
                 <i className="fa-solid fa-sharp fa-bookmark"></i> Guardados
               </a>
             </li>
             <li className="separator"></li>
             <li>
-              <a href="#">
+              <a href="javascript:void(0)">
                 <i className="fa-solid fa-sharp fa-star"></i> Recomendados
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="javascript:void(0)">
                 <i className="fa-solid fa-sharp fa-book"></i> Libros
               </a>
             </li>
             <li>
-              <a href="#">
+              <a href="javascript:void(0)">
                 <i className="fa-solid fa-sharp fa-headphones"></i> Audiolibros
               </a>
             </li>
