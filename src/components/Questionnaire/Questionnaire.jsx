@@ -1,38 +1,48 @@
 import { useTranslation } from 'react-i18next';
 import { questions } from './questions';
 import { useForm } from 'react-hook-form';
+import ReactSlider from 'react-slider';
+import { useState } from 'react';
 
-const Question = ({ title, name, register }) => {
+const Question = ({ title, name, value, onChange }) => {
   const { t } = useTranslation();
   return (
     <div className="my-8 flex justify-between">
       <p>{t(title)}</p>
       <div className="flex w-1/2">
-        {[1, 2, 3, 4, 5].map((value) => (
-          <input
-            key={value}
-            className="w-1/5"
-            type="radio"
-            {...register(name, { required: true })}
-            value={value}
-          />
-        ))}
+        <ReactSlider
+          value={value}
+          onChange={onChange}
+          className="w-full"
+          thumbClassName="h-7 w-7 rounded-2xl bg-sky-700"
+          trackClassName="h-7 bg-gray-200"
+          renderThumb={(props, state) => <div {...props}></div>}
+        />
       </div>
     </div>
   );
 };
 
-export const Questionnaire = () => {
+export const Questionnaire = ({ onFinish }) => {
   const { t } = useTranslation();
+  const [responses, setResponses] = useState(
+    questions.reduce((acc, q) => {
+      acc[q.name] = 50;
+      return acc;
+    }, {})
+  );
 
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-  } = useForm();
+  const [error, setError] = useState(false);
 
-  const onSubmit = (data) => {
-    console.log(data);
+  const onSubmit = (event) => {
+    event.preventDefault();
+    const notChanged =
+      Object.keys(responses).filter((key) => responses[key] !== 50).length == 0;
+    setError(notChanged);
+    if (!notChanged) {
+      console.log('send data');
+      onFinish();
+    }
   };
 
   return (
@@ -40,14 +50,19 @@ export const Questionnaire = () => {
       <h2 className="text-center text-2xl font-medium">
         {t('Questionnaire.Title')}
       </h2>
-      <p className="my-2 text-lg text-center">
+      <p className="my-4 text-lg text-center">
         {t('Questionnaire.Description')}
       </p>
+      {error && (
+        <p className="text-lg text-center font-bold text-red-700">
+          {t('Questionnaire.MandatoryResponses')}
+        </p>
+      )}
       <div className="my-8">
-        <form onSubmit={handleSubmit(onSubmit)}>
+        <form onSubmit={onSubmit}>
           <div className="flex justify-end my-4">
             <div className="flex w-1/2 justify-between">
-              <p className="w-1/5 text-center">{t('Questionnaire.Disagree')}</p>
+              <p className="w-1/4 text-center">{t('Questionnaire.Disagree')}</p>
               <p className="w-1/5 text-center">{t('Questionnaire.Agree')}</p>
             </div>
           </div>
@@ -56,7 +71,10 @@ export const Questionnaire = () => {
               key={q.title}
               title={q.title}
               name={q.name}
-              register={register}
+              value={responses[q.name]}
+              onChange={(newValue) =>
+                setResponses({ ...responses, [q.name]: newValue })
+              }
             />
           ))}
           <div className="my-4">

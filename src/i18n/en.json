@@ -215,6 +215,7 @@
         "Agree": "Strongly Agree",
         "Disagree": "Strongly Disagree",
         "Finish": "Finish",
+        "MandatoryResponses": "Responses are mandatory",
         "Advantage": "I expect this website will not take advantage of me",
         "Trustworthy": "I believe this website is trustworthy",
         "Frustrating": "I thought this interface was frustrating to use",
