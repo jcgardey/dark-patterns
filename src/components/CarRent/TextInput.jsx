@@ -5,6 +5,7 @@ export const TextInput = ({
   rules,
   errors,
   className = '',
+  ...props
 }) => (
   <input
     name={name}
@@ -13,5 +14,6 @@ export const TextInput = ({
     style={errors !== undefined ? { borderColor: 'red' } : {}}
     className={className}
     {...register(name, rules)}
+    {...props}
   />
 );

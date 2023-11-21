@@ -4,7 +4,6 @@ import { TotalPrice } from '../../Components/CarRent/TotalPrice';
 import { BackIcon } from '../../Components/Icons/BackIcon';
 import { useTranslation } from 'react-i18next';
 import { dateString } from '../../utils/date';
-import { Modal } from '../../Components/Modal';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { TextInput } from '../../components/CarRent/TextInput';
@@ -57,12 +56,24 @@ export const Review = ({}) => {
     document.title = t('Rental.Review.Title');
   }, []);
 
+  const [showAutocompleteCard, setShowAutocompleteCard] = useState(false);
+
   const {
     register,
     handleSubmit,
-    getValues,
+    setValue,
     formState: { errors },
   } = useForm();
+
+  const autocompleteCard = () => {
+    console.log('autocomplete');
+    setShowAutocompleteCard(false);
+    setValue('card.number', '5490 4234 4899 4324');
+    setValue('card.holder', 'Miriam Flores');
+    setValue('card.month', '12');
+    setValue('card.year', '2026');
+    setValue('card.cvv', '322');
+  };
 
   const inputClass = 'w-full h-10 border-2 border-sky-800 rounded p-2';
 
@@ -109,19 +120,26 @@ export const Review = ({}) => {
           <div className="my-12">
             <h4 className="text-xl">{t('Rental.Review.Payment.Method')}</h4>
             <div className="flex my-2">
-              <div className="mr-2">
+              <div className="mr-2 relative">
                 <label>{t('Rental.Review.Payment.Card.Number')}</label>
                 <TextInput
                   name={'card.number'}
                   className={inputClass}
                   register={register}
+                  onFocus={() => setShowAutocompleteCard(true)}
                   rules={{
                     required: true,
-                    pattern:
-                      /^(?:(4[0-9]{12}(?:[0-9]{3})?)|(5[1-5][0-9]{14})|(6(?:011|5[0-9]{2})[0-9]{12})|(3[47][0-9]{13})|(3(?:0[0-5]|[68][0-9])[0-9]{11})|((?:2131|1800|35[0-9]{3})[0-9]{11}))$/,
                   }}
                   errors={errors.card?.number}
                 />
+                {showAutocompleteCard && (
+                  <div id="autocompleteCard" onClick={autocompleteCard}>
+                    <h6 className="font-medium text-base">
+                      Autocomplete Credit Card
+                    </h6>
+                    <p>**** **** **** 4324 VISA</p>
+                  </div>
+                )}
               </div>
               <div className="mr-8">
                 <label>{t('Rental.Review.Payment.Card.Holder')}</label>
