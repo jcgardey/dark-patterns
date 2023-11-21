@@ -10,27 +10,27 @@ export const Home = () => {
     {
       name: 'Car Rental',
       instructions:
-        'Alquilar un auto en la ciudad de Madrid el 10 de marzo de 2024, con fecha de devolución el 2 de abril del mismo año.',
+        'Vas a estar en Madrid de vacaciones, con un presupuesto muy acotado. Necesitás alquilar un auto por 4 días, de viernes a lunes de la semana que viene.',
       path: '/car_rental',
       status: 'pending',
     },
     {
       name: 'Air Somewhere',
       instructions:
-        'Completar el check-in para un vuelo determinado. El código de la reserva es NNNN.',
+        'Estás por hacer un viaje de negocios con presupuesto limitado. Tu vuelo ya está reservado, solamente tenés que hacer el checkin online con el código de reserva AAA123',
       path: '/check_in',
       status: 'pending',
     },
     {
       name: 'Roomio',
       instructions:
-        'Reservar un alojamiento en la ciudad de CIUDAD entre el 10 y 20 de mayo de 2024. Para la reserva, dispone de un máximo de $USD 1000.',
+        'Sos un estudiante viajando por Europa con poco dinero, y tenés pensado ir a Madrid por el fin de semana y necesitás una habitación entre viernes y domingo. Tu idea es gastar menos de USD 200. ',
       path: '/roomio',
       status: 'pending',
     },
     {
       name: 'EBook',
-      instructions: 'Desuscribirse de un servicio de libros electrónicos.',
+      instructions: 'Llevas un tiempo suscrito a un servicio de Ebooks por el que pagas mensualmente. Últimamente ha estado sobrecargado de trabajo y no ha podido utilizar el servicio. Un amigo te ha recomendado una opción mejor en la que sólo pagas por uso cuando descargas algo, así que quieres cancelar tu suscripción actual a la tienda de Ebooks.',
       path: '/ebook',
       status: 'pending',
     },
