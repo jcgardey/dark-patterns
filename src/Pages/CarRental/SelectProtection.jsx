@@ -30,7 +30,11 @@ export const SelectProtection = () => {
 
   const onNext = () => {
     const dark = localStorage.getItem('dark');
-    dark === 'true' && protection === null ? setShowModal(true) : checkout();
+    dark === 'true' &&
+    (protection === null ||
+      protection.title === t('Rental.Protection.Basic.Name'))
+      ? setShowModal(true)
+      : checkout();
   };
 
   const checkout = () => {
