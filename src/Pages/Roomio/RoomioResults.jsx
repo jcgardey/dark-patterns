@@ -49,7 +49,8 @@ export const RoomioResults = () => {
   localStorage.setItem('hotel-nights', nights);
 
   const adults = localStorage.getItem('hotel-adults') ?? 0;
-  const city = localStorage.getItem('hotel-city') ?? '';
+  const fullCity = localStorage.getItem('hotel-city') ?? '';
+  const city = (fullCity!='') ? fullCity.split(",")[0] : '';
 
   const { t } = useTranslation();
 
@@ -61,7 +62,7 @@ export const RoomioResults = () => {
         <div className="w-3/4 hotel_serp">
           {rooms.filter((room) => room.city.includes(city)).length == 0 && (
             <h3 className="text-3xl font-medium text-gray-800 text-center">
-              {t('Roomio.Results.NoResults', { city })}
+              {t('Roomio.Results.NoResults', { fullCity })}
             </h3>
           )}
           {rooms

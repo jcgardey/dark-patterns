@@ -1,8 +1,10 @@
 import { useState } from 'react';
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export const NavBar = () => {
   const [dropdown, setDropdown] = useState(false);
+  const { t } = useTranslation();
 
   return (
     <div className="head px-12 py-8 text-gray-500 border-b-2 border-fuchsia-500">
@@ -52,7 +54,7 @@ export const NavBar = () => {
                     onClick={() => setDropdown(!dropdown)}
                     className="dropdown-item"
                   >
-                    Información de Cuenta
+                    {t('Ebook.AccountInfo')}
                   </Link>
                 </li>
                 <li className="hover:bg-gray-100 my-1">
@@ -61,12 +63,12 @@ export const NavBar = () => {
                     onClick={() => setDropdown(!dropdown)}
                     className="dropdown-item"
                   >
-                    Membresía
+                    {t('Ebook.MyMembership')}
                   </Link>
                 </li>
                 <li className="hover:bg-gray-100 my-1">
                   <a className="dropdown-item" href="javascript:void(0)">
-                    Salir
+                    {t('Ebook.Logout')}
                   </a>
                 </li>
               </ul>

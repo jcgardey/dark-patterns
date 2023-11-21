@@ -186,6 +186,55 @@
             "Buy": "Buy"
         }
     },
+    "Ebook": {
+        "Home": "Home",
+        "Saved": "Saved",
+        "Recommended": "Recommended",
+        "Books": "Books",
+        "Audiobooks": "Audiobooks",
+        "AccountInfo":"Account Information",
+        "MyMembership":"Membership",
+        "Logout":"Log out",
+        "Membership":{
+            "Details": "Membership & Payment Details",
+            "Unlimited": "Unlimited reading, at no additional cost",
+            "Learn": "Learn more about your full membership benefits",
+            "Books": "Books",
+            "Read": "Read bestselling books",
+            "Audiobooks": "Audiobooks",
+            "Listen": "Listen to new releases",
+            "Snapshots": "Snapshots",
+            "Gain": "Gain key insights trom books in 15 minutes",
+            "Documents": "Documents",
+            "community": "community uploads",
+            "Magazines": "Magazines",
+            "Find": "Find the latest issues",
+            "Sheet": "Sheet Music",
+            "Play": "Play classics & Don hits",
+            "Plan": "Membership Plan",
+            "Your": "Your membership will be automatically renewed on 4/24/2021 and you will be charged $8.99",
+            "Pause": "Pause Membershin",
+            "End": "End Mv Membershin",
+            "Payment": "Payment Details",
+            "Card": "Card: 2880",
+            "Update": "Update Payment Details",
+            "View": "View Payment History"
+        },
+        "Survey":{
+            "Before": "Before you go...",
+            "Which": "Which of the following reasons best describes why you want to cancel?",
+            "Choose": "Please, select an option",
+            "technical": "I'm having technical problems",
+            "enough": "I don't use Scribd enough",
+            "Please": "Please tell us more about the problem you encountered.",
+            "expensive": "This subscription is too expensive",
+            "specific": "I can't find the specific content that I want to read",
+            "Other": "Other",
+            "Send": "Submit and continue cancellation",
+            "Cancel": "Cancel membership"
+        }
+        
+    },
     "Common": {
         "Select": "Select",
         "Date": {
@@ -215,7 +264,6 @@
         "Agree": "Strongly Agree",
         "Disagree": "Strongly Disagree",
         "Finish": "Finish",
-        "MandatoryResponses": "Responses are mandatory",
         "Advantage": "I expect this website will not take advantage of me",
         "Trustworthy": "I believe this website is trustworthy",
         "Frustrating": "I thought this interface was frustrating to use",
