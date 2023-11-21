@@ -50,12 +50,12 @@ export const RoomioSummary = () => {
     setValue('cc-cvv', '322');
   };
 
-  const price = parseFloat(localStorage.getItem('hotel-price')) ?? 0;
-  const taxes = parseFloat(localStorage.getItem('hotel-taxes')) ?? 0;
+  const nights = parseInt(localStorage.getItem('hotel-nights')) ?? 0;
+
+  const price = (parseFloat(localStorage.getItem('hotel-price')) ?? 0) * nights;
+  const taxes = (parseFloat(localStorage.getItem('hotel-taxes')) ?? 0) * nights;
 
   const { t } = useTranslation();
-
-  const nights = parseInt(localStorage.getItem('hotel-nights')) ?? 0;
 
   return (
     <>

@@ -52,10 +52,10 @@ export const Room = ({
 
         <div className="w-1/5 py-4">
           <h5 className="text-xs my-1 text-gray-900">
-          {t('Roomio.Results.Night', { count: nights })}
+            {t('Roomio.Results.Night', { count: nights })}
           </h5>
           <h5 className="text-xl my-1 font-medium">
-            $ {darkEnabled ? price : price + taxes}
+            $ {darkEnabled ? nights * price : nights * (price + taxes)}
           </h5>
 
           <p className="text-sm text-gray-500 my-2">
