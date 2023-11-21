@@ -1,8 +1,7 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { finishTask } from '../../utils/dark_patterns';
-import { Modal } from '../../Components/Modal';
-import { MembershipCancelled } from '../../components/EBook/MembershipCancelled';
+import { FinishedTask } from '../../components/FinishedTask';
 
 const RadioItem = ({ label, selected, onChange }) => (
   <div className="flex items-center my-3">
@@ -110,11 +109,7 @@ export const CancelMembership = ({}) => {
           </button>
         )}
       </form>
-      {membershipCancelled && (
-        <Modal title="Membresia cancelada">
-          <MembershipCancelled />
-        </Modal>
-      )}
+      <FinishedTask show={membershipCancelled} />
     </div>
   );
 };

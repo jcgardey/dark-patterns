@@ -2,6 +2,9 @@ import { Link } from 'react-router-dom';
 import { Site } from '../components/Home/Site';
 import { useEffect, useState } from 'react';
 
+import { Modal } from '../components/Modal';
+import { Questionnaire } from '../components/Questionnaire/Questionnaire';
+
 export const Home = () => {
   const initialSites = [
     {

@@ -5,12 +5,12 @@ import { BackIcon } from '../../Components/Icons/BackIcon';
 import { useTranslation } from 'react-i18next';
 import { dateString } from '../../utils/date';
 import { Modal } from '../../Components/Modal';
-import { ReservationConfirmed } from '../../components/CarRent/ReservationConfirmed';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { TextInput } from '../../components/CarRent/TextInput';
 import { sendLogs } from '../../utils/logs';
 import { finishTask } from '../../utils/dark_patterns';
+import { FinishedTask } from '../../components/FinishedTask';
 
 const Reservation = () => {
   const reservation = JSON.parse(localStorage.getItem('reservation'));
@@ -51,7 +51,6 @@ export const Review = ({}) => {
   const onSubmit = (data) => {
     setConfirmed(true);
     finishTask('Car Rental');
-    //sendLogs(); interaction effort
   };
 
   useEffect(() => {
@@ -176,11 +175,7 @@ export const Review = ({}) => {
           <Reservation />
         </div>
       </div>
-      {confirmed && (
-        <Modal title={t('Rental.Review.Confirmation.Title')}>
-          <ReservationConfirmed email={getValues('email')} />
-        </Modal>
-      )}
+      <FinishedTask show={confirmed} />
     </div>
   );
 };

@@ -4,8 +4,9 @@ import {
   PageTitle,
   PrimaryButton,
 } from '../../components/Passenger/common';
-import { useEffect } from 'react';
+import { useEffect, useState } from 'react';
 import { finishTask } from '../../utils/dark_patterns';
+import { FinishedTask } from '../../components/FinishedTask';
 
 export const Summary = () => {
   let formatting_options = {
@@ -20,6 +21,7 @@ export const Summary = () => {
   );
 
   const { t } = useTranslation();
+  const [finished, setFinished] = useState(false);
 
   useEffect(() => {
     document.title = t('Checkin.Summary.Title');
@@ -28,6 +30,7 @@ export const Summary = () => {
   const onSubmit = (e) => {
     e.preventDefault();
     finishTask('Air Somewhere');
+    setFinished(true);
   };
 
   return (
@@ -73,6 +76,7 @@ export const Summary = () => {
           </div>
         </form>
       </div>
+      <FinishedTask show={finished} />
     </div>
   );
 };

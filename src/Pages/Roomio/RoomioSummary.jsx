@@ -4,9 +4,8 @@ import { Footer } from '../../components/Roomio/Footer';
 import { useForm } from 'react-hook-form';
 import { formatCurrency } from '../../utils/currency';
 import { useTranslation } from 'react-i18next';
-import { Modal } from '../../components/Modal';
-import { ReservationConfirmed } from '../../components/CarRent/ReservationConfirmed';
 import { finishTask } from '../../utils/dark_patterns';
+import { FinishedTask } from '../../components/FinishedTask';
 
 const Input = forwardRef(
   ({ id, type = 'text', placeholder, errors, ...props }, ref) => (
@@ -199,13 +198,8 @@ export const RoomioSummary = () => {
           </div>
         </form>
       </div>
-
       <Footer />
-      {confirmed && (
-        <Modal title={t('Rental.Review.Confirmation.Title')}>
-          <ReservationConfirmed email={'test@hotmail.com'} />
-        </Modal>
-      )}
+      <FinishedTask show={confirmed} />
     </>
   );
 };
