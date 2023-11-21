@@ -207,6 +207,17 @@
             }
         },
         "RequiredField": "{{ field}} es requerido"
-
+    },
+    "Questionnaire": {
+        "Title": "Cuestionario",
+        "Description": "Por favor, conteste el siguiente cuestionario para finalizar la tarea",
+        "Agree": "De acuerdo",
+        "Disagree": "En desacuerdo",
+        "Finish": "Finalizar",
+        "Advantage": "Espero que este sitio no se aproveche de mí",
+        "Trustworthy": "Creo que este sitio es confiable",
+        "Frustrating": "Utilizar este sitio fue frustrante",
+        "Confusing": "Me sentí confundido utilizando este sitio",
+        "Experience": "Mi experiencia utilizando este sitio fue positiva"
     }
 }

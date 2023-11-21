@@ -208,5 +208,17 @@
             }
         },
         "RequiredField": "{{ field}} is required"
+    },
+    "Questionnaire": {
+        "Title": "Questionnaire",
+        "Description": "Please, answer the following questions to finish the task",
+        "Agree": "Strongly Agree",
+        "Disagree": "Strongly Disagree",
+        "Finish": "Finish",
+        "Advantage": "I expect this website will not take advantage of me",
+        "Trustworthy": "I believe this website is trustworthy",
+        "Frustrating": "I thought this interface was frustrating to use",
+        "Confusing": "I felt confused when using this site",
+        "Experience": "My experience using this site was comfortable"
     }
 }
