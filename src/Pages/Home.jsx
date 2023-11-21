@@ -18,14 +18,14 @@ export const Home = () => {
       name: 'Air Somewhere',
       instructions:
         'Estás por hacer un viaje de negocios con presupuesto limitado. Tu vuelo ya está reservado, solamente tenés que hacer el checkin online con el código de reserva AAA123',
-      path: '/check_in',
+      path: '/check_in?enabled=true',
       status: 'pending',
     },
     {
       name: 'Roomio',
       instructions:
         'Sos un estudiante viajando por Europa con poco dinero, y tenés pensado ir a Madrid por el fin de semana y necesitás una habitación entre viernes y domingo. Tu idea es gastar menos de USD 200. ',
-      path: '/roomio',
+      path: '/roomio?enabled=true',
       status: 'pending',
     },
     {

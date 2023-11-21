@@ -10,7 +10,6 @@ export const TextInput = ({
   <input
     name={name}
     type={type}
-    onPaste={(e) => e.preventDefault()}
     style={errors !== undefined ? { borderColor: 'red' } : {}}
     className={className}
     {...register(name, rules)}

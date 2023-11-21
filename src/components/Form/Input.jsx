@@ -13,7 +13,6 @@ export const Input = ({
     <input
       name={name}
       type={type}
-      onPaste={(e) => e.preventDefault()}
       className={`form-input${errors !== undefined ? ' error' : ''}`}
       {...register(name, rules)}
     />
