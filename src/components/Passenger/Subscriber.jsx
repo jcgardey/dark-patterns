@@ -9,15 +9,15 @@ export const Subscriber =({}) => {
   <div className="flex bg-gray-200 px-12 pb-20 pt-5 mt-20">
   
     <div className="w-4/12 pt-10">
-      <h1 className="text-2xl font-bold text-green-700">Subscribe now and get the best deals</h1>
-      <p>Never miss a sale! </p>
+      <h1 className="text-2xl font-bold text-green-700"> {t('Checkin.Home.Subscribe')}</h1>
+      <p>{t('Checkin.Home.MissSale')}</p>
     </div>
   
     <div className="w-4/12 pt-10 pl-10">
       <ul className="list-disc">
-        <li>Learn about latest deals</li>
-        <li>Be the first to get promotions</li>
-        <li>Learn about new destinations</li>
+        <li>{t('Checkin.Home.LearnDeals')}</li>
+        <li>{t('Checkin.Home.Promotions')}</li>
+        <li>{t('Checkin.Home.NewDestinations')}</li>
       </ul>
     </div>
   

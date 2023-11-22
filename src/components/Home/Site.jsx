@@ -1,6 +1,9 @@
+import { useTranslation } from 'react-i18next';  
+
 export const Site = ({ site, enabled }) => {
   const isDone = site.status === 'done';
-
+  const { t } = useTranslation();
+  
   const onClick = () => {
     window.open(
       `${window.location.href}#${site.path}`,
@@ -34,7 +37,7 @@ export const Site = ({ site, enabled }) => {
         )}
       </div>
       <p className={`text-slate-500 my-2 ${isDone ? 'line-through' : ''}`}>
-        {site.instructions}
+        {t(site.instructions)}
       </p>
     </div>
   );

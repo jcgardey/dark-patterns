@@ -90,7 +90,7 @@
             "Confirmation": {
                 "Title": "Reservation Confirmed",
                 "Message": "Details will be sent to {{email}}.",
-                "Close": "You may close this window"
+                "Close": "Click to close this window"
             }
         }
     },
@@ -105,7 +105,12 @@
             "CheckIn":"Check In",
             "Services":"Services",
             "Terms":"Terms",
-            "Contact":"Contact"
+            "Contact":"Contact",
+            "Subscribe": "Subscribe now and get the best deals",
+            "LearnDeals": " Learn about latest deals",
+            "Promotions": "Be the first to get promotions",
+            "NewDestinations": "Learn about new destinations",
+            "MissSale": "Never miss a sale!"
         },
         "Passenger": {
             "Title": "Check In Information",
@@ -236,6 +241,7 @@
         
     },
     "Common": {
+        "Thanks": "Thanks for participating",
         "Select": "Select",
         "Date": {
             "Day": "Day",
@@ -256,7 +262,13 @@
                 "December": "December"
             }
         },
-        "RequiredField": "{{ field}} is required"
+        "RequiredField": "{{ field}} is required",
+        "TasksFinished": "All tasks successfully completed",
+        "TaskFinished": "Task finished",
+        "TaskCar": "You are going to be in Madrid on vacation, with a very tight budget. You need to rent a car for 4 days, from Friday to Monday of next week.",
+        "TaskCheckin": "You are about to make a business trip with a limited budget. Your flight is already booked, just check in online with the booking code AAA123.",
+        "TaskRoomio": "You are a student traveling in Europe with little money, and you are planning to go to Madrid for the weekend and you need a room between Friday and Sunday. You're planning to spend less than USD 200.",
+        "TaskEBook": "You've been subscribed to an Ebooks service for some time, for which you pay monthly. Lately you have been overloaded with work and have not been able to use the service. A friend has recommended a better option where you only pay for usage when you download something, so you want to cancel your current subscription to the EBooks store."
     },
     "Questionnaire": {
         "Title": "Questionnaire",
@@ -268,6 +280,7 @@
         "Trustworthy": "I believe this website is trustworthy",
         "Frustrating": "I thought this interface was frustrating to use",
         "Confusing": "I felt confused when using this site",
-        "Experience": "My experience using this site was comfortable"
+        "Experience": "My experience using this site was comfortable",
+        "MandatoryResponses": "Please answer the questions to continue"
     }
 }

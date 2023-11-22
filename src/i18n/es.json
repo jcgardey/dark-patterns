@@ -89,7 +89,7 @@
             "Confirmation": {
                 "Title": "Reserva Confirmada",
                 "Message": "Los datos de la reserva seran enviados a {{email}}.",
-                "Close": "Puede cerrar esta ventana"
+                "Close": "Click para cerrar esta ventana"
             }
         }
     },
@@ -104,7 +104,12 @@
             "CheckIn":"Check In",
             "Services":"Servicios",
             "Terms":"Términos",
-            "Contact":"Contacto"
+            "Contact":"Contacto",
+            "Subscribe": "Suscríbete ahora y consigue las mejores ofertas",
+            "LearnDeals": " Conoce las últimas ofertas",
+            "Promotions": "Sé el primero en conseguir promociones",
+            "NewDestinations": "Conoce los nuevos destinos",
+            "MissSale": "¡No te pierdas nunca una oferta!"
         },
         "Passenger": {
             "Title": "Datos del pasajero",
@@ -237,6 +242,7 @@
         
     },
     "Common": {
+        "Thanks": "Gracias por participar",
         "Select": "Seleccionar",
         "Date": {
             "Day": "Día",
@@ -257,7 +263,13 @@
                 "December": "Diciembre"
             }
         },
-        "RequiredField": "{{ field}} es requerido"
+        "RequiredField": "{{ field}} es requerido",
+        "TasksFinished": "Todas las tareas fueron completadas correctamente",
+        "TaskFinished": "Tarea finalizada",
+        "TaskCar": "Vas a estar en Madrid de vacaciones, con un presupuesto muy acotado. Necesitás alquilar un auto por 4 días, de viernes a lunes de la semana que viene.",
+        "TaskCheckin": "Estás por hacer un viaje de negocios con presupuesto limitado. Tu vuelo ya está reservado, solamente tenés que hacer el checkin online con el código de reserva AAA123",
+        "TaskRoomio": "Sos un estudiante viajando por Europa con poco dinero, y tenés pensado ir a Madrid por el fin de semana y necesitás una habitación entre viernes y domingo. Tu idea es gastar menos de USD 200.",
+        "TaskEBook": "Llevas un tiempo suscrito a un servicio de Ebooks por el que pagas mensualmente. Últimamente ha estado sobrecargado de trabajo y no ha podido utilizar el servicio. Un amigo te ha recomendado una opción mejor en la que sólo pagas por uso cuando descargas algo, así que quieres cancelar tu suscripción actual a la tienda de Ebooks."
     },
     "Questionnaire": {
         "Title": "Cuestionario",
@@ -269,6 +281,7 @@
         "Trustworthy": "Creo que este sitio es confiable",
         "Frustrating": "Utilizar este sitio fue frustrante",
         "Confusing": "Me sentí confundido utilizando este sitio",
-        "Experience": "Mi experiencia utilizando este sitio fue positiva"
+        "Experience": "Mi experiencia utilizando este sitio fue positiva",
+        "MandatoryResponses": "Por favor responda las preguntas para continuar"
     }
 }
