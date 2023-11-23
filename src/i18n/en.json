@@ -120,6 +120,7 @@
             "Search": "Search",
             "Code": "Reservation Code",
             "Surname": "Last Name",
+            "FullName": "Full Name",
             "Birthdate": "Birthdate",
             "Gender": {
                 "Label": "Gender",
@@ -144,7 +145,11 @@
             "Cheap": "Cheap Seat",
             "Occupied": "Occupied Seat",
             "Continue": "Continue",
-            "NoSeat": "I don't want to select a seat"
+            "NoSeat": "I don't want to select a seat",
+            "Passengers": "Passenger",
+            "Flights": "Flights",
+            "SmallBag": "SmallBag",
+            "ReservationInfo": "Reservation Info"
         },
         "Summary": {
             "Title":"Summary",

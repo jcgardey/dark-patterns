@@ -22,9 +22,9 @@ export const SeatSelection = () => {
   const saveSeat = (e) => {
     e.preventDefault();
     if (seat !== null) {
-      let price = 10000;
-      if (seat.isVIP) price = 30000;
-      if (seat.save) price = 6000;
+      let price = 20;
+      if (seat.isVIP) price = 50;
+      if (seat.save) price = 12;
       localStorage.setItem('seat-price', price);
       localStorage.setItem('seat', JSON.stringify(seat));
       navigate('/check_in/summary');
@@ -51,19 +51,18 @@ export const SeatSelection = () => {
       
       
       <div className="w-1/4 pl-20 pt-20">
-        Reservation Info
-        <h3 className="font-bold text-lg mt-5">Passengers</h3>
+        {t('Checkin.Seat.ReservationInfo')}
+        <h3 className="font-bold text-lg mt-5">{t('Checkin.Seat.Passengers')}</h3>
         <p>James Ferrel</p>
-        <h3 className="font-bold text-lg mt-5">Flights</h3>
+        <h3 className="font-bold text-lg mt-5">{t('Checkin.Seat.Flights')}</h3>
         <p className="mt-3 font-bold">Dublin -> Barcelona</p>
         Thu 14 Dec - 6:25-00:55 . AS 3077<br/>
-        × small bag (40cm × 20cm)<br/>
-        <small>You do not pay government taxes</small>
+        <small>× {t('Checkin.Seat.SmallBag')} (40cm × 20cm)</small><br/>
 
         <p className="mt-3 font-bold">Barcelona -> Dublin</p>
         Sun 17 Dec - 06:15 - 08:00 - AS 4132<br/>
-       × small bag (40cm × 20cm)<br/>
-       <small>You do not pay government taxes</small>
+        <small>× {t('Checkin.Seat.SmallBag')} (40cm × 20cm)</small><br/>
+
       </div>
       <div className="w-3/4">
         <form id="seatSelection" onSubmit={saveSeat}>
@@ -94,19 +93,19 @@ export const SeatSelection = () => {
                 </dt>
                 <dd>
                   {t('Checkin.Seat.Preferential')}{' '}
-                  <strong>(+ ARS 30.000)</strong>
+                  <strong>(+ USD 50)</strong>
                 </dd>
                 <dt>
                   <Seat value={'NN'} isVIP={false} />
                 </dt>
                 <dd>
-                  {t('Checkin.Seat.Regular')} <strong>(+ ARS 10.000)</strong>
+                  {t('Checkin.Seat.Regular')} <strong>(+ USD 20)</strong>
                 </dd>
                 <dt>
                   <Seat value={'NN'} isVIP={false} save={true} />
                 </dt>
                 <dd>
-                  {t('Checkin.Seat.Cheap')} <strong>(+ ARS 6.000)</strong>
+                  {t('Checkin.Seat.Cheap')} <strong>(+ USD 12)</strong>
                 </dd>
                 <dt>
                   <div className="seat reference">

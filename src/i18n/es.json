@@ -119,6 +119,7 @@
             "Search": "Buscar",
             "Code": "Código de Reserva",
             "Surname": "Apellido",
+            "FullName": "Nombre Completo",
             "Birthdate": "Fecha de Nacimiento",
             "Gender": {
                 "Label": "Género",
@@ -143,7 +144,11 @@
             "Cheap": "Asiento con descuento",
             "Occupied": "Asiento ocupado",
             "Continue": "Continuar",
-            "NoSeat": "No deseo elegir mi asiento"
+            "NoSeat": "No deseo elegir mi asiento",
+            "Passengers": "Pasajeros",
+            "Flights": "Vuelos",
+            "SmallBag": "Equipaje de Cabina",
+            "ReservationInfo": "Información de la Reserva"
         },
         "Summary": {
             "Title":"Resumen",
