@@ -66,8 +66,8 @@ export const PassengerInfo = ({}) => {
               </div>
               <div className="w-1/5">
                 <Input
-                  name={'surname'}
-                  label={t('Checkin.Passenger.Surname')}
+                  name={'fullName'}
+                  label={t('Checkin.Passenger.FullName')}
                   register={register}
                   rules={nameRules}
                   errors={errors.name}
