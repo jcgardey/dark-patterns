@@ -242,6 +242,18 @@
             "Other": "Other",
             "Send": "Submit and continue cancellation",
             "Cancel": "Cancel membership"
+        },
+        "Tease":{
+            "Before": "Before you go...",
+            "Extend": "Extend the Free Period",
+            "Stay": "Stay with us and we will extend your free trial an additional 30 days.",
+            "Get30": "Get 30 more days",
+            "Try": "Try Ebookworld Lite for $4.99/Month", 
+            "Keep": "You will retain access to a limited selection of books and audiobooks, along with unlimited access to Snapshots, documents, news, magazines and sheet music.",
+            "TryLite": "Try Ebookworld Lite",
+            "Still": "Still prefer to cancel?",
+            "End": "End cancellation",
+            "Ended": "Membership cancelled"
         }
         
     },

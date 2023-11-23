@@ -242,7 +242,18 @@
             "Other": "Otros problemas",
             "Send": "Enviar y continuar la cancelación",
             "Cancel": "Cancelar membresía"
-            
+        },
+        "Tease":{
+            "Before": "Antes de que te vayas...",
+            "Extend": "Extender el Período Gratuito",
+            "Stay":"Quedate con nosotros y ampliaremos tu prueba gratuita 30 días adicionales.",
+            "Get30":"Obtener 30 días más",
+            "Try": "Probar Ebookworld Lite por $4.99/Mes",
+            "Keep":"Conservarás el acceso a una selección limitada de libros y audiolibros, junto con acceso ilimitado a Instantáneas, documentos, noticias, revistas y partituras.",
+            "TryLite":"Probar Ebookworld Lite",
+            "Still":"¿Aún prefieres cancelar?",
+            "End":"Finalizar cancelación",
+            "Ended":"Membresia cancelada"
         }
         
     },
