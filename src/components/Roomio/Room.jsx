@@ -19,6 +19,8 @@ export const Room = ({
     localStorage.setItem('hotel-taxes', taxes);
   };
 
+  const priceForStay = (Math.round(nights * price * 100) / 100).toFixed(2);
+  const priceForStayWithTaxes = (Math.round(nights * (price + taxes) * 100) / 100).toFixed(2);
   const darkEnabled = localStorage.getItem('dark') == 'true' ?? false;
 
   return (
@@ -55,7 +57,7 @@ export const Room = ({
             {t('Roomio.Results.Night', { count: nights })}
           </h5>
           <h5 className="text-xl my-1 font-medium">
-            $ {darkEnabled ? nights * price : nights * (price + taxes)}
+            $ {darkEnabled ? priceForStay : priceForStayWithTaxes}
           </h5>
 
           <p className="text-sm text-gray-500 my-2">
