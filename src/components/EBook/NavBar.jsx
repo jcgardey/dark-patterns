@@ -47,27 +47,27 @@ export const NavBar = () => {
               <i className="fa-solid fa-caret-down"></i>
             </a>
             {dropdown && (
-              <ul className="absolute my-1 right-0 border border-gray-300 rounded p-2 bg-white text-gray-700">
-                <li className="hover:bg-gray-100 my-1">
+              <ul className="absolute my-1 right-0 border border-gray-300 rounded bg-white text-gray-700">
+                <li className="hover:bg-gray-100 p-0 m-0">
                   <Link
                     to="/ebook/account"
                     onClick={() => setDropdown(!dropdown)}
-                    className="dropdown-item"
+                    className="dropdown-item px-4 py-1 block w-full"
                   >
                     {t('Ebook.AccountInfo')}
                   </Link>
                 </li>
-                <li className="hover:bg-gray-100 my-1">
+                <li className="hover:bg-gray-100">
                   <Link
                     to="/ebook/membership"
                     onClick={() => setDropdown(!dropdown)}
-                    className="dropdown-item"
+                    className="dropdown-item px-4 py-1 block w-full"
                   >
                     {t('Ebook.MyMembership')}
                   </Link>
                 </li>
-                <li className="hover:bg-gray-100 my-1">
-                  <a className="dropdown-item" href="javascript:void(0)">
+                <li className="hover:bg-gray-100">
+                  <a className="dropdown-item px-4 py-1 block w-full" href="javascript:void(0)">
                     {t('Ebook.Logout')}
                   </a>
                 </li>
