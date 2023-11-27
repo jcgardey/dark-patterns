@@ -93,6 +93,7 @@ export function CarRental() {
                 startDate={startDate}
                 endDate={endDate}
                 minDate={startDate}
+                openToDate={startDate}
                 dateFormat="dd/MM/yyyy"
               />
             </div>
