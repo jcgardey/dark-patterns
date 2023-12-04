@@ -1,17 +1,18 @@
 export const TextInput = ({
   name,
-  type = 'text',
+  type = "text",
   register,
   rules,
   errors,
-  className = '',
+  className = "",
   ...props
 }) => (
   <input
     name={name}
     type={type}
-    style={errors !== undefined ? { borderColor: 'red' } : {}}
-    className={className}
+    className={`${className} ${
+      errors !== undefined ? "border-red-600 outline-0" : ""
+    }`}
     {...register(name, rules)}
     {...props}
   />
