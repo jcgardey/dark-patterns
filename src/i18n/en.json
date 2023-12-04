@@ -167,6 +167,7 @@
             "Search": "Search",
             "Start": "Start Date",
             "End": "End Date",
+            "Adults": "Adults",
             "Adult_one": "{{count}} adult",
             "Adult_other": "{{count}} adults"
         },
