@@ -1,21 +1,21 @@
-import React from 'react';
-import { Field } from './Field';
+import React from "react";
+import { Field } from "./Field";
 
 export const Input = ({
   name,
   label,
-  type = 'text',
+  labelClassName = "",
+  type = "text",
   register,
   rules,
   errors,
 }) => (
-  <Field label={label} errors={errors}>
+  <Field label={label} labelClassName={labelClassName} errors={errors}>
     <input
       name={name}
       type={type}
-      className={`form-input${errors !== undefined ? ' error' : ''}`}
+      className={`form-input${errors !== undefined ? " error" : ""}`}
       {...register(name, rules)}
     />
   </Field>
 );
-
