@@ -194,7 +194,11 @@ export const Review = ({}) => {
           <Reservation />
         </div>
       </div>
-      <FinishedTask show={confirmed} />
+      <FinishedTask
+        show={confirmed}
+        website="Car Rental"
+        data={JSON.parse(localStorage.getItem("reservation"))}
+      />
     </div>
   );
 };

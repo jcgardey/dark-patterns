@@ -58,6 +58,13 @@ export const RoomioSummary = () => {
 
   const { t } = useTranslation();
 
+  const data = {
+    nights,
+    price,
+    taxes,
+    city: localStorage.getItem("hotel-city"),
+  };
+
   return (
     <>
       <NavBar />
@@ -200,7 +207,7 @@ export const RoomioSummary = () => {
         </form>
       </div>
       <Footer />
-      <FinishedTask show={confirmed} />
+      <FinishedTask show={confirmed} website={"Roomio"} data={data} />
     </>
   );
 };

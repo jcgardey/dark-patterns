@@ -1,8 +1,8 @@
-import { useTranslation } from 'react-i18next';
-import { questions } from './questions';
-import { useForm } from 'react-hook-form';
-import ReactSlider from 'react-slider';
-import { useState } from 'react';
+import { useTranslation } from "react-i18next";
+import { questions } from "./questions";
+import { useForm } from "react-hook-form";
+import ReactSlider from "react-slider";
+import { useState } from "react";
 
 const Question = ({ title, name, value, onChange }) => {
   const { t } = useTranslation();
@@ -40,30 +40,30 @@ export const Questionnaire = ({ onFinish }) => {
       Object.keys(responses).filter((key) => responses[key] !== 50).length == 0;
     setError(notChanged);
     if (!notChanged) {
-      console.log('send data');
-      onFinish();
+      console.log("send data");
+      onFinish(responses);
     }
   };
 
   return (
     <div className="m-2">
       <h2 className="text-center text-2xl font-medium">
-        {t('Questionnaire.Title')}
+        {t("Questionnaire.Title")}
       </h2>
       <p className="my-4 text-lg text-center">
-        {t('Questionnaire.Description')}
+        {t("Questionnaire.Description")}
       </p>
       {error && (
         <p className="text-lg text-center font-bold text-red-700">
-          {t('Questionnaire.MandatoryResponses')}
+          {t("Questionnaire.MandatoryResponses")}
         </p>
       )}
       <div className="my-8">
         <form onSubmit={onSubmit}>
           <div className="flex justify-end my-4">
             <div className="flex w-1/2 justify-between">
-              <p className="w-1/4 text-center">{t('Questionnaire.Disagree')}</p>
-              <p className="w-1/5 text-center">{t('Questionnaire.Agree')}</p>
+              <p className="w-1/4 text-center">{t("Questionnaire.Disagree")}</p>
+              <p className="w-1/5 text-center">{t("Questionnaire.Agree")}</p>
             </div>
           </div>
           {questions.map((q) => (
@@ -82,7 +82,7 @@ export const Questionnaire = ({ onFinish }) => {
               className="bg-sky-600 hover:bg-sky-700 rounded text-white text-lg p-2 w-1/5 mx-auto"
               type="submit"
             >
-              {t('Questionnaire.Finish')}
+              {t("Questionnaire.Finish")}
             </button>
           </div>
         </form>
