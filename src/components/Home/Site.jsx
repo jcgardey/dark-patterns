@@ -1,15 +1,11 @@
-import { useTranslation } from 'react-i18next';  
+import { useTranslation } from 'react-i18next';
 
 export const Site = ({ site, enabled }) => {
-  const isDone = site.status === 'done';
   const { t } = useTranslation();
-  
+
   const onClick = () => {
-    window.open(
-      `${window.location.href}#${site.path}`,
-      '_blank',
-      'noopener,noreferrer'
-    );
+    localStorage.setItem('website_id', site.id);
+    window.open(site.url, '_blank', 'noopener,noreferrer');
   };
 
   return (
@@ -17,12 +13,12 @@ export const Site = ({ site, enabled }) => {
       <div className="flex items-center">
         <h3
           className={`w-1/6 text-xl font-medium ${
-            isDone ? 'line-through' : ''
+            site.completed ? 'line-through' : ''
           }`}
         >
           {site.name}
         </h3>
-        {!isDone && (
+        {!site.completed && (
           <button
             onClick={onClick}
             disabled={!enabled}
@@ -30,13 +26,16 @@ export const Site = ({ site, enabled }) => {
             className={`mx-4 text-white rounded p-2 ${
               enabled ? 'bg-green-600' : 'bg-gray-300'
             }`}
-            to={`${site.path}?enabled=false`}
           >
             Iniciar
           </button>
         )}
       </div>
-      <p className={`text-slate-500 my-2 ${isDone ? 'line-through' : ''}`}>
+      <p
+        className={`text-slate-500 my-2 ${
+          site.completed ? 'line-through' : ''
+        }`}
+      >
         {t(site.instructions)}
       </p>
     </div>
