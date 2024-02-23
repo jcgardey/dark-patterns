@@ -8,10 +8,3 @@ export const updateDarkPatternState = () => {
     }
   }
 };
-
-export const finishTask = (siteName) => {
-  const sites = JSON.parse(localStorage.getItem('sites'));
-  const targetSite = sites.find((s) => s.name === siteName);
-  targetSite.status = 'done';
-  localStorage.setItem('sites', JSON.stringify(sites));
-};
