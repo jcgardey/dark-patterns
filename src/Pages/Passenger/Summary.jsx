@@ -5,7 +5,6 @@ import {
   PrimaryButton,
 } from '../../components/Passenger/common';
 import { useEffect, useState } from 'react';
-import { finishTask } from '../../utils/dark_patterns';
 import { FinishedTask } from '../../components/FinishedTask';
 
 export const Summary = () => {

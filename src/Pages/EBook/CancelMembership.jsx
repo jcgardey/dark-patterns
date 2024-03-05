@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { finishTask } from '../../utils/dark_patterns';
 import { FinishedTask } from '../../components/FinishedTask';
 import { useTranslation } from 'react-i18next';
 

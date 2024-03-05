@@ -4,7 +4,6 @@ import { Footer } from '../../components/Roomio/Footer';
 import { useForm } from 'react-hook-form';
 import { formatCurrency } from '../../utils/currency';
 import { useTranslation } from 'react-i18next';
-import { finishTask } from '../../utils/dark_patterns';
 import { FinishedTask } from '../../components/FinishedTask';
 
 const Input = forwardRef(

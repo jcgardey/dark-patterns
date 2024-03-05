@@ -8,7 +8,6 @@ import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { TextInput } from '../../components/CarRent/TextInput';
 import { sendLogs } from '../../utils/logs';
-import { finishTask } from '../../utils/dark_patterns';
 import { FinishedTask } from '../../components/FinishedTask';
 
 const Reservation = () => {

@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { finishTask } from '../../utils/dark_patterns';
 import { useTranslation } from 'react-i18next';
 import { FinishedTask } from '../../components/FinishedTask';
 
