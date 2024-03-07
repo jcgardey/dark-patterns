@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
-import { OrderItem } from '../../Components/CarRent/OrderItem';
-import { TotalPrice } from '../../Components/CarRent/TotalPrice';
-import { BackIcon } from '../../Components/Icons/BackIcon';
+import { OrderItem } from '../../components/CarRent/OrderItem';
+import { TotalPrice } from '../../components/CarRent/TotalPrice';
+import { BackIcon } from '../../components/Icons/BackIcon';
 import { useTranslation } from 'react-i18next';
 import { dateString } from '../../utils/date';
 import { useEffect, useState } from 'react';
