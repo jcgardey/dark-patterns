@@ -75,7 +75,7 @@ export const rooms = [
   {
     title: 'Apartamento en el coraz&#243;n de Madrid',
     city: 'Madrid',
-    img: 'https://cf.bstatic.com/xdata/images/hotel/square600/473109863.jpg?k=9530ef8b3ab8838fc86a7ae01a1e478751e284855aefd3f42ee96870435abce7&amp;o=',
+    img: 'https://cf.bstatic.com/xdata/images/hotel/square200/473160672.jpg?k=fb78bec7a10949a947162cf9f5fcb97a31c6dd4c9801855fbc4e914f92751f99&o=',
     fullPrice: 111.32,
     price: 86.42,
     taxes: 24.9,
