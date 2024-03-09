@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { finishTask } from '../../utils/dark_patterns';
 import { FinishedTask } from '../../components/FinishedTask';
 import { useTranslation } from 'react-i18next';
 
@@ -37,7 +36,6 @@ export const CancelMembership = ({}) => {
     e.preventDefault();
     if (!dark) {
       setMembershipCancelled(true);
-      finishTask('EBook');
     } else if (option !== '') {
       navigate('/ebook/books_offer');
     } else {
@@ -49,9 +47,7 @@ export const CancelMembership = ({}) => {
     <div className="membership survey">
       <h1 className="text-3xl my-8">{t('Ebook.Survey.Before')}</h1>
       <form onSubmit={onSubmit}>
-        <legend className="text-xl my-4">
-          {t('Ebook.Survey.Which')}
-        </legend>
+        <legend className="text-xl my-4">{t('Ebook.Survey.Which')}</legend>
         {error && (
           <p className="text-red-500 font-medium my-2">
             {t('Ebook.Survey.Choose')}
@@ -111,7 +107,7 @@ export const CancelMembership = ({}) => {
           </button>
         )}
       </form>
-      <FinishedTask show={membershipCancelled} />
+      <FinishedTask show={membershipCancelled} website="Roomio" />
     </div>
   );
 };

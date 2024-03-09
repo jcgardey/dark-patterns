@@ -1,14 +1,13 @@
 import { Link } from 'react-router-dom';
-import { OrderItem } from '../../Components/CarRent/OrderItem';
-import { TotalPrice } from '../../Components/CarRent/TotalPrice';
-import { BackIcon } from '../../Components/Icons/BackIcon';
+import { OrderItem } from '../../components/CarRent/OrderItem';
+import { TotalPrice } from '../../components/CarRent/TotalPrice';
+import { BackIcon } from '../../components/Icons/BackIcon';
 import { useTranslation } from 'react-i18next';
 import { dateString } from '../../utils/date';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { TextInput } from '../../components/CarRent/TextInput';
 import { sendLogs } from '../../utils/logs';
-import { finishTask } from '../../utils/dark_patterns';
 import { FinishedTask } from '../../components/FinishedTask';
 
 const Reservation = () => {
@@ -49,7 +48,6 @@ export const Review = ({}) => {
   const [confirmed, setConfirmed] = useState(false);
   const onSubmit = (data) => {
     setConfirmed(true);
-    finishTask('Car Rental');
   };
 
   useEffect(() => {
@@ -62,6 +60,7 @@ export const Review = ({}) => {
     register,
     handleSubmit,
     setValue,
+    getValues,
     formState: { errors },
   } = useForm();
 
@@ -69,7 +68,7 @@ export const Review = ({}) => {
     console.log('autocomplete');
     setShowAutocompleteCard(false);
     setValue('card.number', '5490 4234 4899 4324');
-    setValue('card.holder', 'Miriam Flores');
+    setValue('card.holder', getValues('driver') || '');
     setValue('card.month', '12');
     setValue('card.year', '2026');
     setValue('card.cvv', '322');
@@ -193,7 +192,11 @@ export const Review = ({}) => {
           <Reservation />
         </div>
       </div>
-      <FinishedTask show={confirmed} />
+      <FinishedTask
+        show={confirmed}
+        website="Car Rental"
+        data={JSON.parse(localStorage.getItem('reservation'))}
+      />
     </div>
   );
 };

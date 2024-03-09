@@ -5,7 +5,6 @@ import {
   PrimaryButton,
 } from '../../components/Passenger/common';
 import { useEffect, useState } from 'react';
-import { finishTask } from '../../utils/dark_patterns';
 import { FinishedTask } from '../../components/FinishedTask';
 
 export const Summary = () => {
@@ -14,13 +13,18 @@ export const Summary = () => {
     currency: 'USD',
     minimumFractionDigits: 2,
   };
-  
-  const currencyFractionDigits = new Intl.NumberFormat('en-US',formatting_options).resolvedOptions().maximumFractionDigits;
-  const total = (parseInt(localStorage.getItem('seat-price'))  + 1150 ).toLocaleString('en-US', {
-      maximumFractionDigits: currencyFractionDigits 
+
+  const currencyFractionDigits = new Intl.NumberFormat(
+    'en-US',
+    formatting_options
+  ).resolvedOptions().maximumFractionDigits;
+  const total = (
+    parseInt(localStorage.getItem('seat-price')) + 1150
+  ).toLocaleString('en-US', {
+    maximumFractionDigits: currencyFractionDigits,
   });
-  const seatPrice = (localStorage.getItem('seat-price') ).toLocaleString('en-US', {
-    maximumFractionDigits: currencyFractionDigits 
+  const seatPrice = localStorage.getItem('seat-price').toLocaleString('en-US', {
+    maximumFractionDigits: currencyFractionDigits,
   });
 
   const { t } = useTranslation();
@@ -32,8 +36,13 @@ export const Summary = () => {
 
   const onSubmit = (e) => {
     e.preventDefault();
-    finishTask('Air Somewhere');
     setFinished(true);
+  };
+
+  const data = {
+    code: localStorage.getItem('bookingCode'),
+    passenger: localStorage.getItem('passenger'),
+    seat: JSON.parse(localStorage.getItem('seat')),
   };
 
   return (
@@ -75,7 +84,7 @@ export const Summary = () => {
           </div>
         </form>
       </div>
-      <FinishedTask show={finished} />
+      <FinishedTask show={finished} website="Air somewhere" data={data} />
     </div>
   );
 };

@@ -166,6 +166,7 @@
             "Search": "Buscar",
             "Start": "Inicio",
             "End": "Fin",
+            "Adults": "Adultos",
             "Adult_one": "{{count}} adulto",
             "Adult_other": "{{count}} adultos"
         },

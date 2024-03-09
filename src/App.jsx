@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import './App.css';
-import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { CarRental } from './Pages/CarRental/CarRental';
 import { SelectVehicle } from './Pages/CarRental/SelectVehicle';
 import { SelectProtection } from './Pages/CarRental/SelectProtection';
@@ -24,6 +24,7 @@ import { BooksOffer } from './Pages/EBook/BooksOffer';
 import { PassengerHome } from './Pages/Passenger/PassengerHome';
 import { PassengerIndex } from './Pages/Passenger/PassengerIndex';
 import { updateDarkPatternState } from './utils/dark_patterns';
+import { StartPage } from './Pages/StartPage';
 
 function App() {
   useEffect(() => {
@@ -35,6 +36,7 @@ function App() {
       <HashRouter>
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/start" element={<StartPage />} />
 
           <Route path="/car_rental" element={<CarRental />} />
           <Route path="/car_rental/vehicle" element={<SelectVehicle />} />
@@ -53,14 +55,14 @@ function App() {
           <Route path="/roomio/summary" element={<RoomioSummary />} />
 
           <Route path="/ebook" element={<EBookHome />}>
-          <Route path="" element={<Books />} />
-          <Route path="/ebook/membership" element={<Membership />} />
-          <Route path="/ebook/account" element={<Account />} />
-          <Route
+            <Route path="" element={<Books />} />
+            <Route path="/ebook/membership" element={<Membership />} />
+            <Route path="/ebook/account" element={<Account />} />
+            <Route
               path="/ebook/cancel_membership"
               element={<CancelMembership />}
             />
-          <Route path="/ebook/books_offer" element={<BooksOffer />} />
+            <Route path="/ebook/books_offer" element={<BooksOffer />} />
           </Route>
         </Routes>
       </HashRouter>

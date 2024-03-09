@@ -1,11 +1,11 @@
 import { useEffect, useState } from 'react';
 import { differenceInDays } from '../../utils/date';
-import { ProtectionItem } from '../../Components/CarRent/ProtectionItem';
-import { ProtectionModal } from '../../Components/CarRent/ProtectionModal';
+import { ProtectionItem } from '../../components/CarRent/ProtectionItem';
+import { ProtectionModal } from '../../components/CarRent/ProtectionModal';
 import { Link, useNavigate } from 'react-router-dom';
-import { OrderItem } from '../../Components/CarRent/OrderItem';
-import { TotalPrice } from '../../Components/CarRent/TotalPrice';
-import { BackIcon } from '../../Components/Icons/BackIcon';
+import { OrderItem } from '../../components/CarRent/OrderItem';
+import { TotalPrice } from '../../components/CarRent/TotalPrice';
+import { BackIcon } from '../../components/Icons/BackIcon';
 import { useTranslation } from 'react-i18next';
 
 export const SelectProtection = () => {

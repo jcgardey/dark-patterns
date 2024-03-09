@@ -1,8 +1,6 @@
 import { useState } from 'react';
-import { Modal } from '../../Components/Modal';
-import { MembershipCancelled } from '../../components/EBook/MembershipCancelled';
-import { finishTask } from '../../utils/dark_patterns';
 import { useTranslation } from 'react-i18next';
+import { FinishedTask } from '../../components/FinishedTask';
 
 export const BooksOffer = () => {
   const { t } = useTranslation();
@@ -10,7 +8,6 @@ export const BooksOffer = () => {
 
   const cancelMembership = () => {
     setMembershipCancelled(true);
-    finishTask('Ebook');
   };
 
   return (
@@ -20,9 +17,7 @@ export const BooksOffer = () => {
         <div className="w-2/5 item">
           <i className="fa-solid fa-sharp fa-calendar-days"></i>
           <h6>{t('Ebook.Tease.Extend')}</h6>
-          <p className="text-sm text-gray-500">
-            {t('Ebook.Tease.Stay')}
-          </p>
+          <p className="text-sm text-gray-500">{t('Ebook.Tease.Stay')}</p>
           <button
             type="button"
             className="bg-fuchsia-500 rounded p-2 text-lg text-white hover:bg-fuchsia-600 border border-fuchsia-600"
@@ -33,9 +28,7 @@ export const BooksOffer = () => {
         <div className="w-2/5 item">
           <i className="fa-solid fa-sharp fa-medal"></i>
           <h6>{t('Ebook.Tease.Try')}</h6>
-          <p className="text-sm text-gray-500">
-            {t('Ebook.Tease.Keep')}
-          </p>
+          <p className="text-sm text-gray-500">{t('Ebook.Tease.Keep')}</p>
           <button
             type="button"
             className="bg-fuchsia-500 rounded p-2 text-lg text-white hover:bg-fuchsia-600 border border-fuchsia-600"
@@ -53,11 +46,7 @@ export const BooksOffer = () => {
           {t('Ebook.Tease.End')}
         </button>
       </p>
-      {membershipCancelled && (
-        <Modal title={t('Ebook.Tease.Ended')}>
-          <MembershipCancelled />
-        </Modal>
-      )}
+      <FinishedTask show={membershipCancelled} website="Roomio" />
     </div>
   );
 };

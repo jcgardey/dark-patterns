@@ -4,7 +4,6 @@ import { Footer } from '../../components/Roomio/Footer';
 import { useForm } from 'react-hook-form';
 import { formatCurrency } from '../../utils/currency';
 import { useTranslation } from 'react-i18next';
-import { finishTask } from '../../utils/dark_patterns';
 import { FinishedTask } from '../../components/FinishedTask';
 
 const Input = forwardRef(
@@ -34,18 +33,18 @@ export const RoomioSummary = () => {
     handleSubmit,
     register,
     setValue,
+    getValues,
     formState: { errors },
   } = useForm();
 
   const onSubmit = (data) => {
     setConfirmed(true);
-    finishTask('Roomio');
   };
 
   const autocompleteCard = () => {
     setShowAutocompleteCard(false);
     setValue('cc-number', '5490 4234 4899 4324');
-    setValue('cc-name', 'Miriam Flores');
+    setValue('cc-name', getValues('fullName') || 'Miriam Flores');
     setValue('cc-expiry', '12/28');
     setValue('cc-cvv', '322');
   };
@@ -56,6 +55,13 @@ export const RoomioSummary = () => {
   const taxes = (parseFloat(localStorage.getItem('hotel-taxes')) ?? 0) * nights;
 
   const { t } = useTranslation();
+
+  const data = {
+    nights,
+    price,
+    taxes,
+    city: localStorage.getItem('hotel-city'),
+  };
 
   return (
     <>
@@ -199,7 +205,7 @@ export const RoomioSummary = () => {
         </form>
       </div>
       <Footer />
-      <FinishedTask show={confirmed} />
+      <FinishedTask show={confirmed} website={'Roomio'} data={data} />
     </>
   );
 };
