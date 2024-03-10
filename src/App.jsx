@@ -25,6 +25,7 @@ import { PassengerHome } from './Pages/Passenger/PassengerHome';
 import { PassengerIndex } from './Pages/Passenger/PassengerIndex';
 import { updateDarkPatternState } from './utils/dark_patterns';
 import { StartPage } from './Pages/StartPage';
+import { WebsitesGroups } from './Pages/Dashboard/WebsitesGroups';
 
 function App() {
   useEffect(() => {
@@ -64,6 +65,8 @@ function App() {
             />
             <Route path="/ebook/books_offer" element={<BooksOffer />} />
           </Route>
+
+          <Route path="/dashboard" element={<WebsitesGroups />} />
         </Routes>
       </HashRouter>
     </>
