@@ -61,6 +61,7 @@ export const Home = () => {
   return (
     <div className="w-3/4 my-8 mx-auto">
       <h1 className="text-3xl">{t('Common.Thanks')}</h1>
+      <p>{t('Common.TaskGeneral')}</p>
 
       <div className="my-8 border-b border-gray-300">
         {allCompleted && (

@@ -60,12 +60,12 @@ export const SeatSelection = () => {
           <h3 className="font-bold text-lg mt-5">
             {t("Checkin.Seat.Flights")}
           </h3>
-          <p className="mt-3 font-bold">Dublin -&gt; Barcelona</p>
+          <p className="mt-3 font-bold">Madrid -&gt; Barcelona</p>
           Thu 14 Dec - 6:25-00:55 . AS 3077
           <br />
           <small>× {t("Checkin.Seat.SmallBag")} (40cm × 20cm)</small>
           <br />
-          <p className="mt-3 font-bold">Barcelona -&gt; Dublin</p>
+          <p className="mt-3 font-bold">Barcelona -&gt; Madrid</p>
           Sun 17 Dec - 06:15 - 08:00 - AS 4132
           <br />
           <small>× {t("Checkin.Seat.SmallBag")} (40cm × 20cm)</small>

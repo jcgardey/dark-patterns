@@ -283,10 +283,11 @@
         "RequiredField": "{{ field}} es requerido",
         "TasksFinished": "Todas las tareas fueron completadas correctamente",
         "TaskFinished": "Tarea finalizada",
-        "TaskCar": "Vas a estar en Madrid de vacaciones, con un presupuesto muy acotado. Necesitás alquilar un auto por 4 días, de viernes a lunes de la semana que viene.",
-        "TaskCheckin": "Estás por hacer un viaje de negocios con presupuesto limitado. No tenés que buscar vuelo, ya está reservado, solamente tenés que hacer el checkin online con el código de reserva AAA123",
-        "TaskRoomio": "Sos un estudiante viajando por Europa con poco dinero, y tenés pensado ir a Madrid por el fin de semana y necesitás una habitación entre viernes y domingo. Tu idea es gastar menos de USD 200.",
-        "TaskEBook": "Llevas un tiempo suscrito a un servicio de Ebooks por el que pagas mensualmente. Últimamente ha estado sobrecargado de trabajo y no ha podido utilizar el servicio. Un amigo te ha recomendado una opción mejor en la que sólo pagas por uso cuando descargas algo, así que quieres cancelar tu suscripción actual a la tienda de Ebooks."
+        "TaskGeneral": "Eres un estudiante que está de vacaciones con tus amigos con un presupuesto muy ajustado. Te vas a Madrid la semana que viene",
+        "TaskCar": "Necesitas alquilar un coche para tu viaje a Madrid de viernes a lunes (4 días). Sólo puedes gastar menos de 1.500 USD",
+        "TaskCheckin": "Has reservado un vuelo de Madrid a Barcelona, por el que ya has pagado. Tienes que facturar online con el código de reserva AAA123",
+        "TaskRoomio": "Necesitas reservar una habitación entre el viernes y el domingo. Piensas gastar menos de 200 USD",
+        "TaskEBook": "Como necesitas ahorrar algo de dinero extra para tu viaje, quieres cancelar tu suscripción actual a la tienda de EBooks"
     },
     "Questionnaire": {
         "Title": "Cuestionario",
@@ -294,7 +295,7 @@
         "Agree": "De acuerdo",
         "Disagree": "En desacuerdo",
         "Finish": "Finalizar",
-        "Advantage": "Espero que este sitio no se aproveche de mí",
+        "Advantage": "Supongo que este sitio no se aprovechará de mí",
         "Trustworthy": "Creo que este sitio es confiable",
         "Frustrating": "Utilizar este sitio fue frustrante",
         "Confusing": "Me sentí confundido utilizando este sitio",

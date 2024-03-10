@@ -1,5 +1,6 @@
 import { useEffect } from 'react';
 import { NavBar } from '../../components/EBook/NavBar';
+import { Footer } from '../../components/EBook/Footer';
 import './books.css';
 import { Link, Outlet } from 'react-router-dom';
 import { updateDarkPatternState } from '../../utils/dark_patterns';
@@ -47,10 +48,12 @@ export const Home = () => {
             </li>
           </ul>
         </div>
-        <div className="w-3/4 mx-auto main-content">
+        <div className="w-3/4 mx-auto main-content pb-40">
           <Outlet />
         </div>
       </div>
+      
+      <Footer />
     </>
   );
 };
