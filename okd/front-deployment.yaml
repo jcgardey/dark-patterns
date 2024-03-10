@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: dark-patterns-front
+  name: dark-patterns-front
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+     app: dark-patterns-front        
+  template:
+    metadata:            
+      labels:
+        app: dark-patterns-front        
+    spec:
+      containers:
+        - name: dark-patterns-front
+          image: jcgardey/dark-patterns-front:latest
+          imagePullPolicy: Always
+          ports:
+            - containerPort: 3000
+              protocol: TCP
+          
