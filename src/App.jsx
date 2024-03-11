@@ -26,6 +26,7 @@ import { PassengerIndex } from './Pages/Passenger/PassengerIndex';
 import { updateDarkPatternState } from './utils/dark_patterns';
 import { StartPage } from './Pages/StartPage';
 import { WebsitesGroups } from './Pages/Dashboard/WebsitesGroups';
+import { CreateWebsiteGroup } from './Pages/Dashboard/CreateWebsiteGroup';
 
 function App() {
   useEffect(() => {
@@ -67,6 +68,10 @@ function App() {
           </Route>
 
           <Route path="/dashboard" element={<WebsitesGroups />} />
+          <Route
+            path="/dashboard/websites/new"
+            element={<CreateWebsiteGroup />}
+          />
         </Routes>
       </HashRouter>
     </>
