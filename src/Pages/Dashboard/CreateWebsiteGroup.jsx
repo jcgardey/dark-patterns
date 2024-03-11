@@ -1,10 +1,13 @@
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { createWebsiteGroup } from '../../services/dashboard';
 
 export const CreateWebsiteGroup = () => {
   const { register, handleSubmit } = useForm();
   const [websites, setWebsites] = useState([]);
+
+  const navigate = useNavigate();
 
   const websitesData = {
     car_rental: {
@@ -40,12 +43,14 @@ export const CreateWebsiteGroup = () => {
     setNewWebsite(null);
   };
 
-  const onSubmit = (data) => {
-    console.log({ ...data, websites });
-  };
-
   const onDeleteWebsite = (name) => {
     setWebsites(websites.filter((w) => w.name !== name));
+  };
+
+  const onSubmit = (data) => {
+    createWebsiteGroup({ ...data, websites }).then((response) => {
+      navigate('/dashboard');
+    });
   };
 
   const labelClasses = 'block font-medium';
