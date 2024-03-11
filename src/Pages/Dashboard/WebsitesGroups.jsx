@@ -8,7 +8,11 @@ export const WebsitesGroups = () => {
 
   useEffect(() => {
     getAllWebsitesGroups().then((data) => setGroups(data));
-  });
+  }, []);
+
+  const onDelete = (groupId) => {
+    setGroups(groups.filter((g) => g.id !== groupId));
+  };
 
   return (
     <div className="w-3/4 mx-auto">
@@ -20,7 +24,7 @@ export const WebsitesGroups = () => {
       </div>
       <div className="my-4">
         {groups.map((group) => (
-          <WebsiteGroup key={group.id} group={group} />
+          <WebsiteGroup key={group.id} group={group} onDelete={onDelete} />
         ))}
       </div>
     </div>

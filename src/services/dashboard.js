@@ -5,3 +5,6 @@ export const getAllWebsitesGroups = () =>
 
 export const createWebsiteGroup = (websiteGroup) =>
   api.post('/websites/new', websiteGroup);
+
+export const deleteWebsiteGroup = (groupId) =>
+  api.delete(`/websites/${groupId}/delete`);
