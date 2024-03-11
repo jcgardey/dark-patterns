@@ -8,3 +8,6 @@ export const createWebsiteGroup = (websiteGroup) =>
 
 export const deleteWebsiteGroup = (groupId) =>
   api.delete(`/websites/${groupId}/delete`);
+
+export const deleteUserSession = (sessionId) =>
+  api.delete(`/user_sessions/${sessionId}/delete`);
