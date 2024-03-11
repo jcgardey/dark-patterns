@@ -7,8 +7,8 @@ export const WebsiteGroup = ({ group, onDelete }) => {
   };
 
   return (
-    <div className="my-8 w-3/4 mx-auto">
-      <div className="flex gap-4">
+    <div className="my-8 mx-auto">
+      <div className="flex justify-between">
         <h2 className="font-medium text-xl">{group.name}</h2>
         <button
           disabled={group.user_sessions.length > 0}

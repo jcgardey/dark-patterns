@@ -15,7 +15,7 @@ export const WebsitesGroups = () => {
   };
 
   return (
-    <div className="w-3/4 mx-auto">
+    <div className="w-1/2 mx-auto p-8">
       <h1 className="text-center text-3xl font-bold">Grupos</h1>
       <div className="my-4">
         <Link className="underline text-blue-600" to="/dashboard/websites/new">
