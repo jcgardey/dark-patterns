@@ -33,9 +33,12 @@ export const CreateWebsiteGroup = () => {
   };
 
   const [newWebsite, setNewWebsite] = useState(null);
+  const [isDark, setIsDark] = useState(false);
 
-  const onNewWebsiteChange = (siteKey) => {
-    setNewWebsite({ ...websitesData[siteKey] });
+  const onNewWebsiteChange = (key) => {
+    const website = websitesData[key];
+    website.url += `?enabled=${isDark}`;
+    setNewWebsite({ ...website, key });
   };
 
   const addNewWebsite = () => {
@@ -55,6 +58,8 @@ export const CreateWebsiteGroup = () => {
 
   const labelClasses = 'block font-medium';
   const inputClasses = 'border border-gray-500 rounded w-full h-10 p-1';
+
+  console.log(websites);
 
   return (
     <div className="my-8 w-1/3 mx-auto">
@@ -90,6 +95,7 @@ export const CreateWebsiteGroup = () => {
               className={inputClasses}
               type="text"
               name="website_name"
+              value={newWebsite?.key ?? ''}
               onChange={(e) => onNewWebsiteChange(e.target.value)}
             >
               <option value="">Elegir Sitio</option>
@@ -98,6 +104,14 @@ export const CreateWebsiteGroup = () => {
               <option value="ebook">Ebook</option>
               <option value="roomio">Roomio</option>
             </select>
+          </div>
+          <div className="my-2">
+            <input
+              type="checkbox"
+              value={isDark}
+              onChange={(e) => setIsDark(e.target.checked)}
+            />{' '}
+            <label>Dark</label>
           </div>
           <div className="my-4">
             <button
@@ -114,7 +128,12 @@ export const CreateWebsiteGroup = () => {
           <ol>
             {websites.map((website, i) => (
               <li className="flex w-full justify-between my-2" key={i}>
-                <p className="font-light">{website.name}</p>
+                <p className="font-light">
+                  {website.name}
+                  {website.url.includes('enabled=true') && (
+                    <span className="font-medium mx-1">Dark</span>
+                  )}
+                </p>
                 <button
                   onClick={() => onDeleteWebsite(website.name)}
                   className="mx-2 underline text-blue-600"
