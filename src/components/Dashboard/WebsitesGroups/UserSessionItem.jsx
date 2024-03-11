@@ -9,8 +9,13 @@ export const UserSessionItem = ({ session }) => {
   };
 
   return (
-    <div className="flex">
+    <div className="flex my-4 items-center gap-1">
       <p>{session.email}</p>
+      <div className="flex space-between">
+        {session.samples.map((s) => (
+          <div className="h-5 w-5 mx-1 rounded-3xl bg-green-700" />
+        ))}
+      </div>
       <button className="mx-1 underline text-blue-600">Ver</button>
       <button
         className="mx-2 underline text-blue-600"
