@@ -10,6 +10,6 @@ RUN npm install serve -g
 RUN npm install
 RUN npm run build
 
+RUN chmod 777 ./start.sh
 EXPOSE 3000
-
-CMD [ "serve", "-s", "dist" ]
+CMD ["./start.sh"] 
