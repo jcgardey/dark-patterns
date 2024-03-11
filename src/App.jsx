@@ -1,6 +1,6 @@
 import { useEffect } from 'react';
 import './App.css';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { HashRouter, Route, Routes } from 'react-router-dom';
 import { CarRental } from './Pages/CarRental/CarRental';
 import { SelectVehicle } from './Pages/CarRental/SelectVehicle';
 import { SelectProtection } from './Pages/CarRental/SelectProtection';
@@ -35,10 +35,10 @@ function App() {
 
   return (
     <>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/start" element={<StartPage />} />
+          <Route path="/" element={<StartPage />} />
+          <Route path="/start" element={<Home />} />
 
           <Route path="/car_rental" element={<CarRental />} />
           <Route path="/car_rental/vehicle" element={<SelectVehicle />} />
@@ -73,7 +73,7 @@ function App() {
             element={<CreateWebsiteGroup />}
           />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
     </>
   );
 }

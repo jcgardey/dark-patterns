@@ -6,7 +6,7 @@ export const Site = ({ site, enabled }) => {
   const onClick = () => {
     localStorage.setItem('website_id', site.id);
     window.open(
-      window.location.origin + site.url,
+      `${window.location.origin}#${site.url}`,
       '_blank',
       'noopener,noreferrer'
     );
