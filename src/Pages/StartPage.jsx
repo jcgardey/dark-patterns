@@ -22,7 +22,7 @@ export const StartPage = () => {
 
   useEffect(() => {
     if (sessionId) {
-      navigate('/');
+      navigate('/start');
     }
   }, [sessionId]);
 

@@ -1,8 +1,6 @@
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { Site } from '../components/Home/Site';
 import { useEffect, useState } from 'react';
-
-import { Questionnaire } from '../components/Questionnaire/Questionnaire';
 
 import { useTranslation } from 'react-i18next';
 import { getWebsitesStatus } from '../services/samples';
@@ -10,48 +8,22 @@ import { getWebsitesStatus } from '../services/samples';
 export const Home = () => {
   const { t } = useTranslation();
 
-  const initialSites = [
-    {
-      name: 'Car Rental',
-      instructions: 'Common.TaskCar',
-      path: '/car_rental',
-      status: 'pending',
-    },
-    {
-      name: 'Air Somewhere',
-      instructions: 'Common.TaskCheckin',
-      path: '/check_in?enabled=true',
-      status: 'pending',
-    },
-    {
-      name: 'Roomio',
-      instructions: 'Common.TaskRoomio',
-      path: '/roomio?enabled=true',
-      status: 'pending',
-    },
-    {
-      name: 'EBook',
-      instructions: 'Common.TaskEBook',
-      path: '/ebook',
-      status: 'pending',
-    },
-  ];
-
   const [sites, setSites] = useState([]);
-  const navigate = useNavigate();
 
+  const navigate = useNavigate();
   const sessionId = localStorage.getItem('session_id');
-  if (!sessionId) {
-    navigate('/start');
-  }
 
   useEffect(() => {
     const updateStatus = () => {
-      getWebsitesStatus(localStorage.getItem('session_id')).then((data) =>
-        setSites(data)
-      );
+      getWebsitesStatus(sessionId).then((data) => setSites(data));
     };
-    updateStatus();
+
+    if (sessionId) {
+      updateStatus();
+    } else {
+      navigate('/');
+    }
+
     window.addEventListener('focus', updateStatus);
     return () => window.removeEventListener('focus', updateStatus);
   }, []);
