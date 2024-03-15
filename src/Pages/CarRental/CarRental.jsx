@@ -50,6 +50,12 @@ export function CarRental() {
     </div>
   );
 
+  const handleDateChange = (dates) => {
+    const [start, end] = dates;
+    setStartDate(start);
+    setEndDate(end);
+  };
+
   return (
     <>
       <NavBar />
@@ -58,8 +64,8 @@ export function CarRental() {
           {t('Rental.Start')}
         </h2>
         <form onSubmit={onSubmit}>
-          <div className="my-4 flex items-end">
-            <div className="mx-3 w-1/4 relative">
+          <div className="my-4 flex items-end gap-6">
+            <div className="w-1/4 relative">
               <Label>{t('Rental.Location')}</Label>
               <Autocomplete
                 name={'location'}
@@ -68,43 +74,26 @@ export function CarRental() {
                 suggestedValues={cities.map((c) => `${c.nombre}, ${c.pais}`)}
               />
             </div>
-            <div className="mx-3 w-1/5">
-              <Label>{t('Rental.StartDate')}</Label>
+            <div className="w-1/5">
+              <Label>{t('Rental.Dates')}</Label>
               <DatePicker
                 className="w-full rounded px-2 h-9"
                 wrapperClassName="w-full"
                 selected={startDate}
-                onChange={(date) => setStartDate(date)}
-                selectsStart
+                onChange={handleDateChange}
+                selectsRange
                 startDate={startDate}
                 endDate={endDate}
                 minDate={new Date()}
                 dateFormat="dd/MM/yyyy"
               />
             </div>
-            <div className="mx-3 w-1/5">
-              <Label>{t('Rental.EndDate')}</Label>
-              <DatePicker
-                className="w-full rounded px-2 h-9"
-                wrapperClassName="w-full"
-                selected={endDate}
-                onChange={(date) => setEndDate(date)}
-                selectsEnd
-                startDate={startDate}
-                endDate={endDate}
-                minDate={startDate}
-                openToDate={startDate}
-                dateFormat="dd/MM/yyyy"
-              />
-            </div>
-            <div>
-              <button
-                type="submit"
-                className="bg-yellow-300 hover:bg-yellow-400 p-4 rounded-lg text-xl font-semibold"
-              >
-                {t('Rental.Search')}
-              </button>
-            </div>
+            <button
+              type="submit"
+              className="bg-yellow-300 hover:bg-yellow-400 px-4 py-2 rounded-lg text-xl font-semibold"
+            >
+              {t('Rental.Search')}
+            </button>
           </div>
         </form>
       </div>

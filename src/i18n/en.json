@@ -3,8 +3,7 @@
         "Title": "Rent a Car",
         "Start": "Start a Reservation",
         "Location": "Location",
-        "StartDate": "Pick-up date",
-        "EndDate": "Return date",
+        "Dates": "Dates",
         "Search": "Search",
         "NavBar": {
             "Reservations": "Reservations",

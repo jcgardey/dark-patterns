@@ -3,8 +3,7 @@
         "Title": "Alquiler de Vehículos",
         "Start": "Iniciar una Reserva",
         "Location": "Ubicación",
-        "StartDate": "Fecha de recogida",
-        "EndDate": "Fecha de devolución",
+        "Dates": "Fechas",
         "Search": "Buscar",
         "NavBar": {
             "Reservations": "Reservas",
