@@ -301,5 +301,24 @@
         "Confusing": "I felt confused when using this site",
         "Experience": "My experience using this site was comfortable",
         "MandatoryResponses": "Please answer the questions to continue"
+    },
+    "Start": {
+        "Email": "Email (Optional, we are not going to send spam)",
+        "Age": "Age",
+        "Gender": "Gender",
+        "Country": "Country",
+        "Purchases": "Online purchases in the last month",
+        "Genders": {
+            "Male": "Male",
+            "Female": "Female",
+            "Other": "Other"
+        },
+        "PurchaseOptions": {
+            "None": "None",
+            "1-3": "1-3",
+            "4-6": "4-6",
+            ">6": "> 6"
+        },
+        "Start": "Start"
     }
 }

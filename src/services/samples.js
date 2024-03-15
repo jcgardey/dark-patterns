@@ -18,8 +18,8 @@ export const createSample = ({
   });
 };
 
-export const createUserSession = ({ email, country }) =>
-  api.post('/user_sessions/new', { email, country });
+export const createUserSession = (userInfo) =>
+  api.post('/user_sessions/new', userInfo);
 
 export const getWebsitesStatus = (session_id) =>
   api
