@@ -163,8 +163,7 @@
             "People": "People",
             "Destination": "Destino",
             "Search": "Buscar",
-            "Start": "Inicio",
-            "End": "Fin",
+            "Dates": "Fechas",
             "Adults": "Adultos",
             "Adult_one": "{{count}} adulto",
             "Adult_other": "{{count}} adultos"
