@@ -8,7 +8,7 @@ import car_illustration from '../../assets/CarRental/car_illustration.avif';
 import { NavBar } from '../../components/CarRent/NavBar';
 import { updateDarkPatternState } from '../../utils/dark_patterns';
 import cities from '../../utils/cities.json';
-import { Autocomplete } from '../../components/Form/Autocomplete';
+import ReactSelect from 'react-select';
 
 const Label = ({ children }) => (
   <label className="text-white text-lg">{children}</label>
@@ -35,7 +35,7 @@ export function CarRental() {
     if (location !== '' && startDate !== '' && endDate !== '') {
       localStorage.setItem(
         'reservation',
-        JSON.stringify({ location, startDate, endDate })
+        JSON.stringify({ location: location.value, startDate, endDate })
       );
       navigate('/car_rental/vehicle');
     }
@@ -67,17 +67,24 @@ export function CarRental() {
           <div className="my-4 flex items-end gap-6">
             <div className="w-1/4 relative">
               <Label>{t('Rental.Location')}</Label>
-              <Autocomplete
+              <ReactSelect
                 name={'location'}
+                classNames={{ control: (state) => 'h-10' }}
                 value={location}
                 onChange={(newValue) => setLocation(newValue)}
-                suggestedValues={cities.map((c) => `${c.nombre}, ${c.pais}`)}
+                isClearable
+                openMenuOnFocus={false}
+                openMenuOnClick={false}
+                options={cities.map((c) => ({
+                  label: `${c.nombre}, ${c.pais}`,
+                  value: `${c.nombre}, ${c.pais}`,
+                }))}
               />
             </div>
             <div className="w-1/5">
               <Label>{t('Rental.Dates')}</Label>
               <DatePicker
-                className="w-full rounded px-2 h-9"
+                className="w-full rounded px-2 h-10"
                 wrapperClassName="w-full"
                 selected={startDate}
                 onChange={handleDateChange}
