@@ -1,15 +1,21 @@
 import api from '../axios';
 
-export const createSample = (website, isDark, questionnaire, data) => {
+export const createSample = ({
+  id,
+  isDark,
+  start,
+  end,
+  questionnaire,
+  data,
+}) => {
   const sessionId = localStorage.getItem('session_id');
-  return api.post(
-    `/user_sessions/${sessionId}/websites/${website}/samples/new`,
-    {
-      dark: isDark,
-      questionnaire,
-      sample_data: data,
-    }
-  );
+  return api.post(`/user_sessions/${sessionId}/websites/${id}/samples/new`, {
+    dark: isDark,
+    start,
+    end,
+    questionnaire,
+    sample_data: data,
+  });
 };
 
 export const createUserSession = ({ email, country }) =>

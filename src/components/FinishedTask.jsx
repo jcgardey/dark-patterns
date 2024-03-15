@@ -5,6 +5,7 @@ import { Questionnaire } from './Questionnaire/Questionnaire';
 
 import { useTranslation } from 'react-i18next';
 import { createSample } from '../services/samples';
+import dayjs from 'dayjs';
 
 export const FinishedTask = ({ show, website, data = {} }) => {
   const { t } = useTranslation();
@@ -17,9 +18,17 @@ export const FinishedTask = ({ show, website, data = {} }) => {
   const onFinish = (questionnaire) => {
     setShowQuestionnaire(false);
     const isDark = !!localStorage.getItem('dark');
-    const website = localStorage.getItem('website_id');
-    createSample(website, isDark, questionnaire, data);
-    localStorage.removeItem('website_id');
+    const website = JSON.parse(localStorage.getItem('website'));
+    const end = dayjs().format();
+    createSample({
+      id: website.id,
+      isDark,
+      start: website.start,
+      end,
+      questionnaire,
+      data,
+    });
+    localStorage.removeItem('website');
   };
 
   if (!show) {

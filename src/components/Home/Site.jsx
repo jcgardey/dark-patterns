@@ -1,10 +1,14 @@
+import dayjs from 'dayjs';
 import { useTranslation } from 'react-i18next';
 
 export const Site = ({ site, enabled }) => {
   const { t } = useTranslation();
 
   const onClick = () => {
-    localStorage.setItem('website_id', site.id);
+    localStorage.setItem(
+      'website',
+      JSON.stringify({ id: site.id, start: dayjs().format() })
+    );
     window.open(
       `${window.location.origin}#${site.url}`,
       '_blank',
