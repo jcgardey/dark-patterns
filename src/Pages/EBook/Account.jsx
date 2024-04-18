@@ -18,7 +18,7 @@ export const Account = () => {
         </div>
         
         <div className="w-1/5">
-          <p>Tipo de Cuebnta</p>
+          <p>Tipo de Cuenta</p>
         </div>
         <div className="w-3/4">
           <p>

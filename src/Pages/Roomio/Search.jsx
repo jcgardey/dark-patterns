@@ -57,6 +57,7 @@ export const Search = ({}) => {
               name={'destination'}
               placeholder={t('Roomio.Search.Destination')}
               classNames={{ control: (state) => 'h-11' }}
+              components={{ DropdownIndicator:() => null, IndicatorSeparator:() => null }}
               value={city}
               onChange={(newValue) => setCity(newValue)}
               isClearable

@@ -69,6 +69,7 @@ export function CarRental() {
               <Label>{t('Rental.Location')}</Label>
               <ReactSelect
                 name={'location'}
+                components={{ DropdownIndicator:() => null, IndicatorSeparator:() => null }}
                 classNames={{ control: (state) => 'h-10' }}
                 value={location}
                 onChange={(newValue) => setLocation(newValue)}

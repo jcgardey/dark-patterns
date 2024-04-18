@@ -150,6 +150,9 @@
             "ReservationInfo": "Información de la Reserva"
         },
         "Summary": {
+            "Completed": "Checkin Completado",
+            "BoardingPass": "La tarjeta de embarque se enviará a la dirección de correo electrónico registrada.",
+            "Thanks": "Gracias por elegir AirSomewhere",
             "Title":"Resumen",
             "Taxes": "Impuestos y tasas",
             "Seat": "Selección de Asiento",
@@ -257,8 +260,8 @@
         
     },
     "Common": {
-        "Thanks": "Gracias por participar",
         "Select": "Seleccionar",
+        "Start": "Iniciar",
         "Date": {
             "Day": "Día",
             "Month": "Mes",
@@ -281,9 +284,10 @@
         "RequiredField": "{{ field}} es requerido",
         "TasksFinished": "Todas las tareas fueron completadas correctamente",
         "TaskFinished": "Tarea finalizada",
+        "Instructions": "Instrucciones",
         "TaskGeneral": "Eres un estudiante que está de vacaciones con tus amigos con un presupuesto muy ajustado. Te vas a Madrid la semana que viene",
         "TaskCar": "Necesitas alquilar un coche para tu viaje a Madrid de viernes a lunes (4 días). Sólo puedes gastar menos de 1.500 USD",
-        "TaskCheckin": "Has reservado un vuelo de Madrid a Barcelona, por el que ya has pagado. Tienes que facturar online con el código de reserva AAA123",
+        "TaskCheckin": "Has reservado un vuelo de Madrid a Barcelona, por el que ya has pagado. Tienes que facturar online con el código de reserva AAA123. No puedes gastar más dinero.",
         "TaskRoomio": "Necesitas reservar una habitación entre el viernes y el domingo. Piensas gastar menos de 200 USD",
         "TaskEBook": "Como necesitas ahorrar algo de dinero extra para tu viaje, quieres cancelar tu suscripción actual a la tienda de EBooks"
     },
@@ -301,11 +305,15 @@
         "MandatoryResponses": "Por favor responda las preguntas para continuar"
     },
     "Start": {
+        "Thanks": "Gracias por participar",
+        "Briefing": "Se te pedirá que completes 4 tareas sencillas (15' total estimado). Algunas requerirán datos de la tarjeta de crédito, pero puede utilizar la función de autocompletar.",
+        "Briefing2": "Todos los datos recopilados se mantendrán anónimos, solo te pedimos tu correo electrónico para participar en una evaluación de seguimiento opcional.",
+        "TabOpen": "Esta pestaña permanecerá abierta, por si necesitas volver y comprobar las instrucciones",
         "Email": "Email (Opcional, no te vamos a enviar spam)",
         "Age": "Edad",
         "Gender": "Género",
         "Country": "País",
-        "Purchases": "Cantidad de compras online realizadas en el último mes",
+        "Purchases": "Cantidad de compras online realizadas en los últimos 3 meses",
         "Genders": {
             "Male": "Masculino",
             "Female": "Femenino",
