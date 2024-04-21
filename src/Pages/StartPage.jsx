@@ -102,6 +102,8 @@ export const StartPage = () => {
               {...register('country', { required: true })}
             >
               <option>Argentina</option>
+              <option>Deutschland</option>
+              <option>España</option>
             </select>
           </div>
           <div className="my-8">
