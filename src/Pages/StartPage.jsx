@@ -54,7 +54,7 @@ export const StartPage = () => {
   ];
 
   return (
-    <div className="w-1/3 mx-auto p-4">
+    <div className="w-1/2 mx-auto p-4">
       <h2 className="text-center text-2xl mb-4">{t('Start.Thanks')}</h2>
       <p className="mb-2">{t('Start.Briefing')}</p>
       <p>{t('Start.Briefing2')}</p>
