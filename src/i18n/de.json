@@ -12,7 +12,7 @@
             "Locations": "Standorte"
         },
         "Featured": {
-            "Title": "Ausgewählte Autovermietungs-Angebote",
+            "Title": "Ausgewählte Mietwagen-Angebote",
             "Last_Minute": {
                 "Title": "Last-Minute-Angebote",
                 "Description": "Hier finden Sie tolle Last-Minute-Angebote für Tages- und Wochenmieten in den USA und Kanada."
@@ -31,7 +31,7 @@
             "Bags_one": "{{count}} Tasche",
             "Bags_other": "{{count}} Taschen",
             "Price": "{{price }} / Tag",
-            "Select": "Wählen Sie",
+            "Select": "Auswählen",
             "Filters" : {
                 "Title": "Filter",
                 "Type": "Fahrzeugtyp",
@@ -101,7 +101,7 @@
             "CarHire":"Autovermietung",
             "Deals":"Last-Minute-Angebote",
             "Home":"Startseite",
-            "CheckIn":"Einchecken",
+            "CheckIn":"Check-in",
             "Services":"Dienstleistungen",
             "Terms":"Bedingungen",
             "Contact":"Kontakt",
@@ -117,7 +117,7 @@
             "From": "Von",
             "To": "An",
             "Search": "Suche",
-            "Code": "Reservierung Code",
+            "Code": "Buchungscode",
             "Surname": "Nachname",
             "FullName": "Vollständiger Name",
             "Birthdate": "Geburtsdatum",
@@ -133,22 +133,22 @@
             "Nationality": "Nationalität",
             "Passport": "Reisepass",
             "Email": "E-Mail",
-            "FindReservation": "Reservierung finden",
+            "FindReservation": "Buchung finden",
             "Subscribe": "Abonnieren",
             "SelectSeat": "Sitz auswählen"
         },
         "Seat": {
             "Title": "Sitzauswahl",
             "Preferential": "Vorzugssitz",
-            "Regular": "Regulärer Sitz",
-            "Cheap": "Billiger Sitz",
+            "Regular": "Normaler Sitz",
+            "Cheap": "Günstiger Sitz",
             "Occupied": "Besetzter Sitz",
             "Continue": "Weiter",
             "NoSeat": "Ich möchte keinen Sitzplatz auswählen",
             "Passengers": "Passagier",
             "Flights": "Flüge",
-            "SmallBag": "SmallBag",
-            "ReservationInfo": "Informationen zur Reservierung"
+            "SmallBag": "Handgepäck",
+            "ReservationInfo": "Informationen zur Buchung"
         },
         "Summary": {
             "Completed": "Checkin abgeschlossen",
@@ -158,7 +158,7 @@
             "Taxes": "Steuern",
             "Seat": "Sitzauswahl",
             "Discount": "Rabatt",
-            "Back": "Zurück zu Sitzplatzwahl",
+            "Back": "Zurück zur Sitzplatzwahl",
             "Continue": "Weiter"
         }
     },
@@ -176,8 +176,8 @@
         "Results": {
             "Sidebar": {
                 "Filters": "Filter",
-                "Centre": "Nähe Zentrum",
-                "Pet": "Pet friendly",
+                "Centre": "Zentrumsnah",
+                "Pet": "Haustiere willkommen",
                 "Pool": "Schwimmbad",
                 "Sauna": "Sauna"
             },
@@ -187,7 +187,7 @@
             "Night_other": "{{count}} Nächte",
             "Taxes": "Steuern und Abgaben",
             "TaxesIncluded": "Steuern und Gebühren sind inbegriffen",
-            "Book": "Buchen Sie"
+            "Book": "Jetzt buchen"
         },
         "Summary": {
             "Summary": "Zusammenfassung",
@@ -196,16 +196,16 @@
             "Taxes": "Steuern und Abgaben",
             "Total": "Insgesamt",
             "Name": "Vollständiger Name",
-            "Buy": "Kaufen"
+            "Buy": "Kostenpflichtig buchen"
         }
     },
     "Ebook": {
         "Home": "Startseite",
-        "Saved": "Gerettet",
+        "Saved": "Gespeichert",
         "Recommended": "Empfohlen",
         "Books": "Bücher",
         "Audiobooks": "Hörbücher",
-        "AccountInfo":"Konto-Informationen",
+        "AccountInfo":"Mein Konto",
         "MyMembership":"Mitgliedschaft",
         "Logout":"Abmelden",
         "Membership":{
@@ -213,19 +213,19 @@
             "Unlimited": "Unbegrenztes Lesen, ohne zusätzliche Kosten",
             "Learn": "Erfahren Sie mehr über alle Vorteile einer Mitgliedschaft",
             "Books": "Bücher",
-            "Read": "Lesen von Bestsellern",
+            "Read": "Bestseller lesen",
             "Audiobooks": "Hörbücher",
             "Listen": "Neuerscheinungen anhören",
-            "Snapshots": "Schnappschüsse",
-            "Gain": "Gewinnen Sie in 15 Minuten wichtige Erkenntnisse aus Büchern",
+            "Snapshots": "Snapshots",
+            "Gain": "Die wichtigsten Erkenntnisse in 15 Minuten",
             "Documents": "Dokumente",
             "community": "Community-Uploads",
             "Magazines": "Zeitschriften",
-            "Find": "Finden Sie die neuesten Ausgaben",
+            "Find": "Die neuesten Ausgaben finden",
             "Sheet": "Musiknoten",
             "Play": "Spiele Klassiker & Don Hits",
-            "Plan": "Mitgliedschaftsplan",
-            "Your": "Ihre Mitgliedschaft wird am 24.4.2021 automatisch verlängert und Ihnen werden $8,99 berechnet.",
+            "Plan": "Mitgliedschaft",
+            "Your": "Ihre Mitgliedschaft wird am 24.4.2021 automatisch verlängert und Ihnen werden 8,99 EUR berechnet.",
             "Pause": "Pause Mitgliedschaft",
             "End": "Meine Mitgliedschaft beenden",
             "Payment": "Details zur Bezahlung",
@@ -285,31 +285,31 @@
         "RequiredField": "{{ field}} ist erforderlich",
         "TasksFinished": "Alle Aufgaben erfolgreich abgeschlossen",
         "TaskFinished": "Aufgabe beendet",
-        "Instructions": "Anweisungen",
-        "TaskGeneral":"Sie sind ein Student, der mit seinen Freunden in den Urlaub fährt und ein sehr knappes Budget hat. Nächste Woche fahrt ihr nach Madrid.",
-        "TaskCar": "Sie müssen ein Auto für Ihre Reise in Madrid von Freitag bis Montag (4 Tage) mieten. Du kannst nur weniger als USD 1.500 ausgeben.",
-        "TaskCheckin": "Sie haben einen Flug von Madrid nach Barcelona gebucht, den Sie bereits bezahlt haben. Sie müssen online mit dem Buchungscode AAA123 einchecken. Du kannst kein weiteres Geld ausgeben.",
+        "Instructions": "Anleitung",
+        "TaskGeneral":"Du bist ein Student, der mit seinen Freunden in den Urlaub fährt und ein sehr knappes Budget hat. Nächste Woche fahrt ihr nach Madrid.",
+        "TaskCar": "Du musst ein Auto für Deinen Aufenthalt in Madrid von Freitag bis Montag (4 Tage) mieten. Du kannst nur höchstens USD 1.500 ausgeben.",
+        "TaskCheckin": "Du hast einen Flug von Madrid nach Barcelona gebucht, den Du bereits bezahlt hast. Du musst online mit dem Buchungscode AAA123 einchecken. Du kannst kein weiteres Geld ausgeben.",
         "TaskRoomio": "Du musst ein Zimmer zwischen Freitag und Sonntag buchen. Du planst, weniger als 200 USD auszugeben.",
         "TaskEBook": "Da du etwas mehr Geld für deine Reise sparen musst, möchtest du dein derzeitiges Abonnement für den EBooks Store kündigen."
     },
     "Questionnaire": {
         "Title": "Fragebogen",
-        "Description": "Bitte beantworten Sie die folgenden Fragen, um die Aufgabe zu lösen",
-        "Agree": "Stimme voll und ganz zu",
-        "Disagree": "Stark ablehnend",
-        "Finish": "Oberfläche",
+        "Description": "Bitte beantworten Sie die folgenden Fragen, um die Aufgabe abzuschließen",
+        "Agree": "Stimme ich voll und ganz zu",
+        "Disagree": "Stimme ich überhaupt nicht zu",
+        "Finish": "Absenden",
         "Advantage": "Ich erwarte, dass diese Website mich nicht ausnutzen wird.",
         "Trustworthy": "Ich glaube, diese Website ist vertrauenswürdig",
-        "Frustrating": "Ich fand die Bedienung dieser Schnittstelle frustrierend",
+        "Frustrating": "Ich fand die Bedienung dieser Benutzerschnittstelle frustrierend",
         "Confusing": "Ich fühlte mich bei der Nutzung dieser Website verwirrt",
         "Experience": "Meine Erfahrungen mit dieser Website waren komfortabel",
         "MandatoryResponses": "Bitte beantworten Sie die Fragen, um fortzufahren"
     },
     "Start": {
         "Thanks": "Danke für die Teilnahme",
-        "Briefing": "Sie werden gebeten, 4 einfache Aufgaben auszufüllen (schätzungsweise 15' insgesamt). In einigen Fällen sind Kreditkartendaten erforderlich, aber Sie können die Funktion zum automatischen Ausfüllen nutzen.",
+        "Briefing": "Sie werden gebeten, 4 einfache Aufgaben zu erfüllen (Dauer insgesamt ca. 15 Minuten). In einigen Fällen sind Kreditkartendaten erforderlich, aber Sie können die Funktion zum automatischen Ausfüllen nutzen.",
         "Briefing2": "Alle gesammelten Daten werden anonym gehalten, wir bitten Sie nur um Ihre E-Mail, um an einer optionalen Folgeauswertung teilnehmen zu können.",
-        "TabOpen": "Diese Registerkarte bleibt geöffnet, falls Sie zurückkommen müssen, um nach den Anweisungen zu suchen.",
+        "TabOpen": "Dieser Tab bleibt geöffnet, falls Du zurückkommen möchtest, um nach der Anleitung zu suchen.",
         "Email": "E-Mail (Optional, wir werden keinen Spam versenden)",
         "Age": "Alter",
         "Gender": "Geschlecht",
@@ -318,7 +318,7 @@
         "Genders": {
             "Male": "Männlich",
             "Female": "Weiblich",
-            "Other": "Andere"
+            "Other": "Divers"
         },
         "PurchaseOptions": {
             "None": "Keine",
