@@ -18,34 +18,29 @@ export const Site = ({ site, enabled }) => {
 
   return (
     <div className="my-10">
-      <div className="flex items-center">
-        <h3
-          className={`w-1/6 text-xl font-medium ${
-            site.completed ? 'line-through' : ''
-          }`}
-        >
-          {site.name}
-        </h3>
-        {!site.completed && (
-          <button
-            onClick={onClick}
-            disabled={!enabled}
-            target="_blank"
-            className={`mx-4 text-white rounded p-2 ${
-              enabled ? 'bg-green-600' : 'bg-gray-300'
-            }`}
-          >
-            Iniciar
-          </button>
-        )}
-      </div>
       <p
-        className={`text-slate-500 my-2 ${
-          site.completed ? 'line-through' : ''
-        }`}
+        className={`text-slate-700 text-lg my-2 
+          ${site.completed? 'line-through' : ''}
+          ${!enabled ? 'text-opacity-40' : ''}
+          `}
       >
+        <span className={`text-black mr-2 ${!enabled ? 'text-opacity-40' : ''}`}>{site.name}:</span>
         {t(site.instructions)}
       </p>
+      {!site.completed && (
+        <button
+          onClick={onClick}
+          disabled={!enabled}
+          target="_blank"
+          className={`mb-4 px-6 text-white rounded p-2 ${
+            enabled ? 'bg-green-600' : 'bg-gray-300'
+          }`}
+        >
+          {t("Common.Start")}
+        </button>
+        
+      )}
+      <p className={'text-green-900'}>{enabled ? t('Start.TabOpen') : ''}</p>
     </div>
   );
 };

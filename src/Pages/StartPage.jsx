@@ -54,8 +54,10 @@ export const StartPage = () => {
   ];
 
   return (
-    <div className="w-1/3 mx-auto p-4">
-      <h2 className="text-center text-2xl">{t('Common.Thanks')}</h2>
+    <div className="w-1/2 mx-auto p-4">
+      <h2 className="text-center text-2xl mb-4">{t('Start.Thanks')}</h2>
+      <p className="mb-2">{t('Start.Briefing')}</p>
+      <p>{t('Start.Briefing2')}</p>
       <div className="">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="my-8">
@@ -66,12 +68,14 @@ export const StartPage = () => {
             <Label>{t('Start.Gender')}</Label>
             {genders.map((gender) => (
               <div key={gender.value} className="my-3 flex gap-2">
-                <input
-                  {...register('gender', { required: true })}
-                  type="radio"
-                  value={gender.value}
-                />
-                <label>{t(`Start.Genders.${gender.label}`)}</label>
+                <label>
+                  <input
+                    {...register('gender', { required: true })}
+                    type="radio"
+                    value={gender.value}
+                  /> 
+                  &nbsp;
+                  {t(`Start.Genders.${gender.label}`)}</label>
               </div>
             ))}
           </div>
@@ -79,12 +83,15 @@ export const StartPage = () => {
             <Label>{t('Start.Purchases')}</Label>
             {purchases.map((p) => (
               <div key={p.value} className="my-3 flex gap-2">
-                <input
-                  {...register('purchases', { required: true })}
-                  type="radio"
-                  value={p.value}
-                />
-                <label>{t(`Start.PurchaseOptions.${p.label}`)}</label>
+                <label>
+                  <input
+                    {...register('purchases', { required: true })}
+                    type="radio"
+                    value={p.value}
+                  />
+                  &nbsp;
+                  {t(`Start.PurchaseOptions.${p.label}`)}
+                </label>
               </div>
             ))}
           </div>
@@ -95,6 +102,8 @@ export const StartPage = () => {
               {...register('country', { required: true })}
             >
               <option>Argentina</option>
+              <option>Deutschland</option>
+              <option>España</option>
             </select>
           </div>
           <div className="my-8">
@@ -103,7 +112,7 @@ export const StartPage = () => {
           </div>
           <div className="my-8">
             <button
-              className="bg-gray-800 rounded p-3 text-white"
+              className="bg-gray-800 rounded p-3 text-white px-8"
               type="submit"
             >
               {t('Start.Start')}
