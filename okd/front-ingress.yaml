@@ -4,7 +4,7 @@ metadata:
   name: dark-patterns-front
 spec:
   rules:
-    - host: dark-patterns.okd.lifia.info.unlp.edu.ar
+    - host: sitios-dp.okd.lifia.info.unlp.edu.ar
       http:
         paths:
           - path: /
