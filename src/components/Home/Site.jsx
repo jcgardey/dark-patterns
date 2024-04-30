@@ -10,7 +10,7 @@ export const Site = ({ site, enabled }) => {
       JSON.stringify({ id: site.id, start: dayjs().format() })
     );
     window.open(
-      `${window.location.origin}#${site.url}`,
+      `${window.location.origin}${site.url}`,
       '_blank',
       'noopener,noreferrer'
     );
@@ -20,11 +20,15 @@ export const Site = ({ site, enabled }) => {
     <div className="my-10">
       <p
         className={`text-slate-700 text-lg my-2 
-          ${site.completed? 'line-through' : ''}
+          ${site.completed ? 'line-through' : ''}
           ${!enabled ? 'text-opacity-40' : ''}
           `}
       >
-        <span className={`text-black mr-2 ${!enabled ? 'text-opacity-40' : ''}`}>{site.name}:</span>
+        <span
+          className={`text-black mr-2 ${!enabled ? 'text-opacity-40' : ''}`}
+        >
+          {site.name}:
+        </span>
         {t(site.instructions)}
       </p>
       {!site.completed && (
@@ -36,9 +40,8 @@ export const Site = ({ site, enabled }) => {
             enabled ? 'bg-green-600' : 'bg-gray-300'
           }`}
         >
-          {t("Common.Start")}
+          {t('Common.Start')}
         </button>
-        
       )}
       <p className={'text-green-900'}>{enabled ? t('Start.TabOpen') : ''}</p>
     </div>
