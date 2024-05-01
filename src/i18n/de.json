@@ -300,7 +300,7 @@
         "TaskGeneral":"Du bist ein Student, der in den Urlaub fährt und ein sehr knappes Budget hat. Du fährst im September nach Madrid.",
         "TaskCar": "Du musst ein Auto für Deinen Aufenthalt in Madrid von Freitag bis Montag (4 Tage) mieten. Du kannst nur höchstens USD 100 ausgeben.",
         "TaskCheckin": "Du hast einen Flug von Madrid nach Barcelona gebucht, den Du bereits bezahlt hast. Du musst online mit dem Buchungscode AAA123 einchecken. Du kannst kein weiteres Geld ausgeben.",
-        "TaskRoomio": "Du musst ein Zimmer in Madrid zwischen Freitag und Sonntag buchen. Du planst, weniger als 200 USD auszugeben.",
+        "TaskRoomio": "Du musst ein Zimmer in Madrid zwischen Freitag, 20. September, und Montag, 23. September, buchen (3 Nächte). Du planst, weniger als 300 USD auszugeben.",
         "TaskEBook": "Da du etwas mehr Geld für deine Reise sparen musst, möchtest du dein derzeitiges Abonnement für den EBooks Store kündigen."
     },
     "Questionnaire": {
