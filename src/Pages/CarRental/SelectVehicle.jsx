@@ -23,6 +23,7 @@ const Vehicle = ({ vehicle, onSelect }) => {
     >
       <div className="w-1/3">
         <h3 className="text-slate-700 text-2xl font-bold">{vehicle.name}</h3>
+        {t('Rental.Vehicle.'+[vehicle.capType])}
         <p className="my-1 text-grey-800 italic">
           {vehicle.description} {t('Rental.Vehicle.Similar')}
         </p>
@@ -61,51 +62,57 @@ export const SelectVehicle = ({}) => {
 
   const vehicles = [
     {
-      name: 'Standard SUV',
-      type: 'suv',
-      description: 'Ford Edge',
-      capacity: 5,
-      price: 357.15,
-      img: standard_suv,
-    },
-    {
       name: 'Standard',
       type: 'sedan',
+      capType: 'Sedan',
       description: 'VW Jetta',
       capacity: 5,
-      price: 420.35,
+      price: 32.99,
       img: standard,
     },
     {
-      name: 'Convertible',
-      type: 'convertible',
-      description: 'Ford Mustang',
-      capacity: 4,
-      price: 650.23,
-      img: convertible,
+      name: 'Standard SUV',
+      type: 'suv',
+      capType: 'SUV',
+      description: 'Ford Edge',
+      capacity: 5,
+      price: 41.15,
+      img: standard_suv,
     },
     {
       name: 'Pickup',
       type: 'pickup',
+      capType: 'Pickup',
       description: 'Ford F150',
       capacity: 4,
-      price: 450.95,
+      price: 45.95,
       img: pickup,
-    },
-    {
-      name: 'Sporty Car',
-      type: 'sporty',
-      description: 'Dodge Challenger',
-      capacity: 4,
-      price: 688.65,
-      img: sporty,
     },
     {
       name: 'Standard Pickup',
       type: 'pickup',
+      capType: 'Pickup',
       capacity: 4,
-      price: 468.06,
+      price: 46.06,
       img: standard_pickup,
+    },
+    {
+      name: 'Convertible',
+      type: 'convertible',
+      capType: 'Convertible',
+      description: 'Ford Mustang',
+      capacity: 4,
+      price: 65.23,
+      img: convertible,
+    },
+    {
+      name: 'Sporty Car',
+      type: 'sporty',
+      capType: 'Sporty',
+      description: 'Dodge Challenger',
+      capacity: 4,
+      price: 68.65,
+      img: sporty,
     },
   ];
 
@@ -126,11 +133,11 @@ export const SelectVehicle = ({}) => {
 
   const availableFilters = {
     type: [
-      { value: 'sedan', label: 'Sedan' },
-      { value: 'suv', label: 'SUV' },
-      { value: 'coupe', label: 'Coupe' },
-      { value: 'convertible', label: 'Convertible' },
-      { value: 'pickup', label: 'Pickup' },
+      { value: 'sedan', label: t('Rental.Vehicle.Sedan') },
+      { value: 'suv', label:  t('Rental.Vehicle.SUV')},
+      { value: 'coupe', label:  t('Rental.Vehicle.Coupe')},
+      { value: 'convertible', label:  t('Rental.Vehicle.Convertible')},
+      { value: 'pickup', label:  t('Rental.Vehicle.Pickup')}
     ],
     seats: [
       { value: 2, label: '2+' },

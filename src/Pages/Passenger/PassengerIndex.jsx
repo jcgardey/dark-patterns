@@ -134,7 +134,7 @@ export const PassengerIndex = ({}) => {
           {t('Checkin.Home.Deals')}
         </h1>
         <span className="text-8xl text-right uppercase text-gray-900 pr-20">
-          30% off
+          {t('Checkin.Home.30off')}
         </span>
       </div>
     </div>

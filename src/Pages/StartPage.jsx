@@ -58,6 +58,7 @@ export const StartPage = () => {
       <h2 className="text-center text-2xl mb-4">{t('Start.Thanks')}</h2>
       <p className="mb-2">{t('Start.Briefing')}</p>
       <p>{t('Start.Briefing2')}</p>
+      <p>{t('Start.Briefing3')}</p>
       <div className="">
         <form onSubmit={handleSubmit(onSubmit)}>
           <div className="my-8">

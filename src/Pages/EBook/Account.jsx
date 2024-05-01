@@ -1,10 +1,12 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 
 export const Account = () => {
+  const { t } = useTranslation();
   return (
     <>
       <h1 className="text-2xl my-4 font-medium">
-        Información de Cuenta
+        {t('Ebook.AccountInfo')}
       </h1>
 
       <div className="flex membership-options">
@@ -18,18 +20,18 @@ export const Account = () => {
         </div>
         
         <div className="w-1/5">
-          <p>Tipo de Cuenta</p>
+          <p>{t('Ebook.AccountType')}</p>
         </div>
         <div className="w-3/4">
           <p>
-            Personal
+            {t('Ebook.Personal')}
           </p>
         </div>
       </div>
 
       <div className="flex membership-options">
         <div className="w-1/5">
-          <p>Contraseña</p>
+          <p>{t('Ebook.Password')}</p>
         </div>
         <div className="w-3/4">
           <p>********</p>

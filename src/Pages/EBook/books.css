@@ -90,16 +90,17 @@ a{
 }
 .benefits ul{
 	list-style-type: none;
-	padding: 0 40px;
+	padding: 20px 40px 0;
 	text-align: center;
 	margin: 0;
 }
 .benefits ul li{
 	display: inline-block;
-	height: 60px;
+	height: 120px;
 	width: 120px;
 	text-align: center;
 	margin: 30px 40px;
+	vertical-align: top;
 }
 .benefits ul li i{
 	font-size: 1.5em;

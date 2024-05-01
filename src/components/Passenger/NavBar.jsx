@@ -28,7 +28,7 @@ export const NavBar = ({}) => {
             </li>
             <li>
               <a
-                href="#/check_in/info"
+                href="/check_in/info"
                 class="block py-2 pl-3 pr-4 text-gray-100 rounded md:hover:bg-transparent md:border-0 md:hover:text-green-200 md:p-0"
               >
                 {t('Checkin.Home.CheckIn')}

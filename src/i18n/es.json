@@ -24,6 +24,11 @@
         },
         "SelectVehicle": "Seleccionar un Vehículo",
         "Vehicle": {
+            "Sedan": "Sedan",
+            "SUV": "SUV",
+            "Coupe": "Coupe",
+            "Convertible": "Convertible",
+            "Pickup": "Pickup",
             "Similar": "o similar",
             "Seats_one": "{{count}} asiento",
             "Seats_other": "{{count}} asientos",
@@ -108,7 +113,8 @@
             "LearnDeals": " Conoce las últimas ofertas",
             "Promotions": "Sé el primero en conseguir promociones",
             "NewDestinations": "Conoce los nuevos destinos",
-            "MissSale": "¡No te pierdas nunca una oferta!"
+            "MissSale": "¡No te pierdas nunca una oferta!",
+            "30off": "30% off"
         },
         "Passenger": {
             "Title": "Datos del pasajero",
@@ -147,7 +153,9 @@
             "Passengers": "Pasajeros",
             "Flights": "Vuelos",
             "SmallBag": "Equipaje de Cabina",
-            "ReservationInfo": "Información de la Reserva"
+            "ReservationInfo": "Información de la Reserva",
+            "ReservationDate1": "Lun 23 Sep - 16:25-00:55 . AS 3077",
+            "ReservationDate2": "Dom 29 Sep - 06:15-08:00 - AS 4132"
         },
         "Summary": {
             "Completed": "Checkin Completado",
@@ -194,7 +202,7 @@
             "Taxes": "Impuestos y tasas",
             "Total": "Total",
             "Name": "Nombre Completo",
-            "Buy": "Comprar"
+            "Buy": "Completar Reserva"
         }
     },
     "Ebook": {
@@ -203,8 +211,10 @@
         "Recommended": "Recomendados",
         "Books": "Libros",
         "Audiobooks": "Audiolibros",
-        
         "AccountInfo":"Información de Cuenta",
+        "AccountType":"Tipo de Cuenta",
+        "Personal":"Personal",
+        "Password": "Contraseña",
         "MyMembership":"Membresía",
         "Logout":"Salir",
         "Membership":{
@@ -224,7 +234,7 @@
             "Sheet": "Partituras",
             "Play": "Clásicos y éxitos nuevos",
             "Plan": "Plan de Membresía",
-            "Your": "Su plan se renovará automáticamente el 4/12/23, y se cobrarán USD9.99",
+            "Your": "Su plan se renovará automáticamente el 24/8/24, y se cobrarán USD9.99",
             "Pause": "",
             "End": "Cancelar mi membresía",
             "Payment": "Detalles de Pago",
@@ -247,8 +257,8 @@
         },
         "Tease":{
             "Before": "Antes de que te vayas...",
-            "Extend": "Extender el Período Gratuito",
-            "Stay":"Quedate con nosotros y ampliaremos tu prueba gratuita 30 días adicionales.",
+            "Extend": "Obtenga un periodo de descuento de 30 días",
+            "Stay":"Quedate con nosotros y ampliaremos su suscripción 30 días más por un precio reducido.",
             "Get30":"Obtener 30 días más",
             "Try": "Probar Ebookworld Lite por $4.99/Mes",
             "Keep":"Conservarás el acceso a una selección limitada de libros y audiolibros, junto con acceso ilimitado a Instantáneas, documentos, noticias, revistas y partituras.",
@@ -285,10 +295,10 @@
         "TasksFinished": "Todas las tareas fueron completadas correctamente",
         "TaskFinished": "Tarea finalizada",
         "Instructions": "Instrucciones",
-        "TaskGeneral": "Eres un estudiante que está de vacaciones con tus amigos con un presupuesto muy ajustado. Te vas a Madrid la semana que viene",
-        "TaskCar": "Necesitas alquilar un coche para tu viaje a Madrid de viernes a lunes (4 días). Sólo puedes gastar menos de 1.500 USD",
+        "TaskGeneral": "Eres un estudiante que está de vacaciones con un presupuesto muy ajustado. Te vas a Madrid en septiembre",
+        "TaskCar": "Necesitas alquilar un coche para tu viaje a Madrid entre el viernes 20/9 y el lunes 23/9 (4 días). Sólo puedes gastar menos de 100 USD",
         "TaskCheckin": "Has reservado un vuelo de Madrid a Barcelona, por el que ya has pagado. Tienes que facturar online con el código de reserva AAA123. No puedes gastar más dinero.",
-        "TaskRoomio": "Necesitas reservar una habitación entre el viernes y el domingo. Piensas gastar menos de 200 USD",
+        "TaskRoomio": "Necesitas reservar una habitación en Madrid entre el viernes 20/9 y el lunes 23/9 (3 noches). Piensas gastar menos de 200 USD",
         "TaskEBook": "Como necesitas ahorrar algo de dinero extra para tu viaje, quieres cancelar tu suscripción actual a la tienda de EBooks"
     },
     "Questionnaire": {
@@ -305,9 +315,10 @@
         "MandatoryResponses": "Por favor responda las preguntas para continuar"
     },
     "Start": {
-        "Thanks": "Gracias por participar",
+        "Thanks": "Gracias por participar, por favor lea cuidadosamente",
         "Briefing": "Se te pedirá que completes 4 tareas sencillas (15' total estimado). Algunas requerirán datos de la tarjeta de crédito, pero puede utilizar la función de autocompletar.",
-        "Briefing2": "Todos los datos recopilados se mantendrán anónimos, solo te pedimos tu correo electrónico para participar en una evaluación de seguimiento opcional.",
+        "Briefing2": "Los sitios son clones de sitios reales alterados, por lo que algunos enlaces y botones ajenos a las tareas no funcionarán.",
+        "Briefing3": "Todos los datos recopilados se mantendrán anónimos, solo te pedimos tu correo electrónico para participar en una evaluación de seguimiento opcional.",
         "TabOpen": "Esta pestaña permanecerá abierta, por si necesitas volver y comprobar las instrucciones",
         "Email": "Email (Opcional, no te vamos a enviar spam)",
         "Age": "Edad",

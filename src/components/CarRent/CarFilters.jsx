@@ -13,14 +13,14 @@ const FilterGroup = ({
       <div className="my-2">
         {availableFilters.map((filter, i) => (
           <p className="flex" key={i}>
+            <label className="w-3/4 mx-2 text-left text-xl font-normal mb-1">
             <input
               type="checkbox"
               checked={selectedFilters.includes(filter.value)}
               value={filter.value}
               onChange={(e) => toggleFilter(name, e.target.value)}
             />
-            <label className="w-2/4 mx-2 text-left text-xl font-normal">
-              {filter.label}
+            <span className="pl-2">{filter.label}</span>
             </label>
           </p>
         ))}

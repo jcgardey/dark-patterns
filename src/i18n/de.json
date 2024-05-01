@@ -25,6 +25,11 @@
         "SelectVehicle": "Wählen Sie ein Fahrzeug",
         "Filters": "Filter",
         "Vehicle": {
+            "Sedan": "Limousine",
+            "SUV": "SUV",
+            "Coupe": "Coupe",
+            "Convertible": "Cabrio",
+            "Pickup": "Pick-up",
             "Similar": "oder ähnlich",
             "Seats_one": "{{count}} Sitz",
             "Seats_other": "{{count}} Sitze",
@@ -109,7 +114,8 @@
             "LearnDeals": " Erfahren Sie mehr über die neuesten Angebote",
             "Promotions": "Seien Sie der Erste, der Sonderangebote erhält",
             "NewDestinations": "Lernen Sie neue Reiseziele kennen",
-            "MissSale": "Nie mehr einen Verkauf verpassen!"
+            "MissSale": "Nie mehr einen Verkauf verpassen!",
+            "30off": "30% Rabatt"
         },
         "Passenger": {
             "Title": "Informationen zum Einchecken",
@@ -148,7 +154,9 @@
             "Passengers": "Passagier",
             "Flights": "Flüge",
             "SmallBag": "Handgepäck",
-            "ReservationInfo": "Informationen zur Buchung"
+            "ReservationInfo": "Informationen zur Buchung",
+            "ReservationDate1": "Mon 23 Sep - 16:25-00:55 - AS 3077",
+            "ReservationDate2": "Sun 29 Sep - 06:15-08:00 - AS 4132"
         },
         "Summary": {
             "Completed": "Checkin abgeschlossen",
@@ -206,6 +214,9 @@
         "Books": "Bücher",
         "Audiobooks": "Hörbücher",
         "AccountInfo":"Mein Konto",
+        "AccountType":"Konto-Typ",
+        "Personal":"Persönlich",
+        "Password": "Passwort",
         "MyMembership":"Mitgliedschaft",
         "Logout":"Abmelden",
         "Membership":{
@@ -225,7 +236,7 @@
             "Sheet": "Musiknoten",
             "Play": "Spiele Klassiker & Don Hits",
             "Plan": "Mitgliedschaft",
-            "Your": "Ihre Mitgliedschaft wird am 24.4.2021 automatisch verlängert und Ihnen werden 8,99 EUR berechnet.",
+            "Your": "Ihre Mitgliedschaft wird am 24.8.2024 automatisch verlängert und Ihnen werden 8,99 EUR berechnet.",
             "Pause": "Pause Mitgliedschaft",
             "End": "Meine Mitgliedschaft beenden",
             "Payment": "Details zur Bezahlung",
@@ -248,8 +259,8 @@
         },
         "Tease":{
             "Before": "Bevor Sie gehen...",
-            "Extend": "Verlängern Sie den kostenlosen Zeitraum",
-            "Stay": "Bleiben Sie bei uns und wir verlängern Ihre kostenlose Testphase um weitere 30 Tage.",
+            "Extend": "Erhalten Sie einen 30-tägigen ermäßigten Zeitraum",
+            "Stay": "Bleiben Sie bei uns und wir verlängern Ihr Abonnement um weitere 30 Tage zu einem vergünstigten Preis.",
             "Get30": "Erhalten Sie 30 weitere Tage",
             "Try": "Testen Sie Ebookworld Lite für $4.99/Monat", 
             "Keep": "Sie haben weiterhin Zugriff auf eine begrenzte Auswahl an Büchern und Hörbüchern sowie unbegrenzten Zugriff auf Schnappschüsse, Dokumente, Nachrichten, Zeitschriften und Noten.",
@@ -286,10 +297,10 @@
         "TasksFinished": "Alle Aufgaben erfolgreich abgeschlossen",
         "TaskFinished": "Aufgabe beendet",
         "Instructions": "Anleitung",
-        "TaskGeneral":"Du bist ein Student, der mit seinen Freunden in den Urlaub fährt und ein sehr knappes Budget hat. Nächste Woche fahrt ihr nach Madrid.",
-        "TaskCar": "Du musst ein Auto für Deinen Aufenthalt in Madrid von Freitag bis Montag (4 Tage) mieten. Du kannst nur höchstens USD 1.500 ausgeben.",
+        "TaskGeneral":"Du bist ein Student, der in den Urlaub fährt und ein sehr knappes Budget hat. Du fährst im September nach Madrid.",
+        "TaskCar": "Du musst ein Auto für Deinen Aufenthalt in Madrid von Freitag bis Montag (4 Tage) mieten. Du kannst nur höchstens USD 100 ausgeben.",
         "TaskCheckin": "Du hast einen Flug von Madrid nach Barcelona gebucht, den Du bereits bezahlt hast. Du musst online mit dem Buchungscode AAA123 einchecken. Du kannst kein weiteres Geld ausgeben.",
-        "TaskRoomio": "Du musst ein Zimmer zwischen Freitag und Sonntag buchen. Du planst, weniger als 200 USD auszugeben.",
+        "TaskRoomio": "Du musst ein Zimmer in Madrid zwischen Freitag und Sonntag buchen. Du planst, weniger als 200 USD auszugeben.",
         "TaskEBook": "Da du etwas mehr Geld für deine Reise sparen musst, möchtest du dein derzeitiges Abonnement für den EBooks Store kündigen."
     },
     "Questionnaire": {
@@ -306,9 +317,10 @@
         "MandatoryResponses": "Bitte beantworten Sie die Fragen, um fortzufahren"
     },
     "Start": {
-        "Thanks": "Danke für die Teilnahme",
+        "Thanks": "Danke für die Teilnahme, bitte sorgfältig lesen",
         "Briefing": "Sie werden gebeten, 4 einfache Aufgaben zu erfüllen (Dauer insgesamt ca. 15 Minuten). In einigen Fällen sind Kreditkartendaten erforderlich, aber Sie können die Funktion zum automatischen Ausfüllen nutzen.",
-        "Briefing2": "Alle gesammelten Daten werden anonym gehalten, wir bitten Sie nur um Ihre E-Mail, um an einer optionalen Folgeauswertung teilnehmen zu können.",
+        "Briefing2": "Bei den Seiten handelt es sich um umbenannte Klone echter Seiten, so dass einige Links und Schaltflächen, die nicht in den Aufgabenbereich fallen, nicht funktionieren.",
+        "Briefing3": "Alle gesammelten Daten werden anonym gehalten, wir bitten Sie nur um Ihre E-Mail, um an einer optionalen Folgeauswertung teilnehmen zu können.",
         "TabOpen": "Dieser Tab bleibt geöffnet, falls Du zurückkommen möchtest, um nach der Anleitung zu suchen.",
         "Email": "E-Mail (Optional, wir werden keinen Spam versenden)",
         "Age": "Alter",

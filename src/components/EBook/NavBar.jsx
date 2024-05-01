@@ -21,7 +21,7 @@ export const NavBar = () => {
             <input
               type="text"
               className="w-full p-1 px-2 border border-gray-300 placeholder-gray-400 rounded rounded-r-none"
-              placeholder="Buscar"
+              placeholder={t('Roomio.Search.Search')}
               aria-label="Recipient's username"
               aria-describedby="basic-addon2"
             />
