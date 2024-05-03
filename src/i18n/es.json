@@ -64,7 +64,7 @@
                 "Add": "Agregar protección",
                 "Skip": "Sí, me voy a hacer cargo de los gastos que surjan"
             },
-            "Featured": "Destacada"
+            "Featured": "Recomendada"
         },
         "Review": {
             "Title": "Revisar y reservar",
@@ -303,7 +303,7 @@
     },
     "Questionnaire": {
         "Title": "Cuestionario",
-        "Description": "Por favor, conteste el siguiente cuestionario para finalizar la tarea",
+        "Description": "Por favor, conteste el siguiente cuestionario",
         "Agree": "De acuerdo",
         "Disagree": "En desacuerdo",
         "Finish": "Finalizar",

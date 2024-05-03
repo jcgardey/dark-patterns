@@ -305,7 +305,7 @@
     },
     "Questionnaire": {
         "Title": "Fragebogen",
-        "Description": "Bitte beantworten Sie die folgenden Fragen, um die Aufgabe abzuschließen",
+        "Description": "Bitte beantworten Sie die folgenden Fragen",
         "Agree": "Stimme ich voll und ganz zu",
         "Disagree": "Stimme ich überhaupt nicht zu",
         "Finish": "Absenden",

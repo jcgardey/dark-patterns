@@ -47,10 +47,7 @@ export const Questionnaire = ({ onFinish }) => {
 
   return (
     <div className="m-2">
-      <h2 className="text-center text-2xl font-medium">
-        {t("Questionnaire.Title")}
-      </h2>
-      <p className="my-4 text-lg text-center">
+      <p className="text-center text-xl font-medium">
         {t("Questionnaire.Description")}
       </p>
       {error && (
@@ -58,12 +55,12 @@ export const Questionnaire = ({ onFinish }) => {
           {t("Questionnaire.MandatoryResponses")}
         </p>
       )}
-      <div className="my-8">
+      <div className="my-6">
         <form onSubmit={onSubmit}>
           <div className="flex justify-end my-4">
             <div className="flex w-1/2 justify-between">
-              <p className="w-1/4 text-center">{t("Questionnaire.Disagree")}</p>
-              <p className="w-1/5 text-center">{t("Questionnaire.Agree")}</p>
+              <p className="w-1/3 text-left">{t("Questionnaire.Disagree")}</p>
+              <p className="w-1/3 text-right">{t("Questionnaire.Agree")}</p>
             </div>
           </div>
           {questions.map((q) => (

@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react';
+import './CarRental.css';
 import DatePicker from 'react-datepicker';
 import 'react-datepicker/dist/react-datepicker.css';
 import { useNavigate } from 'react-router-dom';
@@ -71,6 +72,7 @@ export function CarRental() {
                 name={'location'}
                 components={{ DropdownIndicator:() => null, IndicatorSeparator:() => null }}
                 classNames={{ control: (state) => 'h-10' }}
+                classNamePrefix='CarRent'
                 value={location}
                 onChange={(newValue) => setLocation(newValue)}
                 isClearable
