@@ -68,18 +68,7 @@ export const RoomioResults = () => {
           {rooms
             .filter((room) => room.city.includes(city))
             .map((room, i) => (
-              <Room
-                key={i}
-                title={room.title}
-                img={room.img}
-                description={room.description}
-                fullPrice={room.fullPrice}
-                price={room.price}
-                taxes={room.taxes}
-                freeCancellation={room.freeCancellation}
-                nights={nights}
-                adults={adults}
-              />
+              <Room key={i} room={room} nights={nights} adults={adults} />
             ))}
         </div>
       </div>

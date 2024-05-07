@@ -74,9 +74,10 @@ export const StartPage = () => {
                     {...register('gender', { required: true })}
                     type="radio"
                     value={gender.value}
-                  /> 
+                  />
                   &nbsp;
-                  {t(`Start.Genders.${gender.label}`)}</label>
+                  {t(`Start.Genders.${gender.label}`)}
+                </label>
               </div>
             ))}
           </div>

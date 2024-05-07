@@ -1,46 +1,40 @@
 import { useTranslation } from 'react-i18next';
 import { Link } from 'react-router-dom';
 
-export const Room = ({
-  title,
-  img,
-  description,
-  fullPrice,
-  price,
-  taxes,
-  freeCancellation,
-  nights,
-  adults,
-}) => {
-  const { t } = useTranslation();
+export const Room = ({ room, nights, adults }) => {
+  const { t, i18n } = useTranslation();
 
   const onClick = () => {
-    localStorage.setItem('hotel-price', price);
-    localStorage.setItem('hotel-taxes', taxes);
+    localStorage.setItem('hotel-price', room.price);
+    localStorage.setItem('hotel-taxes', room.taxes);
   };
 
-  const priceForStay = (Math.round(nights * price * 100) / 100).toFixed(2);
-  const priceForStayWithTaxes = (Math.round(nights * (price + taxes) * 100) / 100).toFixed(2);
+  const priceForStay = (Math.round(nights * room.price * 100) / 100).toFixed(2);
+  const priceForStayWithTaxes = (
+    Math.round(nights * (room.price + room.taxes) * 100) / 100
+  ).toFixed(2);
   const darkEnabled = localStorage.getItem('dark') == 'true' ?? false;
 
   return (
     <div className="mb-10 border border-gray-400 rounded">
       <div className="flex justify-between">
         <div className="w-1/4">
-          <img src={img} className="img-fluid rounded-start" alt="..." />
+          <img src={room.img} className="img-fluid rounded-start" alt="..." />
         </div>
 
         <div className="w-1/2 pt-5">
           <a
             className="underline font-medium text-xl text-teal-600"
-            dangerouslySetInnerHTML={{ __html: title }}
+            dangerouslySetInnerHTML={{ __html: room.title }}
           />
           <div className="my-2">
             <p
               className="text-gray-800"
-              dangerouslySetInnerHTML={{ __html: description }}
+              dangerouslySetInnerHTML={{
+                __html: room[`description_${i18n.language}`],
+              }}
             />
-            {freeCancellation && (
+            {room.freeCancellation && (
               <p className="font-bold text-md my-1">
                 {t('Roomio.Results.Cancellation')}
               </p>
@@ -62,7 +56,7 @@ export const Room = ({
 
           <p className="text-sm text-gray-500 my-2">
             {darkEnabled
-              ? `+$ ${taxes} ${t('Roomio.Results.Taxes')}`
+              ? `+$ ${room.taxes} ${t('Roomio.Results.Taxes')}`
               : t('Roomio.Results.TaxesIncluded')}
           </p>
           <Link
