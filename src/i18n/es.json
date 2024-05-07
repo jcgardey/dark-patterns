@@ -304,8 +304,8 @@
     "Questionnaire": {
         "Title": "Cuestionario",
         "Description": "Por favor, conteste el siguiente cuestionario",
-        "Agree": "De acuerdo",
-        "Disagree": "En desacuerdo",
+        "Agree": "Muy de acuerdo",
+        "Disagree": "Muy en desacuerdo",
         "Finish": "Finalizar",
         "Advantage": "Supongo que este sitio no se aprovechará de mí",
         "Trustworthy": "Creo que este sitio es confiable",

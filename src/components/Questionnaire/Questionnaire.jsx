@@ -59,8 +59,8 @@ export const Questionnaire = ({ onFinish }) => {
         <form onSubmit={onSubmit}>
           <div className="flex justify-end my-4">
             <div className="flex w-1/2 justify-between">
-              <p className="w-1/3 text-left">{t("Questionnaire.Disagree")}</p>
-              <p className="w-1/3 text-right">{t("Questionnaire.Agree")}</p>
+              <p className="w-1/2 text-left">{t("Questionnaire.Disagree")}</p>
+              <p className="w-1/2 text-right">{t("Questionnaire.Agree")}</p>
             </div>
           </div>
           {questions.map((q) => (

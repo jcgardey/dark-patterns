@@ -1,7 +1,7 @@
 export const Modal = ({ className = '', title, children, onClose }) => (
   <div className="w-full h-full top-0 left-0 fixed z-50 bg-gray-900/80">
     <div
-      className={`mx-auto my-24 p-4 bg-white drop-shadow rounded w-3/5 overflow-auto ${className}`}
+      className={`mx-auto my-24 p-4 bg-white drop-shadow rounded w-4/5 overflow-auto ${className}`}
     >
       {!!onClose && (
         <div className="absolute top-1.5 right-1.5">
