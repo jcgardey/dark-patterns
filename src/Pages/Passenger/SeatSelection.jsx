@@ -127,28 +127,31 @@ export const SeatSelection = () => {
                   </dt>
                   <dd>{t("Checkin.Seat.Occupied")}</dd>
                 </dl>
+                
+                <div className="my-6 mt-20 flex buttons justify-around items-center p-2">
+                  <div className="w-1/2 skip">
+                    <Link
+                    to="/check_in/summary"
+                    className={skipSeatButtonClassName}
+                    onClick={skipSeat}
+                    >
+                    {t("Checkin.Seat.NoSeat")}
+                    </Link>
+                  </div>
+                  <div className="w-1/3">
+                    <PrimaryButton
+                    type={"submit"}
+                    className="disabled:cursor-not-allowed"
+                    disabled={seat === null}
+                    >
+                    {t("Checkin.Seat.Continue")}
+                    </PrimaryButton>
+                  </div>
+                </div>
+                
               </div>
             </div>
-            <div className="my-6 flex buttons justify-around items-center">
-              <div className="w-1/3 skip">
-                <Link
-                  to="/check_in/summary"
-                  className={skipSeatButtonClassName}
-                  onClick={skipSeat}
-                >
-                  {t("Checkin.Seat.NoSeat")}
-                </Link>
-              </div>
-              <div className="w-1/3">
-                <PrimaryButton
-                  type={"submit"}
-                  className="disabled:cursor-not-allowed"
-                  disabled={seat === null}
-                >
-                  {t("Checkin.Seat.Continue")}
-                </PrimaryButton>
-              </div>
-            </div>
+
           </form>
         </div>
       </div>
