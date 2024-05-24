@@ -11,7 +11,7 @@ export const rooms = [
     description_es:
       'Departamento de 2 dormitorios con 3 camas (2 individuales, 1 doble)',
     freeCancellation: false,
-    description_de: '2-Zimmer-Wohnung mit 3 Betten (2 Einzel-, 1 Doppelbett)',
+    description_de: '2-Zimmer-Wohnung mit 3 Betten (2 Einzel- und 1 Doppelbett)',
   },
   {
     title: 'Coqueto Estudio en Malasaña',
@@ -22,7 +22,7 @@ export const rooms = [
     taxes: 22.78,
     description_en: 'One-Bedroom Apartment 1 double bed',
     description_es: 'Departamento de un dormitorio con 1 cama doble',
-    description_de: 'Ein-Schlafzimmer-Wohnung mit 1 Doppelbett',
+    description_de: 'Wohnung mit einem Schlafzimmer, 1 Doppelbett',
     freeCancellation: true,
   },
   {
@@ -37,7 +37,7 @@ export const rooms = [
     description_es:
       'Departamento entero de 3 dormitorios; 2 baños; 1 cocina; 70m&#178; 4 camas (2 individuales, 2 dobles)',
     description_de:
-      'Ganze 3-Schlafzimmer-Wohnung; 2 Bäder; 1 Küche; 70m&#178; 4 Betten (2 Einzel-, 2 Doppelbetten)',
+      'Ganze Wohnung; 3 Schlafzimmer; 2 Bäder; 1 Küche; 70m&#178; 4 Betten (2 Einzel- und 2 Doppelbetten)',
     freeCancellation: true,
   },
   {
