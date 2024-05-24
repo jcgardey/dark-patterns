@@ -90,7 +90,7 @@ export const SeatSelection = () => {
                 </div>
                 <div className="exit exit--back fuselage"></div>
               </div>
-              <div className="legend w-1/2">
+              <div className="legend w-2/3">
                 <h2 className="font-bold text-2xl text-gray-700">
                   {t("Checkin.Seat.Title")}
                 </h2>
