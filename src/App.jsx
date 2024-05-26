@@ -27,6 +27,7 @@ import { updateDarkPatternState } from './utils/dark_patterns';
 import { StartPage } from './Pages/StartPage';
 import { WebsitesGroups } from './Pages/Dashboard/WebsitesGroups';
 import { CreateWebsiteGroup } from './Pages/Dashboard/CreateWebsiteGroup';
+import { WebsitesPage } from './Pages/Dashboard/WebsitesPage';
 
 function App() {
   useEffect(() => {
@@ -72,6 +73,7 @@ function App() {
             path="/dashboard/websites/new"
             element={<CreateWebsiteGroup />}
           />
+          <Route path="/dashboard/websites" element={<WebsitesPage />} />
         </Routes>
       </BrowserRouter>
     </>
