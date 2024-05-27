@@ -3,8 +3,14 @@ import api from '../axios';
 export const getAllWebsitesGroups = () =>
   api.get('/websites/groups').then((response) => response.data);
 
+export const getWebsiteGroupById = (id) =>
+  api.get(`/websites/groups/${id}`).then((response) => response.data);
+
 export const createWebsiteGroup = (websiteGroup) =>
   api.post('/websites/groups/new', websiteGroup);
+
+export const updateWebsiteGroup = (id, websiteGroup) =>
+  api.put(`/websites/groups/${id}`, websiteGroup);
 
 export const deleteWebsiteGroup = (groupId) =>
   api.delete(`/websites/groups/${groupId}/delete`);
