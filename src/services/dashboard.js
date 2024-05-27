@@ -26,3 +26,6 @@ export const createWebsite = (websiteData) =>
 
 export const updateWebsite = (id, websiteData) =>
   api.put(`/websites/${id}`, websiteData).then((response) => response.data);
+
+export const deleteWebsite = (id) =>
+  api.delete(`/websites/${id}`).then((response) => response.data);
