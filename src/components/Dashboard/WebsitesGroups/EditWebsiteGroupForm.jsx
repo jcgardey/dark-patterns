@@ -101,6 +101,7 @@ export const EditWebsiteGroupForm = ({ website_group }) => {
               {websites.map((website) => (
                 <option key={website.id} value={website.id}>
                   {website.name}
+                  {website.url.includes('enabled=true') ? ' (Dark)' : ''}
                 </option>
               ))}
             </select>
