@@ -56,7 +56,9 @@ export const EditWebsiteModal = ({ website, onClose }) => {
           />
         </div>
         <div className="my-4">
-          <button type="submit">Confirmar</button>
+          <button className="bg-gray-600 text-white p-2 rounded" type="submit">
+            Confirmar
+          </button>
         </div>
       </form>
     </Modal>

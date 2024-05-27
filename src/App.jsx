@@ -71,7 +71,7 @@ function App() {
 
           <Route path="/dashboard" element={<WebsitesGroups />} />
           <Route
-            path="/dashboard/websites/new"
+            path="/dashboard/groups/new"
             element={<CreateWebsiteGroup />}
           />
           <Route path="/dashboard/websites" element={<WebsitesPage />} />
