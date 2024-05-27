@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import { getAllWebsites } from '../../services/dashboard';
+import { deleteWebsite, getAllWebsites } from '../../services/dashboard';
 import { EditWebsiteModal } from '../../components/Dashboard/Websites/EditWebsiteModal';
 import { Link } from 'react-router-dom';
 
@@ -25,6 +25,12 @@ export const WebsitesPage = () => {
     });
   };
 
+  const handleDelete = (website) => {
+    deleteWebsite(website.id).then(() => {
+      setWebsites(websites.filter((w) => w.id !== website.id));
+    });
+  };
+
   return (
     <div className="w-1/2 mx-auto p-8">
       <h1 className="text-center text-3xl font-bold">Sitios</h1>
@@ -42,14 +48,25 @@ export const WebsitesPage = () => {
       <div className="my-4">
         {websites.map((website) => (
           <div className="flex justify-between my-4" key={website.id}>
-            <p>{website.name}</p>
-            <p>{website.ux_analyzer_token}</p>
+            <p className="w-1/3">
+              {website.name}{' '}
+              {website.url.includes('enabled=true') && (
+                <span className="font-bold">Dark</span>
+              )}{' '}
+            </p>
+            <p className="w-1/3">{website.ux_analyzer_token}</p>
             <button
-              className="p-2 bg-blue-600 text-white rounded"
+              className="underline text-blue-600"
               type="button"
               onClick={() => setSelectedWebsite(website)}
             >
               Editar
+            </button>
+            <button
+              className="underline text-blue-600 mx-2"
+              onClick={() => handleDelete(website)}
+            >
+              Eliminar
             </button>
           </div>
         ))}
