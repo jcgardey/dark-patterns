@@ -29,10 +29,22 @@ import { WebsitesGroups } from './Pages/Dashboard/WebsitesGroups';
 import { CreateWebsiteGroup } from './Pages/Dashboard/CreateWebsiteGroup';
 import { WebsitesPage } from './Pages/Dashboard/WebsitesPage';
 import { EditWebsiteGroup } from './Pages/Dashboard/EditWebsiteGroup';
+import MicroMetricLogger from './MicroMetricLogger';
 
 function App() {
   useEffect(() => {
     updateDarkPatternState();
+  }, []);
+
+  useEffect(() => {
+    const website = localStorage.getItem('website')
+      ? JSON.parse(localStorage.getItem('website'))
+      : null;
+    if (website?.ux_analyzer_token) {
+      window.microMetricLogger = new MicroMetricLogger();
+      window.microMetricLogger.startLogging();
+      console.log('logging started');
+    }
   }, []);
 
   return (

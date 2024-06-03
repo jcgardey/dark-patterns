@@ -7,7 +7,6 @@ import { dateString } from '../../utils/date';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';
 import { TextInput } from '../../components/CarRent/TextInput';
-import { sendLogs } from '../../utils/logs';
 import { FinishedTask } from '../../components/FinishedTask';
 
 const Reservation = () => {

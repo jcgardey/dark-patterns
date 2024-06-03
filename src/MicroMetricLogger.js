@@ -1,3 +1,5 @@
+import XPathInterpreter from './XpathInterpreter';
+
 class WidgetGroup {
   constructor() {
     this.elements = [];
@@ -383,7 +385,7 @@ HTMLElement.prototype.getAbsoluteBoundingClientRect = function () {
 };
 
 HTMLElement.prototype.getWidgetSurroundings = function () {
-  margin = 20;
+  const margin = 20;
   const rect = this.getAbsoluteBoundingClientRect();
   return rect.withPadding(margin);
 };
@@ -416,7 +418,9 @@ HTMLElement.prototype.euclidianDistanceToElement = function (anotherElement) {
 };
 
 HTMLElement.prototype.closestLabel = function () {
-  allLabels = Array.from(this.parentNode.parentNode.querySelectorAll('label'));
+  const allLabels = Array.from(
+    this.parentNode.parentNode.querySelectorAll('label')
+  );
   return allLabels.reduce(
     (min, current) =>
       current.euclidianDistanceToElement(this) <
@@ -685,7 +689,7 @@ MicroMetricLogger.prototype.initializeWidgetTypes = function () {
 };
 
 MicroMetricLogger.prototype.getWidgetLogs = function (anElement) {
-  metricId = anElement.getAttribute('data-metric-id');
+  let metricId = anElement.getAttribute('data-metric-id');
   if (!metricId) {
     anElement.setMetricID(this.getNextID());
     metricId = anElement.getAttribute('data-metric-id');
@@ -819,7 +823,7 @@ MicroMetricLogger.prototype.getAllMicroMetricsAsList = function () {
 MicroMetricLogger.prototype.getRadioGroups = function () {
   if (!this.radioGroups) {
     this.radioGroups = [];
-    allRadios = document.querySelectorAll(this.radioButtonSelector);
+    const allRadios = document.querySelectorAll(this.radioButtonSelector);
     for (let input of allRadios) {
       /*
             currentElementBox = input.getAbsoluteBoundingClientRect();
@@ -829,10 +833,10 @@ MicroMetricLogger.prototype.getRadioGroups = function () {
             allLabels = Array.from(document.getElementsByTagName('label'));
             closestLabel = allLabels.reduce((min, current) => current.distanceToPoint(inputX, inputY) < min.distanceToPoint(inputX, inputY) ? current : min, allLabels[0])
             */
-      allLabels = Array.from(
+      const allLabels = Array.from(
         input.parentNode.parentNode.querySelectorAll('label, span')
       );
-      closestLabel = allLabels.reduce(
+      const closestLabel = allLabels.reduce(
         (min, current) =>
           current.euclidianDistanceToElement(input) <
           min.euclidianDistanceToElement(input)
@@ -1937,8 +1941,8 @@ class OptionsSelected extends MicroMetric {
   }
 }
 
-window.microMetricLogger = new MicroMetricLogger();
-window.microMetricLogger.startLogging();
+//window.microMetricLogger = new MicroMetricLogger();
+//window.microMetricLogger.startLogging();
 
 /*
  * Necesario para capturar las micro-measures en widget que aparecen dinámicamente
@@ -1951,3 +1955,4 @@ observer.observe(document.body, {
   subtree: true,
 });
 */
+export default MicroMetricLogger;

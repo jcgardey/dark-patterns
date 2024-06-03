@@ -7,7 +7,11 @@ export const Site = ({ site, enabled }) => {
   const onClick = () => {
     localStorage.setItem(
       'website',
-      JSON.stringify({ id: site.id, start: dayjs().format() })
+      JSON.stringify({
+        id: site.id,
+        start: dayjs().format(),
+        ux_analyzer_token: site.ux_analyzer_token,
+      })
     );
     window.open(
       `${window.location.origin}${site.url}`,

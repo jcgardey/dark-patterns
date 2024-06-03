@@ -6,6 +6,7 @@ import { Questionnaire } from './Questionnaire/Questionnaire';
 import { useTranslation } from 'react-i18next';
 import { createSample } from '../services/samples';
 import dayjs from 'dayjs';
+import { sendMicroMeasuresLogs } from '../utils/logs';
 
 export const FinishedTask = ({ show, website, data = {} }) => {
   const { t } = useTranslation();
@@ -28,6 +29,7 @@ export const FinishedTask = ({ show, website, data = {} }) => {
       questionnaire,
       data,
     });
+    sendMicroMeasuresLogs(website.ux_analyzer_token);
     localStorage.removeItem('website');
   };
 
