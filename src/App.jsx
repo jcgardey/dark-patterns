@@ -44,6 +44,17 @@ function App() {
       window.microMetricLogger = new MicroMetricLogger();
       window.microMetricLogger.startLogging();
       console.log('logging started');
+      let observer = new MutationObserver(() =>
+        window.microMetricLogger.setUpMicroMetrics()
+      );
+      observer.observe(document.body, {
+        childList: true,
+        attributes: true,
+        subtree: true,
+      });
+      return () => {
+        observer.disconnect();
+      };
     }
   }, []);
 

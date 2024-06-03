@@ -43,7 +43,7 @@ export const Home = () => {
         )}
         {sites.map((site, i) => (
           <Site
-            key={site.path}
+            key={site.id}
             site={site}
             enabled={
               !site.completed &&
