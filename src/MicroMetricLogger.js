@@ -1,4 +1,4 @@
-import XPathInterpreter from './XpathInterpreter';
+import XPathInterpreter from './XPathInterpreter';
 
 class WidgetGroup {
   constructor() {
