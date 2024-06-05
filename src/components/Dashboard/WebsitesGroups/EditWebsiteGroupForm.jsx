@@ -39,7 +39,10 @@ export const EditWebsiteGroupForm = ({ website_group }) => {
   const onSubmit = (data) => {
     const params = {
       ...data,
-      websites: selectedWebsites.map((w) => w.id),
+      websites: selectedWebsites.map((w, index) => ({
+        website_id: w.id,
+        order: index + 1,
+      })),
     };
     if (website_group.id) {
       updateWebsiteGroup(website_group.id, params).then((response) => {
@@ -112,7 +115,13 @@ export const EditWebsiteGroupForm = ({ website_group }) => {
           <ol>
             {selectedWebsites.map((website, i) => (
               <li className="flex w-full justify-between my-2" key={i}>
-                <p className="font-light">{website.name}</p>
+                <p className="font-light">
+                  {website.name}
+                  {website.url.includes('enabled=true') && (
+                    <span className="font-bold mx-1">Dark</span>
+                  )}
+                </p>
+
                 <button
                   onClick={() => onDeleteWebsite(website)}
                   className="mx-2 underline text-blue-600"
