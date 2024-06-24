@@ -27,12 +27,12 @@ export const NavBar = ({}) => {
               </a>
             </li>
             <li>
-              <a
-                href="/check_in/info"
+              <Link
+              to="/check_in/info"
                 class="block py-2 pl-3 pr-4 text-gray-100 rounded md:hover:bg-transparent md:border-0 md:hover:text-green-200 md:p-0"
               >
                 {t('Checkin.Home.CheckIn')}
-              </a>
+              </Link>
             </li>
             <li>
               <a
