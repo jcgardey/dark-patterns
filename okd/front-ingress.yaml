@@ -2,6 +2,8 @@ apiVersion: extensions/v1beta1
 kind: Ingress
 metadata:
   name: dark-patterns-front
+  annotations:
+    kubernetes.io/tls-acme: "true"
 spec:
   rules:
     - host: sitios-dp.okd.lifia.info.unlp.edu.ar
