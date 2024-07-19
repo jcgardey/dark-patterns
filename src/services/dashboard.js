@@ -29,3 +29,8 @@ export const updateWebsite = (id, websiteData) =>
 
 export const deleteWebsite = (id) =>
   api.delete(`/websites/${id}`).then((response) => response.data);
+
+export const downloadWebsiteSamples = (id) =>
+  api
+    .get(`/samples/websites/${id}/export`, { responseType: 'blob' })
+    .then((response) => response.data);

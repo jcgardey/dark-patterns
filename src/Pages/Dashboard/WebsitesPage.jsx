@@ -1,7 +1,12 @@
 import { useEffect, useState } from 'react';
-import { deleteWebsite, getAllWebsites } from '../../services/dashboard';
+import {
+  deleteWebsite,
+  downloadWebsiteSamples,
+  getAllWebsites,
+} from '../../services/dashboard';
 import { EditWebsiteModal } from '../../components/Dashboard/Websites/EditWebsiteModal';
 import { Link } from 'react-router-dom';
+import { saveFile } from '../../utils/file';
 
 export const WebsitesPage = () => {
   const [websites, setWebsites] = useState([]);
@@ -28,6 +33,12 @@ export const WebsitesPage = () => {
   const handleDelete = (website) => {
     deleteWebsite(website.id).then(() => {
       setWebsites(websites.filter((w) => w.id !== website.id));
+    });
+  };
+
+  const handleExport = (website) => {
+    downloadWebsiteSamples(website.id).then((blob) => {
+      saveFile(`${website.name}.csv`, blob);
     });
   };
 
@@ -61,6 +72,13 @@ export const WebsitesPage = () => {
               onClick={() => setSelectedWebsite(website)}
             >
               Editar
+            </button>
+            <button
+              className="underline text-blue-600"
+              type="button"
+              onClick={() => handleExport(website)}
+            >
+              Exportar
             </button>
             <button
               className="underline text-blue-600 mx-2"
