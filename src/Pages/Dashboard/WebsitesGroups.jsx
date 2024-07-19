@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import {
   downloadUserSessions,
+  downloadWebsiteSamples,
   getAllWebsitesGroups,
 } from '../../services/dashboard';
 import { WebsiteGroup } from '../../components/Dashboard/WebsitesGroups/WebsiteGroup';
@@ -24,6 +25,12 @@ export const WebsitesGroups = () => {
     });
   };
 
+  const handleExportSamples = () => {
+    downloadWebsiteSamples().then((blob) => {
+      saveFile('muestras.csv', blob);
+    });
+  };
+
   return (
     <div className="w-1/2 mx-auto p-8">
       <h1 className="text-center text-3xl font-bold">Grupos</h1>
@@ -36,6 +43,13 @@ export const WebsitesGroups = () => {
         </Link>
         <button className="underline text-blue-600 mx-4" onClick={handleExport}>
           Exportar usuarios
+        </button>
+        <button
+          className="underline text-blue-600"
+          type="button"
+          onClick={handleExportSamples}
+        >
+          Exportar muestras
         </button>
       </div>
       <div className="my-4">

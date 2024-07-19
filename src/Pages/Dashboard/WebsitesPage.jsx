@@ -36,12 +36,6 @@ export const WebsitesPage = () => {
     });
   };
 
-  const handleExport = (website) => {
-    downloadWebsiteSamples(website.id).then((blob) => {
-      saveFile(`${website.name}.csv`, blob);
-    });
-  };
-
   return (
     <div className="w-1/2 mx-auto p-8">
       <h1 className="text-center text-3xl font-bold">Sitios</h1>
@@ -72,13 +66,6 @@ export const WebsitesPage = () => {
               onClick={() => setSelectedWebsite(website)}
             >
               Editar
-            </button>
-            <button
-              className="underline text-blue-600"
-              type="button"
-              onClick={() => handleExport(website)}
-            >
-              Exportar
             </button>
             <button
               className="underline text-blue-600 mx-2"
