@@ -19,13 +19,6 @@ export const WebsiteGroup = ({ group, onDelete }) => {
             Editar
           </Link>
 
-          <button
-            disabled={group.user_sessions.length > 0}
-            onClick={() => onDeleteClick(group.id)}
-            className="underline text-blue-600 disabled:text-gray-400"
-          >
-            Eliminar Variante
-          </button>
         </div>
       </div>
       {group.user_sessions.map((session) => (

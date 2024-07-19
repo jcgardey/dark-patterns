@@ -17,12 +17,6 @@ export const UserSessionItem = ({ session }) => {
         ))}
       </div>
       <button className="mx-1 underline text-blue-600">Ver</button>
-      <button
-        className="mx-2 underline text-blue-600"
-        onClick={() => onDeleteClick(session.id)}
-      >
-        Eliminar
-      </button>
     </div>
   );
 };
