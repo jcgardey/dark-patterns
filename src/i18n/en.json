@@ -318,7 +318,7 @@
     },
     "Start": {
         "Thanks": "Thanks for participating, please read carefully",
-        "Briefing": "You will be asked to complete 4 simple tasks (15' total estimated). Some will require credit card data, but you can use the autocomplete feature.",
+        "Briefing": "You will be asked to complete 4 simple tasks (15' total estimated). Some will require credit card details, you can either enter fake numbers or use the autocomplete function that does this automatically.",
         "Briefing2": "Sites are rebranded clones of real sites, so some links and buttons outside the scope of the tasks will not work.",
         "Briefing3": "All collected data will be kept anonymous, we only ask for your email to participate in an optional follow-up evaluation.",
         "TabOpen": "This tab will remain open, should you need to come back and check for the instructions.",
