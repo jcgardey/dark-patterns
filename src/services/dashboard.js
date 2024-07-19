@@ -34,3 +34,8 @@ export const downloadWebsiteSamples = (id) =>
   api
     .get(`/samples/websites/${id}/export`, { responseType: 'blob' })
     .then((response) => response.data);
+
+export const downloadUserSessions = () =>
+  api
+    .get('/user_sessions/export', { responseType: 'blob' })
+    .then((response) => response.data);

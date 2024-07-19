@@ -1,7 +1,11 @@
 import { useEffect, useState } from 'react';
-import { getAllWebsitesGroups } from '../../services/dashboard';
+import {
+  downloadUserSessions,
+  getAllWebsitesGroups,
+} from '../../services/dashboard';
 import { WebsiteGroup } from '../../components/Dashboard/WebsitesGroups/WebsiteGroup';
 import { Link } from 'react-router-dom';
+import { saveFile } from '../../utils/file';
 
 export const WebsitesGroups = () => {
   const [groups, setGroups] = useState([]);
@@ -14,6 +18,12 @@ export const WebsitesGroups = () => {
     setGroups(groups.filter((g) => g.id !== groupId));
   };
 
+  const handleExport = () => {
+    downloadUserSessions().then((blob) => {
+      saveFile('usuarios.csv', blob);
+    });
+  };
+
   return (
     <div className="w-1/2 mx-auto p-8">
       <h1 className="text-center text-3xl font-bold">Grupos</h1>
@@ -24,6 +34,9 @@ export const WebsitesGroups = () => {
         <Link className="underline text-blue-600 mx-4" to="/dashboard/websites">
           Sitios
         </Link>
+        <button className="underline text-blue-600 mx-4" onClick={handleExport}>
+          Exportar usuarios
+        </button>
       </div>
       <div className="my-4">
         {groups.map((group) => (
