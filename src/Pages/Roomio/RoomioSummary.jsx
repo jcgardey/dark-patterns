@@ -43,10 +43,10 @@ export const RoomioSummary = () => {
 
   const autocompleteCard = () => {
     setShowAutocompleteCard(false);
-    setValue('cc-number', '5490 4234 4899 4324');
-    setValue('cc-name', getValues('fullName') || 'Miriam Flores');
-    setValue('cc-expiry', '12/28');
-    setValue('cc-cvv', '322');
+    setValue('x-number', '5490 4234 4899 4324');
+    setValue('x-name', getValues('fullName') || 'Miriam Flores');
+    setValue('x-expiry', '12/28');
+    setValue('x-code', '322');
   };
 
   const nights = parseInt(localStorage.getItem('hotel-nights')) ?? 0;
@@ -99,17 +99,18 @@ export const RoomioSummary = () => {
               <div className="bg-neutral-200 my-4 p-6 rounded">
                 <div className="flex my-4">
                   <div className="w-1/3 mr-8 relative">
-                    <label htmlFor="cc-number">
-                      {t('Rental.Review.Payment.Card.Number')}
-                    </label>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: t('Rental.Review.Payment.Card.Number'),
+                      }}
+                    ></p>
                     <Input
                       type="text"
-                      id="cc-number"
                       placeholder="XXXX XXXX XXXX XXXX"
                       onFocus={() => setShowAutocompleteCard(true)}
                       onBlur={() => setShowAutocompleteCard(false)}
-                      {...register('cc-number', { required: true })}
-                      errors={errors['cc-number']}
+                      {...register('x-number', { required: true })}
+                      errors={errors['x-number']}
                     />
                     {showAutocompleteCard && (
                       <div id="autocompleteCard" onClick={autocompleteCard}>
@@ -121,38 +122,45 @@ export const RoomioSummary = () => {
                     )}
                   </div>
                   <div className="w-1/3">
-                    <label htmlFor="email">
-                      {t('Rental.Review.Payment.Card.Holder')}
-                    </label>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: t('Rental.Review.Payment.Card.Holder'),
+                      }}
+                    ></p>
                     <Input
                       type="text"
-                      id="cc-name"
                       placeholder="Andrea Paz"
-                      {...register('cc-name', { required: true })}
-                      errors={errors['cc-name']}
+                      {...register('x-name', { required: true })}
+                      errors={errors['x-name']}
                     />
                   </div>
                 </div>
                 <div className="flex my-4">
                   <div className="w-1/6 mr-8">
-                    <label htmlFor="cc-expiry">{`${t(
-                      'Rental.Review.Payment.Card.Month'
-                    )}/${t('Rental.Review.Payment.Card.Year')}`}</label>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: `${t('Rental.Review.Payment.Card.Month')}/${t(
+                          'Rental.Review.Payment.Card.Year'
+                        )}`,
+                      }}
+                    ></p>
                     <Input
-                      id="cc-expiry"
                       placeholder="MM/AA"
-                      {...register('cc-expiry', { required: true })}
-                      errors={errors['cc-expiry']}
+                      {...register('x-expiry', { required: true })}
+                      errors={errors['x-expiry']}
                     />
                   </div>
                   <div className="w-1/12">
-                    <label htmlFor="cc-cvv">CVV</label>
+                    <p
+                      dangerouslySetInnerHTML={{
+                        __html: t('Rental.Review.Payment.Card.CVV'),
+                      }}
+                    ></p>
                     <Input
                       type="password"
-                      id="cc-cvv"
                       placeholder="***"
-                      {...register('cc-cvv', { required: true })}
-                      errors={errors['cc-cvv']}
+                      {...register('x-code', { required: true })}
+                      errors={errors['x-code']}
                     />
                   </div>
                 </div>

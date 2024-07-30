@@ -67,10 +67,10 @@ export const Review = ({}) => {
     console.log('autocomplete');
     setShowAutocompleteCard(false);
     setValue('card.number', '5490 4234 4899 4324');
-    setValue('card.holder', getValues('driver') || '');
+    setValue('card.name', getValues('driver') || '');
     setValue('card.month', '12');
     setValue('card.year', '2026');
-    setValue('card.cvv', '322');
+    setValue('card.code', '322');
   };
 
   const inputClass = 'w-full h-10 border-2 border-sky-800 rounded p-2';
@@ -119,7 +119,11 @@ export const Review = ({}) => {
             <h4 className="text-xl">{t('Rental.Review.Payment.Method')}</h4>
             <div className="flex my-2">
               <div className="mr-2 relative">
-                <label>{t('Rental.Review.Payment.Card.Number')}</label>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: t('Rental.Review.Payment.Card.Number'),
+                  }}
+                ></p>
                 <TextInput
                   name={'card.number'}
                   className={inputClass}
@@ -140,19 +144,27 @@ export const Review = ({}) => {
                 )}
               </div>
               <div className="mr-8">
-                <label>{t('Rental.Review.Payment.Card.Holder')}</label>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: t('Rental.Review.Payment.Card.Holder'),
+                  }}
+                ></p>
                 <TextInput
-                  name={'card.holder'}
+                  name={'card.name'}
                   className={inputClass}
                   register={register}
                   rules={{ required: true }}
-                  errors={errors.card?.holder}
+                  errors={errors.card?.name}
                 />
               </div>
             </div>
             <div className="flex my-4">
               <div className="mr-2 w-1/12">
-                <label>{t('Rental.Review.Payment.Card.Month')}</label>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: t('Rental.Review.Payment.Card.Month'),
+                  }}
+                ></p>
                 <TextInput
                   name={'card.month'}
                   className={inputClass}
@@ -162,9 +174,13 @@ export const Review = ({}) => {
                 />
               </div>
               <div className="mr-2 w-1/12">
-                <label>{t('Rental.Review.Payment.Card.Year')}</label>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: t('Rental.Review.Payment.Card.Year'),
+                  }}
+                ></p>
                 <TextInput
-                  name={'card.year'}
+                  name={'x-year'}
                   className={inputClass}
                   register={register}
                   rules={{ required: true }}
@@ -172,13 +188,17 @@ export const Review = ({}) => {
                 />
               </div>
               <div className="mr-2 w-1/4">
-                <label>{t('Rental.Review.Payment.Card.CVV')}</label>
+                <p
+                  dangerouslySetInnerHTML={{
+                    __html: t('Rental.Review.Payment.Card.CVV'),
+                  }}
+                ></p>
                 <TextInput
-                  name={'card.cvv'}
+                  name={'card.code'}
                   className={inputClass}
                   register={register}
                   rules={{ required: true }}
-                  errors={errors.card?.cvv}
+                  errors={errors.card?.code}
                 />
               </div>
             </div>

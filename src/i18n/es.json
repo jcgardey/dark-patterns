@@ -77,11 +77,11 @@
             "Payment": {
                 "Method": "Método de pago",
                 "Card": {
-                    "Number": "Número de tarjeta",
-                    "Holder": "Nombre del titular",
+                    "Number": "N<span>úm</span>ero de tarjeta",
+                    "Holder": "N<span>om</span>bre del titular",
                     "Month": "Mes",
                     "Year": "Año",
-                    "CVV": "Código de seguridad"
+                    "CVV": "C<span>ód</span>igo de seguridad"
                 }
             },
             "Order": {

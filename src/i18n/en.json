@@ -78,11 +78,11 @@
             "Payment": {
                 "Method": "Payment Method",
                 "Card": {
-                    "Number": "Card number",
-                    "Holder": "Cardholder name",
+                    "Number": "C<span>ard</span> number",
+                    "Holder": "C<span>ard</span> holder name",
                     "Month": "Month",
                     "Year": "Year",
-                    "CVV": "CVV"
+                    "CVV": "<span>CV</span>V"
                 }
             },
             "Order": {
