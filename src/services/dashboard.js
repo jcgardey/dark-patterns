@@ -39,3 +39,6 @@ export const downloadUserSessions = () =>
   api
     .get('/user_sessions/export', { responseType: 'blob' })
     .then((response) => response.data);
+
+export const getAllUserSessions = () =>
+  api.get('/user_sessions').then((response) => response.data);

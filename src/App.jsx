@@ -30,6 +30,7 @@ import { CreateWebsiteGroup } from './Pages/Dashboard/CreateWebsiteGroup';
 import { WebsitesPage } from './Pages/Dashboard/WebsitesPage';
 import { EditWebsiteGroup } from './Pages/Dashboard/EditWebsiteGroup';
 import MicroMetricLogger from './MicroMetricLogger';
+import { UserSessionsPage } from './Pages/Dashboard/UserSessionsPage';
 
 function App() {
   useEffect(() => {
@@ -101,6 +102,10 @@ function App() {
           <Route
             path="/dashboard/websites/:groupId"
             element={<EditWebsiteGroup />}
+          />
+          <Route
+            path="/dashboard/user_sessions"
+            element={<UserSessionsPage />}
           />
         </Routes>
       </BrowserRouter>
