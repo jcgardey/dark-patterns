@@ -295,10 +295,10 @@
         "TasksFinished": "Todas las tareas fueron completadas correctamente",
         "TaskFinished": "Tarea finalizada",
         "Instructions": "Instrucciones",
-        "TaskGeneral": "Eres un estudiante que está de vacaciones con un presupuesto muy ajustado. Te vas a Madrid en septiembre",
-        "TaskCar": "Necesitas alquilar un coche para tu viaje a Madrid entre el viernes 20/9 y el lunes 23/9 (3 días). Sólo puedes gastar menos de 100 USD",
+        "TaskGeneral": "Eres un estudiante que está de vacaciones con un presupuesto muy ajustado. Te vas a Madrid en febrero 2025",
+        "TaskCar": "Necesitas alquilar un coche para tu viaje a Madrid entre el viernes 7/2/25 y el lunes 10/2 (3 días). Sólo puedes gastar menos de 100 USD",
         "TaskCheckin": "Tienes un vuelo de Madrid a Barcelona ya reservado y pago. Solo queda hacer el checkin online con el código de reserva AAA123. No puedes gastar más dinero.",
-        "TaskRoomio": "Necesitas reservar una habitación para una persona en Madrid entre el viernes 20/9 y el lunes 23/9 (3 noches). Piensas gastar menos de 300 USD",
+        "TaskRoomio": "Necesitas reservar una habitación para una persona en Madrid entre el viernes 7/2 y el lunes 10/2 (3 noches). Piensas gastar menos de 300 USD",
         "TaskEBook": "Como necesitas ahorrar algo de dinero extra para tu viaje, quieres cancelar tu suscripción actual a la tienda de EBooks"
     },
     "Questionnaire": {
