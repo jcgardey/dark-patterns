@@ -42,3 +42,5 @@ export const downloadUserSessions = () =>
 
 export const getAllUserSessions = () =>
   api.get('/user_sessions').then((response) => response.data);
+
+export const assignFollowUpGroups = (assignments) => api.put('/user_sessions/follow_up',  { assignments } ) 

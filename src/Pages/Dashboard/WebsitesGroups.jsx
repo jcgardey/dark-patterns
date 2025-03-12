@@ -41,6 +41,9 @@ export const WebsitesGroups = () => {
         <Link className="underline text-blue-600 mx-4" to="/dashboard/websites">
           Sitios
         </Link>
+        <Link className="underline text-blue-600 mx-4" to="/dashboard/user_sessions">
+          Usuarios
+        </Link>
         <button className="underline text-blue-600 mx-4" onClick={handleExport}>
           Exportar usuarios
         </button>

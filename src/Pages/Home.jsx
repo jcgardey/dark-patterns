@@ -1,4 +1,4 @@
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { Site } from '../components/Home/Site';
 import { useEffect, useState } from 'react';
 
@@ -11,7 +11,8 @@ export const Home = () => {
   const [sites, setSites] = useState([]);
 
   const navigate = useNavigate();
-  const sessionId = localStorage.getItem('session_id');
+  const params = useParams();
+  const sessionId = params.sessionId ?? localStorage.getItem('session_id');
 
   useEffect(() => {
     const updateStatus = () => {
