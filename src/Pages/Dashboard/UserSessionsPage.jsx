@@ -9,10 +9,13 @@ export const UserSessionsPage = () => {
   const [sessions, setSessions] = useState([]);
 
   const [groups, setGroups] = useState([]);
+
+  const [assignments, setAssignments] = useState([]);
   
-  const updateAssignment = (session, follow_up_group_id) => {
-    session.follow_up_group = { id: follow_up_group_id };
-    setSessions([...sessions]);
+  const updateAssignment = (user_session_id, follow_up_group_id) => {
+    const newAssignments = assignments.filter(assignment => assignment.user_session_id !== user_session_id);
+    newAssignments.push({ user_session_id, follow_up_group_id });
+    setAssignments(newAssignments);
   };
 
   useEffect(() => {
@@ -25,8 +28,10 @@ export const UserSessionsPage = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    assignFollowUpGroups(sessions.map(session => ({ user_session_id: session.id, follow_up_group_id: session.follow_up_group?.id })))
+    assignFollowUpGroups(assignments)
   }
+
+  const getAssignmentForSession = (session) => assignments.find(assignment => assignment.user_session_id === session.id)?.follow_up_group_id ?? session.follow_up_group?.id;
 
   return (
     <div className="p-8">
@@ -44,8 +49,8 @@ export const UserSessionsPage = () => {
             <p className="w-1/3">{session.website_group.name}</p>{' '}
             <select
               className='border border-gray-500 rounded p-1'
-              value={session.follow_up_group?.id ?? ''}
-              onChange={(e) => updateAssignment(session, parseInt(e.target.value))}
+              value={getAssignmentForSession(session) ?? ''}
+              onChange={(e) => updateAssignment(session.id, parseInt(e.target.value))}
             >
               <option value={''}>Seleccionar variante</option>
               {groups.map((group) => (
