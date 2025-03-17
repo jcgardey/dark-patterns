@@ -297,10 +297,10 @@
         "TasksFinished": "All tasks successfully completed",
         "TaskFinished": "Task finished",
         "Instructions": "Instructions",
-        "TaskGeneral":"You are a student on vacation with a very tight budget. You’re going to Madrid on February 2025.",
-        "TaskCar": "You must rent a car for your trip to Madrid from Friday, Feb 7 to Monday, Feb 10 (3 days). You can only spend less than 100 USD.",
+        "TaskGeneral":"You are a student on vacation with a very tight budget. You’re going to Madrid on September 2025.",
+        "TaskCar": "You must rent a car for your trip to Madrid from Friday, Sep 12 to Monday, Sep 15 (3 days). You can only spend less than 100 USD.",
         "TaskCheckin": "You have a flight from Madrid to Barcelona already booked and paid for. All that's left to do is to check in online with the booking code AAA123. You can't spend any more money.",
-        "TaskRoomio": "You need to book a room for one person in Madrid between Friday, Feb 7 to Monday, Feb 10 (3 nights). You're planning to spend less than USD 300.",
+        "TaskRoomio": "You need to book a room for one person in Madrid between Friday, Sep 12 to Monday, Sep 15 (3 nights). You're planning to spend less than USD 300.",
         "TaskEBook": "Since you need to save some extra money for your trip, you want to cancel your current subscription to the EBooks store."
     },
     "Questionnaire": {
