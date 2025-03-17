@@ -1,9 +1,12 @@
 import { useEffect, useState } from 'react';
 import {
   assignFollowUpGroups,
+  downloadUserSessions,
   getAllUserSessions,
   getAllWebsitesGroups,
 } from '../../services/dashboard';
+import { saveFile } from '../../utils/file';
+import { Link } from 'react-router-dom';
 
 export const UserSessionsPage = () => {
   const [sessions, setSessions] = useState([]);
@@ -12,6 +15,11 @@ export const UserSessionsPage = () => {
 
   const [assignments, setAssignments] = useState([]);
   const [loading, setLoading] = useState(false);
+
+  const [filters, setFilters] = useState({
+    follow_up_group: '',
+    repeated: true,
+  });
 
   const updateAssignment = (user_session_id, follow_up_group_id) => {
     const newAssignments = assignments.filter(
@@ -22,12 +30,18 @@ export const UserSessionsPage = () => {
   };
 
   useEffect(() => {
-    getAllUserSessions().then((data) => setSessions(data));
-  }, []);
+    getAllUserSessions(filters).then((data) => setSessions(data));
+  }, [filters]);
 
   useEffect(() => {
     getAllWebsitesGroups().then((data) => setGroups(data));
   }, []);
+
+  const handleExport = () => {
+    downloadUserSessions(filters).then((blob) => {
+      saveFile('usuarios.csv', blob);
+    });
+  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
@@ -46,9 +60,45 @@ export const UserSessionsPage = () => {
       : session.follow_up_group?.id;
   };
 
+  const handleFilterChange = (filterName, value) => {
+    setFilters({ ...filters, [filterName]: value });
+  };
+
   return (
     <div className="p-8">
-      <h1 className="text-center text-3xl">Usuarios</h1>s
+      <h1 className="text-center text-3xl">Usuarios</h1>
+      <div className="my-4">
+        <Link className="underline text-blue-600" to="/dashboard">
+          Volver
+        </Link>
+      </div>
+      <h3 className="text-2xl font-bold">Filtros</h3>
+      <div className="my-4 flex items-center">
+        <select
+          value={filters.follow_up_group}
+          onChange={(e) =>
+            handleFilterChange('follow_up_group', e.target.value)
+          }
+          className="border border-gray-500 rounded p-1 mx-4"
+        >
+          <option value="">Todos</option>
+          <option value="true">Asignados</option>
+          <option value="false">No asignados</option>
+        </select>
+        <div>
+          <input
+            type="checkbox"
+            className="mx-1"
+            checked={filters.repeated}
+            onChange={(e) => handleFilterChange('repeated', e.target.checked)}
+          />
+          <label>Repetidos</label>
+        </div>
+        <button className="underline text-blue-600 mx-4" onClick={handleExport}>
+          Exportar
+        </button>
+      </div>
+
       <div className="flex my-4">
         <p className="w-1/3 font-bold">Email</p>
         <p className="w-1/3 font-bold">Grupo</p>

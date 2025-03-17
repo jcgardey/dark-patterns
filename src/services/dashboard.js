@@ -1,5 +1,15 @@
 import api from '../axios';
 
+const buildQueryParams = (filters) => {
+  const queryParams = new URLSearchParams();
+  Object.keys(filters).forEach((key) => {
+    if (filters[key] !== '') {
+      queryParams.append(key, filters[key]);
+    }
+  });
+  return queryParams.toString();
+};
+
 export const getAllWebsitesGroups = () =>
   api.get('/websites/groups').then((response) => response.data);
 
@@ -35,12 +45,17 @@ export const downloadWebsiteSamples = () =>
     .get('/samples/websites/export', { responseType: 'blob' })
     .then((response) => response.data);
 
-export const downloadUserSessions = () =>
+export const downloadUserSessions = (filters) =>
   api
-    .get('/user_sessions/export', { responseType: 'blob' })
+    .get(`/user_sessions/export?${buildQueryParams(filters)}`, {
+      responseType: 'blob',
+    })
     .then((response) => response.data);
 
-export const getAllUserSessions = () =>
-  api.get('/user_sessions').then((response) => response.data);
+export const getAllUserSessions = (filters) =>
+  api
+    .get(`/user_sessions?${buildQueryParams(filters)}`)
+    .then((response) => response.data);
 
-export const assignFollowUpGroups = (assignments) => api.put('/user_sessions/follow_up',  { assignments } ) 
+export const assignFollowUpGroups = (assignments) =>
+  api.put('/user_sessions/follow_up', { assignments });
