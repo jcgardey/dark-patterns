@@ -13,15 +13,17 @@ export const Home = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const queryParams = new URLSearchParams(location.search);
-  const sessionId = queryParams.get('sessionId') ?? localStorage.getItem('session_id');
 
   useEffect(() => {
     const updateStatus = () => {
       getWebsitesStatus(sessionId).then((data) => setSites(data));
     };
 
+    const sessionId =
+      queryParams.get('sessionId') ?? localStorage.getItem('session_id');
     if (sessionId) {
       updateStatus();
+      localStorage.setItem('session_id', sessionId);
     } else {
       navigate('/');
     }
