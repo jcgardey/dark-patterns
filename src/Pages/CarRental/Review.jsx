@@ -180,7 +180,7 @@ export const Review = ({}) => {
                   }}
                 ></p>
                 <TextInput
-                  name={'x-year'}
+                  name={'card.year'}
                   className={inputClass}
                   register={register}
                   rules={{ required: true }}
