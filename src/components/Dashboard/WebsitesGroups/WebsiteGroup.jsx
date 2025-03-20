@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom';
 import { deleteWebsiteGroup } from '../../../services/dashboard';
 import { UserSessionItem } from './UserSessionItem';
 
-export const WebsiteGroup = ({ group, onDelete }) => {
+export const WebsiteGroup = ({ group, onDelete, onShowUserSession }) => {
   const onDeleteClick = (groupId) => {
     deleteWebsiteGroup(groupId).then((response) => onDelete(groupId));
   };
@@ -18,11 +18,14 @@ export const WebsiteGroup = ({ group, onDelete }) => {
           >
             Editar
           </Link>
-
         </div>
       </div>
       {group.user_sessions.map((session) => (
-        <UserSessionItem key={session.id} session={session} />
+        <UserSessionItem
+          key={session.id}
+          session={session}
+          onShowUserSession={onShowUserSession}
+        />
       ))}
     </div>
   );
