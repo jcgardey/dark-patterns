@@ -82,8 +82,10 @@ export const UserSessionsPage = () => {
           className="border border-gray-500 rounded p-1 mx-4"
         >
           <option value="">Todos</option>
-          <option value="true">Asignados</option>
-          <option value="false">No asignados</option>
+          <option value="assigned">Asignados</option>
+          <option value="not_assigned">No asignados</option>
+          <option value="completed">Completados</option>
+          <option value="not_completed">No completados</option>
         </select>
         <div>
           <input
@@ -133,6 +135,13 @@ export const UserSessionsPage = () => {
             >
               Link
             </a>
+            <div
+              className={`h-4 w-4 rounded-xl ${
+                session.is_follow_up_group_completed
+                  ? 'bg-green-500'
+                  : 'bg-yellow-500'
+              } `}
+            />
           </div>
         ))}
         <div className="my-4">
