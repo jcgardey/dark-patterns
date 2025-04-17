@@ -40,9 +40,9 @@ export const updateWebsite = (id, websiteData) =>
 export const deleteWebsite = (id) =>
   api.delete(`/websites/${id}`).then((response) => response.data);
 
-export const downloadWebsiteSamples = () =>
+export const downloadWebsiteSamples = (filter) =>
   api
-    .get('/samples/websites/export', { responseType: 'blob' })
+    .get(`/samples/websites/export?filter=${filter}`, { responseType: 'blob' })
     .then((response) => response.data);
 
 export const downloadUserSessions = (filters) =>

@@ -25,8 +25,8 @@ export const WebsitesGroups = () => {
     setGroups(groups.filter((g) => g.id !== groupId));
   };
 
-  const handleExportSamples = () => {
-    downloadWebsiteSamples().then((blob) => {
+  const handleExportSamples = (filter) => {
+    downloadWebsiteSamples(filter).then((blob) => {
       saveFile('muestras.csv', blob);
     });
   };
@@ -34,25 +34,36 @@ export const WebsitesGroups = () => {
   return (
     <div className="w-3/4 mx-auto p-8">
       <h1 className="text-center text-3xl font-bold">Grupos</h1>
-      <div className="my-4">
+      <div className="my-4 flex gap-4 items-center">
         <Link className="underline text-blue-600" to="/dashboard/groups/new">
           Crear Variante
         </Link>
-        <Link className="underline text-blue-600 mx-4" to="/dashboard/websites">
+        <Link className="underline text-blue-600" to="/dashboard/websites">
           Sitios
         </Link>
-        <Link
-          className="underline text-blue-600 mx-4"
-          to="/dashboard/user_sessions"
-        >
+        <Link className="underline text-blue-600" to="/dashboard/user_sessions">
           Usuarios
         </Link>
         <button
           className="underline text-blue-600"
           type="button"
-          onClick={handleExportSamples}
+          onClick={() => handleExportSamples('all')}
         >
-          Exportar muestras
+          Exportar todas las muestras
+        </button>
+        <button
+          className="underline text-blue-600"
+          type="button"
+          onClick={() => handleExportSamples('first_round')}
+        >
+          Exportar primera vuelta
+        </button>
+        <button
+          className="underline text-blue-600"
+          type="button"
+          onClick={() => handleExportSamples('follow_up_completed')}
+        >
+          Exportar follow up
         </button>
       </div>
       <div className="my-4">
