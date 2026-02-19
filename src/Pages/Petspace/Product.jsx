@@ -12,7 +12,9 @@ export function Product() {
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
   const { t } = useTranslation();
-  const darkEnabled = localStorage.getItem('dark') == 'true' ?? false;
+  const [newItem, setNewItem] = useState({new: false, item: null});
+  const [amount, setAmount]= useState(1)
+  const darkEnabled = localStorage.getItem("dark") == "true" ?? false;
 
   if (!product) return <div>{t("PetSpace.Product.NotFound")}</div>;
 
@@ -20,12 +22,16 @@ export function Product() {
 
   const handleBuyNow = () => {
     if (darkEnabled) setShowModal(true);
-    else goToCheckout()
+    else goToCheckout();
   };
 
   const goToCheckout = () => {
     navigate(`/petspace/buy/${product.id}`);
   };
+
+  const addToCart= () =>{
+    setNewItem({new: !newItem.new, item: {product, amount}})
+  }
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -33,7 +39,7 @@ export function Product() {
 
   return (
     <div className="min-h-screen bg-gray-50">
-      <Navbar />
+      <Navbar newItem={newItem} />
 
       <div className="max-w-5xl mx-auto p-6 flex flex-col md:flex-row gap-10 my-10 bg-white rounded-2xl shadow-lg">
         <div className="md:w-1/2 flex justify-center items-center">
@@ -87,7 +93,7 @@ export function Product() {
             >
               {t("PetSpace.Product.BuyNow")}
             </button>
-            <button className="w-full text-gray-800 px-6 py-3 rounded-xl text-lg font-medium border border-gray-300 hover:bg-gray-100 transition-all">
+            <button onClick={addToCart} className="w-full text-gray-800 px-6 py-3 rounded-xl text-lg font-medium border border-gray-300 hover:bg-gray-100 transition-all">
               {t("PetSpace.Product.AddToCart")}
             </button>
           </div>

@@ -1,8 +1,9 @@
 import { useNavigate, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
+import ShoppingCart from "./ShoppingCart";
 
-export const Navbar = () => {
+export const Navbar = ({newItem = null}) => {
   const navigate = useNavigate();
   const location = useLocation();
   const { t } = useTranslation();
@@ -52,12 +53,7 @@ export const Navbar = () => {
           {t("PetSpace.NavBar.Contact")}
         </li>
       </ul>
-      <div className="flex gap-4 items-center">
-        <i className="fa fa-shopping-cart text-gray-600 cursor-pointer"></i>
-        <span className="inline sm:hidden">
-          <i className="fa-solid fa-bars"></i>
-        </span>
-      </div>
+      <ShoppingCart  newItem={newItem}/>
     </nav>
   );
 };
