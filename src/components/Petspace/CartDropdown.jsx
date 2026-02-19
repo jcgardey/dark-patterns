@@ -1,4 +1,19 @@
-function CartDropdown({ open, item, amount, onClose }) {
+import { useEffect, useState } from "react";
+
+function CartDropdown({ open, item, amount, onClose, totalItems }) {
+  const [itemsTotalAmount, setitemsTotalAmount] = useState(0);
+  const [totalPrice, setTotalPrice] = useState(0);
+
+  useEffect(() => {
+    setitemsTotalAmount(totalItems.reduce((acc, item) => acc + item.amount, 0));
+    setTotalPrice(
+      totalItems.reduce(
+        (acc, item) => acc + item.product.priceKg * item.product.amountKg * item.amount,
+        0,
+      ),
+    );
+  }, [totalItems]);
+
   if (!open) return null;
 
   return (
@@ -23,7 +38,9 @@ function CartDropdown({ open, item, amount, onClose }) {
               Agregado al carrito
             </p>
             <p className="text-sm text-gray-600 truncate">{item.name}</p>
-            <p className="text-sm font-medium text-gray-900">${item.priceKg * item.amountKg}</p>
+            <p className="text-sm font-medium text-gray-900">
+              {amount} x ${item.priceKg * item.amountKg}
+            </p>
           </div>
         </div>
 
@@ -35,6 +52,23 @@ function CartDropdown({ open, item, amount, onClose }) {
         </button>
       </div>
 
+      <hr className="my-2" />
+
+      <div className="flex items-center justify-between gap-1">
+        <p className="text-lg text-blue-600 font-bold">
+          Total{" "}
+          <span className="text-base font-medium">
+            (
+            {itemsTotalAmount == 1
+              ? "1 producto"
+              : itemsTotalAmount + " productos"}
+            ):
+          </span>
+        </p>
+        <p className="text-blue-600 font-bold text-lg">
+          ${totalPrice}
+        </p>
+      </div>
       <button
         className="mt-4 w-full bg-black text-white 
                    py-2 rounded-lg text-sm 

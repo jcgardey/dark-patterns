@@ -34,7 +34,7 @@ function ShoppingCart({ newItem }) {
                      w-5 h-5 flex items-center justify-center 
                      rounded-full"
         >
-          {items.length} {/*Calcular por total no por length*/}
+          {items.reduce((acc, item) => acc + item.amount, 0)}
         </span>
       </div>
 
@@ -47,6 +47,7 @@ function ShoppingCart({ newItem }) {
         item={newItem?.item?.product}
         amount={newItem?.item?.amount}
         onClose={() => setOpenDropdown(false)}
+        totalItems={items}
       />
     </div>
   );

@@ -12,8 +12,8 @@ export function Product() {
   const [showModal, setShowModal] = useState(false);
   const navigate = useNavigate();
   const { t } = useTranslation();
-  const [newItem, setNewItem] = useState({new: false, item: null});
-  const [amount, setAmount]= useState(1)
+  const [newItem, setNewItem] = useState({ new: false, item: null });
+  const [amount, setAmount] = useState(1);
   const darkEnabled = localStorage.getItem("dark") == "true" ?? false;
 
   if (!product) return <div>{t("PetSpace.Product.NotFound")}</div>;
@@ -21,6 +21,7 @@ export function Product() {
   const totalPrice = product.priceKg * product.amountKg;
 
   const handleBuyNow = () => {
+    // pasar a carrito
     if (darkEnabled) setShowModal(true);
     else goToCheckout();
   };
@@ -29,9 +30,9 @@ export function Product() {
     navigate(`/petspace/buy/${product.id}`);
   };
 
-  const addToCart= () =>{
-    setNewItem({new: !newItem.new, item: {product, amount}})
-  }
+  const addToCart = () => {
+    setNewItem({ new: !newItem.new, item: { product, amount } });
+  };
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -41,7 +42,7 @@ export function Product() {
     <div className="min-h-screen bg-gray-50">
       <Navbar newItem={newItem} />
 
-      <div className="max-w-5xl mx-auto p-6 flex flex-col md:flex-row gap-10 my-10 bg-white rounded-2xl shadow-lg">
+      <div className="max-w-5xl mx-auto p-6 flex flex-col md:flex-row gap-10 mt-3 mb-10 bg-white rounded-2xl shadow-lg">
         <div className="md:w-1/2 flex justify-center items-center">
           <img
             src={product.image}
@@ -86,14 +87,38 @@ export function Product() {
             </p>
           </div>
 
-          <div className="mt-6 flex flex-col gap-3">
+          <div className="flex gap-3 mb-3">
+            {/* Botonera cantidad */}
+            <div className="flex items-center justify-center gap-4">
+              <button
+                onClick={() => amount > 1 && setAmount(amount-1)}
+                className="w-10 h-10 flex items-center justify-center 
+                 rounded-lg border border-gray-300 
+                 text-lg font-semibold 
+                 hover:bg-gray-100 transition"
+              >
+                −
+              </button>
+
+              <span className="w-10 text-center text-lg font-medium">{amount}</span>
+
+              <button
+                onClick={() => amount < 15 && setAmount(amount+1)}
+                className="w-10 h-10 flex items-center justify-center 
+                 rounded-lg border border-gray-300 
+                 text-lg font-semibold 
+                 hover:bg-gray-100 transition"
+              >
+                +
+              </button>
+            </div>
+
             <button
-              onClick={handleBuyNow}
-              className="w-full bg-green-500 hover:bg-green-600 text-white px-6 py-3 rounded-xl text-lg font-bold transition-all shadow-lg hover:shadow-xl"
+              onClick={addToCart}
+              className="w-full bg-blue-500 hover:bg-blue-600 text-white 
+               px-6 py-3 rounded-xl text-lg font-medium 
+               transition-all"
             >
-              {t("PetSpace.Product.BuyNow")}
-            </button>
-            <button onClick={addToCart} className="w-full text-gray-800 px-6 py-3 rounded-xl text-lg font-medium border border-gray-300 hover:bg-gray-100 transition-all">
               {t("PetSpace.Product.AddToCart")}
             </button>
           </div>
