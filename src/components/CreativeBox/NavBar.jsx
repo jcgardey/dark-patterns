@@ -18,15 +18,15 @@ function NavBar() {
       />
 
       <ul className="flex gap-10">
-        <li className="cursor-pointer">
+        <li className="cursor-not-allowed">
           <span className="hidden sm:inline">{t("CreativeBox.NavBar.Design")}</span>{" "}
           <i className="fa-solid fa-chevron-down fa-xs"></i>
         </li>
-        <li className="cursor-pointer">
+        <li className="cursor-not-allowed">
           <span className="hidden sm:inline">{t("CreativeBox.NavBar.Marketing")}</span>{" "}
           <i className="fa-solid fa-chevron-down fa-xs"></i>
         </li>
-        <li className="cursor-pointer">
+        <li className="cursor-not-allowed">
           <span className="hidden sm:inline">{t("CreativeBox.NavBar.Learning")}</span>{" "}
           <i className="fa-solid fa-chevron-down fa-xs"></i>
         </li>

@@ -18,13 +18,13 @@ function NavBar() {
       </p>
 
       <ul className="flex">
-        <li className="cursor-pointer border-r-2 border-r-red-700 p-2 px-2 sm:px-5 text-xs sm:text-lg">
+        <li className="border-r-2 border-r-red-700 p-2 px-2 sm:px-5 text-xs sm:text-lg select-none">
           <span className="">{t("Teatrum.Home.Calendar")}</span>
         </li>
-        <li className="cursor-pointer border-r-2 border-r-red-700 p-2 px-2 sm:px-5 text-xs sm:text-lg">
+        <li className="border-r-2 border-r-red-700 p-2 px-2 sm:px-5 text-xs sm:text-lg select-none">
           <span className="">{t("Teatrum.Home.History")}</span>
         </li>
-        <li className="cursor-pointer p-2 px-2 sm:px-5 text-xs sm:text-lg">
+        <li className="p-2 px-2 sm:px-5 text-xs sm:text-lg select-none">
           <span className="">{t("Teatrum.Home.Layout")}</span>
         </li>
       </ul>

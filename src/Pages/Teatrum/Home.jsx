@@ -26,7 +26,7 @@ export function Home() {
           style={{ backgroundImage: `url(${Banner})` }}
         >
           {/* Flecha izquierda */}
-          <i className="fa-solid fa-chevron-left text-white/70 text-3xl cursor-pointer hover:text-white transition-colors duration-200"></i>
+          <i className="fa-solid fa-chevron-left text-white/70 text-3xl"></i>
 
           {/* Texto centrado */}
 
@@ -40,7 +40,7 @@ export function Home() {
           </div>
 
           {/* Flecha derecha */}
-          <i className="fa-solid fa-chevron-right text-white/70 text-3xl cursor-pointer hover:text-white transition-colors duration-200"></i>
+          <i className="fa-solid fa-chevron-right text-white/70 text-3xl"></i>
         </div>
 
         <Search events={events} setEventsState={setEventsState} />

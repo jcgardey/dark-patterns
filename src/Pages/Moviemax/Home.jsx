@@ -28,7 +28,7 @@ export function Home() {
       <div className="relative z-10 flex w-full justify-between items-center p-10 py-6">
         <h1 className="text-4xl font-bold text-purple-600 cursor-pointer">MovieMax</h1>
 
-        <button className="bg-purple-600 hover:bg-purple-700 px-3 py-1 rounded font-medium">
+        <button className="bg-purple-600 hover:bg-purple-700 px-3 py-1 rounded font-medium cursor-not-allowed">
           {t("Moviemax.Login")}
         </button>
       </div>

@@ -70,7 +70,7 @@ function Checkout() {
             MovieMax
           </h1>
 
-          <button className="hover:bg-gray-300 px-3 py-1 rounded font-medium">
+          <button className="hover:bg-gray-300 px-3 py-1 rounded font-medium cursor-not-allowed">
             {t(`Moviemax.Login`)}
           </button>
         </div>
