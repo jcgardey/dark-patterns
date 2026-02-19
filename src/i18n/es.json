@@ -550,15 +550,15 @@
         "TasksFinished": "Todas las tareas fueron completadas correctamente",
         "TaskFinished": "Tarea finalizada",
         "Instructions": "Instrucciones",
-        "TaskGeneral": "El próximo fin de semana cumple años un familiar tuyo y quieres regalarle unas entradas para el teatro, pero tu presupuesto es ajustado.",
+        "TaskGeneral": "",
         "TaskCar": "Necesitas alquilar un coche para tu viaje a Madrid entre el viernes 12/09/25 y el lunes 15/09 (3 días). Sólo puedes gastar menos de 100 USD",
         "TaskCheckin": "Tienes un vuelo de Madrid a Barcelona ya reservado y pago. Solo queda hacer el checkin online con el código de reserva AAA123. No puedes gastar más dinero.",
         "TaskRoomio": "Necesitas reservar una habitación para una persona en Madrid entre el viernes 12/09 y el lunes 15/09 (3 noches). Piensas gastar menos de 300 USD",
         "TaskEBook": "Como necesitas ahorrar algo de dinero extra para tu viaje, quieres cancelar tu suscripción actual a la tienda de EBooks",
         "TaskCreativebox": "Tienes una suscripción a un plan para editar imágenes en Creativebox que ya no usas, deberás cancelar el plan.",
-        "TaskMoviemax": "Por este mes cancelaste la suscripción a tu plataforma de streaming habitual, pero quieres seguir viendo series y películas, ahorra lo máximo posible con un plan de Moviemax.",
-        "TaskPetspace": "Necesitas comprarle alimento a tu mascota, en Petspace está a buen precio. No puedes gastar más de $40.",
-        "TaskTeatrum": "Compra 2 entradas en Teatrum para la obra Crazy Ladies, no puedes gastar más de $180."
+        "TaskMoviemax": "Quieres comenzar a usar una plataforma de streaming para ver series y películas. Tu objetivo es suscribirte a Moviemax, pero cuentas con un presupuesto limitado, por lo que necesitas gastar lo menos posible.",
+        "TaskPetspace": "Necesitas comprar alimento para tu mascota. Deberás comprar el alimento HappyPaws en Petspace.",
+        "TaskTeatrum": "Quieres comprar 2 entradas de teatro para la obra Crazy Ladies, no puedes gastar más de $180."
     },
     "Questionnaire": {
         "Title": "Cuestionario",

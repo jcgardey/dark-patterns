@@ -550,14 +550,14 @@
     "TasksFinished": "All tasks successfully completed",
     "TaskFinished": "Task finished",
     "Instructions": "Instructions",
-    "TaskGeneral": "Next weekend, a family member’s birthday is coming up, and you want to give them theater tickets, but your budget is tight.",
+    "TaskGeneral": "",
     "TaskCar": "You need to rent a car for your trip to Madrid from Friday 09/12/25 to Monday 09/15/25 (3 days). You can only spend less than 100 USD.",
     "TaskCheckin": "You already have a paid and confirmed flight from Madrid to Barcelona. All that’s left is to do the online check-in with the reservation code AAA123. You can’t spend any more money.",
     "TaskRoomio": "You need to book a room for one person in Madrid from Friday 09/12 to Monday 09/15 (3 nights). You plan to spend less than 300 USD.",
     "TaskEBook": "Since you need to save some extra money for your trip, you want to cancel your current subscription to the EBooks store.",
-    "TaskCreativebox": "You have a subscription to an image-editing plan in Creativebox that you no longer use, so you should cancel it.",
-    "TaskMoviemax": "This month you canceled your usual streaming subscription, but you still want to watch series and movies. Save as much as possible with a Moviemax plan.",
-    "TaskPetspace": "You need to buy food for your pet. At Petspace it’s well-priced. You can’t spend more than $40.",
+    "TaskCreativebox": "You have a subscription to an image editing plan on Creativebox that you no longer use. You need to cancel the plan.",
+    "TaskMoviemax": "The goal is to subscribe to Moviemax to watch series and movies. Since the budget is limited, the subscription should be as affordable as possible.",
+    "TaskPetspace": "You need to buy food for your pet. You must purchase HappyPaws food at Petspace.",
     "TaskTeatrum": "Buy 2 tickets on Teatrum for the play Crazy Ladies. You can’t spend more than $180."
   },
   "Questionnaire": {

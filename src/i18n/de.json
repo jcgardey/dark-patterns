@@ -550,15 +550,15 @@
     "TasksFinished": "Alle Aufgaben erfolgreich abgeschlossen",
     "TaskFinished": "Aufgabe beendet",
     "Instructions": "Anleitung",
-    "TaskGeneral": "Nächstes Wochenende hat ein Familienmitglied Geburtstag, und du möchtest ihm Theaterkarten schenken, aber dein Budget ist knapp.",
+    "TaskGeneral": "",
     "TaskCar": "Du musst ein Auto für Deinen Aufenthalt in Madrid von Freitag bis Montag (3 Tage) mieten. Du kannst nur höchstens USD 100 ausgeben.",
     "TaskCheckin": "Du hast bereits einen Flug von Madrid nach Barcelona gebucht und bezahlt. Du musst nur noch mit dem Buchungscode AAA123 online einchecken und kannst kein Geld mehr ausgeben.",
     "TaskRoomio": "Du musst ein Zimmer für eine Person in Madrid zwischen Freitag, 12. September, und Montag, 15. September 2025, buchen (3 Nächte). Du planst, weniger als 300 USD auszugeben.",
     "TaskEBook": "Da du etwas mehr Geld für deine Reise sparen musst, möchtest du dein derzeitiges Abonnement für den EBooks Store kündigen.",
-    "TaskCreativebox": "Du hast ein Abonnement für einen Bildbearbeitungsplan bei Creativebox, den du nicht mehr nutzt, also solltest du den Plan kündigen.",
-    "TaskMoviemax": "Diesen Monat hast du dein gewohntes Streaming-Abo gekündigt, möchtest aber weiterhin Serien und Filme schauen. Spare so viel wie möglich mit einem Moviemax-Tarif.",
-    "TaskPetspace": "Du musst Futter für dein Haustier kaufen. Bei Petspace ist es günstig. Du kannst nicht mehr als 40 $ ausgeben.",
-    "TaskTeatrum": "Kaufe 2 Tickets bei Teatrum für das Stück *Crazy Ladies*. Du kannst nicht mehr als 180 $ ausgeben."
+    "TaskCreativebox": "Es gibt ein aktives Abonnement für einen Bildbearbeitungsplan bei Creativebox, das nicht mehr genutzt wird. Das Abonnement muss gekündigt werden.",
+    "TaskMoviemax": "Ziel ist es, ein Abonnement bei Moviemax abzuschließen, um Serien und Filme zu schauen. Da das Budget begrenzt ist, sollte das Abonnement so günstig wie möglich sein.",
+    "TaskPetspace": "Kaufe das Tierfutter HappyPaws bei Petspace.",
+    "TaskTeatrum": "Kaufe 2 Theaterkarten für das Stück Crazy Ladies, ohne mehr als 180 $ auszugeben."
   },
   "Questionnaire": {
     "Title": "Fragebogen",
