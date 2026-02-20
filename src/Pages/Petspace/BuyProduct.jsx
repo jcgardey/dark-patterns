@@ -44,6 +44,7 @@ export function BuyProduct() {
   } = useForm();
 
   const onSubmit = (data) => {
+    localStorage.removeItem("cartItems")
     setConfirmed(true);
   };
 
