@@ -1,12 +1,9 @@
 import { useState, forwardRef, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { products } from "./Home";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import Navbar from "../../components/Petspace/Navbar";
 import { FinishedTask } from "../../components/FinishedTask";
 
-//ToDo: Limpiar localStorage cartItems al finalizar compra
 //ToDo: Cambiar logica de recibir solo un producto, ahora recibo varios, usar LOCALSTORAGE
 
 const Input = forwardRef(
@@ -21,7 +18,7 @@ const Input = forwardRef(
       placeholder={placeholder}
       {...props}
     />
-  )
+  ),
 );
 
 const FieldError = ({ message }) => (
@@ -29,7 +26,14 @@ const FieldError = ({ message }) => (
 );
 
 export function BuyProduct() {
-  const product = products.find((p) => p.id === 1);
+  const [products, setProducts] = useState(() => {
+    try {
+      const raw = localStorage.getItem("cartItems");
+      return raw ? JSON.parse(raw) : [];
+    } catch {
+      return [];
+    }
+  });
   const [showAutocompleteCard, setShowAutocompleteCard] = useState(false);
   const [confirmed, setConfirmed] = useState(false);
 
@@ -44,7 +48,11 @@ export function BuyProduct() {
   } = useForm();
 
   const onSubmit = (data) => {
-    localStorage.removeItem("cartItems")
+    if (products.length == 0) {
+      alert("Compra al menos 1 producto");
+      return;
+    }
+    localStorage.removeItem("cartItems");
     setConfirmed(true);
   };
 
@@ -167,7 +175,7 @@ export function BuyProduct() {
                   className="text-gray-700 font-medium mb-1"
                   dangerouslySetInnerHTML={{
                     __html: `${t("Rental.Review.Payment.Card.Month")}/${t(
-                      "Rental.Review.Payment.Card.Year"
+                      "Rental.Review.Payment.Card.Year",
                     )}`,
                   }}
                 ></p>
@@ -207,21 +215,54 @@ export function BuyProduct() {
           </button>
         </form>
 
-        <div className="w-full lg:w-1/3 bg-white p-6 rounded-2xl shadow-lg">
-          <h2 className="text-2xl font-bold mb-4">{t("PetSpace.BuyProduct.OrderSummary")}</h2>
-          <div className="flex flex-col gap-4">
-            <div className="flex justify-between">
-              <span>{product.name}</span>
-              <span>${(product.priceKg * product.amountKg).toFixed(2)}</span>
-            </div>
-            <div className="flex justify-between">
-              <span>{t("PetSpace.BuyProduct.Amount")}</span>
-              <span>{product.amountKg} kg</span>
-            </div>
-            <hr className="my-2" />
-            <div className="flex justify-between font-bold text-lg">
-              <span>Total</span>
-              <span>${(product.priceKg * product.amountKg).toFixed(2)}</span>
+        <div className="w-full lg:w-1/3 bg-white p-8 rounded-3xl shadow-xl border border-gray-100">
+          <h2 className="text-2xl font-bold mb-6 text-gray-800">
+            {t("PetSpace.BuyProduct.OrderSummary")}
+          </h2>
+
+          <div className="flex flex-col gap-5">
+            {products.map(p => {
+              const subtotal =
+                p.product.priceKg * p.product.amountKg * p.amount;
+
+              return (
+                <div
+                  key={p.product.id}
+                  className="flex justify-between items-center bg-gray-200/50 p-4 rounded-xl"
+                >
+                  <div className="flex flex-col">
+                    <span className="font-medium text-gray-700">
+                      {p.product.name}
+                    </span>
+                    <span className="text-sm text-gray-500">
+                      {p.product.amountKg}kg × {p.amount}
+                    </span>
+                  </div>
+
+                  <span className="font-semibold text-gray-800">
+                    ${subtotal.toLocaleString()}
+                  </span>
+                </div>
+              );
+            })}
+
+            <div className="border-t pt-6 mt-2">
+              <div className="flex justify-between items-center text-2xl font-bold text-gray-900">
+                <span>Total</span>
+                <span>
+                  $
+                  {products
+                    .reduce(
+                      (acc, item) =>
+                        acc +
+                        item.product.priceKg *
+                          item.product.amountKg *
+                          item.amount,
+                      0,
+                    )
+                    .toLocaleString()}
+                </span>
+              </div>
             </div>
           </div>
         </div>

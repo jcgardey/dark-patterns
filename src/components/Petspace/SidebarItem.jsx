@@ -5,7 +5,6 @@ function SidebarItem({ item, deleteItem, editItem }) {
       <div className="w-20 h-20 rounded-lg overflow-hidden bg-gray-100 flex-shrink-0">
         <img
           src={item.product.image}
-          alt="Producto"
           className="w-full h-full object-cover"
         />
       </div>
@@ -13,7 +12,7 @@ function SidebarItem({ item, deleteItem, editItem }) {
       <div className="flex-1 flex flex-col gap-3">
         <div className="flex justify-between items-start gap-2">
           <p className="text-sm font-medium text-gray-800 leading-snug">
-            {item.product.name}
+            {item.product.name} {item.product.amountKg}kg
           </p>
 
           <button
