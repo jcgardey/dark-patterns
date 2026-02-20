@@ -122,7 +122,7 @@ function App() {
 
           <Route path="/petspace" element={<PetspaceHome />} />
           <Route path="/petspace/product/:id" element={<PetProduct />} />
-          <Route path="/petspace/buy/:id" element={<BuyPetProduct />} />
+          <Route path="/petspace/buy" element={<BuyPetProduct />} />
 
           <Route path="/moviemax" element={<MoviemaxHome />} />
           <Route path="/moviemax/indications" element={<Indications />} />

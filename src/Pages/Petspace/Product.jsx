@@ -1,34 +1,20 @@
-import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import { useEffect, useState } from "react";
+import { useParams } from "react-router-dom";
 import { products } from "./Home";
 import Navbar from "../../components/Petspace/Navbar";
 import { Footer } from "../../components/Petspace/Footer";
-import Modal from "../../components/Petspace/Modal";
 import { useTranslation } from "react-i18next";
 
 export function Product() {
   const { id } = useParams();
   const product = products.find((p) => p.id === parseInt(id));
-  const [showModal, setShowModal] = useState(false);
-  const navigate = useNavigate();
   const { t } = useTranslation();
   const [newItem, setNewItem] = useState({ new: false, item: null });
   const [amount, setAmount] = useState(1);
-  const darkEnabled = localStorage.getItem("dark") == "true" ?? false;
 
   if (!product) return <div>{t("PetSpace.Product.NotFound")}</div>;
 
   const totalPrice = product.priceKg * product.amountKg;
-
-  const handleBuyNow = () => {
-    // pasar a carrito
-    if (darkEnabled) setShowModal(true);
-    else goToCheckout();
-  };
-
-  const goToCheckout = () => {
-    navigate(`/petspace/buy/${product.id}`);
-  };
 
   const addToCart = () => {
     setNewItem({ new: !newItem.new, item: { product, amount } });
@@ -87,8 +73,7 @@ export function Product() {
             </p>
           </div>
 
-          <div className="flex gap-3 mb-3">
-            {/* Botonera cantidad */}
+          <div className="flex flex-col md:flex-row gap-3 my-3">
             <div className="flex items-center justify-center gap-4">
               <button
                 onClick={() => amount > 1 && setAmount(amount-1)}
@@ -124,8 +109,6 @@ export function Product() {
           </div>
         </div>
       </div>
-
-      {showModal && <Modal show={setShowModal} goToCheckout={goToCheckout} />}
 
       <Footer />
     </div>

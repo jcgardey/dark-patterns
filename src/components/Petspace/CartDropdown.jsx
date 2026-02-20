@@ -1,6 +1,13 @@
 import { useEffect, useState } from "react";
 
-function CartDropdown({ open, item, amount, onClose, totalItems }) {
+function CartDropdown({
+  open,
+  item,
+  amount,
+  onClose,
+  totalItems,
+  openSidebar,
+}) {
   const [itemsTotalAmount, setitemsTotalAmount] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -8,7 +15,8 @@ function CartDropdown({ open, item, amount, onClose, totalItems }) {
     setitemsTotalAmount(totalItems.reduce((acc, item) => acc + item.amount, 0));
     setTotalPrice(
       totalItems.reduce(
-        (acc, item) => acc + item.product.priceKg * item.product.amountKg * item.amount,
+        (acc, item) =>
+          acc + item.product.priceKg * item.product.amountKg * item.amount,
         0,
       ),
     );
@@ -65,11 +73,10 @@ function CartDropdown({ open, item, amount, onClose, totalItems }) {
             ):
           </span>
         </p>
-        <p className="text-blue-600 font-bold text-lg">
-          ${totalPrice}
-        </p>
+        <p className="text-blue-600 font-bold text-lg">${totalPrice}</p>
       </div>
       <button
+        onClick={openSidebar}
         className="mt-4 w-full bg-black text-white 
                    py-2 rounded-lg text-sm 
                    hover:bg-gray-800 transition"

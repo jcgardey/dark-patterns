@@ -1,10 +1,13 @@
-import React, { useState, forwardRef, useEffect } from "react";
+import { useState, forwardRef, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { products } from "./Home";
 import { useForm } from "react-hook-form";
 import { useTranslation } from "react-i18next";
 import Navbar from "../../components/Petspace/Navbar";
 import { FinishedTask } from "../../components/FinishedTask";
+
+//ToDo: Limpiar localStorage cartItems al finalizar compra
+//ToDo: Cambiar logica de recibir solo un producto, ahora recibo varios, usar LOCALSTORAGE
 
 const Input = forwardRef(
   ({ id, type = "text", placeholder, errors, ...props }, ref) => (
@@ -26,8 +29,7 @@ const FieldError = ({ message }) => (
 );
 
 export function BuyProduct() {
-  const { id } = useParams();
-  const product = products.find((p) => p.id === parseInt(id));
+  const product = products.find((p) => p.id === 1);
   const [showAutocompleteCard, setShowAutocompleteCard] = useState(false);
   const [confirmed, setConfirmed] = useState(false);
 
@@ -52,8 +54,6 @@ export function BuyProduct() {
     setValue("x-expiry", "12/28");
     setValue("x-code", "322");
   };
-
-  if (!product) return <div>{t("PetSpace.Product.NotFound")}</div>;
 
   useEffect(() => {
     window.scrollTo(0, 0);

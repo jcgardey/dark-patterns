@@ -3,7 +3,7 @@ import { useTranslation } from "react-i18next";
 import { useEffect } from "react";
 import ShoppingCart from "./ShoppingCart";
 
-export const Navbar = ({newItem = null}) => {
+export const Navbar = ({ newItem = null }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const { t } = useTranslation();
@@ -53,7 +53,11 @@ export const Navbar = ({newItem = null}) => {
           {t("PetSpace.NavBar.Contact")}
         </li>
       </ul>
-      <ShoppingCart  newItem={newItem}/>
+      {location.pathname !== "/petspace/buy" ? (
+        <ShoppingCart newItem={newItem} />
+      )
+    :
+    <span className="text-white opacity-0">/</span>}
     </nav>
   );
 };
