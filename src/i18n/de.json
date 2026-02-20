@@ -466,6 +466,15 @@
         "Description": "Premium-Gourmetfutter für wählerische Haustiere. Hergestellt mit hochwertigen Zutaten, die ein glänzendes Fell und optimale Gesundheit fördern."
       }
     },
+    "Cart": {
+      "AddedToCart": "Zum Warenkorb hinzugefügt",
+      "Products": "produkte",
+      "Product": "produkt",
+      "ViewCart": "Warenkorb ansehen",
+      "Cart": "Warenkorb",
+      "Buy": "Kaufen",
+      "EmptyCart": "Dein Warenkorb ist leer."
+    },
     "Modal": {
       "Title": "Erreiche den Mindestkauf von 30 $ und erhalte kostenlose Snacks für dein Haustier!",
       "AddProduct": "Ein weiteres Produkt hinzufügen",

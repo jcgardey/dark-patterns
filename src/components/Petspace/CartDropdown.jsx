@@ -1,4 +1,5 @@
 import { useEffect, useState } from "react";
+import { useTranslation } from "react-i18next";
 
 function CartDropdown({
   open,
@@ -10,6 +11,7 @@ function CartDropdown({
 }) {
   const [itemsTotalAmount, setitemsTotalAmount] = useState(0);
   const [totalPrice, setTotalPrice] = useState(0);
+  const { t } = useTranslation();
 
   useEffect(() => {
     setitemsTotalAmount(totalItems.reduce((acc, item) => acc + item.amount, 0));
@@ -43,7 +45,7 @@ function CartDropdown({
 
           <div>
             <p className="text-sm font-semibold text-gray-900">
-              Agregado al carrito
+              {t("PetSpace.Cart.AddedToCart")}
             </p>
             <p className="text-sm text-gray-600 truncate">{item.name}</p>
             <p className="text-sm font-medium text-gray-900">
@@ -68,8 +70,8 @@ function CartDropdown({
           <span className="text-base font-medium">
             (
             {itemsTotalAmount == 1
-              ? "1 producto"
-              : itemsTotalAmount + " productos"}
+              ? "1 " + t("PetSpace.Cart.Product")
+              : itemsTotalAmount + " " + t("PetSpace.Cart.Products")}
             ):
           </span>
         </p>
@@ -81,7 +83,7 @@ function CartDropdown({
                    py-2 rounded-lg text-sm 
                    hover:bg-gray-800 transition"
       >
-        Ver carrito
+        {t("PetSpace.Cart.ViewCart")}
       </button>
 
       <style>{`

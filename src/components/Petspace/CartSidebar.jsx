@@ -2,12 +2,14 @@ import React, { useEffect, useState } from "react";
 import SidebarItem from "./SidebarItem";
 import { useNavigate } from "react-router-dom";
 import Modal from "./Modal";
+import { useTranslation } from "react-i18next";
 
 function CartSidebar({ open, onClose, items, deleteItem, editItem }) {
   const navigate = useNavigate();
   const [totalPrice, setTotalPrice] = useState(0);
   const [showModal, setShowModal] = useState(false);
   const darkEnabled = localStorage.getItem("dark") == "true" ?? false;
+  const { t } = useTranslation();
 
   const handleBuyNow = () => {
     if (darkEnabled && totalPrice < 30) setShowModal(true);
@@ -63,7 +65,7 @@ function CartSidebar({ open, onClose, items, deleteItem, editItem }) {
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-center justify-between border-b border-gray-100 px-4 py-3">
-          <h3 className="text-base font-semibold text-gray-900">Carrito</h3>
+          <h3 className="text-base font-semibold text-gray-900">{t("PetSpace.Cart.Cart")}</h3>
 
           <button
             onClick={onClose}
@@ -76,7 +78,7 @@ function CartSidebar({ open, onClose, items, deleteItem, editItem }) {
 
         {items?.length == 0 ? (
           <div className="p-4 text-sm text-gray-500">
-            El carrito de compras está vacío.
+            {t("PetSpace.Cart.EmptyCart")}
           </div>
         ) : (
           <div className="flex flex-col gap-1">
@@ -101,7 +103,7 @@ function CartSidebar({ open, onClose, items, deleteItem, editItem }) {
               className="bg-blue-600 hover:bg-blue-700 text-white 
                mx-2 py-3 rounded-2xl text-lg font-medium "
             >
-              Comprar
+              {t("PetSpace.Cart.Buy")}
             </button>
           </div>
         )}

@@ -37,7 +37,6 @@ export function Product() {
           />
         </div>
 
-        {/* Detalles del producto */}
         <div className="md:w-1/2 flex flex-col justify-between">
           <div className="space-y-4">
             <div className="flex flex-col items-start gap-2">

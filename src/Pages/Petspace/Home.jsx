@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import Navbar from "../../components/Petspace/Navbar";
 import ProductCard from "../../components/Petspace/ProductCard";
 import { Footer } from "../../components/Petspace/Footer";
@@ -17,8 +17,6 @@ export const products = [
     image: CrunchyBites,
     priceKg: 3,
     amountKg: 2,
-    description:
-      "Croquetas crujientes y nutritivas, ideales para perros adultos de todas las razas. Contienen vitaminas y minerales esenciales para mantenerlos activos y saludables.",
   },
   {
     id: 2,
@@ -27,8 +25,6 @@ export const products = [
     priceKg: 2,
     amountKg: 5,
     halfStar: true,
-    description:
-      "Alimento que promueve la felicidad y el bienestar de tu mascota. Rico en proteínas y con ingredientes naturales que cuidan su digestión.",
   },
   {
     id: 3,
@@ -36,8 +32,6 @@ export const products = [
     image: Tailtreats,
     priceKg: 2,
     amountKg: 10,
-    description:
-      "Snacks y croquetas especiales para perros con energía alta. Sabor irresistible y textura crujiente que hará que muevan la cola de alegría.",
   },
   {
     id: 4,
@@ -45,8 +39,6 @@ export const products = [
     image: FurFeast,
     priceKg: 5,
     amountKg: 5,
-    description:
-      "Alimento premium gourmet para mascotas exigentes. Con ingredientes de alta calidad que promueven un pelaje brillante y una salud óptima.",
   },
 ];
 
@@ -77,7 +69,6 @@ export function Home() {
         </div>
       </section>
 
-      {/* Featured Products */}
       <section className="px-10 py-14">
         <h3 className="text-2xl font-semibold mb-8">
           {t("PetSpace.Home.FeaturedProducts")}

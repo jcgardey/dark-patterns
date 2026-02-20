@@ -466,6 +466,15 @@
         "Description": "Premium gourmet food for picky pets. Made with high-quality ingredients that promote a shiny coat and optimal health."
       }
     },
+    "Cart": {
+      "AddedToCart": "Added to cart",
+      "Products": "products",
+      "Product": "product",
+      "ViewCart": "View cart",
+      "Cart": "Cart",
+      "Buy": "Buy",
+      "EmptyCart": "Your shopping cart is empty."
+    },
     "Modal": {
       "Title": "Reach the $30 minimum purchase and get free snacks for your pet!",
       "AddProduct": "Add another product",
