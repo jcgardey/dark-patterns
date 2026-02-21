@@ -22,10 +22,10 @@ export function Home() {
       <NavBar />
       <div className="flex flex-col items-center gap-7 ">
         <div
-          className="relative flex items-center justify-between w-full bg-cover bg-center px-6 py-36"
+          className="relative flex items-center justify-center w-full bg-cover bg-center px-6 py-36"
           style={{ backgroundImage: `url(${Banner})` }}
         >
-          <i className="fa-solid fa-chevron-left text-white/70 text-3xl"></i>
+
 
           <div className="bg-black/50 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-lg">
             <p className="text-white text-2xl md:text-3xl font-semibold text-center tracking-wide">
@@ -36,7 +36,7 @@ export function Home() {
             </p>
           </div>
 
-          <i className="fa-solid fa-chevron-right text-white/70 text-3xl"></i>
+
         </div>
 
         <Search events={events} setEventsState={setEventsState} />

@@ -50,6 +50,54 @@ function SelectPrice() {
     <div>
       <NavBar />
       <div className="flex flex-col justify-center sm:flex-row p-5 gap-10 sm:gap-24   sm:h-[350px]">
+        <div className="flex flex-col gap-3">
+          <h1 className="text-2xl font-semibold">
+            {t("Teatrum.Buy.SelectTickets")}
+          </h1>
+
+          <div className="flex items-center w-full ">
+            <div className="w-full border border-gray-300 shadow rounded p-5 flex flex-col items-center gap-5">
+              <select
+                name="amount"
+                value={selectedAmount}
+                onChange={(e) => setSelectedAmount(e.target.value)}
+                className="cursor-pointer border border-gray-400 rounded w-full p-1"
+              >
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+              </select>
+              <div className="flex flex-col gap-2 w-full">
+                <div className="flex items-center justify-between">
+                  <h2 className="text-2xl font-semibold">
+                    Total: $
+                    {darkEnabled ? total : total + Math.floor(total * 0.15)}{" "}
+                  </h2>
+                  <button
+                    onClick={goToBuy}
+                    className="bg-black hover:bg-black/90 text-white p-1.5 px-4 rounded font-semibold text-lg"
+                  >
+                    {t("Teatrum.Buy.BuyNow")}
+                  </button>
+                </div>
+
+                {darkEnabled ? (
+                  <p className="text-gray-600">
+                    {t("Teatrum.Buy.ServiceCharge")} ${Math.floor(total * 0.15)}
+                  </p>
+                ) : (
+                  <p className="text-gray-800">
+                    {t("Teatrum.Buy.WithoutCharges")} ${total}
+                  </p>
+                )}
+              </div>
+            </div>
+          </div>
+        </div>
+        
         <div className="flex flex-col gap-3 h-full">
           <h1 className="text-2xl font-semibold">
             {t("Teatrum.Buy.SelectLocation")}
@@ -90,53 +138,7 @@ function SelectPrice() {
           </div>
         </div>
 
-        <div className="flex flex-col gap-3">
-          <h1 className="text-2xl font-semibold">
-            {t("Teatrum.Buy.SelectTickets")}
-          </h1>
-
-          <div className="h-full flex items-center w-full">
-            <div className="w-full border border-gray-300 shadow rounded p-5 flex flex-col items-center gap-5">
-              <select
-                name="amount"
-                value={selectedAmount}
-                onChange={(e) => setSelectedAmount(e.target.value)}
-                className="cursor-pointer border border-gray-400 rounded w-1/2 pl-1"
-              >
-                <option value="1">1</option>
-                <option value="2">2</option>
-                <option value="3">3</option>
-                <option value="4">4</option>
-                <option value="5">5</option>
-                <option value="6">6</option>
-              </select>
-              <div className="flex flex-col gap-2 w-full">
-                <div className="flex items-center justify-between">
-                  <h2 className="text-2xl font-semibold">
-                    Total: $
-                    {darkEnabled ? total : total + Math.floor(total * 0.15)}{" "}
-                  </h2>
-                  <button
-                    onClick={goToBuy}
-                    className="bg-black hover:bg-black/90 text-white p-1.5 px-4 rounded font-semibold text-lg"
-                  >
-                    {t("Teatrum.Buy.BuyNow")}
-                  </button>
-                </div>
-
-                {darkEnabled ? (
-                  <p className="text-gray-600">
-                    {t("Teatrum.Buy.ServiceCharge")} ${Math.floor(total * 0.15)}
-                  </p>
-                ) : (
-                  <p className="text-gray-800">
-                    {t("Teatrum.Buy.WithoutCharges")} ${total}
-                  </p>
-                )}
-              </div>
-            </div>
-          </div>
-        </div>
+        
       </div>
 
       <Footer />
