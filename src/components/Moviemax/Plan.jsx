@@ -22,7 +22,7 @@ function Plan({ selectedPlan, setSelectedPlan, plan }) {
       onClick={select}
       className={`${
         selectedPlan == plan.id && "border-purple-400 bg-gray-200"
-      } flex flex-col p-2 border border-gray-300 rounded-lg shadow hover:shadow-md cursor-pointer gap-2`}
+      } flex flex-col w-[330px] shrink-0 p-2 border border-gray-300 rounded-lg shadow hover:shadow-md cursor-pointer gap-2`}
     >
       <div
         className={`bg-gradient-to-r ${
@@ -97,7 +97,7 @@ function Plan({ selectedPlan, setSelectedPlan, plan }) {
         )}
       </ul>
 
-      <FinishedTask show={showFinished} />
+      <FinishedTask show={showFinished} data={{plan: plan.title, price: plan.price}} />
     </div>
   );
 }

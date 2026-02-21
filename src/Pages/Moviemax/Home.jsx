@@ -21,10 +21,8 @@ export function Home() {
       className="relative w-full h-screen flex flex-col items-center bg-cover bg-center text-white overflow-auto"
       style={{ backgroundImage: `url(${BackgroundHome})` }}
     >
-      {/* Capa de oscurecimiento */}
       <div className="fixed inset-0 bg-black/70 "></div>
 
-      {/* Header */}
       <div className="relative z-10 flex w-full justify-between items-center p-10 py-6">
         <h1 className="text-4xl font-bold text-purple-600 cursor-pointer">MovieMax</h1>
 

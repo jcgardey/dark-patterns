@@ -25,10 +25,7 @@ export function Home() {
           className="relative flex items-center justify-between w-full bg-cover bg-center px-6 py-40"
           style={{ backgroundImage: `url(${Banner})` }}
         >
-          {/* Flecha izquierda */}
           <i className="fa-solid fa-chevron-left text-white/70 text-3xl"></i>
-
-          {/* Texto centrado */}
 
           <div className="bg-black/50 backdrop-blur-sm px-6 py-4 rounded-2xl shadow-lg">
             <p className="text-white text-2xl md:text-3xl font-semibold text-center tracking-wide">
@@ -39,7 +36,6 @@ export function Home() {
             </p>
           </div>
 
-          {/* Flecha derecha */}
           <i className="fa-solid fa-chevron-right text-white/70 text-3xl"></i>
         </div>
 

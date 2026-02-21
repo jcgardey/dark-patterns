@@ -40,7 +40,7 @@ function PlanSelect() {
           {t("Moviemax.PlanSelect.Title")}
         </h2>
 
-        <div className="flex gap-3 overflow-x-auto max-w-[320px] sm:max-w-[700px] lg:max-w-[1050px]">
+        <div className="flex gap-3 overflow-x-auto max-w-full">
           {plans
             .filter((plan) => seeAll || plan.id !== 1)
             .map((plan) => (

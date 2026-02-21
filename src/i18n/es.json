@@ -474,7 +474,7 @@
       "EmptyCart": "El carrito de compras está vacío."
     },
     "Modal": {
-      "Title": "¡Llegá al mínimo de compra de $30 y llevate snacks de regalo para tu mascota!",
+      "Title": "¡Alcanza el mínimo de compra de $30 y lleva snacks de regalo para tu mascota!",
       "AddProduct": "Agregar otro producto",
       "No": "No, gracias… mi mascota se perderá los snacks"
     },
@@ -486,7 +486,7 @@
     }
   },
   "Moviemax": {
-    "Login": "Iniciar sesión",
+    "Login": "Cerrar sesión",
     "Home": {
       "Suscribe": "Suscribete y disfruta de tu pelicula favorita.",
       "Start": "Comenzar"

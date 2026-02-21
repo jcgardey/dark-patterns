@@ -191,7 +191,7 @@ function Checkout() {
         </form>
 
       <Footer />
-      <FinishedTask show={confirmed} />
+      <FinishedTask show={confirmed} data={{plan: plan.title, price: plan.price}}/>
     </div>
   );
 }

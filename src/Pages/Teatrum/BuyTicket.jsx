@@ -18,7 +18,7 @@ const Input = forwardRef(
       placeholder={placeholder}
       {...props}
     />
-  )
+  ),
 );
 
 const FieldError = ({ message }) => (
@@ -183,7 +183,7 @@ function BuyTicket() {
                 <p
                   dangerouslySetInnerHTML={{
                     __html: `${t("Rental.Review.Payment.Card.Month")}/${t(
-                      "Rental.Review.Payment.Card.Year"
+                      "Rental.Review.Payment.Card.Year",
                     )}`,
                   }}
                 ></p>
@@ -244,18 +244,25 @@ function BuyTicket() {
               <span>${Math.floor(total * 0.15)}</span>
             </div>
 
-            <div className="border-t border-gray-300 pt-3 mt-3 flex justify-between items-center">
-              <h2 className="text-lg font-bold">Total</h2>
-              <h2 className="text-xl font-bold text-red-700">
-                ${total + Math.floor(total * 0.15)}
-              </h2>
+            <div className="border-t border-gray-300 pt-3 mt-3 flex justify-between items-center text-2xl">
+              <h2 className="font-bold">Total</h2>
+              <h2 className="font-bold">${total + Math.floor(total * 0.15)}</h2>
             </div>
           </div>
         </div>
       </div>
 
       <Footer />
-      <FinishedTask show={confirmed} />
+      <FinishedTask
+        show={confirmed}
+        data={{
+          event: event.title,
+          tickets: selectedAmount,
+          price: total,
+          taxes: Math.floor(total * 0.15),
+          total: total + Math.floor(total * 0.15),
+        }}
+      />
     </div>
   );
 }

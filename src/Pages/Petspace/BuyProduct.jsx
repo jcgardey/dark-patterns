@@ -36,6 +36,15 @@ export function BuyProduct() {
   });
   const [showAutocompleteCard, setShowAutocompleteCard] = useState(false);
   const [confirmed, setConfirmed] = useState(false);
+  
+  const addsProducts = () => {
+    try {
+      const raw = localStorage.getItem("addsProducts");
+      return raw ?? null;
+    } catch {
+      return null;
+    }
+  };
 
   const { t } = useTranslation();
 
@@ -221,7 +230,7 @@ export function BuyProduct() {
           </h2>
 
           <div className="flex flex-col gap-5">
-            {products.map(p => {
+            {products.map((p) => {
               const subtotal =
                 p.product.priceKg * p.product.amountKg * p.amount;
 
@@ -267,7 +276,20 @@ export function BuyProduct() {
           </div>
         </div>
       </div>
-      <FinishedTask show={confirmed} />
+      <FinishedTask
+        show={confirmed}
+        data={{
+          addsProducts: addsProducts(),
+          total: products
+            .reduce(
+              (acc, item) =>
+                acc +
+                item.product.priceKg * item.product.amountKg * item.amount,
+              0,
+            )
+            .toLocaleString(),
+        }}
+      />
     </div>
   );
 }
