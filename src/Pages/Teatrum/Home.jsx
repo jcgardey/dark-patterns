@@ -20,9 +20,9 @@ export function Home() {
   return (
     <div>
       <NavBar />
-      <div className="flex flex-col items-center gap-10 ">
+      <div className="flex flex-col items-center gap-7 ">
         <div
-          className="relative flex items-center justify-between w-full bg-cover bg-center px-6 py-40"
+          className="relative flex items-center justify-between w-full bg-cover bg-center px-6 py-36"
           style={{ backgroundImage: `url(${Banner})` }}
         >
           <i className="fa-solid fa-chevron-left text-white/70 text-3xl"></i>

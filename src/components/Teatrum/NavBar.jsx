@@ -29,7 +29,7 @@ function NavBar() {
         </li>
       </ul>
 
-      <div className="flex gap-1 sm:gap-3 p-2 truncate">
+      <div className="flex gap-1 sm:gap-3 p-2 truncate sm:ml-20">
         <i className="fa-brands fa-facebook-f cursor-pointer"></i>
         <i className="fa-brands fa-instagram cursor-pointer"></i>
         <i className="fab fa-x-twitter cursor-pointer"></i>

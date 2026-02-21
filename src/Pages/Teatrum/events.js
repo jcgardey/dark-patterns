@@ -13,7 +13,7 @@ export const events = [
     id: "1",
     title: "Shadows of the Mind",
     price: 45,
-    date: "03/11/2025 20:30",
+    date: "03/11/2026 20:30",
     description:
       "Un drama psicológico que explora los dilemas internos de sus personajes, atrapados entre decisiones difíciles y emociones intensas.",
     img: One,
@@ -38,7 +38,7 @@ export const events = [
     id: "2",
     title: "Last Round",
     price: 70,
-    date: "25/11/2025 21:00",
+    date: "25/11/2026 21:00",
     description:
       "La historia de un peleador que enfrenta su mayor desafío dentro y fuera del ring, con golpes y risas por igual.",
     img: Eight,
@@ -63,7 +63,7 @@ export const events = [
     id: "3",
     title: "Fragments of Time",
     price: 75,
-    date: "10/11/2025 19:30",
+    date: "10/11/2026 19:30",
     description:
       "Un viaje teatral que entrelaza diferentes épocas y vidas, mostrando cómo los momentos y decisiones se reflejan a través del tiempo.",
     img: Three,
@@ -88,7 +88,7 @@ export const events = [
     id: "4",
     title: "Crazy ladies",
     price: 50,
-    date: "12/11/2025 20:00",
+    date: "12/11/2026 20:00",
     description:
       "Seis mujeres, una casa y cero sentido común. Crazy ladies es una comedia desbordada donde todo puede salir mal… y efectivamente, sale mal. Pero entre risas, gritos y copas de vino, descubren que la locura compartida puede ser la mejor terapia.",
     img: Four,
@@ -113,7 +113,7 @@ export const events = [
     id: "5",
     title: "Fractured",
     price: 65,
-    date: "15/11/2025 21:30",
+    date: "15/11/2026 21:30",
     description:
       "Un drama que explora los conflictos, secretos y emociones intensas dentro de una pareja al borde del colapso.",
     img: Five,
@@ -138,7 +138,7 @@ export const events = [
     id: "6",
     title: "Reflection",
     price: 55,
-    date: "18/11/2025 19:00",
+    date: "18/11/2026 19:00",
     description:
       "Una mujer descubre que su reflejo empieza a moverse antes que ella. Ese pequeño desfasaje, casi imperceptible al principio, se convierte en un diálogo incómodo con una versión suya que parece saber demasiado.",
     img: Six,
@@ -163,7 +163,7 @@ export const events = [
     id: "7",
     title: "Legacy",
     price: 80,
-    date: "22/11/2025 20:30",
+    date: "22/11/2026 20:30",
     description:
       "Un relato que conecta generaciones, explorando cómo las decisiones de antaño repercuten en el presente de manera inesperada.",
     img: Seven,
@@ -188,7 +188,7 @@ export const events = [
     id: "8",
     title: "Wild Couple",
     price: 60,
-    date: "05/11/2025 21:00",
+    date: "05/11/2026 21:00",
     description:
       "Una comedia sobre una pareja alocada que no para de meterse en situaciones cómicas y desopilantes.",
     img: Two,
