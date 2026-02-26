@@ -11,7 +11,7 @@ const CancelPlanModal = ({ onClose }) => {
   const darkEnabled = localStorage.getItem('dark') == 'true' ?? false;
 
   const nextStep = () => {
-    if (step === 1 && !hasSelection) return;
+    if (step === 1 && !hasSelection && darkEnabled) return;
     if (!darkEnabled) {
       if (step == 1) setStep(3)
       else setStep(4)
@@ -44,7 +44,7 @@ const CancelPlanModal = ({ onClose }) => {
 
         <div className="mt-6 flex flex-col sm:flex-row justify-between items-start gap-1 text-xs">
           <button
-            className="px-4 py-2 rounded-full border-2 border-black text-gray-700 hover:bg-gray-100"
+            className="px-4 py-2 rounded-full border border-black text-gray-700 hover:bg-gray-100 font-bold"
             onClick={() => onClose()}
           >
             {t("CreativeBox.Modal.KeepPlan")}
@@ -62,11 +62,12 @@ const CancelPlanModal = ({ onClose }) => {
             <button
               onClick={nextStep}
               className={`px-4 py-2 rounded-full  ${
-                hasSelection
-                  ? step == 3
-                    ? "text-red-500 border border-red-500 hover:font-bold hover:border-red-600"
-                    : "hover:bg-gray-200 border border-black"
-                  : "cursor-not-allowed bg-gray-200 border-none text-gray-400"
+                step == 3 ? 
+                    "bg-red-600 text-white hover:bg-red-700"
+                  :
+                hasSelection || !darkEnabled
+                  ? "border border-black hover:bg-gray-200"
+                  : "bg-gray-300 text-gray-500 cursor-not-allowed"
               }`}
             >
               {step == 1 && t("CreativeBox.Modal.Next")}

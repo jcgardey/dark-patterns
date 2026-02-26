@@ -1,14 +1,16 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Plan from "../../components/Moviemax/Plan";
 import { useNavigate } from "react-router-dom";
 import { plans } from "./plans";
 import { Footer } from "../../components/Moviemax/Footer";
 import { useTranslation } from "react-i18next";
+import { FinishedTask } from "../../components/FinishedTask";
 
 
 function PlanSelect() {
   const [seeAll, setSeeAllPlans] = useState(false);
   const [selectedPlan, setSelectedPlan] = useState(4);
+  const [showFinished, setShowFinished]= useState(false)
   const navigate = useNavigate();
   const {t} = useTranslation()
   const darkEnabled = localStorage.getItem('dark') == 'true' ?? false;
@@ -56,7 +58,7 @@ function PlanSelect() {
         <div className="text-gray-600 text-sm flex flex-col items-end gap-2">
           {!seeAll && (
             <span
-              onClick={() => setSeeAllPlans(true)}
+              onClick={() => setShowFinished(true)}
               className="font-medium text-[17px] text-blue-500 cursor-pointer hover:text-blue-600"
             >
               {t("Moviemax.PlanSelect.GetFreePlan")}
@@ -68,6 +70,7 @@ function PlanSelect() {
         </div>
       </div>
       <Footer />
+      <FinishedTask show={showFinished} data={{plan: "Gratis", price: "0"}} />
     </div>
   );
 }

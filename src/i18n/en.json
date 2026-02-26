@@ -559,7 +559,7 @@
     "TasksFinished": "All tasks successfully completed",
     "TaskFinished": "Task finished",
     "Instructions": "Instructions",
-    "TaskGeneral": "",
+    "TaskGeneral": "You are a student on vacation with a very tight budget. You’re going to Madrid on September 2025.",
     "TaskCar": "You need to rent a car for your trip to Madrid from Friday 09/12/25 to Monday 09/15/25 (3 days). You can only spend less than 100 USD.",
     "TaskCheckin": "You already have a paid and confirmed flight from Madrid to Barcelona. All that’s left is to do the online check-in with the reservation code AAA123. You can’t spend any more money.",
     "TaskRoomio": "You need to book a room for one person in Madrid from Friday 09/12 to Monday 09/15 (3 nights). You plan to spend less than 300 USD.",
