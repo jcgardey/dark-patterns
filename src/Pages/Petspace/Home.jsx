@@ -4,7 +4,7 @@ import ProductCard from "../../components/Petspace/ProductCard";
 import { Footer } from "../../components/Petspace/Footer";
 import CrunchyBites from "../../assets/PetSpace/CrunchyBites.png";
 import HappyPaws from "../../assets/PetSpace/HappyPaws.png";
-import Tailtreats from "../../assets/PetSpace/Tailtreats.png";
+import Tailtreats from "../../assets/PetSpace/TailTreats.png";
 import FurFeast from "../../assets/PetSpace/FurFeast.png";
 import portada2 from "../../assets/PetSpace/portada2.webp";
 import { useTranslation } from "react-i18next";

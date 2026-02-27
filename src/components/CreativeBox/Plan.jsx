@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import logo1 from "../../assets/CreativeBox/logo3.jpeg";
 import logo2 from "../../assets/CreativeBox/logo1.jpeg";
-import fondo from "../../assets/CreativeBox/fondoPlan.jpeg";
+import fondo from "../../assets/CreativeBox/FondoPlan.jpeg";
 import logo3 from "../../assets/CreativeBox/logoAI.jpeg";
 import ProductoBox from "./ProductoBox";
 import CancelPlanModal from "./CancelPlanModal";
