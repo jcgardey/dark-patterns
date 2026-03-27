@@ -17,3 +17,6 @@ services:
       - "${APP_PORT}:3000"
     volumes:
       - ./src:/usr/src/app/dark-patterns/src
+networks:
+  traefik-public:
+    external: true
