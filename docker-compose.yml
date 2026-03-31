@@ -10,7 +10,8 @@ services:
     labels:
       - "traefik.enable=true"
       - "traefik.http.routers.dp-frontend.rule=Host(`${APP_HOST}`)"
-      - "traefik.http.routers.dp-frontend.entrypoints=web"
+      - "traefik.http.routers.dp-frontend.entrypoints=websecure"
+      - "traefik.http.routers.dp-frontend.tls.certresolver=myresolver"
       # Forward requests to the correct port on the container
       - "traefik.http.services.dp-frontend.loadbalancer.server.port=${APP_PORT}"
     ports:
