@@ -1,5 +1,5 @@
 export const Modal = ({ className = '', title, children, onClose }) => (
-  <div className="w-full h-full top-0 left-0 fixed z-50 bg-gray-900/80">
+  <div className="fixed inset-0 z-50 bg-gray-900/80 flex items-center justify-center">
     <div
       className={`mx-auto my-24 p-4 bg-white drop-shadow rounded w-4/5 overflow-auto ${className}`}
     >

@@ -37,7 +37,7 @@ export const Home = () => {
   return (
     <div className="w-1/2 my-8 mx-auto">
       <h1 className="text-3xl">{t('Common.Instructions')}</h1>
-      <h3 className="text-xl mt-8">{t('Common.TaskGeneral')}</h3>
+      {/* <h3 className="text-xl mt-8">{t('Common.TaskGeneral')}</h3> */}
 
       <div className="my-8 border-b border-gray-300">
         {allCompleted && (

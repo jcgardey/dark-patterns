@@ -111,7 +111,7 @@ export const UserSessionsPage = () => {
           <div className="flex my-4 items-center" key={session.id}>
             {' '}
             <p className="w-1/3">{session.email}</p>{' '}
-            <p className="w-1/3">{session.website_group.name}</p>{' '}
+            <p className="w-1/3">{session.website_group?.name}</p>{' '}
             <select
               className="border border-gray-500 rounded p-1"
               value={getAssignmentForSession(session) ?? ''}

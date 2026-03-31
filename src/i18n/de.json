@@ -1,343 +1,609 @@
 {
-    "Rental": {
-        "Title": "Ein Auto mieten",
-        "Start": "Eine Reservierung starten",
-        "Location": "Standort",
-        "Dates": "Daten",
-        "Search": "Suche",
-        "NavBar": {
-            "Reservations": "Reservierungen",
-            "Deals": "Deals",
-            "Vehicles": "Fahrzeuge",
-            "Locations": "Standorte"
-        },
-        "Featured": {
-            "Title": "Ausgewählte Mietwagen-Angebote",
-            "Last_Minute": {
-                "Title": "Last-Minute-Angebote",
-                "Description": "Hier finden Sie tolle Last-Minute-Angebote für Tages- und Wochenmieten in den USA und Kanada."
-            },
-            "Plan_Ahead": {
-                "Title": "Plan Ahead Specials",
-                "Description": "Buchen Sie Ihren nächsten Mietwagen im Voraus mit Plan Ahead Specials und sparen Sie Geld bei Anmietungen in den USA und Kanada."
-            }
-        },
-        "SelectVehicle": "Wählen Sie ein Fahrzeug",
-        "Filters": "Filter",
-        "Vehicle": {
-            "Sedan": "Limousine",
-            "SUV": "SUV",
-            "Coupe": "Coupe",
-            "Convertible": "Cabrio",
-            "Pickup": "Pick-up",
-            "Similar": "oder ähnlich",
-            "Seats_one": "{{count}} Sitz",
-            "Seats_other": "{{count}} Sitze",
-            "Bags_one": "{{count}} Tasche",
-            "Bags_other": "{{count}} Taschen",
-            "Price": "{{price }} / Tag",
-            "Select": "Auswählen",
-            "Filters" : {
-                "Title": "Filter",
-                "Type": "Fahrzeugtyp",
-                "Seats": "Sitze"
-            }
-        },
-        "Protection": {
-          "Select": "Wählen Sie Ihren Schutz",
-              "Basic": {
-                  "Name": "Grundlegender Versicherungsschutz",
-                  "Description": "Vermeiden Sie die Bezahlung von Schäden oder Diebstahl an Ihrem Mietfahrzeug."    
-              },
-              "Standard": {
-                  "Name": "Standard-Abdeckungsschutz",
-                  "Description": "Schützen Sie sich vor Ansprüchen Dritter bei Unfällen oder Verletzungen bis zu einer Höhe von 1 Million Dollar."
-              },
-              "Total": {
-                  "Name": "Vollständiger Schutz der Abdeckung",
-                  "Description": "Kostenlose 24/7-Pannenhilfe für platte Reifen, verlorene Schlüssel und leere Batterien."
-              },
-              "Price": "{{price }} / Tag",
-              "Next": "Weiter",
-              "NoProtection": {
-                "Title": "Weiter ohne zusätzlichen Schutz?",
-                "Description": "Sie haften für alle Schäden und Diebstähle bis zum vollen Wert des Mietwagens, sowie für Unfall- und Verletzungsschäden Dritter, zuzüglich Verwaltungsgebühren. Ihre persönliche Versicherung oder Kreditkarte deckt diese Miete möglicherweise nicht vollständig ab.",
-                "Add": "Schutz hinzufügen",
-                "Skip": "Ja, ich werde für alle anfallenden Kosten aufkommen."
-             },
-             "Featured": "Ausgewählt"
-        },
-        "Review": {
-            "Title": "Rezension und Buch",
-            "Book": "Bezahlen und buchen",
-            "Driver": {
-                "Title": "Angaben zum Fahrer",
-                "Name": "Name",
-                "Email": "E-Mail"
-            },
-            "Payment": {
-                "Method": "Zahlungsmethode",
-                "Card": {
-                    "Number": "Kartennummer",
-                    "Holder": "Name des Karteninhabers",
-                    "Month": "Monat",
-                    "Year": "Jahr",
-                    "CVV": "CVV"
-                }
-            },
-            "Order": {
-                "Unlimited": "Unbegrenzte Meilen",
-                "Tires": "Reifen und Batteriekosten",
-                "Rental": "Mietzuschlag",
-                "License": "Lizenzgebühr für Fahrzeuge"
-            },
-            "Confirmation": {
-                "Title": "Bestätigte Reservierung",
-                "Message": "Einzelheiten werden übermittelt an {{email}}.",
-                "Close": "Klicken Sie, um dieses Fenster zu schließen"
-            }
+  "Rental": {
+    "Title": "Ein Auto mieten",
+    "Start": "Eine Reservierung starten",
+    "Location": "Standort",
+    "Dates": "Daten",
+    "Search": "Suche",
+    "NavBar": {
+      "Reservations": "Reservierungen",
+      "Deals": "Deals",
+      "Vehicles": "Fahrzeuge",
+      "Locations": "Standorte"
+    },
+    "Featured": {
+      "Title": "Ausgewählte Mietwagen-Angebote",
+      "Last_Minute": {
+        "Title": "Last-Minute-Angebote",
+        "Description": "Hier finden Sie tolle Last-Minute-Angebote für Tages- und Wochenmieten in den USA und Kanada."
+      },
+      "Plan_Ahead": {
+        "Title": "Plan Ahead Specials",
+        "Description": "Buchen Sie Ihren nächsten Mietwagen im Voraus mit Plan Ahead Specials und sparen Sie Geld bei Anmietungen in den USA und Kanada."
+      }
+    },
+    "SelectVehicle": "Wählen Sie ein Fahrzeug",
+    "Filters": "Filter",
+    "Vehicle": {
+      "Sedan": "Limousine",
+      "SUV": "SUV",
+      "Coupe": "Coupe",
+      "Convertible": "Cabrio",
+      "Pickup": "Pick-up",
+      "Similar": "oder ähnlich",
+      "Seats_one": "{{count}} Sitz",
+      "Seats_other": "{{count}} Sitze",
+      "Bags_one": "{{count}} Tasche",
+      "Bags_other": "{{count}} Taschen",
+      "Price": "{{price }} / Tag",
+      "Select": "Auswählen",
+      "Filters": {
+        "Title": "Filter",
+        "Type": "Fahrzeugtyp",
+        "Seats": "Sitze"
+      }
+    },
+    "Protection": {
+      "Select": "Wählen Sie Ihren Schutz",
+      "Basic": {
+        "Name": "Grundlegender Versicherungsschutz",
+        "Description": "Vermeiden Sie die Bezahlung von Schäden oder Diebstahl an Ihrem Mietfahrzeug."
+      },
+      "Standard": {
+        "Name": "Standard-Abdeckungsschutz",
+        "Description": "Schützen Sie sich vor Ansprüchen Dritter bei Unfällen oder Verletzungen bis zu einer Höhe von 1 Million Dollar."
+      },
+      "Total": {
+        "Name": "Vollständiger Schutz der Abdeckung",
+        "Description": "Kostenlose 24/7-Pannenhilfe für platte Reifen, verlorene Schlüssel und leere Batterien."
+      },
+      "Price": "{{price }} / Tag",
+      "Next": "Weiter",
+      "NoProtection": {
+        "Title": "Weiter ohne zusätzlichen Schutz?",
+        "Description": "Sie haften für alle Schäden und Diebstähle bis zum vollen Wert des Mietwagens, sowie für Unfall- und Verletzungsschäden Dritter, zuzüglich Verwaltungsgebühren. Ihre persönliche Versicherung oder Kreditkarte deckt diese Miete möglicherweise nicht vollständig ab.",
+        "Add": "Schutz hinzufügen",
+        "Skip": "Ja, ich werde für alle anfallenden Kosten aufkommen."
+      },
+      "Featured": "Ausgewählt"
+    },
+    "Review": {
+      "Title": "Rezension und Buch",
+      "Book": "Bezahlen und buchen",
+      "Driver": {
+        "Title": "Angaben zum Fahrer",
+        "Name": "Name",
+        "Email": "E-Mail"
+      },
+      "Payment": {
+        "Method": "Zahlungsmethode",
+        "Card": {
+          "Number": "Kartennummer",
+          "Holder": "Name des Karteninhabers",
+          "Month": "Monat",
+          "Year": "Jahr",
+          "CVV": "CVV"
         }
-    },
-    "Checkin": {
-        "Home":{
-            "Flights":"Flüge",
-            "SelfCheckin": "Selbst einchecken",
-            "Hotels": "Hotels",
-            "CarHire":"Autovermietung",
-            "Deals":"Last-Minute-Angebote",
-            "Home":"Startseite",
-            "CheckIn":"Check-in",
-            "Services":"Dienstleistungen",
-            "Terms":"Bedingungen",
-            "Contact":"Kontakt",
-            "Subscribe": "Jetzt abonnieren und die besten Angebote erhalten",
-            "LearnDeals": " Erfahren Sie mehr über die neuesten Angebote",
-            "Promotions": "Seien Sie der Erste, der Sonderangebote erhält",
-            "NewDestinations": "Lernen Sie neue Reiseziele kennen",
-            "MissSale": "Nie mehr einen Verkauf verpassen!",
-            "30off": "30% Rabatt"
-        },
-        "Passenger": {
-            "Title": "Informationen zum Einchecken",
-            "Name": "Name",
-            "From": "Von",
-            "To": "An",
-            "Search": "Suche",
-            "Code": "Buchungscode",
-            "Surname": "Nachname",
-            "FullName": "Vollständiger Name",
-            "Birthdate": "Geburtsdatum",
-            "Gender": {
-                "Label": "Geschlecht",
-                "Male": "Männlich",
-                "Female": "Weiblich"
-            },
-            "IdType": "ID-Typ",
-            "IdNumber": "ID-Nummer",
-            "IssueCountry": "Land der Ausgabe",
-            "DueDate": "Fälligkeitsdatum",
-            "Nationality": "Nationalität",
-            "Passport": "Reisepass",
-            "Email": "E-Mail",
-            "FindReservation": "Buchung finden",
-            "Subscribe": "Abonnieren",
-            "SelectSeat": "Sitz auswählen"
-        },
-        "Seat": {
-            "Title": "Sitzauswahl",
-            "Preferential": "Vorzugssitz",
-            "Regular": "Normaler Sitz",
-            "Cheap": "Günstiger Sitz",
-            "Occupied": "Besetzter Sitz",
-            "Continue": "Weiter",
-            "NoSeat": "Ich möchte keinen Sitzplatz auswählen",
-            "Passengers": "Passagier",
-            "Flights": "Flüge",
-            "SmallBag": "Handgepäck",
-            "ReservationInfo": "Informationen zur Buchung",
-            "ReservationDate1": "Mon 23 Sep - 16:25-00:55 - AS 3077",
-            "ReservationDate2": "Sun 29 Sep - 06:15-08:00 - AS 4132"
-        },
-        "Summary": {
-            "Completed": "Checkin abgeschlossen",
-            "BoardingPass": "Ihre Bordkarte wird an Ihre registrierte E-Mail-Adresse gesendet.",
-            "Thanks": "Danke, dass Sie sich für AirSomewhere entschieden haben.",
-            "Title":"Zusammenfassung",
-            "Taxes": "Steuern",
-            "Seat": "Sitzauswahl",
-            "Discount": "Rabatt",
-            "Back": "Zurück zur Sitzplatzwahl",
-            "Continue": "Weiter"
-        }
-    },
-    "Roomio": {
-        "Search": {
-            "People": "Personen",
-            "Destination": "Reiseziel",
-            "Search": "Suche",
-            "Dates": "Daten",
-            "End": "Enddatum",
-            "Adults": "Erwachsene",
-            "Adult_one": "{{count}} Erwachsene",
-            "Adult_other": "{{count}} Erwachsene"
-        },
-        "Results": {
-            "Sidebar": {
-                "Filters": "Filter",
-                "Centre": "Zentrumsnah",
-                "Pet": "Haustiere willkommen",
-                "Pool": "Schwimmbad",
-                "Sauna": "Sauna"
-            },
-            "NoResults": "Keine Zimmer gefunden für '{{ city }}'",
-            "Cancellation": "KOSTENLOSE Stornierung Sie können später stornieren, also sichern Sie sich diesen günstigen Preis noch heute..",
-            "Night_one": "{{count}} Nacht",
-            "Night_other": "{{count}} Nächte",
-            "Taxes": "Steuern und Abgaben",
-            "TaxesIncluded": "Steuern und Gebühren sind inbegriffen",
-            "Book": "Jetzt buchen"
-        },
-        "Summary": {
-            "Summary": "Zusammenfassung",
-            "Price_one": "Preis für {{count}} Nacht",
-            "Price_other": "Preis für {{count}} Nächte",
-            "Taxes": "Steuern und Abgaben",
-            "Total": "Insgesamt",
-            "Name": "Vollständiger Name",
-            "Buy": "Kostenpflichtig buchen"
-        }
-    },
-    "Ebook": {
-        "Home": "Startseite",
-        "Saved": "Gespeichert",
-        "Recommended": "Empfohlen",
-        "Books": "Bücher",
-        "Audiobooks": "Hörbücher",
-        "AccountInfo":"Mein Konto",
-        "AccountType":"Konto-Typ",
-        "Personal":"Persönlich",
-        "Password": "Passwort",
-        "MyMembership":"Mitgliedschaft",
-        "Logout":"Abmelden",
-        "Membership":{
-            "Details": "Mitgliedschaft & Zahlungsdetails",
-            "Unlimited": "Unbegrenztes Lesen, ohne zusätzliche Kosten",
-            "Learn": "Erfahren Sie mehr über alle Vorteile einer Mitgliedschaft",
-            "Books": "Bücher",
-            "Read": "Bestseller lesen",
-            "Audiobooks": "Hörbücher",
-            "Listen": "Neuerscheinungen anhören",
-            "Snapshots": "Snapshots",
-            "Gain": "Die wichtigsten Erkenntnisse in 15 Minuten",
-            "Documents": "Dokumente",
-            "community": "Community-Uploads",
-            "Magazines": "Zeitschriften",
-            "Find": "Die neuesten Ausgaben finden",
-            "Sheet": "Musiknoten",
-            "Play": "Spiele Klassiker & Don Hits",
-            "Plan": "Mitgliedschaft",
-            "Your": "Ihre Mitgliedschaft wird am 24.8.2024 automatisch verlängert und Ihnen werden 8,99 EUR berechnet.",
-            "Pause": "Pause Mitgliedschaft",
-            "End": "Meine Mitgliedschaft beenden",
-            "Payment": "Details zur Bezahlung",
-            "Card": "Karte: 2880",
-            "Update": "Zahlungsdetails aktualisieren",
-            "View": "Zahlungsverlauf anzeigen"
-        },
-        "Survey":{
-            "Before": "Bevor Sie gehen...",
-            "Which": "Welcher der folgenden Gründe beschreibt am besten, warum Sie kündigen möchten?",
-            "Choose": "Bitte wählen Sie eine Option",
-            "technical": "Ich habe technische Probleme",
-            "enough": "Ich benutze ebookworld nicht genug",
-            "Please": "Bitte erzählen Sie uns mehr über das Problem, das Sie hatten.",
-            "expensive": "Dieses Abonnement ist zu teuer",
-            "specific": "Ich kann die Inhalte, die ich lesen möchte, nicht finden",
-            "Other": "Other",
-            "Send": "Stornierung einreichen und fortsetzen",
-            "Cancel": "Mitgliedschaft kündigen"
-        },
-        "Tease":{
-            "Before": "Bevor Sie gehen...",
-            "Extend": "Erhalten Sie einen 30-tägigen ermäßigten Zeitraum",
-            "Stay": "Bleiben Sie bei uns und wir verlängern Ihr Abonnement um weitere 30 Tage zu einem vergünstigten Preis.",
-            "Get30": "Erhalten Sie 30 weitere Tage",
-            "Try": "Testen Sie Ebookworld Lite für $4.99/Monat", 
-            "Keep": "Sie haben weiterhin Zugriff auf eine begrenzte Auswahl an Büchern und Hörbüchern sowie unbegrenzten Zugriff auf Schnappschüsse, Dokumente, Nachrichten, Zeitschriften und Noten.",
-            "TryLite": "Versuchen Sie Ebookworld Lite",
-            "Still": "Möchten Sie immer noch stornieren?",
-            "End": "Vollständige Löschung",
-            "Ended": "Mitgliedschaft gestrichen"
-        }
-        
-    },
-    "Common": {
-        "Select": "Wählen Sie",
-        "Start": "Start",
-        "Date": {
-            "Day": "Tag",
-            "Month": "Monat",
-            "Year": "Jahr",
-            "Months": {
-                "January": "Januar",
-                "February": "Februar",
-                "March": "März",
-                "April": "April",
-                "May": "Mai",
-                "June": "Juni",
-                "July": "Juli",
-                "August": "August",
-                "September": "September",
-                "October": "Oktober",
-                "November": "November",
-                "December": "Dezember"
-            }
-        },
-        "RequiredField": "{{ field}} ist erforderlich",
-        "TasksFinished": "Alle Aufgaben erfolgreich abgeschlossen",
-        "TaskFinished": "Aufgabe beendet",
-        "Instructions": "Anleitung",
-        "TaskGeneral":"Du bist ein Student, der in den Urlaub fährt und ein sehr knappes Budget hat. Du fährst im September 2025 nach Madrid.",
-        "TaskCar": "Du musst ein Auto für Deinen Aufenthalt in Madrid von Freitag bis Montag (3 Tage) mieten. Du kannst nur höchstens USD 100 ausgeben.",
-        "TaskCheckin": "Du hast bereits einen Flug von Madrid nach Barcelona gebucht und bezahlt. Du musst nur noch mit dem Buchungscode AAA123 online einchecken und kannst kein Geld mehr ausgeben.",
-        "TaskRoomio": "Du musst ein Zimmer für eine Person in Madrid zwischen Freitag, 12. September, und Montag, 15. September 2025, buchen (3 Nächte). Du planst, weniger als 300 USD auszugeben.",
-        "TaskEBook": "Da du etwas mehr Geld für deine Reise sparen musst, möchtest du dein derzeitiges Abonnement für den EBooks Store kündigen."
-    },
-    "Questionnaire": {
-        "Title": "Fragebogen",
-        "Description": "Bitte beantworten Sie die folgenden Fragen",
-        "Agree": "Stimme ich voll und ganz zu",
-        "Disagree": "Stimme ich überhaupt nicht zu",
-        "Finish": "Absenden",
-        "Advantage": "Ich erwarte, dass diese Website mich nicht ausnutzen wird.",
-        "Trustworthy": "Ich glaube, diese Website ist vertrauenswürdig",
-        "Frustrating": "Ich fand die Bedienung dieser Benutzerschnittstelle frustrierend",
-        "Confusing": "Ich fühlte mich bei der Nutzung dieser Website verwirrt",
-        "Experience": "Meine Erfahrungen mit dieser Website waren komfortabel",
-        "MandatoryResponses": "Bitte beantworten Sie die Fragen, um fortzufahren"
-    },
-    "Start": {
-        "Thanks": "Danke für Ihre Teilnahme, bitte lesen Sie die folgende Anleitung sorgfältig",
-        "Briefing": "Sie werden gebeten, 4 einfache Aufgaben zu erfüllen (Dauer insgesamt ca. 15 Minuten). In einigen Fällen sind Kreditkartendaten erforderlich. Sie können entweder falsche Zahlen eingeben oder die Funktion zum automatischen Ausfüllen verwenden, die dies automatisch erledigt.",
-        "Briefing2": "Bei den Seiten handelt es sich um umbenannte Klone echter Seiten, so dass einige Links und Schaltflächen, die nicht in den Aufgabenbereich fallen, nicht funktionieren.",
-        "Briefing3": "Alle gesammelten Daten werden anonym gehalten, wir bitten Sie nur um Ihre E-Mail, um an einer optionalen Folgeauswertung teilnehmen zu können.",
-        "TabOpen": "Dieser Tab bleibt geöffnet, falls Du zurückkommen möchtest, um nach der Anleitung zu suchen.",
-        "Email": "E-Mail (Optional, wir werden keinen Spam versenden)",
-        "Age": "Alter",
-        "Gender": "Geschlecht",
-        "Country": "Land",
-        "Purchases": "Online-Käufe in den letzten 3 Monaten",
-        "Genders": {
-            "Male": "Männlich",
-            "Female": "Weiblich",
-            "Other": "Divers"
-        },
-        "PurchaseOptions": {
-            "None": "Keine",
-            "1-3": "1-3",
-            "4-6": "4-6",
-            ">6": "> 6"
-        },
-        "Start": "Start"
+      },
+      "Order": {
+        "Unlimited": "Unbegrenzte Meilen",
+        "Tires": "Reifen und Batteriekosten",
+        "Rental": "Mietzuschlag",
+        "License": "Lizenzgebühr für Fahrzeuge"
+      },
+      "Confirmation": {
+        "Title": "Bestätigte Reservierung",
+        "Message": "Einzelheiten werden übermittelt an {{email}}.",
+        "Close": "Klicken Sie, um dieses Fenster zu schließen"
+      }
     }
+  },
+  "Checkin": {
+    "Home": {
+      "Flights": "Flüge",
+      "SelfCheckin": "Selbst einchecken",
+      "Hotels": "Hotels",
+      "CarHire": "Autovermietung",
+      "Deals": "Last-Minute-Angebote",
+      "Home": "Startseite",
+      "CheckIn": "Check-in",
+      "Services": "Dienstleistungen",
+      "Terms": "Bedingungen",
+      "Contact": "Kontakt",
+      "Subscribe": "Jetzt abonnieren und die besten Angebote erhalten",
+      "LearnDeals": " Erfahren Sie mehr über die neuesten Angebote",
+      "Promotions": "Seien Sie der Erste, der Sonderangebote erhält",
+      "NewDestinations": "Lernen Sie neue Reiseziele kennen",
+      "MissSale": "Nie mehr einen Verkauf verpassen!",
+      "30off": "30% Rabatt"
+    },
+    "Passenger": {
+      "Title": "Informationen zum Einchecken",
+      "Name": "Name",
+      "From": "Von",
+      "To": "An",
+      "Search": "Suche",
+      "Code": "Buchungscode",
+      "Surname": "Nachname",
+      "FullName": "Vollständiger Name",
+      "Birthdate": "Geburtsdatum",
+      "Gender": {
+        "Label": "Geschlecht",
+        "Male": "Männlich",
+        "Female": "Weiblich"
+      },
+      "IdType": "ID-Typ",
+      "IdNumber": "ID-Nummer",
+      "IssueCountry": "Land der Ausgabe",
+      "DueDate": "Fälligkeitsdatum",
+      "Nationality": "Nationalität",
+      "Passport": "Reisepass",
+      "Email": "E-Mail",
+      "FindReservation": "Buchung finden",
+      "Subscribe": "Abonnieren",
+      "SelectSeat": "Sitz auswählen"
+    },
+    "Seat": {
+      "Title": "Sitzauswahl",
+      "Preferential": "Vorzugssitz",
+      "Regular": "Normaler Sitz",
+      "Cheap": "Günstiger Sitz",
+      "Occupied": "Besetzter Sitz",
+      "Continue": "Weiter",
+      "NoSeat": "Ich möchte keinen Sitzplatz auswählen",
+      "Passengers": "Passagier",
+      "Flights": "Flüge",
+      "SmallBag": "Handgepäck",
+      "ReservationInfo": "Informationen zur Buchung",
+      "ReservationDate1": "Mon 23 Sep - 16:25-00:55 - AS 3077",
+      "ReservationDate2": "Sun 29 Sep - 06:15-08:00 - AS 4132"
+    },
+    "Summary": {
+      "Completed": "Checkin abgeschlossen",
+      "BoardingPass": "Ihre Bordkarte wird an Ihre registrierte E-Mail-Adresse gesendet.",
+      "Thanks": "Danke, dass Sie sich für AirSomewhere entschieden haben.",
+      "Title": "Zusammenfassung",
+      "Taxes": "Steuern",
+      "Seat": "Sitzauswahl",
+      "Discount": "Rabatt",
+      "Back": "Zurück zur Sitzplatzwahl",
+      "Continue": "Weiter"
+    }
+  },
+  "Roomio": {
+    "Search": {
+      "People": "Personen",
+      "Destination": "Reiseziel",
+      "Search": "Suche",
+      "Dates": "Daten",
+      "End": "Enddatum",
+      "Adults": "Erwachsene",
+      "Adult_one": "{{count}} Erwachsene",
+      "Adult_other": "{{count}} Erwachsene"
+    },
+    "Results": {
+      "Sidebar": {
+        "Filters": "Filter",
+        "Centre": "Zentrumsnah",
+        "Pet": "Haustiere willkommen",
+        "Pool": "Schwimmbad",
+        "Sauna": "Sauna"
+      },
+      "NoResults": "Keine Zimmer gefunden für '{{ city }}'",
+      "Cancellation": "KOSTENLOSE Stornierung Sie können später stornieren, also sichern Sie sich diesen günstigen Preis noch heute..",
+      "Night_one": "{{count}} Nacht",
+      "Night_other": "{{count}} Nächte",
+      "Taxes": "Steuern und Abgaben",
+      "TaxesIncluded": "Steuern und Gebühren sind inbegriffen",
+      "Book": "Jetzt buchen"
+    },
+    "Summary": {
+      "Summary": "Zusammenfassung",
+      "Price_one": "Preis für {{count}} Nacht",
+      "Price_other": "Preis für {{count}} Nächte",
+      "Taxes": "Steuern und Abgaben",
+      "Total": "Insgesamt",
+      "Name": "Vollständiger Name",
+      "Buy": "Kostenpflichtig buchen"
+    }
+  },
+  "Ebook": {
+    "Home": "Startseite",
+    "Saved": "Gespeichert",
+    "Recommended": "Empfohlen",
+    "Books": "Bücher",
+    "Audiobooks": "Hörbücher",
+    "AccountInfo": "Mein Konto",
+    "AccountType": "Konto-Typ",
+    "Personal": "Persönlich",
+    "Password": "Passwort",
+    "MyMembership": "Mitgliedschaft",
+    "Logout": "Abmelden",
+    "Membership": {
+      "Details": "Mitgliedschaft & Zahlungsdetails",
+      "Unlimited": "Unbegrenztes Lesen, ohne zusätzliche Kosten",
+      "Learn": "Erfahren Sie mehr über alle Vorteile einer Mitgliedschaft",
+      "Books": "Bücher",
+      "Read": "Bestseller lesen",
+      "Audiobooks": "Hörbücher",
+      "Listen": "Neuerscheinungen anhören",
+      "Snapshots": "Snapshots",
+      "Gain": "Die wichtigsten Erkenntnisse in 15 Minuten",
+      "Documents": "Dokumente",
+      "community": "Community-Uploads",
+      "Magazines": "Zeitschriften",
+      "Find": "Die neuesten Ausgaben finden",
+      "Sheet": "Musiknoten",
+      "Play": "Spiele Klassiker & Don Hits",
+      "Plan": "Mitgliedschaft",
+      "Your": "Ihre Mitgliedschaft wird am 24.8.2024 automatisch verlängert und Ihnen werden 8,99 EUR berechnet.",
+      "Pause": "Pause Mitgliedschaft",
+      "End": "Meine Mitgliedschaft beenden",
+      "Payment": "Details zur Bezahlung",
+      "Card": "Karte: 2880",
+      "Update": "Zahlungsdetails aktualisieren",
+      "View": "Zahlungsverlauf anzeigen"
+    },
+    "Survey": {
+      "Before": "Bevor Sie gehen...",
+      "Which": "Welcher der folgenden Gründe beschreibt am besten, warum Sie kündigen möchten?",
+      "Choose": "Bitte wählen Sie eine Option",
+      "technical": "Ich habe technische Probleme",
+      "enough": "Ich benutze ebookworld nicht genug",
+      "Please": "Bitte erzählen Sie uns mehr über das Problem, das Sie hatten.",
+      "expensive": "Dieses Abonnement ist zu teuer",
+      "specific": "Ich kann die Inhalte, die ich lesen möchte, nicht finden",
+      "Other": "Other",
+      "Send": "Stornierung einreichen und fortsetzen",
+      "Cancel": "Mitgliedschaft kündigen"
+    },
+    "Tease": {
+      "Before": "Bevor Sie gehen...",
+      "Extend": "Erhalten Sie einen 30-tägigen ermäßigten Zeitraum",
+      "Stay": "Bleiben Sie bei uns und wir verlängern Ihr Abonnement um weitere 30 Tage zu einem vergünstigten Preis.",
+      "Get30": "Erhalten Sie 30 weitere Tage",
+      "Try": "Testen Sie Ebookworld Lite für $4.99/Monat",
+      "Keep": "Sie haben weiterhin Zugriff auf eine begrenzte Auswahl an Büchern und Hörbüchern sowie unbegrenzten Zugriff auf Schnappschüsse, Dokumente, Nachrichten, Zeitschriften und Noten.",
+      "TryLite": "Versuchen Sie Ebookworld Lite",
+      "Still": "Möchten Sie immer noch stornieren?",
+      "End": "Vollständige Löschung",
+      "Ended": "Mitgliedschaft gestrichen"
+    }
+  },
+  "CreativeBox": {
+    "Home": {
+      "CreateSomethingNew": "Etwas Neues erstellen",
+      "Image": "Bild",
+      "Generate": "Generieren",
+      "Product1Description": "Generiere ein neues Bild, das du zu deinem Projekt hinzufügen kannst",
+      "Product2Description": "Finde die perfekte Schriftart, um dein Design zu ergänzen",
+      "Product3Description": "Generiere Vektorgrafiken aus einer detaillierten Beschreibung",
+      "Product4Description": "Untertitel deine Videos automatisch in jeder Sprache"
+    },
+    "NavBar": {
+      "Design": "Kreativität & Design",
+      "Marketing": "Marketing & Handel",
+      "Learning": "Lernen & Unterstützung",
+      "Settings": "Einstellungen",
+      "Account": "Mein Konto",
+      "Logout": "Abmelden"
+    },
+    "Sidebar": {
+      "Menu": "Menü",
+      "Account": "Konto",
+      "Plans": "Meine Pläne",
+      "ContactPreferences": "Kontaktpräferenzen"
+    },
+    "Account": {
+      "BoxAccountInfo1": "Profilbild",
+      "BoxAccountInfo2": "Kontoname",
+      "BoxAccountInfo3": "CreativeBox-Benutzername",
+      "BoxAccountInfo4": "Unternehmen",
+      "BoxAccountInfo5": "E-Mail",
+      "BoxAccountInfo6": "Telefon",
+      "NotAdded": "Nicht hinzugefügt",
+      "Add": "Hinzufügen"
+    },
+    "Plan": {
+      "Included": "In deinem Plan enthalten",
+      "CreativeboxImages": "CreativeBox-Bilder",
+      "GenerativeAI": "Verwendung von generativer KI",
+      "Description": "Greife auf Millionen von Bildern, 4K- und HD-Videos, Vorlagen und vieles mehr lizenzfrei zu – alles in einem Plan.",
+      "Cancel": "Kündigen",
+      "Change": "Ändern"
+    },
+    "Modal": {
+      "KeepPlan": "Plan behalten",
+      "Previous": "Zurück",
+      "Next": "Weiter",
+      "NoThanks": "Nein, danke",
+      "ConfirmCancellation": "Kündigung bestätigen",
+      "Title1": "Schade, dass du gehst.",
+      "SubTitle": "Welche dieser Optionen beschreibt deine Erfahrung?",
+      "Option1": "Es ist zu teuer.",
+      "Option2": "Die Apps funktionierten nicht wie erwartet.",
+      "Option3": "Ich habe zu viele technische Probleme.",
+      "Option4": "Ich benötigte die Produkte für ein Projekt, das nun abgeschlossen ist.",
+      "PlanDetails": "Plandetails",
+      "MonthlyPlan": "Monatsplan",
+      "Month": "Monat",
+      "Title2": "Bevor du kündigst, schau dir diese Angebote an:",
+      "Product1": {
+        "Title": "Wechsle zu PixelForge und spare",
+        "Description": "Spare jetzt, indem du von deinem aktuellen 25 $/Monat-Plan zu PixelForge wechselst.\nBeginnt bei 20 $."
+      },
+      "Product2": {
+        "Title": "Wechsle zu Frameflow und spare",
+        "Description": "Spare jetzt, indem du von deinem aktuellen 25 $/Monat-Plan zu Frameflow wechselst.\nBeginnt bei 18 $."
+      },
+      "Product3": {
+        "Title": "Wechsle zu QuickCreatives und spare",
+        "Description": "Spare jetzt, indem du von deinem aktuellen 25 $/Monat-Plan zu QuickCreatives wechselst.\nBeginnt bei 15 $."
+      },
+      "Title3": "Die Kündigungsdetails umfassen Folgendes:",
+      "Detail1": {
+        "Title": "Plandatum",
+        "Description": "Du verlierst den Zugang zu deinem Plan sofort."
+      },
+      "Detail2": {
+        "Title": "Anwendungen",
+        "Description": "Du wirst keinen Zugang mehr zu deinen Apps oder den meisten Diensten deines bezahlten Plans haben."
+      },
+      "Detail3": {
+        "Title": "Speicher",
+        "Description": "Der Cloud-Speicher wird auf 5 GB reduziert. Wenn du dieses Limit überschreitest, hast du 90 Tage Zeit, deinen Online-Speicher zu reduzieren, sonst kannst du den Zugriff auf einige oder alle gespeicherten Dateien verlieren."
+      }
+    }
+  },
+  "Teatrum": {
+    "Home": {
+      "Calendar": "Kalender",
+      "History": "Verlauf",
+      "Layout": "Layout",
+      "Search": "Suche",
+      "EmptyEvents": "Es wurde kein Stück mit diesem Titel gefunden",
+      "HeroText1": "Erlebe die Magie des Theaters.",
+      "HeroText2": "Wähle deine nächste Vorstellung."
+    },
+    "Event": {
+      "Buy": "Kaufen",
+      "Date": "Datum",
+      "Opinions": "bewertungen",
+      "Rating": "Bewertung",
+      "1": {
+        "Description": "Tauche ein in ein intensives psychologisches Drama, in dem Emotionen und innere Konflikte dich bis zur letzten Minute fesseln.",
+        "Comment1": "Ich habe es geliebt. Sehr empfehlenswert.",
+        "Comment2": "Das Stück war unglaublich, die Darsteller haben mich wirklich überrascht.",
+        "Comment3": "Ich habe es sehr genossen, jede Szene hatte etwas Unerwartetes."
+      },
+      "2": {
+        "Description": "Die Geschichte eines Kämpfers, der sich seiner größten Herausforderung stellt – im Ring und im Leben. Voller Schläge, Humor und Herz.",
+        "Comment1": "Ich bin mit einem Lächeln aus dem Theater gegangen und will bald wiederkommen.",
+        "Comment2": "Ausgezeichnet, berührt ohne übertrieben zu sein...",
+        "Comment3": "Unglaubliche Geschichte über Durchhaltevermögen!!!"
+      },
+      "3": {
+        "Description": "Erlebe eine einzigartige theatralische Reise, die Epochen und Schicksale miteinander verwebt und dich über Entscheidungen nachdenken lässt, die unser Leben formen.",
+        "Comment1": "Habe die Tickets aus Neugier gekauft und war am Ende begeistert.",
+        "Comment2": "Sehr empfehlenswert, Drehbuch und Inszenierung waren großartig...",
+        "Comment3": "Das Beste, was ich dieses Jahr im Theater gesehen habe, ohne Zweifel."
+      },
+      "4": {
+        "Description": "Sechs Frauen, ein Haus und absolut kein gesunder Menschenverstand. 'Verrückte Damen' ist eine überdrehte Komödie, in der alles schiefgehen kann… und es passiert auch. Doch zwischen Lachen, Schreien und Wein entdecken sie, dass geteilte Verrücktheit vielleicht die beste Therapie ist.",
+        "Comment1": "Hahaha großartiges Stück, ich habe von Anfang bis Ende gelacht...",
+        "Comment2": "Sehr gut! Bin mit niedrigen Erwartungen gekommen und wurde überrascht...",
+        "Comment3": "Alle sechs haben es genial gemacht!"
+      },
+      "5": {
+        "Description": "Ein Drama über Konflikte, Geheimnisse und intensive Emotionen eines Paares am Rande des Zusammenbruchs.",
+        "Comment1": "Ich wurde in mehreren Szenen emotional, großartige Schauspieler...",
+        "Comment2": "Jede Minute und jedes Ticket wert.",
+        "Comment3": "Fesselnde Geschichte und tadellose Inszenierung."
+      },
+      "6": {
+        "Description": "Eine Frau entdeckt, dass sich ihr Spiegelbild bewegt, bevor sie selbst es tut. Diese winzige Verzögerung, die anfangs kaum wahrnehmbar ist, entwickelt sich zu einem unangenehmen Dialog mit einem Spiegelbild ihrer selbst, das scheinbar zu viel weiß.",
+        "Comment1": "Eine einzigartige Show, hat mich die ganze Zeit gefesselt.",
+        "Comment2": "Sehr empfehlenswert.",
+        "Comment3": "Das Ende hat mich sprachlos gemacht."
+      },
+      "7": {
+        "Description": "Folge einer Geschichte, die Generationen verbindet und zeigt, wie Entscheidungen der Vergangenheit im Heute nachhallen.",
+        "Comment1": "Die Charaktere sind liebenswert und die Handlung fließt wunderschön...",
+        "Comment2": "Alles war perfekt, von der Beleuchtung bis zum Sound.",
+        "Comment3": "Eines der besten Stücke dieses Jahres."
+      },
+      "8": {
+        "Description": "Eine Komödie über ein verrücktes Paar, das ständig in absurde und urkomische Situationen stolpert.",
+        "Comment1": "Eine wundervolle Erfahrung, die ich bald wiederholen möchte.",
+        "Comment2": "Die Schauspieler vermitteln Emotionen perfekt...",
+        "Comment3": "Fantastisch, ich habe es von Anfang bis Ende ohne eine Sekunde Langeweile genossen."
+      }
+    },
+    "Buy": {
+      "forward": "VORNE",
+      "middle": "MITTE",
+      "back": "HINTEN",
+      "ServiceCharge": "Servicegebühr:",
+      "WithoutCharges": "Preis ohne Gebühren:",
+      "SelectLocation": "Platz auswählen",
+      "SelectTickets": "Anzahl der Tickets auswählen",
+      "BuyNow": "Jetzt kaufen",
+      "Tickets": "ticket(s)",
+      "TicketsPrice": "Ticketpreis",
+      "Checkout": "Zur Kasse"
+    }
+  },
+  "PetSpace": {
+    "Home": {
+      "Title": "Alles, was dein Haustier braucht – alles an einem Ort",
+      "Subtitle": "Futter, Spielzeug und Zubehör mit schnellem Versand und tollen Preisen.",
+      "SeeProducts": "Produkte ansehen",
+      "FeaturedProducts": "Empfohlene Produkte"
+    },
+    "NavBar": {
+      "Home": "Startseite",
+      "Products": "Produkte",
+      "Offers": "Angebote",
+      "Contact": "Kontakt"
+    },
+    "Product": {
+      "NotFound": "Produkt nicht gefunden",
+      "PriceKg": "Preis pro kg",
+      "Amount": "Menge",
+      "TotalPrice": "Gesamtpreis",
+      "BuyNow": "Jetzt kaufen",
+      "AddToCart": "In den Warenkorb",
+      "1": {
+        "Description": "Knuspriges und nahrhaftes Trockenfutter, ideal für erwachsene Hunde aller Rassen. Enthält essentielle Vitamine und Mineralstoffe, um sie aktiv und gesund zu halten."
+      },
+      "2": {
+        "Description": "Futter, das Glück und Wohlbefinden für dein Haustier fördert. Reich an Protein und aus natürlichen Zutaten hergestellt, die eine gesunde Verdauung unterstützen."
+      },
+      "3": {
+        "Description": "Besondere Snacks und Trockenfutter für energiegeladene Hunde. Unwiderstehlicher Geschmack und knusprige Textur, die ihre Schwänze voller Freude wedeln lässt."
+      },
+      "4": {
+        "Description": "Premium-Gourmetfutter für wählerische Haustiere. Hergestellt mit hochwertigen Zutaten, die ein glänzendes Fell und optimale Gesundheit fördern."
+      }
+    },
+    "Cart": {
+      "AddedToCart": "Zum Warenkorb hinzugefügt",
+      "Products": "produkte",
+      "Product": "produkt",
+      "ViewCart": "Warenkorb ansehen",
+      "Cart": "Warenkorb",
+      "Buy": "Kaufen",
+      "EmptyCart": "Dein Warenkorb ist leer."
+    },
+    "Modal": {
+      "Title": "Erreiche den Mindestkauf von 30 $ und erhalte kostenlose Snacks für dein Haustier!",
+      "AddProduct": "Ein weiteres Produkt hinzufügen",
+      "No": "Nein, danke… mein Haustier wird die Snacks vermissen"
+    },
+    "BuyProduct": {
+      "Title": "Zahlungsdetails",
+      "ConfirmPurchase": "Kauf bestätigen",
+      "OrderSummary": "Bestellübersicht",
+      "Amount": "Menge"
+    }
+  },
+  "Moviemax": {
+    "Login": "Abmelden",
+    "Home": {
+      "Suscribe": "Abonnieren und deinen Lieblingsfilm genießen.",
+      "Start": "Starten"
+    },
+    "Indications": {
+      "ChoosePlan": "Wähle deinen Plan",
+      "Indication1": "Keine Verpflichtungen: jederzeit kündbar.",
+      "Indication2": "Alles von Moviemax zu einem niedrigen Preis.",
+      "Indication3": "Genieße ohne Limits auf all deinen Geräten.",
+      "Next": "Weiter"
+    },
+    "PlanSelect": {
+      "Title": "Wähle den Plan, der am besten zu dir passt",
+      "GetFreePlan": "Gratisplan erhalten",
+      "Disclaimer": "Die Verfügbarkeit von HD (720p), Full HD (1080p), Ultra HD (4K) und HDR-Inhalten hängt von deinem Internetdienst und dem verwendeten Gerät ab. Nicht alle Inhalte sind in allen Auflösungen verfügbar. Weitere Informationen findest du in unseren Nutzungsbedingungen."
+    },
+    "Plan": {
+      "Select": "Auswählen",
+      "MonthlyPrice": "Monatspreis",
+      "Quality": "Audio- und Videoqualität",
+      "Resolution": "Auflösung",
+      "CompatibleDevices": "Kompatible Geräte",
+      "DevicesList": "TV, Computer, Handy, Tablet",
+      "HomeDevices": "Heimgeräte, auf denen Moviemax gleichzeitig angesehen werden kann",
+      "DownloadDevices": "Download-Geräte",
+      "1": {
+        "Title": "Free",
+        "Quality": "Gut"
+      },
+      "2": {
+        "Title": "Basic",
+        "Quality": "Gut"
+      },
+      "3": {
+        "Title": "Standard",
+        "Quality": "Ausgezeichnet"
+      },
+      "4": {
+        "Title": "Premium",
+        "Quality": "Optimal"
+      }
+    },
+    "Finish": "Fertig"
+  },
+  "Common": {
+    "Select": "Wählen Sie",
+    "Start": "Start",
+    "Date": {
+      "Day": "Tag",
+      "Month": "Monat",
+      "Year": "Jahr",
+      "Months": {
+        "January": "Januar",
+        "February": "Februar",
+        "March": "März",
+        "April": "April",
+        "May": "Mai",
+        "June": "Juni",
+        "July": "Juli",
+        "August": "August",
+        "September": "September",
+        "October": "Oktober",
+        "November": "November",
+        "December": "Dezember"
+      }
+    },
+    "RequiredField": "{{ field}} ist erforderlich",
+    "TasksFinished": "Alle Aufgaben erfolgreich abgeschlossen",
+    "TaskFinished": "Aufgabe beendet",
+    "Instructions": "Anleitung",
+    "TaskGeneral": "Du bist ein Student, der in den Urlaub fährt und ein sehr knappes Budget hat. Du fährst im September 2025 nach Madrid.",
+    "TaskCar": "Du musst ein Auto für Deinen Aufenthalt in Madrid von Freitag bis Montag (3 Tage) mieten. Du kannst nur höchstens USD 100 ausgeben.",
+    "TaskCheckin": "Du hast bereits einen Flug von Madrid nach Barcelona gebucht und bezahlt. Du musst nur noch mit dem Buchungscode AAA123 online einchecken und kannst kein Geld mehr ausgeben.",
+    "TaskRoomio": "Du musst ein Zimmer für eine Person in Madrid zwischen Freitag, 12. September, und Montag, 15. September 2025, buchen (3 Nächte). Du planst, weniger als 300 USD auszugeben.",
+    "TaskEBook": "Da du etwas mehr Geld für deine Reise sparen musst, möchtest du dein derzeitiges Abonnement für den EBooks Store kündigen.",
+    "TaskCreativebox": "Es gibt ein aktives Abonnement für einen Bildbearbeitungsplan bei Creativebox, das nicht mehr genutzt wird. Das Abonnement muss gekündigt werden.",
+    "TaskMoviemax": "Du möchtest anfangen, eine Streaming-Plattform zu nutzen, um Serien und Filme zu schauen. Dein Ziel ist es, Moviemax zu abonnieren und dabei so wenig wie möglich auszugeben, da du es nur auf einem einzigen Gerät nutzen wirst.",
+    "TaskPetspace": "Kaufe das Tierfutter HappyPaws bei Petspace.",
+    "TaskTeatrum": "Kaufe 2 Theaterkarten für das Stück Crazy Ladies, ohne mehr als 180 $ auszugeben."
+  },
+  "Questionnaire": {
+    "Title": "Fragebogen",
+    "Description": "Bitte beantworten Sie die folgenden Fragen",
+    "Agree": "Stimme ich voll und ganz zu",
+    "Disagree": "Stimme ich überhaupt nicht zu",
+    "Finish": "Absenden",
+    "Advantage": "Ich erwarte, dass diese Website mich nicht ausnutzen wird.",
+    "Trustworthy": "Ich glaube, diese Website ist vertrauenswürdig",
+    "Frustrating": "Ich fand die Bedienung dieser Benutzerschnittstelle frustrierend",
+    "Confusing": "Ich fühlte mich bei der Nutzung dieser Website verwirrt",
+    "Experience": "Meine Erfahrungen mit dieser Website waren komfortabel",
+    "MandatoryResponses": "Bitte beantworten Sie die Fragen, um fortzufahren"
+  },
+  "Start": {
+    "Thanks": "Danke für Ihre Teilnahme, bitte lesen Sie die folgende Anleitung sorgfältig",
+    "Briefing": "Sie werden gebeten, 4 einfache Aufgaben zu erfüllen (Dauer insgesamt ca. 15 Minuten). In einigen Fällen sind Kreditkartendaten erforderlich. Sie können entweder falsche Zahlen eingeben oder die Funktion zum automatischen Ausfüllen verwenden, die dies automatisch erledigt.",
+    "Briefing2": "Bei den Seiten handelt es sich um umbenannte Klone echter Seiten, so dass einige Links und Schaltflächen, die nicht in den Aufgabenbereich fallen, nicht funktionieren.",
+    "Briefing3": "Alle gesammelten Daten werden anonym gehalten, wir bitten Sie nur um Ihre E-Mail, um an einer optionalen Folgeauswertung teilnehmen zu können.",
+    "TabOpen": "Dieser Tab bleibt geöffnet, falls Du zurückkommen möchtest, um nach der Anleitung zu suchen.",
+    "Email": "E-Mail (Optional, wir werden keinen Spam versenden)",
+    "Age": "Alter",
+    "Gender": "Geschlecht",
+    "Country": "Land",
+    "Purchases": "Online-Käufe in den letzten 3 Monaten",
+    "Genders": {
+      "Male": "Männlich",
+      "Female": "Weiblich",
+      "Other": "Divers"
+    },
+    "PurchaseOptions": {
+      "None": "Keine",
+      "1-3": "1-3",
+      "4-6": "4-6",
+      ">6": "> 6"
+    },
+    "Start": "Start"
+  }
 }
