@@ -29,7 +29,7 @@ export const deleteUserSession = (sessionId) =>
   api.delete(`/user_sessions/${sessionId}/delete`);
 
 export const getAllWebsites = () =>
-  api.get('/websites').then((response) => response.data);
+  api.get('/websites/').then((response) => response.data);
 
 export const createWebsite = (websiteData) =>
   api.post('/websites/new', websiteData).then((response) => response.data);
@@ -54,7 +54,7 @@ export const downloadUserSessions = (filters) =>
 
 export const getAllUserSessions = (filters) =>
   api
-    .get(`/user_sessions?${buildQueryParams(filters)}`)
+    .get(`/user_sessions/?${buildQueryParams(filters)}`)
     .then((response) => response.data);
 
 export const assignFollowUpGroups = (assignments) =>
