@@ -111,7 +111,7 @@ function BuyTicket() {
 
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col flex-1 px-10 sm:px-20 lg:px-40 gap-5 sm:items-center"
+          className="flex flex-col flex-1 px-5 sm:px-10 lg:px-40 gap-5 sm:items-center"
         >
           <div className="shadow border border-gray-300 p-6 rounded sm:w-full ">
             <div className="">
@@ -141,7 +141,7 @@ function BuyTicket() {
           </div>
           <div className="shadow border border-gray-300 p-6 rounded sm:w-full">
             <div className="flex my-4">
-              <div className="w-1/3 mr-8 relative">
+              <div className=" mr-8 relative">
                 <p
                   dangerouslySetInnerHTML={{
                     __html: t("Rental.Review.Payment.Card.Number"),
@@ -164,7 +164,7 @@ function BuyTicket() {
                   </div>
                 )}
               </div>
-              <div className="w-1/3">
+              <div className="">
                 <p
                   dangerouslySetInnerHTML={{
                     __html: t("Rental.Review.Payment.Card.Holder"),
@@ -179,7 +179,7 @@ function BuyTicket() {
               </div>
             </div>
             <div className="flex my-4">
-              <div className="w-1/6 mr-8">
+              <div className="mr-8">
                 <p
                   dangerouslySetInnerHTML={{
                     __html: `${t("Rental.Review.Payment.Card.Month")}/${t(

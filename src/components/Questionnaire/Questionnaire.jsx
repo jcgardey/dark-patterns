@@ -7,9 +7,9 @@ import { useState } from "react";
 const Question = ({ title, name, value, onChange }) => {
   const { t } = useTranslation();
   return (
-    <div className="my-8 flex justify-between">
+    <div className="my-8 flex flex-col sm:flex-row gap-2 justify-between ">
       <p>{t(title)}</p>
-      <div className="flex w-1/2">
+      <div className="flex sm:w-1/2">
         <ReactSlider
           value={value}
           onChange={onChange}
@@ -57,8 +57,8 @@ export const Questionnaire = ({ onFinish }) => {
       )}
       <div className="my-6">
         <form onSubmit={onSubmit}>
-          <div className="flex justify-end my-4">
-            <div className="flex w-1/2 justify-between">
+          <div className="flex justify-between sm:justify-end my-4">
+            <div className="flex sm:w-1/2 justify-between w-full">
               <p className="w-1/2 text-left">{t("Questionnaire.Disagree")}</p>
               <p className="w-1/2 text-right">{t("Questionnaire.Agree")}</p>
             </div>
@@ -76,7 +76,7 @@ export const Questionnaire = ({ onFinish }) => {
           ))}
           <div className="my-4">
             <button
-              className="bg-sky-600 hover:bg-sky-700 rounded text-white text-lg p-2 w-1/5 mx-auto"
+              className="bg-sky-600 hover:bg-sky-700 rounded text-white text-lg p-2 sm:w-1/5 mx-auto my-1"
               type="submit"
             >
               {t("Questionnaire.Finish")}
