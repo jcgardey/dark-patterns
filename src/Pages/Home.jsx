@@ -35,7 +35,7 @@ export const Home = () => {
   const allCompleted = sites.every((site) => site.completed);
 
   return (
-    <div className="w-1/2 my-8 mx-auto">
+    <div className="sm:w-1/2 my-8 p-6 sm:mx-auto">
       <h1 className="text-3xl">{t('Common.Instructions')}</h1>
       {/* <h3 className="text-xl mt-8">{t('Common.TaskGeneral')}</h3> */}
 

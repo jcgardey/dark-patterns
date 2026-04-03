@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import { useState } from 'react'
 import NavBar from '../../components/CreativeBox/NavBar'
 import Sidebar from '../../components/CreativeBox/Sidebar'
 import InfoCuentaBox from '../../components/CreativeBox/InfoCuentaBox';
@@ -13,7 +13,7 @@ export function Account() {
   return (
     <div className='flex flex-col items-center w-full bg-gray-100'>
       <NavBar />
-      <div className='flex w-full h-[100%]'>
+      <div className='flex flex-col sm:flex-row w-full h-[100%]'>
         <Sidebar actual={actual} setActual={setActual} />
 
         <div className='sm:w-full h-screen mb-20'>
@@ -38,5 +38,3 @@ export function Account() {
     </div>
   )
 }
-
-
