@@ -37,6 +37,6 @@ export const plans = [
     quality: "Óptima",
     resolution: "4K (Ultra HD) + HDR",
     home_devices: "4",
-    download_devices: "6",
+    download_devices: "4",
   },
 ];

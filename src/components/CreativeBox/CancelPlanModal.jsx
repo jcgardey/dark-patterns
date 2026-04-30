@@ -42,7 +42,7 @@ const CancelPlanModal = ({ onClose }) => {
         {step == 2 && <Paso2 />}
         {step == 3 && <Paso3 />}
 
-        <div className="mt-6 flex flex-col sm:flex-row justify-between items-start gap-1 text-xs">
+        <div className={`${step > 1 ? "flex-col gap-3" : "gap-2 items-start"} mt-6 flex justify-between text-xs`}>
           <button
             className="px-4 py-2 rounded-full border border-black text-gray-700 hover:bg-gray-100 font-bold"
             onClick={() => onClose()}

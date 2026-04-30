@@ -23,7 +23,7 @@ function PlanSelect() {
 
   return (
     <div>
-      <div className="relative z-10 flex w-full justify-between items-center px-8 py-6">
+      <div className="relative z-10 flex w-full justify-between items-center p-2 sm:p-10 py-6">
         <h1
           onClick={() => navigate("/moviemax")}
           className="text-4xl font-bold text-purple-600 cursor-pointer"
@@ -37,12 +37,12 @@ function PlanSelect() {
       </div>
       <hr />
 
-      <div className="flex flex-col items-center gap-3 p-8">
-        <h2 className="font-medium text-2xl">
+      <div className="flex flex-col items-center gap-3 sm:p-8">
+        <h2 className="font-medium text-2xl p-2 sm:p-0">
           {t("Moviemax.PlanSelect.Title")}
         </h2>
 
-        <div className="flex gap-3 overflow-x-auto max-w-full">
+        <div className="flex flex-col sm:flex-row gap-3 sm:overflow-x-auto max-w-full">
           {plans
             .filter((plan) => seeAll || plan.id !== 1)
             .map((plan) => (

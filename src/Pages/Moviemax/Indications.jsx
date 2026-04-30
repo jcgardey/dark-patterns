@@ -13,7 +13,7 @@ function Indications() {
   return (
     <div className="flex flex-col items-center gap-10">
       <div className="w-full">
-        <div className="relative z-10 flex w-full justify-between items-center px-8 py-6">
+        <div className="relative z-10 flex w-full justify-between items-center p-2 sm:p-8 py-6">
           <h1
             onClick={() => navigate("/moviemax")}
             className="text-4xl font-bold text-purple-600 cursor-pointer"
@@ -28,7 +28,7 @@ function Indications() {
         <hr />
       </div>
 
-      <div className="flex flex-col gap-6 p-8 rounded-2xl shadow-lg bg-white max-w-md mx-auto">
+      <div className="flex flex-col gap-6 p-8 rounded-2xl shadow-lg bg-white max-w-md mx-3 sm:mx-auto">
         <h2 className="text-4xl md:text-5xl font-bold tracking-tight">
           {t("Moviemax.Indications.ChoosePlan")}
         </h2>

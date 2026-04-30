@@ -23,7 +23,7 @@ export function Home() {
     >
       <div className="fixed inset-0 bg-black/70 "></div>
 
-      <div className="relative z-10 flex w-full justify-between items-center p-10 py-6">
+      <div className="relative z-10 flex w-full justify-between items-center p-2 sm:p-10 py-6">
         <h1 className="text-4xl font-bold text-purple-600 cursor-pointer">MovieMax</h1>
 
         <button className="bg-purple-600 hover:bg-purple-700 px-3 py-1 rounded font-medium cursor-not-allowed">

@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import { useEffect } from "react";
 import NavBar from "../../components/CreativeBox/NavBar";
 import imagenFondo from "../../assets/CreativeBox/FondoPaisaje.jpg";
 import Buscador from "../../components/CreativeBox/Buscador";
@@ -27,7 +27,7 @@ export function Home() {
       <NavBar />
 
       <div
-        className="flex flex-col items-center gap-5 w-4/5 bg-cover bg-center p-8 pb-14 rounded-lg "
+        className="flex flex-col items-center gap-5 sm:w-4/5 w-[90%] bg-cover bg-center p-8 pb-14 rounded-lg "
         style={{ backgroundImage: `url(${imagenFondo})` }}
       >
         <h1 className="text-2xl font-semibold">{t("CreativeBox.Home.CreateSomethingNew")}</h1>

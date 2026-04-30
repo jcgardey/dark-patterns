@@ -62,7 +62,7 @@ function Checkout() {
   return (
     <div className="flex flex-col items-center gap-10">
       <div className="w-full">
-        <div className="relative z-10 flex w-full justify-between items-center px-8 py-6">
+        <div className="relative z-10 flex w-full justify-between items-center p-1 sm:p-10 py-6">
           <h1
             onClick={() => navigate("/moviemax")}
             className="text-4xl font-bold text-purple-600 cursor-pointer"
